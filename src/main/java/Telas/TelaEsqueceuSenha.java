@@ -1,18 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package Telas;
 
-/**
- *
- * @author 25.01373-1
- */
 public class TelaEsqueceuSenha extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TelaEsqueceuSenha
-     */
     public TelaEsqueceuSenha() {
         initComponents();
         setResizable(false);

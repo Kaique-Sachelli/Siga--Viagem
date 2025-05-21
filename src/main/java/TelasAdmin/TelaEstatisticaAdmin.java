@@ -1,7 +1,6 @@
 package TelasAdmin;
 
 import javax.swing.JFrame;
-import Telas.*;
 
 
 public class TelaEstatisticaAdmin extends javax.swing.JFrame {

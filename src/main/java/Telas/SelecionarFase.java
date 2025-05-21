@@ -40,7 +40,7 @@ public class SelecionarFase extends javax.swing.JFrame {
         tituloMenuLabel.setPreferredSize(new java.awt.Dimension(320, 75));
         getContentPane().add(tituloMenuLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 430, 80));
 
-        logoMauaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Imagens/logoMaua.png"))); // NOI18N
+        logoMauaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logoMaua.png"))); // NOI18N
         getContentPane().add(logoMauaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 530, 230, 110));
 
         voltarMenuButton.setBackground(new java.awt.Color(246, 246, 246));

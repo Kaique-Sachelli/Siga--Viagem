@@ -1,7 +1,6 @@
 package TelasAdmin;
 
 import javax.swing.*;
-import Telas.*;
 
 
 public class TelaConfiguracoesAdmin extends javax.swing.JFrame {
