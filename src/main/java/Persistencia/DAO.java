@@ -7,7 +7,7 @@ public class DAO {
     public boolean existe (Usuario u) throws Exception {
         //try-with-resources 
         //1.Definir o comando SQL
-        var sql = "SELECT login, senha FROM tb_usuario WHERE login=? AND senha = ?";
+        var sql = "SELECT login, senha FROM usuario WHERE login=? AND senha = ?";
         //2. Estabelecer uma conexão com o SQBD (MySQL)
         
         //3.Preparar o comando 

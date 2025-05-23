@@ -126,7 +126,19 @@ public class TelaLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginTextFieldActionPerformed
+                               
+    }//GEN-LAST:event_loginTextFieldActionPerformed
 
+    private void senhaPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaPasswordFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_senhaPasswordFieldActionPerformed
+
+    private void esqueceuSenhaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_esqueceuSenhaButtonActionPerformed
+        TelaEsqueceuSenha janelaEsqueceuSenha  = new TelaEsqueceuSenha();
+        janelaEsqueceuSenha.setVisible(true);
+    }//GEN-LAST:event_esqueceuSenhaButtonActionPerformed
+
+    private void entrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarButtonActionPerformed
         try{
             var login = loginTextField.getText();
             var senha = new String(senhaPasswordField.getPassword());
@@ -136,7 +148,7 @@ public class TelaLogin extends javax.swing.JFrame {
             var dao = new DAO ();
             //3. Perguntar, por meio do DAO, se o usuario existe ou nao 
             //4. Se existe, dar boas vinndas, senão, avisar que não exist
-            if(dao.existe(u)){
+            if(dao.existe(u) == true){
                 //JOptionPane.showMessageDialog(null,"Bem-vindo");
                 var dt = new TelaMenuUsuario();
                 dt.setVisible(true);
@@ -150,23 +162,9 @@ public class TelaLogin extends javax.swing.JFrame {
             }
         }
         catch(Exception e){
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Sistema indisponivel");
-        }                                           
-    }//GEN-LAST:event_loginTextFieldActionPerformed
-
-    private void senhaPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaPasswordFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_senhaPasswordFieldActionPerformed
-
-    private void esqueceuSenhaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_esqueceuSenhaButtonActionPerformed
-        TelaEsqueceuSenha janelaEsqueceuSenha  = new TelaEsqueceuSenha();
-        janelaEsqueceuSenha.setVisible(true);
-    }//GEN-LAST:event_esqueceuSenhaButtonActionPerformed
-
-    private void entrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarButtonActionPerformed
-        TelaMenuUsuario janelaMenuUsuario = new TelaMenuUsuario(this);
-        janelaMenuUsuario.setVisible(true);
+            e.printStackTrace(); // aparece no console
+            JOptionPane.showMessageDialog(this, "Erro: " + e.getMessage());
+        }            
     }//GEN-LAST:event_entrarButtonActionPerformed
 
     private void criarContaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_criarContaButtonActionPerformed
