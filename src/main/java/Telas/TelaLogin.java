@@ -162,8 +162,8 @@ public class TelaLogin extends javax.swing.JFrame {
             }
         }
         catch(Exception e){
-            e.printStackTrace(); // aparece no console
-            JOptionPane.showMessageDialog(this, "Erro: " + e.getMessage());
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Sistema indisponivel");
         }            
     }//GEN-LAST:event_entrarButtonActionPerformed
 
