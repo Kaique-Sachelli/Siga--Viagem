@@ -15,7 +15,6 @@ public class TelaConfiguracoes extends javax.swing.JFrame {
         this.frame.setVisible(false);
         initComponents();
         setResizable(false);
-
     }
     
     @SuppressWarnings("unchecked")

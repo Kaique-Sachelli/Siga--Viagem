@@ -1,5 +1,6 @@
 java\PessoaDAO.class
 MenuTelas\CriarConta$1.class
+SimulacaoCabine\TelaDeReferencia$1.class
 MenuTelas\TelaConfiguracoes$2.class
 MenuTelasAdmin\TelaMenuAdmin$1.class
 MenuTelasAdmin\TelaMenuAdmin$4.class
@@ -7,6 +8,7 @@ MenuTelas\TelaEstatistica$2.class
 MenuTelas\TelaMenuUsuario$5.class
 MenuTelas\TelaLogin$4.class
 MenuTelas\TelaMenuUsuario$1.class
+SimulacaoCabine\TelaDeReferencia$4.class
 MenuTelas\CriarConta.class
 MenuTelasAdmin\SelecionarFaseAdmin$2.class
 MenuTelasAdmin\TelaConfiguracoesAdmin.class
@@ -20,17 +22,18 @@ SimulacaoCabine\TelaCabine$1.class
 MenuTelas\TelaEsqueceuSenha$1.class
 SimulacaoCabine\TelaCabine.class
 MenuTelasAdmin\TelaConfiguracoesAdmin$2.class
-SimulacaoCabine\TelaCabine$4.class
+SimulacaoCabine\TelaDeReferencia$2.class
 MenuTelasAdmin\TelaMenuAdmin.class
 MenuTelas\TelaLogin.class
 MenuTelasAdmin\TelaMenuAdmin$7.class
+SimulacaoCabine\TelaDeReferencia$5.class
+SimulacaoCabine\TelaDeReferencia.class
 MenuTelas\SelecionarFase.class
 MenuTelasAdmin\SelecionarFaseAdmin$1.class
 MenuTelasAdmin\TelaMenuAdmin$6.class
 MenuTelasAdmin\TelaConfiguracoesAdmin$3.class
 MenuTelasAdmin\TelaEstatisticaAdmin$1.class
 MenuTelas\SelecionarFase$3.class
-SimulacaoCabine\TelaCabine$5.class
 java\Pessoa.class
 MenuTelasAdmin\AlterarUsuario$2.class
 MenuTelasAdmin\TelaMenuAdmin$3.class
@@ -40,6 +43,7 @@ java\ConnectionFactory.class
 MenuTelas\TelaConfiguracoes.class
 MenuTelas\TelaEsqueceuSenha.class
 MenuTelas\TelaMenuUsuario$3.class
+SimulacaoCabine\TelaADU$2.class
 MenuTelas\TelaLogin$2.class
 MenuTelas\SelecionarFase$2.class
 MenuTelasAdmin\SelecionarFaseAdmin.class
@@ -51,10 +55,13 @@ MenuTelas\TelaEstatistica.class
 MenuTelasAdmin\TelaMenuAdmin$2.class
 MenuTelas\TelaMenuUsuario.class
 MenuTelasAdmin\TelaConfiguracoesAdmin$1.class
+SimulacaoCabine\TelaDeReferencia$3.class
 MenuTelas\TelaEstatistica$1.class
 MenuTelas\TelaLogin$3.class
+SimulacaoCabine\TelaADU$1.class
 MenuTelas\CriarConta$2.class
 MenuTelasAdmin\AlterarUsuario$1.class
 MenuTelas\TelaLogin$6.class
 MenuTelas\TelaMenuUsuario$2.class
+SimulacaoCabine\TelaADU.class
 SimulacaoCabine\TelaCabine$2.class
