@@ -6,7 +6,7 @@ public class Usuario {
     private String nome, login, senha;
     boolean instrutor ; 
     
-    public Usuario(String nome, String login, String senha, String categoria){
+    public Usuario(String nome, String login, String senha, boolean instrutor){
         this.nome = nome;
         this.login = login;
         this.senha = senha;
