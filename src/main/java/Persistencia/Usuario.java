@@ -3,7 +3,7 @@ package Persistencia;
 
 public class Usuario {
     private int id;
-    String nome, login, senha;
+    private String nome, login, senha;
     boolean instrutor ; 
     
     public Usuario(String nome, String login, String senha, String categoria){
@@ -11,6 +11,11 @@ public class Usuario {
         this.login = login;
         this.senha = senha;
         this.instrutor = instrutor;
+    }
+    
+    public Usuario(String login, String senha){
+        this.login = login;
+        this.senha = senha;
     }
 
     public String getNome() {

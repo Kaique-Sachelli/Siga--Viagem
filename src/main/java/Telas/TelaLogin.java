@@ -1,5 +1,8 @@
 package Telas;
+import Persistencia.DAO;
+import Persistencia.Usuario;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 public class TelaLogin extends javax.swing.JFrame {
     
@@ -123,7 +126,33 @@ public class TelaLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginTextFieldActionPerformed
-        // TODO add your handling code here:
+
+        try{
+            var login = loginTextField.getText();
+            var senha = new String(senhaPasswordField.getPassword());
+            //1.Construir um usuario ja caracterizado 
+            var u = new Usuario (login, senha);
+            //2.Construir um DAO 
+            var dao = new DAO ();
+            //3. Perguntar, por meio do DAO, se o usuario existe ou nao 
+            //4. Se existe, dar boas vinndas, senão, avisar que não exist
+            if(dao.existe(u)){
+                //JOptionPane.showMessageDialog(null,"Bem-vindo");
+                var dt = new TelaMenuUsuario();
+                dt.setVisible(true);
+                this.dispose();
+            }
+            else {
+                JOptionPane.showMessageDialog(
+                        null, 
+                        "Usuario/senha invalidos"
+                );
+            }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Sistema indisponivel");
+        }                                           
     }//GEN-LAST:event_loginTextFieldActionPerformed
 
     private void senhaPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaPasswordFieldActionPerformed
