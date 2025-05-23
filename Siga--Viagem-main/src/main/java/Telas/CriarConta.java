@@ -34,7 +34,6 @@ public class CriarConta extends javax.swing.JFrame {
         novaSenhaPasswordField1 = new javax.swing.JPasswordField();
         confirmarButton = new javax.swing.JButton();
         mostrarSenhaButton = new javax.swing.JButton();
-        confirmarSenhaButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Criar Conta!");
@@ -67,6 +66,7 @@ public class CriarConta extends javax.swing.JFrame {
         loginLabel.setText("LOGIN:");
         getContentPane().add(loginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 80, -1));
 
+        LoginTextField.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         LoginTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LoginTextFieldActionPerformed(evt);
@@ -79,6 +79,7 @@ public class CriarConta extends javax.swing.JFrame {
         senhaLabel.setText("Nova Senha:");
         getContentPane().add(senhaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, 30));
 
+        confirmarSenhaPasswordField.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         confirmarSenhaPasswordField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 confirmarSenhaPasswordFieldActionPerformed(evt);
@@ -91,6 +92,7 @@ public class CriarConta extends javax.swing.JFrame {
         senhaLabel1.setText("Confirmar Senha: ");
         getContentPane().add(senhaLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, -1, 30));
 
+        novaSenhaPasswordField1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         novaSenhaPasswordField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 novaSenhaPasswordField1ActionPerformed(evt);
@@ -115,13 +117,6 @@ public class CriarConta extends javax.swing.JFrame {
             }
         });
         getContentPane().add(mostrarSenhaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 290, 20, 20));
-
-        confirmarSenhaButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                confirmarSenhaButtonActionPerformed(evt);
-            }
-        });
-        getContentPane().add(confirmarSenhaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 400, 20, 20));
 
         pack();
         setLocationRelativeTo(null);
@@ -153,26 +148,16 @@ private boolean mostrarSenha = false;
         // TODO add your handling code here:
         if(mostrarSenha){
             novaSenhaPasswordField1.setEchoChar('•');
+            confirmarSenhaPasswordField.setEchoChar('•');
             mostrarSenhaButton.setText("Mostrar Senha");
             mostrarSenha = false;
         } else{
             novaSenhaPasswordField1.setEchoChar((char)0);
+            confirmarSenhaPasswordField.setEchoChar((char)0);
             mostrarSenhaButton.setText("Ocultar Senha");
             mostrarSenha = true;
         }
     }//GEN-LAST:event_mostrarSenhaButtonActionPerformed
-private boolean confirmarSenha = false;
-    private void confirmarSenhaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarSenhaButtonActionPerformed
-        if(confirmarSenha){
-            confirmarSenhaPasswordField.setEchoChar('•');
-            confirmarSenhaButton.setText("Mostrar Senha");
-            confirmarSenha = false;
-        } else{
-            confirmarSenhaPasswordField.setEchoChar((char)0);
-            confirmarSenhaButton.setText("Ocultar Senha");
-            confirmarSenha = true;
-        }
-    }//GEN-LAST:event_confirmarSenhaButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -212,7 +197,6 @@ private boolean confirmarSenha = false;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField LoginTextField;
     private javax.swing.JButton confirmarButton;
-    private javax.swing.JButton confirmarSenhaButton;
     private javax.swing.JPasswordField confirmarSenhaPasswordField;
     private javax.swing.JLabel criarContaLabel;
     private javax.swing.JLabel loginLabel;
