@@ -54,7 +54,7 @@ public class CriarConta extends javax.swing.JFrame {
         });
         getContentPane().add(voltarMenuButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 530, 220, 60));
 
-        logoMauaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logoMaua.png"))); // NOI18N
+        logoMauaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/logoMaua.png"))); // NOI18N
         getContentPane().add(logoMauaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 530, 230, 110));
 
         pack();

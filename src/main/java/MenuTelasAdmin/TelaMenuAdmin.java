@@ -36,7 +36,7 @@ public class TelaMenuAdmin extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(960, 640));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Imagens/logoMaua.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/logoMaua.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 520, 230, 110));
 
         tituloMenuLabel.setFont(new java.awt.Font("Impact", 0, 60)); // NOI18N
@@ -122,7 +122,7 @@ public class TelaMenuAdmin extends javax.swing.JFrame {
         });
         getContentPane().add(jogarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 90, 220, 60));
 
-        imagemAdministradorLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/menuAdmin.png"))); // NOI18N
+        imagemAdministradorLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/menuAdmin.png"))); // NOI18N
         getContentPane().add(imagemAdministradorLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 580, 450));
 
         selecionarFaseButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N

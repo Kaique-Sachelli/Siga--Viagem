@@ -38,7 +38,7 @@ public class TelaConfiguracoesAdmin extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(960, 640));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logoMaua.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/logoMaua.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 520, 230, 110));
 
         tituloMenuLabel.setFont(new java.awt.Font("Impact", 0, 60)); // NOI18N
@@ -63,7 +63,7 @@ public class TelaConfiguracoesAdmin extends javax.swing.JFrame {
         jLabel1.setText("Ajustar volume");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 170, -1, 20));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mapaMetro.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/mapaMetro.png"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 580, 450));
 
         voltarMenuButton.setBackground(new java.awt.Color(246, 246, 246));

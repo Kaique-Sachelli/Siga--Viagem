@@ -1,7 +1,5 @@
 package SimulacaoCabine;
 
-import java.awt.Color;
-import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 
 public class TelaCabine extends javax.swing.JFrame {
@@ -27,28 +25,30 @@ public class TelaCabine extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         ADUButton = new javax.swing.JButton();
+        DDUButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cabine");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        ADUButton.setBorder(null);
         ADUButton.setContentAreaFilled(false);
-        ADUButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                ADUButtonMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                ADUButtonMouseExited(evt);
-            }
-        });
+        ADUButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ADUButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ADUButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(ADUButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 230, 200, 90));
+        getContentPane().add(ADUButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, 200, 110));
+
+        DDUButton.setContentAreaFilled(false);
+        DDUButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        DDUButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DDUButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(DDUButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 170, 80));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/01 - Painel (1).jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, -1));
@@ -62,14 +62,11 @@ public class TelaCabine extends javax.swing.JFrame {
         janelaADU.setVisible(true);
     }//GEN-LAST:event_ADUButtonActionPerformed
 
-    private void ADUButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ADUButtonMouseEntered
-        ADUButton.setBorder(BorderFactory.createLineBorder(Color.BLUE, 2));
-    }//GEN-LAST:event_ADUButtonMouseEntered
-
-    private void ADUButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ADUButtonMouseExited
-        ADUButton.setBorder(BorderFactory.createEmptyBorder());
-    }//GEN-LAST:event_ADUButtonMouseExited
-
+    private void DDUButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DDUButtonActionPerformed
+        TelaDDU janelaDDU = new TelaDDU(this);
+        janelaDDU.setVisible(true);
+    }//GEN-LAST:event_DDUButtonActionPerformed
+     
     /**
      * @param args the command line arguments
      */
@@ -107,6 +104,7 @@ public class TelaCabine extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ADUButton;
+    private javax.swing.JButton DDUButton;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JLabel jLabel1;

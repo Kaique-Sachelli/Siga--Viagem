@@ -40,7 +40,7 @@ public class SelecionarFaseAdmin extends javax.swing.JFrame {
         tituloMenuLabel.setPreferredSize(new java.awt.Dimension(320, 75));
         getContentPane().add(tituloMenuLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 430, 80));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logoMaua.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/logoMaua.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 530, 230, 110));
 
         voltarMenuButton.setBackground(new java.awt.Color(246, 246, 246));
@@ -61,7 +61,7 @@ public class SelecionarFaseAdmin extends javax.swing.JFrame {
         getContentPane().add(voltarMenuButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 560, 220, 60));
         getContentPane().add(selecaoFasesLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, -1));
 
-        selecaoDeFasesLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/SeleçãoFases.png"))); // NOI18N
+        selecaoDeFasesLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/SeleçãoFases.png"))); // NOI18N
         getContentPane().add(selecaoDeFasesLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

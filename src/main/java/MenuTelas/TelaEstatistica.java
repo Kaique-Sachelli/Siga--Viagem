@@ -54,7 +54,7 @@ public class TelaEstatistica extends javax.swing.JFrame {
         estatisticasLabel.setForeground(new java.awt.Color(0, 20, 137));
         estatisticasLabel.setText("ESTATÍSTICAS DO JOGADOR");
 
-        linhaAzulLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/linhaAzul.png"))); // NOI18N
+        linhaAzulLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/linhaAzul.png"))); // NOI18N
 
         rankingLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         rankingLabel.setText("Ranking:");

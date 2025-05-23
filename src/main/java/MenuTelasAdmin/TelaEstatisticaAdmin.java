@@ -71,7 +71,7 @@ public class TelaEstatisticaAdmin extends javax.swing.JFrame {
         estatisticasLabel.setText("ESTATÍSTICAS DO JOGADOR");
         getContentPane().add(estatisticasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 640, 80));
 
-        linhaAzulLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/linhaAzul.png"))); // NOI18N
+        linhaAzulLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/linhaAzul.png"))); // NOI18N
         getContentPane().add(linhaAzulLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 70, 640));
 
         rankingLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N

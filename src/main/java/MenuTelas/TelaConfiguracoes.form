@@ -35,7 +35,7 @@
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/images/logoMaua.png"/>
+          <Image iconType="3" name="/MenuImagens/logoMaua.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -84,7 +84,7 @@
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/images/mapaMetro.png"/>
+          <Image iconType="3" name="/MenuImagens/mapaMetro.png"/>
         </Property>
       </Properties>
       <Constraints>

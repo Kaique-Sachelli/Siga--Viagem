@@ -19,6 +19,7 @@ MenuTelasAdmin\AlterarUsuario.class
 MenuTelas\TelaLogin$1.class
 MenuTelas\TelaMenuUsuario$4.class
 SimulacaoCabine\TelaCabine$1.class
+SimulacaoCabine\TelaDDU.class
 MenuTelas\TelaEsqueceuSenha$1.class
 SimulacaoCabine\TelaCabine.class
 MenuTelasAdmin\TelaConfiguracoesAdmin$2.class
@@ -34,6 +35,7 @@ MenuTelasAdmin\TelaMenuAdmin$6.class
 MenuTelasAdmin\TelaConfiguracoesAdmin$3.class
 MenuTelasAdmin\TelaEstatisticaAdmin$1.class
 MenuTelas\SelecionarFase$3.class
+SimulacaoCabine\TelaDDU$2.class
 java\Pessoa.class
 MenuTelasAdmin\AlterarUsuario$2.class
 MenuTelasAdmin\TelaMenuAdmin$3.class
@@ -45,6 +47,7 @@ MenuTelas\TelaEsqueceuSenha.class
 MenuTelas\TelaMenuUsuario$3.class
 SimulacaoCabine\TelaADU$2.class
 MenuTelas\TelaLogin$2.class
+SimulacaoCabine\TelaDDU$1.class
 MenuTelas\SelecionarFase$2.class
 MenuTelasAdmin\SelecionarFaseAdmin.class
 MenuTelasAdmin\TelaMenuAdmin$5.class
