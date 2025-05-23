@@ -31,6 +31,7 @@ public class TelaLogin extends javax.swing.JFrame {
         senhaPasswordField = new javax.swing.JPasswordField();
         entrarButton = new javax.swing.JButton();
         criarContaButton = new javax.swing.JButton();
+        mostrarSenhaButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -51,6 +52,7 @@ public class TelaLogin extends javax.swing.JFrame {
         loginLabel.setText("LOGIN");
         getContentPane().add(loginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 220, -1, -1));
 
+        loginTextField.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         loginTextField.setMinimumSize(new java.awt.Dimension(75, 30));
         loginTextField.setPreferredSize(new java.awt.Dimension(75, 30));
         loginTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -83,6 +85,7 @@ public class TelaLogin extends javax.swing.JFrame {
         });
         getContentPane().add(esqueceuSenhaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 510, 240, 50));
 
+        senhaPasswordField.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         senhaPasswordField.setPreferredSize(new java.awt.Dimension(75, 30));
         senhaPasswordField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,6 +118,13 @@ public class TelaLogin extends javax.swing.JFrame {
         });
         getContentPane().add(criarContaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 460, 240, 50));
 
+        mostrarSenhaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mostrarSenhaButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(mostrarSenhaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 360, 20, 20));
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/login.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
@@ -144,6 +154,19 @@ public class TelaLogin extends javax.swing.JFrame {
         CriarConta janelaConta = new CriarConta(this);
         janelaConta.setVisible(true);
     }//GEN-LAST:event_criarContaButtonActionPerformed
+private boolean mostrarSenha = false;
+    private void mostrarSenhaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarSenhaButtonActionPerformed
+        // TODO add your handling code here:
+        if(mostrarSenha){
+            senhaPasswordField.setEchoChar('•');
+            mostrarSenhaButton.setText("Mostrar Senha");
+            mostrarSenha = false;
+        } else{
+           senhaPasswordField.setEchoChar((char)0);
+            mostrarSenhaButton.setText("Ocultar Senha");
+            mostrarSenha = true;
+        }
+    }//GEN-LAST:event_mostrarSenhaButtonActionPerformed
 
     
     
@@ -189,6 +212,7 @@ public class TelaLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel loginLabel;
     private javax.swing.JTextField loginTextField;
+    private javax.swing.JButton mostrarSenhaButton;
     private javax.swing.JLabel senhaLabel;
     private javax.swing.JPasswordField senhaPasswordField;
     private javax.swing.JLabel tituloMenuLabel;
