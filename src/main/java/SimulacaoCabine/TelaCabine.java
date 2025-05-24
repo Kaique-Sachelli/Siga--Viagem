@@ -29,6 +29,7 @@ public class TelaCabine extends javax.swing.JFrame {
         VDUButton = new javax.swing.JButton();
         ModuloComunicacaoButton = new javax.swing.JButton();
         ReversoraButton = new javax.swing.JButton();
+        SocoConsoleButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -60,7 +61,7 @@ public class TelaCabine extends javax.swing.JFrame {
                 VDUButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(VDUButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 250, 190, 130));
+        getContentPane().add(VDUButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 250, 200, 100));
 
         ModuloComunicacaoButton.setContentAreaFilled(false);
         ModuloComunicacaoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -79,6 +80,15 @@ public class TelaCabine extends javax.swing.JFrame {
             }
         });
         getContentPane().add(ReversoraButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, -1, 60));
+
+        SocoConsoleButton.setContentAreaFilled(false);
+        SocoConsoleButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        SocoConsoleButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SocoConsoleButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(SocoConsoleButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 360, 180, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/01 - Painel (1).jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, -1));
@@ -111,6 +121,11 @@ public class TelaCabine extends javax.swing.JFrame {
         TelaReversoraFrente janelaReversora = new TelaReversoraFrente(this);
         janelaReversora.setVisible(true);
     }//GEN-LAST:event_ReversoraButtonActionPerformed
+
+    private void SocoConsoleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SocoConsoleButtonActionPerformed
+        TelaSocoConsole janelaConsole = new TelaSocoConsole(this);
+        janelaConsole.setVisible(true);
+    }//GEN-LAST:event_SocoConsoleButtonActionPerformed
      
     /**
      * @param args the command line arguments
@@ -152,6 +167,7 @@ public class TelaCabine extends javax.swing.JFrame {
     private javax.swing.JButton DDUButton;
     private javax.swing.JButton ModuloComunicacaoButton;
     private javax.swing.JButton ReversoraButton;
+    private javax.swing.JButton SocoConsoleButton;
     private javax.swing.JButton VDUButton;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
