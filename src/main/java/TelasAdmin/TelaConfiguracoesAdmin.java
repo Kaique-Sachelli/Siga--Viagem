@@ -2,7 +2,6 @@ package TelasAdmin;
 
 import javax.swing.*;
 
-
 public class TelaConfiguracoesAdmin extends javax.swing.JFrame {
 
     private JFrame frame;
@@ -11,11 +10,28 @@ public class TelaConfiguracoesAdmin extends javax.swing.JFrame {
         initComponents();
         setResizable(false);
     }
+    
+    private static int valorDoSlider = 0;
 
+    private void configurarSlider() {
+        jSlider1.setMinimum(0);
+        jSlider1.setMaximum(10);
+        jSlider1.setMajorTickSpacing(1);
+
+        jSlider1.setValue(valorDoSlider);
+        jSlider1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                valorDoSlider = jSlider1.getValue();
+            }
+        });
+
+    }
+    
     public TelaConfiguracoesAdmin(JFrame frame){
         this.frame = frame;
         this.frame.setVisible(false);
         initComponents();
+        configurarSlider();
         setResizable(false);
 
     }
@@ -50,6 +66,15 @@ public class TelaConfiguracoesAdmin extends javax.swing.JFrame {
         getContentPane().add(tituloMenuLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 580, 80));
 
         jSlider1.setCursor(new java.awt.Cursor(java.awt.Cursor.W_RESIZE_CURSOR));
+        jSlider1.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+                jSlider1AncestorMoved(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
         getContentPane().add(jSlider1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 190, 220, 20));
 
         jCheckBox1.setText("Desligar som");
@@ -94,6 +119,10 @@ public class TelaConfiguracoesAdmin extends javax.swing.JFrame {
         frame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_voltarMenuButtonActionPerformed
+
+    private void jSlider1AncestorMoved(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSlider1AncestorMoved
+        jSlider1.setValue(valorDoSlider);
+    }//GEN-LAST:event_jSlider1AncestorMoved
 
     /**
      * @param args the command line arguments

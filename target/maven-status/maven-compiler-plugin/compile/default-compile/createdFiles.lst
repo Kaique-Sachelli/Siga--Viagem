@@ -1,4 +1,3 @@
-java\PessoaDAO.class
 Telas\TelaEstatistica$2.class
 Telas\CriarConta$3.class
 TelasAdmin\TelaMenuAdmin$6.class
@@ -16,6 +15,7 @@ TelasAdmin\TelaConfiguracoesAdmin.class
 TelasAdmin\TelaMenuAdmin$3.class
 Telas\CriarConta.class
 Telas\SelecionarFase.class
+Telas\TelaConfiguracoes$5.class
 Telas\TelaLogin$6.class
 TelasAdmin\TelaMenuAdmin$2.class
 Telas\CriarConta$2.class
@@ -25,6 +25,7 @@ Telas\TelaLogin.class
 TelasAdmin\AlterarUsuario.class
 Telas\CriarConta$6.class
 Telas\TelaEsqueceuSenha$1.class
+TelasAdmin\TelaConfiguracoesAdmin$5.class
 TelasAdmin\TelaMenuAdmin.class
 Telas\TelaMenuUsuario$2.class
 Telas\TelaLogin$5.class
@@ -32,18 +33,17 @@ Telas\TelaMenuUsuario$3.class
 TelasAdmin\TelaEstatisticaAdmin$1.class
 TelasAdmin\SelecionarFaseAdmin$2.class
 TelasAdmin\TelaMenuAdmin$1.class
-java\Pessoa.class
 Telas\TelaConfiguracoes$2.class
 Telas\TelaMenuUsuario$6.class
 Telas\TelaMenuUsuario.class
 Telas\TelaConfiguracoes$3.class
 TelasAdmin\TelaConfiguracoesAdmin$1.class
-java\ConnectionFactory.class
 Telas\TelaLogin$2.class
 Telas\SelecionarFase$3.class
 Telas\CriarConta$5.class
 Telas\TelaEsqueceuSenha.class
 Telas\TelaConfiguracoes.class
+TelasAdmin\TelaConfiguracoesAdmin$4.class
 Telas\CriarConta$4.class
 TelasAdmin\TelaMenuAdmin$7.class
 TelasAdmin\TelaEstatisticaAdmin.class
@@ -57,4 +57,5 @@ TelasAdmin\SelecionarFaseAdmin$1.class
 Telas\CriarConta$1.class
 Telas\TelaConfiguracoes$1.class
 TelasAdmin\AlterarUsuario$1.class
+Telas\TelaConfiguracoes$4.class
 Telas\TelaLogin$1.class

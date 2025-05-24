@@ -1,4 +1,4 @@
-package java;
+package Persistencia;
 
 public class Pessoa {
     private int codigo;

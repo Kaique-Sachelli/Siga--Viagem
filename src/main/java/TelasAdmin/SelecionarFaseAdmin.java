@@ -1,7 +1,6 @@
 package TelasAdmin;
 import javax.swing.JFrame;
 
-
 public class SelecionarFaseAdmin extends javax.swing.JFrame {
 
     private JFrame frame;
