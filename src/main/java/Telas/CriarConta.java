@@ -26,7 +26,14 @@ public class CriarConta extends javax.swing.JFrame {
 
         criarContaLabel = new javax.swing.JLabel();
         voltarMenuButton = new javax.swing.JButton();
-        logoMauaLabel = new javax.swing.JLabel();
+        loginLabel = new javax.swing.JLabel();
+        LoginTextField = new javax.swing.JTextField();
+        senhaLabel = new javax.swing.JLabel();
+        confirmarSenhaPasswordField = new javax.swing.JPasswordField();
+        senhaLabel1 = new javax.swing.JLabel();
+        novaSenhaPasswordField1 = new javax.swing.JPasswordField();
+        confirmarButton = new javax.swing.JButton();
+        mostrarSenhaButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Criar Conta!");
@@ -52,10 +59,64 @@ public class CriarConta extends javax.swing.JFrame {
                 voltarMenuButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(voltarMenuButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 530, 220, 60));
+        getContentPane().add(voltarMenuButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 540, 220, 60));
 
-        logoMauaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logoMaua.png"))); // NOI18N
-        getContentPane().add(logoMauaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 530, 230, 110));
+        loginLabel.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        loginLabel.setForeground(new java.awt.Color(0, 20, 137));
+        loginLabel.setText("LOGIN:");
+        getContentPane().add(loginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 80, -1));
+
+        LoginTextField.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        LoginTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoginTextFieldActionPerformed(evt);
+            }
+        });
+        getContentPane().add(LoginTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 510, 50));
+
+        senhaLabel.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        senhaLabel.setForeground(new java.awt.Color(0, 20, 137));
+        senhaLabel.setText("Nova Senha:");
+        getContentPane().add(senhaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, 30));
+
+        confirmarSenhaPasswordField.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        confirmarSenhaPasswordField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                confirmarSenhaPasswordFieldActionPerformed(evt);
+            }
+        });
+        getContentPane().add(confirmarSenhaPasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 510, 50));
+
+        senhaLabel1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        senhaLabel1.setForeground(new java.awt.Color(0, 20, 137));
+        senhaLabel1.setText("Confirmar Senha: ");
+        getContentPane().add(senhaLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, -1, 30));
+
+        novaSenhaPasswordField1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        novaSenhaPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                novaSenhaPasswordField1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(novaSenhaPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 510, 50));
+
+        confirmarButton.setBackground(new java.awt.Color(0, 20, 137));
+        confirmarButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        confirmarButton.setForeground(new java.awt.Color(255, 255, 255));
+        confirmarButton.setText("CONFIRMAR");
+        confirmarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                confirmarButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(confirmarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 520, 220, 60));
+
+        mostrarSenhaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mostrarSenhaButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(mostrarSenhaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 290, 20, 20));
 
         pack();
         setLocationRelativeTo(null);
@@ -65,6 +126,38 @@ public class CriarConta extends javax.swing.JFrame {
         frame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_voltarMenuButtonActionPerformed
+
+    private void LoginTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginTextFieldActionPerformed
+        dispose();
+    }//GEN-LAST:event_LoginTextFieldActionPerformed
+
+    private void confirmarSenhaPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarSenhaPasswordFieldActionPerformed
+        dispose();
+    }//GEN-LAST:event_confirmarSenhaPasswordFieldActionPerformed
+
+    private void novaSenhaPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_novaSenhaPasswordField1ActionPerformed
+        dispose();
+    }//GEN-LAST:event_novaSenhaPasswordField1ActionPerformed
+
+    private void confirmarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarButtonActionPerformed
+        TelaLogin loginUsuario = new TelaLogin(this);
+        loginUsuario.setVisible(true);
+    }//GEN-LAST:event_confirmarButtonActionPerformed
+private boolean mostrarSenha = false;
+    private void mostrarSenhaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarSenhaButtonActionPerformed
+        // TODO add your handling code here:
+        if(mostrarSenha){
+            novaSenhaPasswordField1.setEchoChar('•');
+            confirmarSenhaPasswordField.setEchoChar('•');
+            mostrarSenhaButton.setText("Mostrar Senha");
+            mostrarSenha = false;
+        } else{
+            novaSenhaPasswordField1.setEchoChar((char)0);
+            confirmarSenhaPasswordField.setEchoChar((char)0);
+            mostrarSenhaButton.setText("Ocultar Senha");
+            mostrarSenha = true;
+        }
+    }//GEN-LAST:event_mostrarSenhaButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -102,8 +195,15 @@ public class CriarConta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField LoginTextField;
+    private javax.swing.JButton confirmarButton;
+    private javax.swing.JPasswordField confirmarSenhaPasswordField;
     private javax.swing.JLabel criarContaLabel;
-    private javax.swing.JLabel logoMauaLabel;
+    private javax.swing.JLabel loginLabel;
+    private javax.swing.JButton mostrarSenhaButton;
+    private javax.swing.JPasswordField novaSenhaPasswordField1;
+    private javax.swing.JLabel senhaLabel;
+    private javax.swing.JLabel senhaLabel1;
     private javax.swing.JButton voltarMenuButton;
     // End of variables declaration//GEN-END:variables
 }
