@@ -2,15 +2,15 @@ package SimulacaoCabine;
 
 import javax.swing.JFrame;
 
-public class TelaReversora extends javax.swing.JFrame {
+public class TelaReversoraNeutro extends javax.swing.JFrame {
 
     private JFrame frame;
     
-    public TelaReversora() {
+    public TelaReversoraNeutro() {
         initComponents();
     }
 
-    public TelaReversora(JFrame frame) {
+    public TelaReversoraNeutro(JFrame frame) {
         this();
         frame.setVisible(false);
         this.frame = frame;
@@ -22,10 +22,11 @@ public class TelaReversora extends javax.swing.JFrame {
     private void initComponents() {
 
         SetaBaixoButton = new javax.swing.JButton();
-        ReversoraFrenteLabel = new javax.swing.JLabel();
+        ReversoraNeutroButton = new javax.swing.JButton();
+        ReversoraNeutroLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tela Reversora");
+        setTitle("Tela Reversora Neutro");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         SetaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
@@ -39,8 +40,17 @@ public class TelaReversora extends javax.swing.JFrame {
         });
         getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        ReversoraFrenteLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/08 - Reversora em frente (1).jpg"))); // NOI18N
-        getContentPane().add(ReversoraFrenteLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        ReversoraNeutroButton.setContentAreaFilled(false);
+        ReversoraNeutroButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ReversoraNeutroButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ReversoraNeutroButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ReversoraNeutroButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 530, 350));
+
+        ReversoraNeutroLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Reversora em neutro (1).jpg"))); // NOI18N
+        getContentPane().add(ReversoraNeutroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -50,6 +60,11 @@ public class TelaReversora extends javax.swing.JFrame {
         frame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_SetaBaixoButtonActionPerformed
+
+    private void ReversoraNeutroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReversoraNeutroButtonActionPerformed
+        TelaReversoraFrente janelaFrente = new TelaReversoraFrente(this);
+        janelaFrente.setVisible(true);
+    }//GEN-LAST:event_ReversoraNeutroButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -68,26 +83,27 @@ public class TelaReversora extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaReversora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaReversoraNeutro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaReversora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaReversoraNeutro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaReversora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaReversoraNeutro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaReversora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaReversoraNeutro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaReversora().setVisible(true);
+                new TelaReversoraNeutro().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel ReversoraFrenteLabel;
+    private javax.swing.JButton ReversoraNeutroButton;
+    private javax.swing.JLabel ReversoraNeutroLabel;
     private javax.swing.JButton SetaBaixoButton;
     // End of variables declaration//GEN-END:variables
 }

@@ -78,7 +78,7 @@ public class TelaCabine extends javax.swing.JFrame {
                 ReversoraButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(ReversoraButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 340, -1, 30));
+        getContentPane().add(ReversoraButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, -1, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/01 - Painel (1).jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, -1));
@@ -108,7 +108,7 @@ public class TelaCabine extends javax.swing.JFrame {
     }//GEN-LAST:event_ModuloComunicacaoButtonActionPerformed
 
     private void ReversoraButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReversoraButtonActionPerformed
-        TelaReversora janelaReversora = new TelaReversora(this);
+        TelaReversoraFrente janelaReversora = new TelaReversoraFrente(this);
         janelaReversora.setVisible(true);
     }//GEN-LAST:event_ReversoraButtonActionPerformed
      

@@ -1,5 +1,5 @@
-SimulacaoCabine\TelaReversora.class
 MenuTelas\CriarConta$1.class
+SimulacaoCabine\TelaReversoraFrente$2.class
 MenuTelas\TelaMenuUsuario$5.class
 MenuTelasAdmin\TelaConfiguracoesAdmin$5.class
 MenuTelas\CriarConta.class
@@ -7,6 +7,7 @@ MenuTelasAdmin\TelaConfiguracoesAdmin.class
 SimulacaoCabine\TelaCabine$3.class
 MenuTelas\TelaConfiguracoes$1.class
 Persistencia\DAO.class
+SimulacaoCabine\TelaReversoraNeutro$3.class
 MenuTelasAdmin\TelaConfiguracoesAdmin$2.class
 SimulacaoCabine\TelaDeReferencia$2.class
 SimulacaoCabine\TelaModuloComunicacao.class
@@ -28,6 +29,7 @@ MenuTelas\TelaMenuUsuario$3.class
 SimulacaoCabine\TelaListaPAS$1.class
 MenuTelas\SelecionarFase$2.class
 MenuTelasAdmin\SelecionarFaseAdmin.class
+SimulacaoCabine\TelaReversoraFrente$1.class
 MenuTelas\CriarConta$5.class
 MenuTelas\TelaConfiguracoes$3.class
 SimulacaoCabine\TelaVDU$1.class
@@ -48,7 +50,6 @@ MenuTelas\TelaConfiguracoes$2.class
 MenuTelasAdmin\TelaMenuAdmin$1.class
 MenuTelasAdmin\TelaMenuAdmin$4.class
 MenuTelas\TelaEstatistica$2.class
-SimulacaoCabine\TelaReversora$2.class
 SimulacaoCabine\TelaModuloComunicacao$3.class
 MenuTelas\TelaLogin$4.class
 MenuTelas\TelaMenuUsuario$1.class
@@ -62,6 +63,7 @@ SimulacaoCabine\TelaCabine$1.class
 SimulacaoCabine\TelaDDU.class
 MenuTelas\TelaEsqueceuSenha$1.class
 SimulacaoCabine\TelaCabine.class
+SimulacaoCabine\TelaReversoraFrente.class
 SimulacaoCabine\TelaVDU.class
 SimulacaoCabine\TelaCabine$4.class
 MenuTelas\TelaConfiguracoes$5.class
@@ -72,9 +74,10 @@ MenuTelasAdmin\TelaMenuAdmin$6.class
 MenuTelasAdmin\TelaConfiguracoesAdmin$3.class
 MenuTelasAdmin\TelaEstatisticaAdmin$1.class
 SimulacaoCabine\TelaCabine$5.class
+SimulacaoCabine\TelaReversoraNeutro$2.class
 SimulacaoCabine\TelaDDU$2.class
 MenuTelas\CriarConta$3.class
-SimulacaoCabine\TelaReversora$1.class
+SimulacaoCabine\TelaReversoraFrente$3.class
 MenuTelas\TelaMenuUsuario$6.class
 SimulacaoCabine\TelaModuloComunicacao$1.class
 MenuTelas\TelaEsqueceuSenha.class
@@ -91,7 +94,9 @@ MenuTelasAdmin\TelaEstatisticaAdmin$2.class
 MenuTelas\TelaEstatistica.class
 MenuTelas\TelaMenuUsuario.class
 SimulacaoCabine\TelaModuloComunicacao$2.class
+SimulacaoCabine\TelaReversoraNeutro.class
 SimulacaoCabine\TelaDeReferencia$3.class
+SimulacaoCabine\TelaReversoraNeutro$1.class
 MenuTelas\TelaLogin$3.class
 SimulacaoCabine\TelaADU$1.class
 MenuTelas\CriarConta$2.class
