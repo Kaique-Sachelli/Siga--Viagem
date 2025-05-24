@@ -1,4 +1,4 @@
-package Persistencia;
+// package java;
 /*
 import static javax.swing.JOptionPane.*;
 import static java.lang.Integer.parseInt;

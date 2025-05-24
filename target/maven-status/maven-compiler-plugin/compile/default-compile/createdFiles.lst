@@ -5,6 +5,7 @@ MenuTelas\CriarConta.class
 MenuTelasAdmin\TelaConfiguracoesAdmin.class
 SimulacaoCabine\TelaCabine$3.class
 MenuTelas\TelaConfiguracoes$1.class
+Persistencia\DAO.class
 MenuTelasAdmin\TelaConfiguracoesAdmin$2.class
 SimulacaoCabine\TelaDeReferencia$2.class
 MenuTelas\CriarConta$4.class
@@ -69,6 +70,7 @@ MenuTelas\TelaLogin$2.class
 SimulacaoCabine\TelaDDU$1.class
 MenuTelasAdmin\TelaMenuAdmin$5.class
 Persistencia\ConnectionFactory.class
+Persistencia\Usuario.class
 MenuTelasAdmin\TelaEstatisticaAdmin.class
 MenuTelasAdmin\TelaEstatisticaAdmin$2.class
 MenuTelas\TelaEstatistica.class

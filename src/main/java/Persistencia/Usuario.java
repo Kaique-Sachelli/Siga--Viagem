@@ -1,0 +1,38 @@
+package Persistencia;
+
+
+public class Usuario {
+    private int id;
+    private String nome, login, senha;
+    boolean instrutor ; 
+    
+    public Usuario(String nome, String login, String senha, boolean instrutor){
+        this.nome = nome;
+        this.login = login;
+        this.senha = senha;
+        this.instrutor = instrutor;
+    }
+    
+    public Usuario(String login, String senha){
+        this.login = login;
+        this.senha = senha;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+    
+    public boolean getInstrutor(){
+        return instrutor;
+        
+    }
+}
+    

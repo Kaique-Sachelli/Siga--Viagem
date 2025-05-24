@@ -6,12 +6,11 @@ import java.sql.DriverManager;
 public class ConnectionFactory {
     private String host = "localhost";
     private String port = "3306";
-    private String db = "20251_maua_tti101_t3_sub1_pessoas";
+    private String db = "simulador";
     private String user = "root";
-    private String password = "123456"; //máquinas da Mauá: imtdb    
+    private String password = "imtdb"; //máquinas da Mauá: imtdb    
     public Connection obterConexao() throws Exception{
-        //http://google.com.br:80/search
-        //http://github.com:80/professorbossini
+
         //string de conexão
         var s = String.format(
             "jdbc:mysql://%s:%s/%s",
