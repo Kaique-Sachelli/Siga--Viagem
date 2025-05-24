@@ -26,6 +26,7 @@ public class TelaCabine extends javax.swing.JFrame {
         buttonGroup2 = new javax.swing.ButtonGroup();
         ADUButton = new javax.swing.JButton();
         DDUButton = new javax.swing.JButton();
+        VDUButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -50,6 +51,15 @@ public class TelaCabine extends javax.swing.JFrame {
         });
         getContentPane().add(DDUButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 170, 80));
 
+        VDUButton.setContentAreaFilled(false);
+        VDUButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        VDUButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VDUButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(VDUButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 250, 190, 130));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/01 - Painel (1).jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, -1));
 
@@ -66,6 +76,11 @@ public class TelaCabine extends javax.swing.JFrame {
         TelaDDU janelaDDU = new TelaDDU(this);
         janelaDDU.setVisible(true);
     }//GEN-LAST:event_DDUButtonActionPerformed
+
+    private void VDUButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VDUButtonActionPerformed
+        TelaVDU janelaVDU = new TelaVDU(this);
+        janelaVDU.setVisible(true);
+    }//GEN-LAST:event_VDUButtonActionPerformed
      
     /**
      * @param args the command line arguments
@@ -105,6 +120,7 @@ public class TelaCabine extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ADUButton;
     private javax.swing.JButton DDUButton;
+    private javax.swing.JButton VDUButton;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JLabel jLabel1;

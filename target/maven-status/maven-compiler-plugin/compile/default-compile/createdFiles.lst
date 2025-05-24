@@ -15,6 +15,7 @@ SimulacaoCabine\TelaDeReferencia$5.class
 SimulacaoCabine\TelaDeReferencia.class
 MenuTelas\CriarConta$7.class
 MenuTelas\CriarConta$6.class
+SimulacaoCabine\TelaVDU$2.class
 MenuTelas\SelecionarFase$3.class
 MenuTelasAdmin\AlterarUsuario$2.class
 MenuTelasAdmin\TelaMenuAdmin$3.class
@@ -26,6 +27,7 @@ MenuTelas\SelecionarFase$2.class
 MenuTelasAdmin\SelecionarFaseAdmin.class
 MenuTelas\CriarConta$5.class
 MenuTelas\TelaConfiguracoes$3.class
+SimulacaoCabine\TelaVDU$1.class
 MenuTelasAdmin\TelaMenuAdmin$2.class
 MenuTelasAdmin\TelaConfiguracoesAdmin$1.class
 MenuTelas\TelaEstatistica$1.class
@@ -54,6 +56,8 @@ SimulacaoCabine\TelaCabine$1.class
 SimulacaoCabine\TelaDDU.class
 MenuTelas\TelaEsqueceuSenha$1.class
 SimulacaoCabine\TelaCabine.class
+SimulacaoCabine\TelaVDU.class
+SimulacaoCabine\TelaCabine$4.class
 MenuTelas\TelaConfiguracoes$5.class
 MenuTelasAdmin\TelaMenuAdmin$7.class
 MenuTelas\SelecionarFase.class
