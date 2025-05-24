@@ -30,6 +30,7 @@ public class TelaCabine extends javax.swing.JFrame {
         ModuloComunicacaoButton = new javax.swing.JButton();
         ReversoraButton = new javax.swing.JButton();
         SocoConsoleButton = new javax.swing.JButton();
+        ChavesPainelButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -90,6 +91,15 @@ public class TelaCabine extends javax.swing.JFrame {
         });
         getContentPane().add(SocoConsoleButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 360, 180, 60));
 
+        ChavesPainelButton.setContentAreaFilled(false);
+        ChavesPainelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ChavesPainelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChavesPainelButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ChavesPainelButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(576, 230, 120, 110));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/01 - Painel (1).jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, -1));
 
@@ -126,6 +136,11 @@ public class TelaCabine extends javax.swing.JFrame {
         TelaSocoConsole janelaConsole = new TelaSocoConsole(this);
         janelaConsole.setVisible(true);
     }//GEN-LAST:event_SocoConsoleButtonActionPerformed
+
+    private void ChavesPainelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChavesPainelButtonActionPerformed
+        TelaChavesPainel janelaChavesPainel = new TelaChavesPainel(this);
+        janelaChavesPainel.setVisible(true);
+    }//GEN-LAST:event_ChavesPainelButtonActionPerformed
      
     /**
      * @param args the command line arguments
@@ -164,6 +179,7 @@ public class TelaCabine extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ADUButton;
+    private javax.swing.JButton ChavesPainelButton;
     private javax.swing.JButton DDUButton;
     private javax.swing.JButton ModuloComunicacaoButton;
     private javax.swing.JButton ReversoraButton;
