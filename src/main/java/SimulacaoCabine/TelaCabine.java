@@ -31,6 +31,7 @@ public class TelaCabine extends javax.swing.JFrame {
         ReversoraButton = new javax.swing.JButton();
         SocoConsoleButton = new javax.swing.JButton();
         ChavesPainelButton = new javax.swing.JButton();
+        LimpadorParabrisaButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -100,6 +101,15 @@ public class TelaCabine extends javax.swing.JFrame {
         });
         getContentPane().add(ChavesPainelButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(576, 230, 120, 110));
 
+        LimpadorParabrisaButton.setContentAreaFilled(false);
+        LimpadorParabrisaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LimpadorParabrisaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LimpadorParabrisaButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(LimpadorParabrisaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 357, 150, 30));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/01 - Painel (1).jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, -1));
 
@@ -141,6 +151,11 @@ public class TelaCabine extends javax.swing.JFrame {
         TelaChavesPainel janelaChavesPainel = new TelaChavesPainel(this);
         janelaChavesPainel.setVisible(true);
     }//GEN-LAST:event_ChavesPainelButtonActionPerformed
+
+    private void LimpadorParabrisaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LimpadorParabrisaButtonActionPerformed
+        TelaLimpadorParabrisa janelaLimpadorParabrisa = new TelaLimpadorParabrisa(this);
+        janelaLimpadorParabrisa.setVisible(true);
+    }//GEN-LAST:event_LimpadorParabrisaButtonActionPerformed
      
     /**
      * @param args the command line arguments
@@ -181,6 +196,7 @@ public class TelaCabine extends javax.swing.JFrame {
     private javax.swing.JButton ADUButton;
     private javax.swing.JButton ChavesPainelButton;
     private javax.swing.JButton DDUButton;
+    private javax.swing.JButton LimpadorParabrisaButton;
     private javax.swing.JButton ModuloComunicacaoButton;
     private javax.swing.JButton ReversoraButton;
     private javax.swing.JButton SocoConsoleButton;

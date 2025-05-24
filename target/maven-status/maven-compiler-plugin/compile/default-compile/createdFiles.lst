@@ -13,6 +13,7 @@ SimulacaoCabine\TelaReversoraNeutro$3.class
 MenuTelasAdmin\TelaConfiguracoesAdmin$2.class
 SimulacaoCabine\TelaDeReferencia$2.class
 SimulacaoCabine\TelaModuloComunicacao.class
+SimulacaoCabine\TelaLimpadorParabrisa.class
 MenuTelas\CriarConta$4.class
 SimulacaoCabine\TelaSocoConsole$1.class
 MenuTelasAdmin\TelaMenuAdmin.class
@@ -24,6 +25,7 @@ SimulacaoCabine\TelaChavesPainel$3.class
 MenuTelas\CriarConta$6.class
 SimulacaoCabine\TelaVDU$2.class
 MenuTelas\SelecionarFase$3.class
+SimulacaoCabine\TelaCabine$9.class
 MenuTelasAdmin\AlterarUsuario$2.class
 SimulacaoCabine\TelaSocoConsole.class
 MenuTelasAdmin\TelaMenuAdmin$3.class
@@ -79,6 +81,7 @@ SimulacaoCabine\TelaChavesPainel$1.class
 MenuTelas\SelecionarFase.class
 MenuTelasAdmin\SelecionarFaseAdmin$1.class
 MenuTelasAdmin\TelaMenuAdmin$6.class
+SimulacaoCabine\TelaLimpadorParabrisa$2.class
 MenuTelasAdmin\TelaConfiguracoesAdmin$3.class
 MenuTelasAdmin\TelaEstatisticaAdmin$1.class
 SimulacaoCabine\TelaCabine$5.class
@@ -94,6 +97,7 @@ SimulacaoCabine\TelaCabine$6.class
 SimulacaoCabine\TelaADU$2.class
 MenuTelas\TelaLogin$2.class
 SimulacaoCabine\TelaDDU$1.class
+SimulacaoCabine\TelaLimpadorParabrisa$1.class
 MenuTelasAdmin\TelaMenuAdmin$5.class
 Persistencia\ConnectionFactory.class
 Persistencia\Usuario.class
