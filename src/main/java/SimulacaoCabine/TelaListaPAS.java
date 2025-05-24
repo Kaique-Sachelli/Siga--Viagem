@@ -2,19 +2,18 @@ package SimulacaoCabine;
 
 import javax.swing.JFrame;
 
-public class TelaModuloComunicacao extends javax.swing.JFrame {
+public class TelaListaPAS extends javax.swing.JFrame {
 
     private JFrame frame;
     
-    public TelaModuloComunicacao() {
+    public TelaListaPAS() {
         initComponents();
-        setResizable(false);
     }
-
-    public TelaModuloComunicacao(JFrame frame) {
+    
+    public TelaListaPAS(JFrame frame) {
+        this();
+        frame.setVisible(false);
         this.frame = frame;
-        this.frame.setVisible(false);
-        initComponents();
         setResizable(false);
     }
     
@@ -23,11 +22,10 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
     private void initComponents() {
 
         SetaBaixoButton = new javax.swing.JButton();
-        ListaPASButton = new javax.swing.JButton();
-        ModuloComunicacaoLabel = new javax.swing.JLabel();
+        ListaPASLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tela Modulo Comunicacao");
+        setTitle("Tela Lista PAS");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         SetaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
@@ -41,17 +39,8 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
         });
         getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        ListaPASButton.setContentAreaFilled(false);
-        ListaPASButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ListaPASButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ListaPASButtonActionPerformed(evt);
-            }
-        });
-        getContentPane().add(ListaPASButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 60, 50));
-
-        ModuloComunicacaoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/05 - Módulo de Comunicação - tela de início (1).jpg"))); // NOI18N
-        getContentPane().add(ModuloComunicacaoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        ListaPASLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/05A Módulo de Comunicação - Lista de PA's E1 (1).jpg"))); // NOI18N
+        getContentPane().add(ListaPASLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
@@ -61,11 +50,6 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
         frame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_SetaBaixoButtonActionPerformed
-
-    private void ListaPASButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListaPASButtonActionPerformed
-        TelaListaPAS janelaPAS = new TelaListaPAS(this);
-        janelaPAS.setVisible(true);
-    }//GEN-LAST:event_ListaPASButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -84,27 +68,26 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaModuloComunicacao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaListaPAS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaModuloComunicacao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaListaPAS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaModuloComunicacao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaListaPAS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaModuloComunicacao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaListaPAS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaModuloComunicacao().setVisible(true);
+                new TelaListaPAS().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ListaPASButton;
-    private javax.swing.JLabel ModuloComunicacaoLabel;
+    private javax.swing.JLabel ListaPASLabel;
     private javax.swing.JButton SetaBaixoButton;
     // End of variables declaration//GEN-END:variables
 }
