@@ -1,4 +1,5 @@
 MenuTelas\CriarConta$1.class
+SimulacaoCabine\TelaPainelDeAcesso$3.class
 SimulacaoCabine\TelaReversoraFrente$2.class
 MenuTelas\TelaMenuUsuario$5.class
 SimulacaoCabine\TelaChavesPainel.class
@@ -34,12 +35,14 @@ MenuTelas\TelaLogin$5.class
 MenuTelas\TelaConfiguracoes$4.class
 MenuTelas\TelaConfiguracoes.class
 MenuTelas\TelaMenuUsuario$3.class
+SimulacaoCabine\TelaPainelDeControle$1.class
 SimulacaoCabine\TelaListaPAS$1.class
 MenuTelas\SelecionarFase$2.class
 MenuTelasAdmin\SelecionarFaseAdmin.class
 SimulacaoCabine\TelaReversoraFrente$1.class
 SimulacaoCabine\TelaCabine$8.class
 MenuTelas\CriarConta$5.class
+SimulacaoCabine\TelaPainelDeControle.class
 MenuTelas\TelaConfiguracoes$3.class
 SimulacaoCabine\TelaVDU$1.class
 MenuTelasAdmin\TelaMenuAdmin$2.class
@@ -54,6 +57,7 @@ SimulacaoCabine\TelaADU.class
 SimulacaoCabine\TelaCabine$2.class
 SimulacaoCabine\TelaCabine$7.class
 MenuTelas\TelaLogin$7.class
+SimulacaoCabine\TelaPainelDeControle$2.class
 Persistencia\PessoaDAO.class
 SimulacaoCabine\TelaDeReferencia$1.class
 MenuTelas\TelaConfiguracoes$2.class

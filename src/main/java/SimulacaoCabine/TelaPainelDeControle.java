@@ -2,16 +2,15 @@ package SimulacaoCabine;
 
 import javax.swing.JFrame;
 
-public class TelaPainelDeAcesso extends javax.swing.JFrame {
+public class TelaPainelDeControle extends javax.swing.JFrame {
 
     private JFrame frame;
     
-    public TelaPainelDeAcesso() {
+    public TelaPainelDeControle() {
         initComponents();
-        setResizable(false);
     }
 
-    public TelaPainelDeAcesso(JFrame frame) {
+    public TelaPainelDeControle(JFrame frame) {
         this();
         frame.setVisible(false);
         this.frame = frame;
@@ -23,11 +22,10 @@ public class TelaPainelDeAcesso extends javax.swing.JFrame {
     private void initComponents() {
 
         SetaBaixoButton = new javax.swing.JButton();
-        PainelDeControleButton = new javax.swing.JButton();
-        PainelDeAcessoLabel = new javax.swing.JLabel();
+        PainelDeControleLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tela Painel de Acesso");
+        setTitle("Tela Painel de Controle");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         SetaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
@@ -41,17 +39,8 @@ public class TelaPainelDeAcesso extends javax.swing.JFrame {
         });
         getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        PainelDeControleButton.setContentAreaFilled(false);
-        PainelDeControleButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        PainelDeControleButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PainelDeControleButtonActionPerformed(evt);
-            }
-        });
-        getContentPane().add(PainelDeControleButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(289, 200, 330, 250));
-
-        PainelDeAcessoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Painel_de_Acesso_em_Metal_Escovado (1).png"))); // NOI18N
-        getContentPane().add(PainelDeAcessoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        PainelDeControleLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Painel_de_Controle_em_Metal_Industrial (1).png"))); // NOI18N
+        getContentPane().add(PainelDeControleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
@@ -61,11 +50,6 @@ public class TelaPainelDeAcesso extends javax.swing.JFrame {
         frame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_SetaBaixoButtonActionPerformed
-
-    private void PainelDeControleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PainelDeControleButtonActionPerformed
-        TelaPainelDeControle janelaPainelDeControle = new TelaPainelDeControle(this);
-        janelaPainelDeControle.setVisible(true);
-    }//GEN-LAST:event_PainelDeControleButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -84,27 +68,26 @@ public class TelaPainelDeAcesso extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaPainelDeAcesso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPainelDeControle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaPainelDeAcesso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPainelDeControle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaPainelDeAcesso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPainelDeControle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaPainelDeAcesso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPainelDeControle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaPainelDeAcesso().setVisible(true);
+                new TelaPainelDeControle().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel PainelDeAcessoLabel;
-    private javax.swing.JButton PainelDeControleButton;
+    private javax.swing.JLabel PainelDeControleLabel;
     private javax.swing.JButton SetaBaixoButton;
     // End of variables declaration//GEN-END:variables
 }
