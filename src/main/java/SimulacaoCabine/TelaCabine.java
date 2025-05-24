@@ -24,23 +24,15 @@ public class TelaCabine extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
-        ADUButton = new javax.swing.JButton();
         DDUButton = new javax.swing.JButton();
+        ADUButton = new javax.swing.JButton();
         VDUButton = new javax.swing.JButton();
+        ModuloComunicacaoButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cabine");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        ADUButton.setContentAreaFilled(false);
-        ADUButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ADUButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ADUButtonActionPerformed(evt);
-            }
-        });
-        getContentPane().add(ADUButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, 200, 110));
 
         DDUButton.setContentAreaFilled(false);
         DDUButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -51,6 +43,15 @@ public class TelaCabine extends javax.swing.JFrame {
         });
         getContentPane().add(DDUButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 170, 80));
 
+        ADUButton.setContentAreaFilled(false);
+        ADUButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ADUButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ADUButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ADUButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, 200, 110));
+
         VDUButton.setContentAreaFilled(false);
         VDUButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         VDUButton.addActionListener(new java.awt.event.ActionListener() {
@@ -59,6 +60,15 @@ public class TelaCabine extends javax.swing.JFrame {
             }
         });
         getContentPane().add(VDUButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 250, 190, 130));
+
+        ModuloComunicacaoButton.setContentAreaFilled(false);
+        ModuloComunicacaoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ModuloComunicacaoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModuloComunicacaoButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ModuloComunicacaoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 100, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/01 - Painel (1).jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, -1));
@@ -81,6 +91,11 @@ public class TelaCabine extends javax.swing.JFrame {
         TelaVDU janelaVDU = new TelaVDU(this);
         janelaVDU.setVisible(true);
     }//GEN-LAST:event_VDUButtonActionPerformed
+
+    private void ModuloComunicacaoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModuloComunicacaoButtonActionPerformed
+        TelaModuloComunicacao janelaModulo= new TelaModuloComunicacao(this);
+        janelaModulo.setVisible(true);
+    }//GEN-LAST:event_ModuloComunicacaoButtonActionPerformed
      
     /**
      * @param args the command line arguments
@@ -120,6 +135,7 @@ public class TelaCabine extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ADUButton;
     private javax.swing.JButton DDUButton;
+    private javax.swing.JButton ModuloComunicacaoButton;
     private javax.swing.JButton VDUButton;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;

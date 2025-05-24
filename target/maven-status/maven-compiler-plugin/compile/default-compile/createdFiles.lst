@@ -8,6 +8,7 @@ MenuTelas\TelaConfiguracoes$1.class
 Persistencia\DAO.class
 MenuTelasAdmin\TelaConfiguracoesAdmin$2.class
 SimulacaoCabine\TelaDeReferencia$2.class
+SimulacaoCabine\TelaModuloComunicacao.class
 MenuTelas\CriarConta$4.class
 MenuTelasAdmin\TelaMenuAdmin.class
 MenuTelas\TelaLogin.class
@@ -65,9 +66,11 @@ MenuTelasAdmin\SelecionarFaseAdmin$1.class
 MenuTelasAdmin\TelaMenuAdmin$6.class
 MenuTelasAdmin\TelaConfiguracoesAdmin$3.class
 MenuTelasAdmin\TelaEstatisticaAdmin$1.class
+SimulacaoCabine\TelaCabine$5.class
 SimulacaoCabine\TelaDDU$2.class
 MenuTelas\CriarConta$3.class
 MenuTelas\TelaMenuUsuario$6.class
+SimulacaoCabine\TelaModuloComunicacao$1.class
 MenuTelas\TelaEsqueceuSenha.class
 SimulacaoCabine\TelaADU$2.class
 MenuTelas\TelaLogin$2.class
@@ -79,6 +82,7 @@ MenuTelasAdmin\TelaEstatisticaAdmin.class
 MenuTelasAdmin\TelaEstatisticaAdmin$2.class
 MenuTelas\TelaEstatistica.class
 MenuTelas\TelaMenuUsuario.class
+SimulacaoCabine\TelaModuloComunicacao$2.class
 SimulacaoCabine\TelaDeReferencia$3.class
 MenuTelas\TelaLogin$3.class
 SimulacaoCabine\TelaADU$1.class
