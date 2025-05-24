@@ -2,15 +2,15 @@ package SimulacaoCabine;
 
 import javax.swing.JFrame;
 
-public class TelaListaPAS extends javax.swing.JFrame {
+public class TelaReversora extends javax.swing.JFrame {
 
     private JFrame frame;
     
-    public TelaListaPAS() {
+    public TelaReversora() {
         initComponents();
     }
-    
-    public TelaListaPAS(JFrame frame) {
+
+    public TelaReversora(JFrame frame) {
         this();
         frame.setVisible(false);
         this.frame = frame;
@@ -21,33 +21,35 @@ public class TelaListaPAS extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        VoltarButton = new javax.swing.JButton();
-        ListaPASLabel = new javax.swing.JLabel();
+        SetaBaixoButton = new javax.swing.JButton();
+        ReversoraFrenteLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tela Lista PAS");
+        setTitle("Tela Reversora");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        VoltarButton.setContentAreaFilled(false);
-        VoltarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        VoltarButton.addActionListener(new java.awt.event.ActionListener() {
+        SetaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
+        SetaBaixoButton.setContentAreaFilled(false);
+        SetaBaixoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        SetaBaixoButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        SetaBaixoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VoltarButtonActionPerformed(evt);
+                SetaBaixoButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(VoltarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 550, 50, 50));
+        getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        ListaPASLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/05A Módulo de Comunicação - Lista de PA's E1 (1).jpg"))); // NOI18N
-        getContentPane().add(ListaPASLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        ReversoraFrenteLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/08 - Reversora em frente (1).jpg"))); // NOI18N
+        getContentPane().add(ReversoraFrenteLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void VoltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarButtonActionPerformed
+    private void SetaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButtonActionPerformed
         frame.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_VoltarButtonActionPerformed
+    }//GEN-LAST:event_SetaBaixoButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -66,26 +68,26 @@ public class TelaListaPAS extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaListaPAS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaReversora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaListaPAS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaReversora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaListaPAS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaReversora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaListaPAS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaReversora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaListaPAS().setVisible(true);
+                new TelaReversora().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel ListaPASLabel;
-    private javax.swing.JButton VoltarButton;
+    private javax.swing.JLabel ReversoraFrenteLabel;
+    private javax.swing.JButton SetaBaixoButton;
     // End of variables declaration//GEN-END:variables
 }

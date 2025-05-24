@@ -1,3 +1,4 @@
+SimulacaoCabine\TelaReversora.class
 MenuTelas\CriarConta$1.class
 MenuTelas\TelaMenuUsuario$5.class
 MenuTelasAdmin\TelaConfiguracoesAdmin$5.class
@@ -47,6 +48,7 @@ MenuTelas\TelaConfiguracoes$2.class
 MenuTelasAdmin\TelaMenuAdmin$1.class
 MenuTelasAdmin\TelaMenuAdmin$4.class
 MenuTelas\TelaEstatistica$2.class
+SimulacaoCabine\TelaReversora$2.class
 SimulacaoCabine\TelaModuloComunicacao$3.class
 MenuTelas\TelaLogin$4.class
 MenuTelas\TelaMenuUsuario$1.class
@@ -72,9 +74,11 @@ MenuTelasAdmin\TelaEstatisticaAdmin$1.class
 SimulacaoCabine\TelaCabine$5.class
 SimulacaoCabine\TelaDDU$2.class
 MenuTelas\CriarConta$3.class
+SimulacaoCabine\TelaReversora$1.class
 MenuTelas\TelaMenuUsuario$6.class
 SimulacaoCabine\TelaModuloComunicacao$1.class
 MenuTelas\TelaEsqueceuSenha.class
+SimulacaoCabine\TelaCabine$6.class
 SimulacaoCabine\TelaADU$2.class
 MenuTelas\TelaLogin$2.class
 SimulacaoCabine\TelaDDU$1.class

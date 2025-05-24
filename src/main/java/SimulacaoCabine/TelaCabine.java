@@ -28,6 +28,7 @@ public class TelaCabine extends javax.swing.JFrame {
         ADUButton = new javax.swing.JButton();
         VDUButton = new javax.swing.JButton();
         ModuloComunicacaoButton = new javax.swing.JButton();
+        ReversoraButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -70,6 +71,15 @@ public class TelaCabine extends javax.swing.JFrame {
         });
         getContentPane().add(ModuloComunicacaoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 100, 50));
 
+        ReversoraButton.setContentAreaFilled(false);
+        ReversoraButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ReversoraButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ReversoraButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ReversoraButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 340, -1, 30));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/01 - Painel (1).jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, -1));
 
@@ -96,6 +106,11 @@ public class TelaCabine extends javax.swing.JFrame {
         TelaModuloComunicacao janelaModulo= new TelaModuloComunicacao(this);
         janelaModulo.setVisible(true);
     }//GEN-LAST:event_ModuloComunicacaoButtonActionPerformed
+
+    private void ReversoraButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReversoraButtonActionPerformed
+        TelaReversora janelaReversora = new TelaReversora(this);
+        janelaReversora.setVisible(true);
+    }//GEN-LAST:event_ReversoraButtonActionPerformed
      
     /**
      * @param args the command line arguments
@@ -136,6 +151,7 @@ public class TelaCabine extends javax.swing.JFrame {
     private javax.swing.JButton ADUButton;
     private javax.swing.JButton DDUButton;
     private javax.swing.JButton ModuloComunicacaoButton;
+    private javax.swing.JButton ReversoraButton;
     private javax.swing.JButton VDUButton;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
