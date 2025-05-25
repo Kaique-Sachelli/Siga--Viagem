@@ -2,15 +2,15 @@ package SimulacaoCabine;
 
 import javax.swing.JFrame;
 
-public class TelaPainelDeControle extends javax.swing.JFrame {
+public class TelaPainelAcessoAmpliado extends javax.swing.JFrame {
 
     private JFrame frame;
     
-    public TelaPainelDeControle() {
+    public TelaPainelAcessoAmpliado() {
         initComponents();
     }
 
-    public TelaPainelDeControle(JFrame frame) {
+    public TelaPainelAcessoAmpliado(JFrame frame) {
         this();
         frame.setVisible(false);
         this.frame = frame;
@@ -22,12 +22,8 @@ public class TelaPainelDeControle extends javax.swing.JFrame {
     private void initComponents() {
 
         SetaBaixoButton = new javax.swing.JButton();
-        PainelAmpliadoButton = new javax.swing.JButton();
-        PainelDeControleLabel = new javax.swing.JLabel();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tela Painel de Controle");
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        SetaBaixoButton1 = new javax.swing.JButton();
+        PainelAcessoAmpliadoLabel = new javax.swing.JLabel();
 
         SetaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
         SetaBaixoButton.setContentAreaFilled(false);
@@ -38,19 +34,24 @@ public class TelaPainelDeControle extends javax.swing.JFrame {
                 SetaBaixoButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        PainelAmpliadoButton.setContentAreaFilled(false);
-        PainelAmpliadoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        PainelAmpliadoButton.addActionListener(new java.awt.event.ActionListener() {
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Tela Painel de Controle Ampliado");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        SetaBaixoButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
+        SetaBaixoButton1.setContentAreaFilled(false);
+        SetaBaixoButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        SetaBaixoButton1.setPreferredSize(new java.awt.Dimension(100, 100));
+        SetaBaixoButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PainelAmpliadoButtonActionPerformed(evt);
+                SetaBaixoButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(PainelAmpliadoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(279, 310, 400, 240));
+        getContentPane().add(SetaBaixoButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        PainelDeControleLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Painel_de_Controle_em_Metal_Industrial (1).png"))); // NOI18N
-        getContentPane().add(PainelDeControleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        PainelAcessoAmpliadoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Painel externo aberto (1).png"))); // NOI18N
+        getContentPane().add(PainelAcessoAmpliadoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
@@ -61,10 +62,10 @@ public class TelaPainelDeControle extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_SetaBaixoButtonActionPerformed
 
-    private void PainelAmpliadoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PainelAmpliadoButtonActionPerformed
-        TelaPainelAcessoAmpliado janelaAcessoAmpliado = new TelaPainelAcessoAmpliado(this);
-        janelaAcessoAmpliado.setVisible(true);
-    }//GEN-LAST:event_PainelAmpliadoButtonActionPerformed
+    private void SetaBaixoButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButton1ActionPerformed
+        frame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_SetaBaixoButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -83,27 +84,27 @@ public class TelaPainelDeControle extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaPainelDeControle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPainelAcessoAmpliado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaPainelDeControle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPainelAcessoAmpliado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaPainelDeControle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPainelAcessoAmpliado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaPainelDeControle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPainelAcessoAmpliado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaPainelDeControle().setVisible(true);
+                new TelaPainelAcessoAmpliado().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton PainelAmpliadoButton;
-    private javax.swing.JLabel PainelDeControleLabel;
+    private javax.swing.JLabel PainelAcessoAmpliadoLabel;
     private javax.swing.JButton SetaBaixoButton;
+    private javax.swing.JButton SetaBaixoButton1;
     // End of variables declaration//GEN-END:variables
 }

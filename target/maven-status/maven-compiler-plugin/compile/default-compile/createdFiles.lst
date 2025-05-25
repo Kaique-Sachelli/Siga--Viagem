@@ -19,6 +19,7 @@ MenuTelas\CriarConta$4.class
 SimulacaoCabine\TelaSocoConsole$1.class
 MenuTelasAdmin\TelaMenuAdmin.class
 MenuTelas\TelaLogin.class
+SimulacaoCabine\TelaPainelAcessoAmpliado$2.class
 SimulacaoCabine\TelaDeReferencia$5.class
 SimulacaoCabine\TelaDeReferencia.class
 MenuTelas\CriarConta$7.class
@@ -32,6 +33,7 @@ MenuTelasAdmin\AlterarUsuario$2.class
 SimulacaoCabine\TelaSocoConsole.class
 MenuTelasAdmin\TelaMenuAdmin$3.class
 MenuTelas\TelaLogin$5.class
+SimulacaoCabine\TelaPainelAcessoAmpliado$1.class
 MenuTelas\TelaConfiguracoes$4.class
 MenuTelas\TelaConfiguracoes.class
 MenuTelas\TelaMenuUsuario$3.class
@@ -60,6 +62,7 @@ MenuTelas\TelaLogin$7.class
 SimulacaoCabine\TelaPainelDeControle$2.class
 Persistencia\PessoaDAO.class
 SimulacaoCabine\TelaDeReferencia$1.class
+SimulacaoCabine\TelaPainelAcessoAmpliado$3.class
 MenuTelas\TelaConfiguracoes$2.class
 MenuTelasAdmin\TelaMenuAdmin$1.class
 MenuTelasAdmin\TelaMenuAdmin$4.class
@@ -107,9 +110,11 @@ SimulacaoCabine\TelaDDU$1.class
 SimulacaoCabine\TelaLimpadorParabrisa$1.class
 MenuTelasAdmin\TelaMenuAdmin$5.class
 Persistencia\ConnectionFactory.class
+SimulacaoCabine\TelaPainelAcessoAmpliado.class
 Persistencia\Usuario.class
 MenuTelasAdmin\TelaEstatisticaAdmin.class
 SimulacaoCabine\TelaListaPAS.class
+SimulacaoCabine\TelaPainelDeControle$3.class
 MenuTelasAdmin\TelaEstatisticaAdmin$2.class
 MenuTelas\TelaEstatistica.class
 MenuTelas\TelaMenuUsuario.class
