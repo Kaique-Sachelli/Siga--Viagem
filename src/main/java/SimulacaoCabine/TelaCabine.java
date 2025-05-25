@@ -199,8 +199,8 @@ public class TelaCabine extends javax.swing.JFrame {
     }//GEN-LAST:event_SetaEsquerdaButton1ActionPerformed
 
     private void SetaDireitaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaDireitaButtonActionPerformed
-        TelaPortaDireita janelaPortaDireita = new TelaPortaDireita(this);
-        janelaPortaDireita.setVisible(true);
+        TelaColunaLateral janelaColunaLateral = new TelaColunaLateral(this);
+        janelaColunaLateral.setVisible(true);
     }//GEN-LAST:event_SetaDireitaButtonActionPerformed
 
     private void SetaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButtonActionPerformed

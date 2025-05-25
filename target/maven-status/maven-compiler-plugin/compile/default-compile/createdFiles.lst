@@ -43,6 +43,7 @@ SimulacaoCabine\TelaPainelDeControle$1.class
 SimulacaoCabine\TelaCabine$10.class
 SimulacaoCabine\TelaListaPAS$1.class
 SimulacaoCabine\TelaCabineTras$1.class
+SimulacaoCabine\TelaColunaLateral$1.class
 MenuTelas\SelecionarFase$2.class
 MenuTelasAdmin\SelecionarFaseAdmin.class
 SimulacaoCabine\TelaReversoraFrente$1.class
@@ -59,6 +60,7 @@ MenuTelasAdmin\TelaConfiguracoesAdmin$1.class
 SimulacaoCabine\TelaListaPAS$2.class
 MenuTelas\TelaEstatistica$1.class
 MenuTelasAdmin\AlterarUsuario$1.class
+SimulacaoCabine\TelaColunaLateral$2.class
 MenuTelas\TelaLogin$6.class
 MenuTelas\TelaMenuUsuario$2.class
 SimulacaoCabine\TelaPortaEsquerda.class
@@ -90,9 +92,11 @@ SimulacaoCabine\TelaCabine.class
 SimulacaoCabine\TelaReversoraFrente.class
 SimulacaoCabine\TelaCabine$12.class
 SimulacaoCabine\TelaPainelDeAcesso$2.class
+SimulacaoCabine\TelaColunaLateral$3.class
 SimulacaoCabine\TelaVDU.class
 SimulacaoCabine\TelaCabine$4.class
 SimulacaoCabine\TelaBotoeirasSinaleiras.class
+SimulacaoCabine\TelaColunaLateral.class
 MenuTelas\TelaConfiguracoes$5.class
 MenuTelasAdmin\TelaMenuAdmin$7.class
 SimulacaoCabine\TelaPortaDireita$1.class
