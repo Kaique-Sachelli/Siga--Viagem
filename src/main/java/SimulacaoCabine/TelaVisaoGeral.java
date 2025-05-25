@@ -23,6 +23,7 @@ public class TelaVisaoGeral extends javax.swing.JFrame {
 
         SetaEsquerdaButton1 = new javax.swing.JButton();
         SetaEsquerdaButton2 = new javax.swing.JButton();
+        SetaDireitaButton = new javax.swing.JButton();
         VisaoGeralLabel = new javax.swing.JLabel();
 
         SetaEsquerdaButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaEsquerda.png"))); // NOI18N
@@ -50,6 +51,17 @@ public class TelaVisaoGeral extends javax.swing.JFrame {
         });
         getContentPane().add(SetaEsquerdaButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, -1, -1));
 
+        SetaDireitaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaDireita.png"))); // NOI18N
+        SetaDireitaButton.setContentAreaFilled(false);
+        SetaDireitaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        SetaDireitaButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        SetaDireitaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SetaDireitaButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(SetaDireitaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 270, -1, -1));
+
         VisaoGeralLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/13 - Visão geral do carro 5 (1).jpg"))); // NOI18N
         getContentPane().add(VisaoGeralLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
@@ -66,6 +78,11 @@ public class TelaVisaoGeral extends javax.swing.JFrame {
         frame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_SetaEsquerdaButton2ActionPerformed
+
+    private void SetaDireitaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaDireitaButtonActionPerformed
+        TelaPortaSemiAberta janelaPortaSemiAberta = new TelaPortaSemiAberta(this);
+        janelaPortaSemiAberta.setVisible(true);
+    }//GEN-LAST:event_SetaDireitaButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -103,6 +120,7 @@ public class TelaVisaoGeral extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton SetaDireitaButton;
     private javax.swing.JButton SetaEsquerdaButton1;
     private javax.swing.JButton SetaEsquerdaButton2;
     private javax.swing.JLabel VisaoGeralLabel;
