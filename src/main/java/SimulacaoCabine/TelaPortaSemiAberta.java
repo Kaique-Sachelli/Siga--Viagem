@@ -22,6 +22,7 @@ public class TelaPortaSemiAberta extends javax.swing.JFrame {
     private void initComponents() {
 
         SetaEsquerdaButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         PortaSemiAbertaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -39,6 +40,15 @@ public class TelaPortaSemiAberta extends javax.swing.JFrame {
         });
         getContentPane().add(SetaEsquerdaButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, -1, -1));
 
+        jButton1.setContentAreaFilled(false);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(409, 90, 160, 550));
+
         PortaSemiAbertaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Porta semi aberta - externo (1).jpg"))); // NOI18N
         getContentPane().add(PortaSemiAbertaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
@@ -50,6 +60,11 @@ public class TelaPortaSemiAberta extends javax.swing.JFrame {
         frame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_SetaEsquerdaButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        TelaPortaSemiAbertaInterna janelaPortaSemiAbertaInterna = new TelaPortaSemiAbertaInterna(this);
+        janelaPortaSemiAbertaInterna.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -89,5 +104,6 @@ public class TelaPortaSemiAberta extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel PortaSemiAbertaLabel;
     private javax.swing.JButton SetaEsquerdaButton2;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }

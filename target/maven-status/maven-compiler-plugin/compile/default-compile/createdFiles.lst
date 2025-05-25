@@ -95,6 +95,7 @@ MenuTelasAdmin\TelaConfiguracoesAdmin.class
 MenuTelas\TelaConfiguracoes$1.class
 SimulacaoCabine\TelaReversoraNeutro$3.class
 MenuTelasAdmin\TelaConfiguracoesAdmin$2.class
+SimulacaoCabine\TelaPortaSemiAbertaInterna$1.class
 MenuTelasAdmin\TelaMenuAdmin.class
 SimulacaoCabine\TelaCabineTras$2.class
 SimulacaoCabine\TelaVisaoGeral$3.class
@@ -109,6 +110,7 @@ MenuTelas\SelecionarFase$2.class
 MenuTelasAdmin\SelecionarFaseAdmin.class
 SimulacaoCabine\TelaReversoraFrente$1.class
 SimulacaoCabine\TelaAreaExterna.class
+SimulacaoCabine\TelaPortaSemiAberta$3.class
 SimulacaoCabine\TelaVDU$1.class
 SimulacaoCabine\TelaCabine$11.class
 MenuTelasAdmin\TelaConfiguracoesAdmin$1.class
@@ -125,10 +127,12 @@ MenuTelas\TelaConfiguracoes$2.class
 MenuTelasAdmin\TelaMenuAdmin$1.class
 SimulacaoCabine\TelaModuloComunicacao$3.class
 MenuTelas\TelaLogin$4.class
+SimulacaoCabine\TelaPortaSemiAbertaInterna$2.class
 MenuTelasAdmin\AlterarUsuario.class
 MenuTelas\TelaLogin$1.class
 MenuTelas\TelaMenuUsuario$4.class
 SimulacaoCabine\TelaCabine.class
+SimulacaoCabine\TelaPortaSemiAbertaInterna.class
 SimulacaoCabine\TelaCabine$12.class
 SimulacaoCabine\TelaPortaEsquerda$3.class
 SimulacaoCabine\TelaVDU.class
