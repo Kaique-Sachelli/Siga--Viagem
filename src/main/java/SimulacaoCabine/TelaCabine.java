@@ -33,6 +33,7 @@ public class TelaCabine extends javax.swing.JFrame {
         ChavesPainelButton = new javax.swing.JButton();
         LimpadorParabrisaButton = new javax.swing.JButton();
         SetaEsquerdaButton1 = new javax.swing.JButton();
+        SetaDireitaButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -122,6 +123,17 @@ public class TelaCabine extends javax.swing.JFrame {
         });
         getContentPane().add(SetaEsquerdaButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, -1, -1));
 
+        SetaDireitaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaDireita.png"))); // NOI18N
+        SetaDireitaButton.setContentAreaFilled(false);
+        SetaDireitaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        SetaDireitaButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        SetaDireitaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SetaDireitaButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(SetaDireitaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 150, -1, -1));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/01 - Painel (1).jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, -1));
 
@@ -173,6 +185,11 @@ public class TelaCabine extends javax.swing.JFrame {
         TelaPortaEsquerda janelaPortaEsquerda = new TelaPortaEsquerda(this);
         janelaPortaEsquerda.setVisible(true);
     }//GEN-LAST:event_SetaEsquerdaButton1ActionPerformed
+
+    private void SetaDireitaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaDireitaButtonActionPerformed
+        TelaPortaDireita janelaPortaDireita = new TelaPortaDireita(this);
+        janelaPortaDireita.setVisible(true);
+    }//GEN-LAST:event_SetaDireitaButtonActionPerformed
      
     /**
      * @param args the command line arguments
@@ -216,6 +233,7 @@ public class TelaCabine extends javax.swing.JFrame {
     private javax.swing.JButton LimpadorParabrisaButton;
     private javax.swing.JButton ModuloComunicacaoButton;
     private javax.swing.JButton ReversoraButton;
+    private javax.swing.JButton SetaDireitaButton;
     private javax.swing.JButton SetaEsquerdaButton1;
     private javax.swing.JButton SocoConsoleButton;
     private javax.swing.JButton VDUButton;
