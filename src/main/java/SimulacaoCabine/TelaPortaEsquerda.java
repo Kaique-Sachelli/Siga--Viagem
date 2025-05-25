@@ -22,6 +22,7 @@ public class TelaPortaEsquerda extends javax.swing.JFrame {
     private void initComponents() {
 
         SetaDireitaButton = new javax.swing.JButton();
+        AreaExternaButton = new javax.swing.JButton();
         PortaEsquerdaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -39,6 +40,15 @@ public class TelaPortaEsquerda extends javax.swing.JFrame {
         });
         getContentPane().add(SetaDireitaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, -1, -1));
 
+        AreaExternaButton.setContentAreaFilled(false);
+        AreaExternaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        AreaExternaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AreaExternaButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(AreaExternaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 170, 610));
+
         PortaEsquerdaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/12 - Porta de cabine lateral esquerda (3).jpg"))); // NOI18N
         getContentPane().add(PortaEsquerdaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 750));
 
@@ -50,6 +60,11 @@ public class TelaPortaEsquerda extends javax.swing.JFrame {
         frame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_SetaDireitaButtonActionPerformed
+
+    private void AreaExternaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AreaExternaButtonActionPerformed
+        TelaAreaExterna janelaAreaExterna = new TelaAreaExterna(this);
+        janelaAreaExterna.setVisible(true);
+    }//GEN-LAST:event_AreaExternaButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -87,6 +102,7 @@ public class TelaPortaEsquerda extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AreaExternaButton;
     private javax.swing.JLabel PortaEsquerdaLabel;
     private javax.swing.JButton SetaDireitaButton;
     // End of variables declaration//GEN-END:variables
