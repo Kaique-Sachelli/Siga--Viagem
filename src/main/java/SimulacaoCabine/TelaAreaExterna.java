@@ -23,6 +23,7 @@ public class TelaAreaExterna extends javax.swing.JFrame {
 
         SetaEsquerdaButton1 = new javax.swing.JButton();
         SetaCimaButton1 = new javax.swing.JButton();
+        PainelDeAcessoButton = new javax.swing.JButton();
         AreaExternaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -51,6 +52,15 @@ public class TelaAreaExterna extends javax.swing.JFrame {
         });
         getContentPane().add(SetaCimaButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, -1, -1));
 
+        PainelDeAcessoButton.setContentAreaFilled(false);
+        PainelDeAcessoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        PainelDeAcessoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PainelDeAcessoButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(PainelDeAcessoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 500, -1, 130));
+
         AreaExternaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Sinalização externa de portas fechadas 4 (1).jpg"))); // NOI18N
         getContentPane().add(AreaExternaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
@@ -67,6 +77,11 @@ public class TelaAreaExterna extends javax.swing.JFrame {
         TelaVisaoGeral janelaVisaoGeral = new TelaVisaoGeral(this);
         janelaVisaoGeral.setVisible(true);
     }//GEN-LAST:event_SetaCimaButton1ActionPerformed
+
+    private void PainelDeAcessoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PainelDeAcessoButtonActionPerformed
+        TelaPainelDeAcesso janelaPainelDeAcesso = new TelaPainelDeAcesso(this);
+        janelaPainelDeAcesso.setVisible(true);
+    }//GEN-LAST:event_PainelDeAcessoButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -105,6 +120,7 @@ public class TelaAreaExterna extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AreaExternaLabel;
+    private javax.swing.JButton PainelDeAcessoButton;
     private javax.swing.JButton SetaCimaButton1;
     private javax.swing.JButton SetaEsquerdaButton1;
     // End of variables declaration//GEN-END:variables
