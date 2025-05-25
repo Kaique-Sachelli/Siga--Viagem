@@ -22,6 +22,7 @@ public class TelaPortaDireita extends javax.swing.JFrame {
     private void initComponents() {
 
         SetaEsquerdaButton1 = new javax.swing.JButton();
+        BotoeirasSinaleirasButton = new javax.swing.JButton();
         PortaDireitaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -39,6 +40,18 @@ public class TelaPortaDireita extends javax.swing.JFrame {
         });
         getContentPane().add(SetaEsquerdaButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, -1, -1));
 
+        BotoeirasSinaleirasButton.setContentAreaFilled(false);
+        BotoeirasSinaleirasButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BotoeirasSinaleirasButton.setMaximumSize(new java.awt.Dimension(70, 180));
+        BotoeirasSinaleirasButton.setMinimumSize(new java.awt.Dimension(70, 180));
+        BotoeirasSinaleirasButton.setPreferredSize(new java.awt.Dimension(70, 180));
+        BotoeirasSinaleirasButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotoeirasSinaleirasButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BotoeirasSinaleirasButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, 70, 180));
+
         PortaDireitaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Porta de cabine lateral direita (1).jpg"))); // NOI18N
         getContentPane().add(PortaDireitaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 750));
 
@@ -50,6 +63,11 @@ public class TelaPortaDireita extends javax.swing.JFrame {
         frame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_SetaEsquerdaButton1ActionPerformed
+
+    private void BotoeirasSinaleirasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoeirasSinaleirasButtonActionPerformed
+        TelaBotoeirasSinaleiras janelaBotoeiras = new TelaBotoeirasSinaleiras(this);
+        janelaBotoeiras.setVisible(true);
+    }//GEN-LAST:event_BotoeirasSinaleirasButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -87,6 +105,7 @@ public class TelaPortaDireita extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotoeirasSinaleirasButton;
     private javax.swing.JLabel PortaDireitaLabel;
     private javax.swing.JButton SetaEsquerdaButton1;
     // End of variables declaration//GEN-END:variables
