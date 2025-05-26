@@ -47,6 +47,7 @@ MenuTelas\TelaLogin$7.class
 SimulacaoCabine\TelaDeReferencia$1.class
 MenuTelasAdmin\TelaMenuAdmin$4.class
 MenuTelas\TelaEstatistica$2.class
+SimulacaoCabine\TelaPaineisEmergencia$1.class
 MenuTelas\TelaMenuUsuario$1.class
 SimulacaoCabine\TelaDeReferencia$4.class
 SimulacaoCabine\TelaVisaoGeral$2.class
@@ -73,6 +74,7 @@ SimulacaoCabine\TelaSocoConsole$2.class
 SimulacaoCabine\TelaVisaoGeral$1.class
 SimulacaoCabine\TelaPortaDireita.class
 MenuTelas\CriarConta$3.class
+SimulacaoCabine\TelaPaineisEmergencia.class
 SimulacaoCabine\TelaReversoraFrente$3.class
 MenuTelas\TelaEsqueceuSenha.class
 SimulacaoCabine\TelaADU$2.class
@@ -94,6 +96,7 @@ SimulacaoCabine\TelaChavesPainel.class
 MenuTelas\CriarConta.class
 MenuTelasAdmin\TelaConfiguracoesAdmin.class
 MenuTelas\TelaConfiguracoes$1.class
+SimulacaoCabine\TelaPaineisEmergencia$2.class
 SimulacaoCabine\TelaReversoraNeutro$3.class
 MenuTelasAdmin\TelaConfiguracoesAdmin$2.class
 SimulacaoCabine\TelaPortaSemiAbertaInterna$1.class
@@ -166,3 +169,4 @@ SimulacaoCabine\TelaModuloComunicacao$2.class
 SimulacaoCabine\TelaReversoraNeutro.class
 SimulacaoCabine\TelaReversoraNeutro$1.class
 MenuTelas\TelaLogin$3.class
+SimulacaoCabine\TelaPortaSemiAbertaInterna$3.class
