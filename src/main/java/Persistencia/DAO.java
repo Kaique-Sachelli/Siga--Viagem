@@ -7,7 +7,7 @@ public class DAO {
     public boolean existe (Usuario u) throws Exception {
         //try-with-resources 
         //1.Definir o comando SQL
-        var sql = "SELECT login, senha FROM usuario WHERE login=? AND senha = ?";
+        var sql = "SELECT login, senha, instrutor FROM usuario WHERE login=? AND senha = ?";
         //2. Estabelecer uma conexão com o SQBD (MySQL)
         
         //3.Preparar o comando 
@@ -24,7 +24,11 @@ public class DAO {
                  ResultSet rs = ps.executeQuery();
                      
             ){
-                 return rs.next ();
+                 if (rs.next()){
+                    u.setInstrutor(rs.getBoolean("instrutor"));
+                    return true;
+                 }
+                 return false;
             }
              //6. Fechar os recursos
         }

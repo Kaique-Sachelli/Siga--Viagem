@@ -34,5 +34,9 @@ public class Usuario {
         return instrutor;
         
     }
+    public void setInstrutor(boolean instrutor) {
+        this.instrutor = instrutor;
+    }
+
 }
     
