@@ -23,6 +23,7 @@ public class TelaPortaSemiAberta extends javax.swing.JFrame {
 
         SetaEsquerdaButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        SetaBaixoButton = new javax.swing.JButton();
         PortaSemiAbertaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -47,7 +48,18 @@ public class TelaPortaSemiAberta extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(409, 90, 160, 550));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(409, 90, 160, 420));
+
+        SetaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
+        SetaBaixoButton.setContentAreaFilled(false);
+        SetaBaixoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        SetaBaixoButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        SetaBaixoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SetaBaixoButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
         PortaSemiAbertaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Porta semi aberta - externo (1).jpg"))); // NOI18N
         getContentPane().add(PortaSemiAbertaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
@@ -65,6 +77,11 @@ public class TelaPortaSemiAberta extends javax.swing.JFrame {
         TelaPortaSemiAbertaInterna janelaPortaSemiAbertaInterna = new TelaPortaSemiAbertaInterna(this);
         janelaPortaSemiAbertaInterna.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void SetaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButtonActionPerformed
+        TelaSoleira janelaSoleira = new TelaSoleira(this);
+        janelaSoleira.setVisible(true);
+    }//GEN-LAST:event_SetaBaixoButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -103,6 +120,7 @@ public class TelaPortaSemiAberta extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel PortaSemiAbertaLabel;
+    private javax.swing.JButton SetaBaixoButton;
     private javax.swing.JButton SetaEsquerdaButton2;
     private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables

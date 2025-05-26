@@ -37,6 +37,7 @@ SimulacaoCabine\TelaPainelDeControle.class
 SimulacaoCabine\TelaCabineTras.class
 MenuTelas\TelaConfiguracoes$3.class
 MenuTelasAdmin\TelaMenuAdmin$2.class
+SimulacaoCabine\TelaSoleira.class
 SimulacaoCabine\TelaColunaLateral$2.class
 MenuTelas\TelaLogin$6.class
 MenuTelas\TelaMenuUsuario$2.class
@@ -98,6 +99,7 @@ MenuTelasAdmin\TelaConfiguracoesAdmin$2.class
 SimulacaoCabine\TelaPortaSemiAbertaInterna$1.class
 MenuTelasAdmin\TelaMenuAdmin.class
 SimulacaoCabine\TelaCabineTras$2.class
+SimulacaoCabine\TelaPortaSemiAberta$4.class
 SimulacaoCabine\TelaVisaoGeral$3.class
 SimulacaoCabine\TelaDeReferencia$5.class
 MenuTelas\CriarConta$7.class
@@ -149,7 +151,9 @@ SimulacaoCabine\TelaModuloComunicacao$1.class
 SimulacaoCabine\TelaCabine$6.class
 SimulacaoCabine\TelaPortaEsquerda$1.class
 MenuTelas\TelaLogin$2.class
+SimulacaoCabine\TelaSoleira$1.class
 SimulacaoCabine\TelaDDU$1.class
+SimulacaoCabine\TelaSoleira$2.class
 Persistencia\ConnectionFactory.class
 Persistencia\Usuario.class
 SimulacaoCabine\TelaAreaExterna$1.class
