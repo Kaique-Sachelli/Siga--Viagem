@@ -7,7 +7,7 @@ public class DAO {
     public boolean existe (Usuario u) throws Exception {
         //try-with-resources 
         //1.Definir o comando SQL
-        var sql = "SELECT login, senha FROM usuario WHERE login=? AND senha = ?";
+        var sql = "SELECT login, senha, instrutor FROM usuario WHERE login=? AND senha = ?";
         //2. Estabelecer uma conexão com o SQBD (MySQL)
         
         //3.Preparar o comando 
@@ -24,10 +24,33 @@ public class DAO {
                  ResultSet rs = ps.executeQuery();
                      
             ){
-                 return rs.next ();
+                 if (rs.next()){
+                    u.setInstrutor(rs.getBoolean("instrutor"));
+                    return true;
+                 }
+                 return false;
             }
              //6. Fechar os recursos
         }
        
     }
+    public boolean cadastrar (Usuario u) throws Exception{
+        var sql = "INSERT INTO usuario (nome, login, senha) VALUES (?, ?, ?)";
+        try(
+                
+            var conexao = new ConnectionFactory().obterConexao();  
+            var ps = conexao.prepareStatement(sql)
+        ){
+            ps.setString(1, u.getNome());
+            ps.setString(2, u.getLogin());
+            ps.setString(3, u.getSenha());        
+            int linhasAfetadas = ps.executeUpdate();
+            return linhasAfetadas > 0; // true = cadastrou, false = não cadastrou
+
+        }
+    
+    }
+    
+    
+    
 }
