@@ -7,6 +7,7 @@ Persistencia\DAO.class
 SimulacaoCabine\TelaDeReferencia$2.class
 SimulacaoCabine\TelaPortaSemiAberta$1.class
 SimulacaoCabine\TelaModuloComunicacao.class
+SimulacaoCabine\TelaPortaFechada.class
 SimulacaoCabine\TelaLimpadorParabrisa.class
 MenuTelas\CriarConta$4.class
 SimulacaoCabine\TelaSocoConsole$1.class
@@ -142,9 +143,12 @@ SimulacaoCabine\TelaCabine$12.class
 SimulacaoCabine\TelaPortaEsquerda$3.class
 SimulacaoCabine\TelaVDU.class
 SimulacaoCabine\TelaCabine$4.class
+SimulacaoCabine\TelaAdesivoPortaIsolada1.class
+SimulacaoCabine\TelaPortaFechada$1.class
 SimulacaoCabine\TelaPortaDireita$1.class
 SimulacaoCabine\TelaAreaExterna$3.class
 SimulacaoCabine\TelaPainelDeAcesso.class
+SimulacaoCabine\TelaAdesivoPortaIsolada1$1.class
 SimulacaoCabine\TelaCabine$5.class
 SimulacaoCabine\TelaReversoraNeutro$2.class
 SimulacaoCabine\TelaDDU$2.class
