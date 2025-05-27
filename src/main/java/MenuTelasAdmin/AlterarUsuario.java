@@ -47,7 +47,7 @@ public class AlterarUsuario extends javax.swing.JFrame {
         tituloMenuLabel = new javax.swing.JLabel();
         voltarMenuButton = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        usuariosComboBox = new javax.swing.JComboBox<>();
+        usuariosComboBox = new javax.swing.JComboBox<Usuario>();
         confirmarButton = new javax.swing.JButton();
         senhaLabel = new javax.swing.JLabel();
         novaSenhaPasswordField = new javax.swing.JPasswordField();
@@ -145,14 +145,14 @@ public class AlterarUsuario extends javax.swing.JFrame {
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton confirmarButton;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPasswordField novaSenhaPasswordField;
     private javax.swing.JLabel senhaLabel;
     private javax.swing.JLabel tituloMenuLabel;
-    private javax.swing.JComboBox<String> usuariosComboBox;
+    private javax.swing.JComboBox<Usuario> usuariosComboBox;
     private javax.swing.JButton voltarMenuButton;
     // End of variables declaration//GEN-END:variables
 }
