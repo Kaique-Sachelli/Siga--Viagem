@@ -26,6 +26,8 @@ public class DAO {
             ){
                  if (rs.next()){
                     u.setInstrutor(rs.getBoolean("instrutor"));
+                    u.setId(rs.getInt("id_usuario"));
+                    u.setNome(rs.getString("nome"));
                     return true;
                  }
                  return false;
@@ -34,6 +36,7 @@ public class DAO {
         }
        
     }
+<<<<<<< HEAD
     public boolean cadastrar (Usuario u) throws Exception{
         var sql = "INSERT INTO usuario (nome, login, senha) VALUES (?, ?, ?)";
         try(
@@ -51,6 +54,8 @@ public class DAO {
     
     }
     
+=======
+>>>>>>> Integrando-Banco
     
     
 }
