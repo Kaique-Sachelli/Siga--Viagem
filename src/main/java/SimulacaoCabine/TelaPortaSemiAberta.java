@@ -61,7 +61,7 @@ public class TelaPortaSemiAberta extends javax.swing.JFrame {
         });
         getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        PortaSemiAbertaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Porta semi aberta - externo (1).jpg"))); // NOI18N
+        PortaSemiAbertaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Porta semi aberta - externo.jpg"))); // NOI18N
         getContentPane().add(PortaSemiAbertaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

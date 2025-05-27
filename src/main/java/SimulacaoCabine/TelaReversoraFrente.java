@@ -27,7 +27,6 @@ public class TelaReversoraFrente extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela  Reversora Frente");
-        setPreferredSize(new java.awt.Dimension(940, 640));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         SetaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
@@ -50,7 +49,7 @@ public class TelaReversoraFrente extends javax.swing.JFrame {
         });
         getContentPane().add(ReversoraFrenteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 130, 530, 350));
 
-        ReversoraFrenteLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/08 - Reversora em frente (1).jpg"))); // NOI18N
+        ReversoraFrenteLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Reversora em frente.jpg"))); // NOI18N
         getContentPane().add(ReversoraFrenteLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

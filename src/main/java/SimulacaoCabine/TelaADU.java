@@ -39,7 +39,7 @@ public class TelaADU extends javax.swing.JFrame {
         });
         getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        ADULabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/02 - ADU e sinaleiras (2).jpg"))); // NOI18N
+        ADULabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/ADU e sinaleiras.jpg"))); // NOI18N
         getContentPane().add(ADULabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

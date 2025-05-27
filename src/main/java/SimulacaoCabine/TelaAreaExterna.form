@@ -89,7 +89,7 @@
     <Component class="javax.swing.JLabel" name="AreaExternaLabel">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/SimulacaoImagens/Sinaliza&#xe7;&#xe3;o externa de portas fechadas 4 (1).jpg"/>
+          <Image iconType="3" name="/SimulacaoImagens/Sinaliza&#xe7;&#xe3;o externa de portas fechadas.jpg"/>
         </Property>
       </Properties>
       <Constraints>

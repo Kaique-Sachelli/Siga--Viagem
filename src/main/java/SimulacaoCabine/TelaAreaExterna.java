@@ -61,7 +61,7 @@ public class TelaAreaExterna extends javax.swing.JFrame {
         });
         getContentPane().add(PainelDeAcessoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 500, -1, 130));
 
-        AreaExternaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Sinalização externa de portas fechadas 4 (1).jpg"))); // NOI18N
+        AreaExternaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Sinalização externa de portas fechadas.jpg"))); // NOI18N
         getContentPane().add(AreaExternaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

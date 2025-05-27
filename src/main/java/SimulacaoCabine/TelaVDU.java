@@ -40,7 +40,7 @@ public class TelaVDU extends javax.swing.JFrame {
         });
         getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        VDULabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/04 - VDU (1).jpg"))); // NOI18N
+        VDULabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/VDU.jpg"))); // NOI18N
         getContentPane().add(VDULabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 640));
 
         pack();

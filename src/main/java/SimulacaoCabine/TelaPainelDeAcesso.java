@@ -50,7 +50,7 @@ public class TelaPainelDeAcesso extends javax.swing.JFrame {
         });
         getContentPane().add(PainelDeControleButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(289, 200, 330, 250));
 
-        PainelDeAcessoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Painel_de_Acesso_em_Metal_Escovado (1).png"))); // NOI18N
+        PainelDeAcessoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Painel_de_Acesso_em_Metal_Escovado.png"))); // NOI18N
         getContentPane().add(PainelDeAcessoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

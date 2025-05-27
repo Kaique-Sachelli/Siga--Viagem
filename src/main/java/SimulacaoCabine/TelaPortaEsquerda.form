@@ -67,7 +67,7 @@
     <Component class="javax.swing.JLabel" name="PortaEsquerdaLabel">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/SimulacaoImagens/12 - Porta de cabine lateral esquerda (3).jpg"/>
+          <Image iconType="3" name="/SimulacaoImagens/Porta de cabine lateral esquerda.jpg"/>
         </Property>
       </Properties>
       <Constraints>

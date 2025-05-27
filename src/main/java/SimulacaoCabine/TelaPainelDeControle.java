@@ -49,7 +49,7 @@ public class TelaPainelDeControle extends javax.swing.JFrame {
         });
         getContentPane().add(PainelAmpliadoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(279, 310, 400, 240));
 
-        PainelDeControleLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Painel_de_Controle_em_Metal_Industrial (1).png"))); // NOI18N
+        PainelDeControleLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Painel_de_Controle_em_Metal_Industrial.png"))); // NOI18N
         getContentPane().add(PainelDeControleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

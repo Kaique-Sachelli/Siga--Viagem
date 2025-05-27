@@ -39,7 +39,7 @@ public class TelaSocoConsole extends javax.swing.JFrame {
         });
         getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        SocoConsoleLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/botão soco do console (1).jpg"))); // NOI18N
+        SocoConsoleLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Botão soco do console.jpg"))); // NOI18N
         getContentPane().add(SocoConsoleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

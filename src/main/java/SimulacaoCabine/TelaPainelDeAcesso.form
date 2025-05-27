@@ -67,7 +67,7 @@
     <Component class="javax.swing.JLabel" name="PainelDeAcessoLabel">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/SimulacaoImagens/Painel_de_Acesso_em_Metal_Escovado (1).png"/>
+          <Image iconType="3" name="/SimulacaoImagens/Painel_de_Acesso_em_Metal_Escovado.png"/>
         </Property>
       </Properties>
       <Constraints>

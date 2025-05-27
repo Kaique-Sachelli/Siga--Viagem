@@ -62,7 +62,7 @@ public class TelaVisaoGeral extends javax.swing.JFrame {
         });
         getContentPane().add(SetaDireitaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 270, -1, -1));
 
-        VisaoGeralLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/13 - Visão geral do carro 5 (1).jpg"))); // NOI18N
+        VisaoGeralLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Visão geral do carro.jpg"))); // NOI18N
         getContentPane().add(VisaoGeralLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

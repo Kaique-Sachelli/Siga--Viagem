@@ -39,7 +39,7 @@ public class TelaCabineTras extends javax.swing.JFrame {
         });
         getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        CabineTrasLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/cabine - parte de trás (1).jpg"))); // NOI18N
+        CabineTrasLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Cabine - parte de trás.jpg"))); // NOI18N
         getContentPane().add(CabineTrasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

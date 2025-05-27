@@ -36,7 +36,6 @@ public class DAO {
         }
        
     }
-<<<<<<< HEAD
     public boolean cadastrar (Usuario u) throws Exception{
         var sql = "INSERT INTO usuario (nome, login, senha) VALUES (?, ?, ?)";
         try(
@@ -54,8 +53,7 @@ public class DAO {
     
     }
     
-=======
->>>>>>> Integrando-Banco
+
     
     
 }

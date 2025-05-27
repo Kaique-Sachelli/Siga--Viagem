@@ -40,7 +40,7 @@ public class TelaBotoeirasSinaleiras extends javax.swing.JFrame {
         });
         getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        BotoeirasSinaleirasLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Botoeiras e sinaleira lateral - detalhe (1).jpg"))); // NOI18N
+        BotoeirasSinaleirasLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Botoeiras e sinaleira lateral - detalhe.jpg"))); // NOI18N
         getContentPane().add(BotoeirasSinaleirasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

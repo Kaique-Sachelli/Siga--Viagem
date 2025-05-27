@@ -50,7 +50,7 @@ public class TelaPainelAcessoAmpliado extends javax.swing.JFrame {
         });
         getContentPane().add(SetaBaixoButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        PainelAcessoAmpliadoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Painel externo aberto (1).png"))); // NOI18N
+        PainelAcessoAmpliadoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Painel externo aberto.png"))); // NOI18N
         getContentPane().add(PainelAcessoAmpliadoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

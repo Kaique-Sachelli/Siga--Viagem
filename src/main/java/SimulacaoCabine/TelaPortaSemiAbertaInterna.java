@@ -49,7 +49,7 @@ public class TelaPortaSemiAbertaInterna extends javax.swing.JFrame {
         });
         getContentPane().add(SetaDireitaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 270, -1, -1));
 
-        PortSemiAbertaInternaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Porta semi aberta - interno (1).jpg"))); // NOI18N
+        PortSemiAbertaInternaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Porta semi aberta - interno.jpg"))); // NOI18N
         getContentPane().add(PortSemiAbertaInternaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

@@ -37,7 +37,7 @@ public class TelaListaPAS extends javax.swing.JFrame {
         });
         getContentPane().add(VoltarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 550, 50, 50));
 
-        ListaPASLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/05A Módulo de Comunicação - Lista de PA's E1 (1).jpg"))); // NOI18N
+        ListaPASLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Módulo de Comunicação - Lista de PA's E1.jpg"))); // NOI18N
         getContentPane().add(ListaPASLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

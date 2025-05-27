@@ -52,7 +52,7 @@ public class TelaPortaDireita extends javax.swing.JFrame {
         });
         getContentPane().add(BotoeirasSinaleirasButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, 70, 180));
 
-        PortaDireitaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Porta de cabine lateral direita (1).jpg"))); // NOI18N
+        PortaDireitaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Porta de cabine lateral direita.jpg"))); // NOI18N
         getContentPane().add(PortaDireitaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 750));
 
         pack();

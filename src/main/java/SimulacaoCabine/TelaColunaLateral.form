@@ -73,7 +73,7 @@
     <Component class="javax.swing.JLabel" name="ColunaLateralLabel">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/SimulacaoImagens/07 - Coluna lateral direita - DIC, Deriva&#xe7;&#xe3;o de Portas e Chave do CBTC (1).jpg"/>
+          <Image iconType="3" name="/SimulacaoImagens/Coluna lateral direita - DIC, Deriva&#xe7;&#xe3;o de Portas e Chave do CBTC.jpg"/>
         </Property>
       </Properties>
       <Constraints>

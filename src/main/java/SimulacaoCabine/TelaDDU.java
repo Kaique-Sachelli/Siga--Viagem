@@ -39,7 +39,7 @@ public class TelaDDU extends javax.swing.JFrame {
         });
         getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        DDUImagemLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/3- DDU com fachada aberta (1).jpg"))); // NOI18N
+        DDUImagemLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/DDU com fachada aberta.jpg"))); // NOI18N
         getContentPane().add(DDUImagemLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();

@@ -50,7 +50,7 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
         });
         getContentPane().add(ListaPASButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 60, 50));
 
-        ModuloComunicacaoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/05 - Módulo de Comunicação - tela de início (1).jpg"))); // NOI18N
+        ModuloComunicacaoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Módulo de Comunicação - tela de início.jpg"))); // NOI18N
         getContentPane().add(ModuloComunicacaoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
