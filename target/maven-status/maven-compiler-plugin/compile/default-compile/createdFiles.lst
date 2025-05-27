@@ -1,3 +1,4 @@
+SimulacaoCabine\TelaAdesivoPorta1$1.class
 SimulacaoCabine\TelaPortaSemiAberta.class
 MenuTelasAdmin\TelaConfiguracoesAdmin$5.class
 SimulacaoCabine\TelaPortaDireita$2.class
@@ -16,6 +17,7 @@ SimulacaoCabine\TelaPainelAcessoAmpliado$2.class
 SimulacaoCabine\TelaDeReferencia.class
 SimulacaoCabine\TelaChavesPainel$3.class
 SimulacaoCabine\TelaVDU$2.class
+SimulacaoCabine\TelaAdesivoPortaI2.class
 SimulacaoCabine\TelaPainelDeAcesso$1.class
 SimulacaoCabine\TelaCabine$9.class
 SimulacaoCabine\TelaPortaSemiAberta$2.class
@@ -35,6 +37,7 @@ SimulacaoCabine\TelaCabine$8.class
 MenuTelas\CriarConta$5.class
 SimulacaoCabine\TelaBotoeirasSinaleiras$2.class
 SimulacaoCabine\TelaPainelDeControle.class
+SimulacaoCabine\TelaAdesivoPorta1.class
 SimulacaoCabine\TelaCabineTras.class
 MenuTelas\TelaConfiguracoes$3.class
 MenuTelasAdmin\TelaMenuAdmin$2.class
@@ -53,6 +56,7 @@ MenuTelas\TelaMenuUsuario$1.class
 SimulacaoCabine\TelaDeReferencia$4.class
 SimulacaoCabine\TelaVisaoGeral$2.class
 MenuTelasAdmin\SelecionarFaseAdmin$2.class
+SimulacaoCabine\TelaAdesivoPortaI2$1.class
 MenuTelas\SelecionarFase$1.class
 SimulacaoCabine\TelaCabine$1.class
 SimulacaoCabine\TelaDDU.class
@@ -122,6 +126,7 @@ SimulacaoCabine\TelaCabine$11.class
 MenuTelasAdmin\TelaConfiguracoesAdmin$1.class
 SimulacaoCabine\TelaListaPAS$2.class
 MenuTelas\TelaEstatistica$1.class
+SimulacaoCabine\TelaPortaIsolada.class
 MenuTelasAdmin\AlterarUsuario$1.class
 SimulacaoCabine\TelaPortaEsquerda.class
 SimulacaoCabine\TelaADU.class
@@ -143,12 +148,10 @@ SimulacaoCabine\TelaCabine$12.class
 SimulacaoCabine\TelaPortaEsquerda$3.class
 SimulacaoCabine\TelaVDU.class
 SimulacaoCabine\TelaCabine$4.class
-SimulacaoCabine\TelaAdesivoPortaIsolada1.class
 SimulacaoCabine\TelaPortaFechada$1.class
 SimulacaoCabine\TelaPortaDireita$1.class
 SimulacaoCabine\TelaAreaExterna$3.class
 SimulacaoCabine\TelaPainelDeAcesso.class
-SimulacaoCabine\TelaAdesivoPortaIsolada1$1.class
 SimulacaoCabine\TelaCabine$5.class
 SimulacaoCabine\TelaReversoraNeutro$2.class
 SimulacaoCabine\TelaDDU$2.class
@@ -156,6 +159,7 @@ SimulacaoCabine\TelaAreaExterna$2.class
 MenuTelas\TelaMenuUsuario$6.class
 SimulacaoCabine\TelaModuloComunicacao$1.class
 SimulacaoCabine\TelaCabine$6.class
+SimulacaoCabine\TelaPortaIsolada$1.class
 SimulacaoCabine\TelaPortaEsquerda$1.class
 MenuTelas\TelaLogin$2.class
 SimulacaoCabine\TelaSoleira$1.class

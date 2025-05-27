@@ -2,15 +2,16 @@ package SimulacaoCabine;
 
 import javax.swing.JFrame;
 
-public class TelaAdesivoPortaIsolada2 extends javax.swing.JFrame {
-
+public class TelaAdesivoPorta1 extends javax.swing.JFrame {
+    
     private JFrame frame;
     
-    public TelaAdesivoPortaIsolada2() {
+    public TelaAdesivoPorta1() {
         initComponents();
+        setResizable(false);
     }
 
-    public TelaAdesivoPortaIsolada2(JFrame frame) {
+    public TelaAdesivoPorta1(JFrame frame) {
         this();
         frame.setVisible(false);
         this.frame = frame;
@@ -21,14 +22,14 @@ public class TelaAdesivoPortaIsolada2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        AdesivoPortaIsolada2Label = new javax.swing.JLabel();
+        AdesivoPortaIsolada1Label = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tela Adesivo Porta Isolada 2");
+        setTitle("Tela Adesivo Porta Isolada 1");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        AdesivoPortaIsolada2Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/22 - Adesivo de porta isolada - 2 terços instalado (1).jpg"))); // NOI18N
-        getContentPane().add(AdesivoPortaIsolada2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        AdesivoPortaIsolada1Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/21 - Adesivo de porta isolada - 1 terço instalado (1).jpg"))); // NOI18N
+        getContentPane().add(AdesivoPortaIsolada1Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
@@ -51,25 +52,26 @@ public class TelaAdesivoPortaIsolada2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaAdesivoPortaIsolada2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaAdesivoPorta1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaAdesivoPortaIsolada2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaAdesivoPorta1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaAdesivoPortaIsolada2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaAdesivoPorta1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaAdesivoPortaIsolada2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaAdesivoPorta1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaAdesivoPortaIsolada2().setVisible(true);
+                new TelaAdesivoPorta1().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel AdesivoPortaIsolada2Label;
+    private javax.swing.JLabel AdesivoPortaIsolada1Label;
     // End of variables declaration//GEN-END:variables
 }
