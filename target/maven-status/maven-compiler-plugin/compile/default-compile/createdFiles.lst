@@ -69,6 +69,7 @@ SimulacaoCabine\TelaColunaLateral.class
 MenuTelas\TelaConfiguracoes$5.class
 MenuTelasAdmin\TelaMenuAdmin$7.class
 SimulacaoCabine\TelaChavesPainel$1.class
+SimulacaoCabine\TelaVisaoPortaIsolada$2.class
 MenuTelas\SelecionarFase.class
 MenuTelasAdmin\SelecionarFaseAdmin$1.class
 MenuTelasAdmin\TelaMenuAdmin$6.class
@@ -86,6 +87,7 @@ SimulacaoCabine\TelaADU$2.class
 SimulacaoCabine\TelaLimpadorParabrisa$1.class
 MenuTelasAdmin\TelaMenuAdmin$5.class
 SimulacaoCabine\TelaPainelAcessoAmpliado.class
+SimulacaoCabine\TelaSinalizacaoExternaApagada.class
 MenuTelasAdmin\TelaEstatisticaAdmin.class
 SimulacaoCabine\TelaListaPAS.class
 MenuTelasAdmin\TelaEstatisticaAdmin$2.class
@@ -101,6 +103,7 @@ SimulacaoCabine\TelaChavesPainel.class
 MenuTelas\CriarConta.class
 MenuTelasAdmin\TelaConfiguracoesAdmin.class
 MenuTelas\TelaConfiguracoes$1.class
+SimulacaoCabine\TelaSinalizacaoExternaApagada$1.class
 SimulacaoCabine\TelaPaineisEmergencia$2.class
 SimulacaoCabine\TelaReversoraNeutro$3.class
 MenuTelasAdmin\TelaConfiguracoesAdmin$2.class
@@ -113,6 +116,7 @@ SimulacaoCabine\TelaDeReferencia$5.class
 MenuTelas\CriarConta$7.class
 MenuTelas\CriarConta$6.class
 MenuTelas\SelecionarFase$3.class
+SimulacaoCabine\TelaVisaoPortaIsolada$1.class
 SimulacaoCabine\TelaCabine$10.class
 SimulacaoCabine\TelaVisaoGeral$4.class
 SimulacaoCabine\TelaCabineTras$1.class
@@ -127,6 +131,7 @@ MenuTelasAdmin\TelaConfiguracoesAdmin$1.class
 SimulacaoCabine\TelaListaPAS$2.class
 MenuTelas\TelaEstatistica$1.class
 SimulacaoCabine\TelaPortaIsolada.class
+SimulacaoCabine\TelaSinalizacaoExternaApagada$2.class
 MenuTelasAdmin\AlterarUsuario$1.class
 SimulacaoCabine\TelaPortaEsquerda.class
 SimulacaoCabine\TelaADU.class
@@ -139,6 +144,7 @@ MenuTelasAdmin\TelaMenuAdmin$1.class
 SimulacaoCabine\TelaModuloComunicacao$3.class
 MenuTelas\TelaLogin$4.class
 SimulacaoCabine\TelaPortaSemiAbertaInterna$2.class
+SimulacaoCabine\TelaVisaoPortaIsolada.class
 MenuTelasAdmin\AlterarUsuario.class
 MenuTelas\TelaLogin$1.class
 MenuTelas\TelaMenuUsuario$4.class

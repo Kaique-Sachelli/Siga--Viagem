@@ -22,11 +22,21 @@ public class TelaVisaoPortaIsolada extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        sinalizacaoExternaApagadaButton = new javax.swing.JButton();
         VisaoPortaIsoladaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Visão Geral Porta Isolada");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        sinalizacaoExternaApagadaButton.setContentAreaFilled(false);
+        sinalizacaoExternaApagadaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        sinalizacaoExternaApagadaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sinalizacaoExternaApagadaButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(sinalizacaoExternaApagadaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 190, 130, 80));
 
         VisaoPortaIsoladaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/23 - Adesivo de porta isolada instalado visão geral (1).jpg"))); // NOI18N
         getContentPane().add(VisaoPortaIsoladaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
@@ -34,6 +44,11 @@ public class TelaVisaoPortaIsolada extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void sinalizacaoExternaApagadaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sinalizacaoExternaApagadaButtonActionPerformed
+        TelaSinalizacaoExternaApagada janelaExternaApagada = new TelaSinalizacaoExternaApagada(this);
+        janelaExternaApagada.setVisible(true);
+    }//GEN-LAST:event_sinalizacaoExternaApagadaButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -72,5 +87,6 @@ public class TelaVisaoPortaIsolada extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel VisaoPortaIsoladaLabel;
+    private javax.swing.JButton sinalizacaoExternaApagadaButton;
     // End of variables declaration//GEN-END:variables
 }
