@@ -57,7 +57,8 @@ public class TelaReversoraNeutro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SetaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButtonActionPerformed
-        frame.setVisible(true);
+        TelaCabine telaCabine = new TelaCabine();
+        telaCabine.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_SetaBaixoButtonActionPerformed
 
