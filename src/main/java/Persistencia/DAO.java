@@ -34,4 +34,23 @@ public class DAO {
         }
        
     }
+    public boolean cadastrar (Usuario u) throws Exception{
+        var sql = "INSERT INTO usuario (nome, login, senha) VALUES (?, ?, ?)";
+        try(
+                
+            var conexao = new ConnectionFactory().obterConexao();  
+            var ps = conexao.prepareStatement(sql)
+        ){
+            ps.setString(1, u.getNome());
+            ps.setString(2, u.getLogin());
+            ps.setString(3, u.getSenha());        
+            int linhasAfetadas = ps.executeUpdate();
+            return linhasAfetadas > 0; // true = cadastrou, false = não cadastrou
+
+        }
+    
+    }
+    
+    
+    
 }

@@ -1,6 +1,9 @@
 package MenuTelas;
 
+import Persistencia.DAO;
+import Persistencia.Usuario;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 public class CriarConta extends javax.swing.JFrame {
 
@@ -27,11 +30,11 @@ public class CriarConta extends javax.swing.JFrame {
         criarContaLabel = new javax.swing.JLabel();
         voltarMenuButton = new javax.swing.JButton();
         nomeLabel = new javax.swing.JLabel();
-        LoginTextField = new javax.swing.JTextField();
+        loginTextField = new javax.swing.JTextField();
         senhaLabel = new javax.swing.JLabel();
         confirmarSenhaPasswordField = new javax.swing.JPasswordField();
         senhaLabel1 = new javax.swing.JLabel();
-        novaSenhaPasswordField1 = new javax.swing.JPasswordField();
+        senhaPasswordField = new javax.swing.JPasswordField();
         confirmarButton = new javax.swing.JButton();
         mostrarSenhaButton = new javax.swing.JButton();
         nomeTextField = new javax.swing.JTextField();
@@ -68,13 +71,13 @@ public class CriarConta extends javax.swing.JFrame {
         nomeLabel.setText("Nome:");
         getContentPane().add(nomeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 80, -1));
 
-        LoginTextField.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        LoginTextField.addActionListener(new java.awt.event.ActionListener() {
+        loginTextField.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        loginTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoginTextFieldActionPerformed(evt);
+                loginTextFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(LoginTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 510, 50));
+        getContentPane().add(loginTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 510, 50));
 
         senhaLabel.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         senhaLabel.setForeground(new java.awt.Color(0, 20, 137));
@@ -94,13 +97,13 @@ public class CriarConta extends javax.swing.JFrame {
         senhaLabel1.setText("Confirmar Senha: ");
         getContentPane().add(senhaLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, -1, 30));
 
-        novaSenhaPasswordField1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        novaSenhaPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        senhaPasswordField.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        senhaPasswordField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                novaSenhaPasswordField1ActionPerformed(evt);
+                senhaPasswordFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(novaSenhaPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 510, 50));
+        getContentPane().add(senhaPasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 510, 50));
 
         confirmarButton.setBackground(new java.awt.Color(0, 20, 137));
         confirmarButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
@@ -142,32 +145,61 @@ public class CriarConta extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_voltarMenuButtonActionPerformed
 
-    private void LoginTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginTextFieldActionPerformed
+    private void loginTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginTextFieldActionPerformed
         dispose();
-    }//GEN-LAST:event_LoginTextFieldActionPerformed
+    }//GEN-LAST:event_loginTextFieldActionPerformed
 
     private void confirmarSenhaPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarSenhaPasswordFieldActionPerformed
         dispose();
     }//GEN-LAST:event_confirmarSenhaPasswordFieldActionPerformed
 
-    private void novaSenhaPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_novaSenhaPasswordField1ActionPerformed
+    private void senhaPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaPasswordFieldActionPerformed
         dispose();
-    }//GEN-LAST:event_novaSenhaPasswordField1ActionPerformed
+    }//GEN-LAST:event_senhaPasswordFieldActionPerformed
 
     private void confirmarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarButtonActionPerformed
-        TelaLogin loginUsuario = new TelaLogin(this);
-        loginUsuario.setVisible(true);
+        try {
+            var nome = nomeTextField.getText();
+            var login = loginTextField.getText();
+            var senha = new String (senhaPasswordField.getPassword());
+            var confirmarSenha = new String (confirmarSenhaPasswordField.getPassword());
+            
+            if (senha.equals(confirmarSenha)){
+                var u = new Usuario (nome, login, senha, false);
+                var dao = new DAO();
+
+                if(dao.cadastrar(u)) {
+                    JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso!");
+                    var dt = new TelaLogin();
+                    dt.setVisible(true);
+                    this.dispose();
+                }
+                else{
+                        JOptionPane.showMessageDialog(null, "Cadastro inválido.");
+                    }
+                
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Senhas não coincidem");
+                
+            }
+                
+        }catch (Exception e){
+          e.printStackTrace();
+          JOptionPane.showMessageDialog(null, "Sistema indisponível");
+            }
+            
     }//GEN-LAST:event_confirmarButtonActionPerformed
 private boolean mostrarSenha = false;
     private void mostrarSenhaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarSenhaButtonActionPerformed
         // TODO add your handling code here:
         if(mostrarSenha){
-            novaSenhaPasswordField1.setEchoChar('•');
+            senhaPasswordField.setEchoChar('•');
             confirmarSenhaPasswordField.setEchoChar('•');
             mostrarSenhaButton.setText("Mostrar Senha");
             mostrarSenha = false;
         } else{
-            novaSenhaPasswordField1.setEchoChar((char)0);
+            senhaPasswordField.setEchoChar((char)0);
             confirmarSenhaPasswordField.setEchoChar((char)0);
             mostrarSenhaButton.setText("Ocultar Senha");
             mostrarSenha = true;
@@ -214,17 +246,19 @@ private boolean mostrarSenha = false;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField LoginTextField;
     private javax.swing.JButton confirmarButton;
     private javax.swing.JPasswordField confirmarSenhaPasswordField;
     private javax.swing.JLabel criarContaLabel;
     private javax.swing.JLabel loginLabel1;
+    private javax.swing.JTextField loginTextField;
     private javax.swing.JButton mostrarSenhaButton;
     private javax.swing.JLabel nomeLabel;
     private javax.swing.JTextField nomeTextField;
-    private javax.swing.JPasswordField novaSenhaPasswordField1;
     private javax.swing.JLabel senhaLabel;
     private javax.swing.JLabel senhaLabel1;
+    private javax.swing.JPasswordField senhaPasswordField;
     private javax.swing.JButton voltarMenuButton;
     // End of variables declaration//GEN-END:variables
 }
+
+
