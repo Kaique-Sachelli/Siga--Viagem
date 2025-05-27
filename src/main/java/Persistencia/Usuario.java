@@ -6,6 +6,13 @@ public class Usuario {
     private String nome, login, senha;
     boolean instrutor ; 
     
+     public Usuario(int id, String nome, String login, String senha, boolean instrutor){
+        this.nome = nome;
+        this.login = login;
+        this.senha = senha;
+        this.instrutor = instrutor;
+    }
+    
     public Usuario(String nome, String login, String senha, boolean instrutor){
         this.nome = nome;
         this.login = login;

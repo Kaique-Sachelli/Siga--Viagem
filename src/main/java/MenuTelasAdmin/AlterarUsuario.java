@@ -1,8 +1,27 @@
 package MenuTelasAdmin;
 
+import Persistencia.Usuario;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import java.util.List;
+import java.util.ArrayList; 
+
 
 public class AlterarUsuario extends javax.swing.JFrame {
+    private void obterUsuarios(){
+        try{
+            usuariosComboBox.setModel(
+            new DefaultComboBoxModel<Usuario>(usuarios.toArray(new Usuario[]{}))
+            );
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null,"Lista de usuarios não disponivel");
+            
+        }
+    
+    }
 
     private JFrame frame;
     
@@ -25,7 +44,7 @@ public class AlterarUsuario extends javax.swing.JFrame {
         tituloMenuLabel = new javax.swing.JLabel();
         voltarMenuButton = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        usuariosComboBox = new javax.swing.JComboBox<>();
         confirmarButton = new javax.swing.JButton();
         senhaLabel = new javax.swing.JLabel();
         novaSenhaPasswordField = new javax.swing.JPasswordField();
@@ -63,8 +82,8 @@ public class AlterarUsuario extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/logoMaua.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 530, 230, 110));
 
-        jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, 480, 60));
+        usuariosComboBox.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        getContentPane().add(usuariosComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, 480, 60));
 
         confirmarButton.setBackground(new java.awt.Color(0, 20, 137));
         confirmarButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
@@ -126,11 +145,11 @@ public class AlterarUsuario extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton confirmarButton;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPasswordField novaSenhaPasswordField;
     private javax.swing.JLabel senhaLabel;
     private javax.swing.JLabel tituloMenuLabel;
+    private javax.swing.JComboBox<String> usuariosComboBox;
     private javax.swing.JButton voltarMenuButton;
     // End of variables declaration//GEN-END:variables
 }

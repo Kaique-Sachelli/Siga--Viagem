@@ -1,13 +1,17 @@
 
 package Persistencia;
 
+
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+import Persistencia.Usuario;
 
 public class DAO {
     public boolean existe (Usuario u) throws Exception {
         //try-with-resources 
         //1.Definir o comando SQL
-        var sql = "SELECT login, senha, instrutor FROM usuario WHERE login=? AND senha = ?";
+        var sql = "SELECT id_usuario, nome, login, senha, instrutor FROM usuario WHERE login=? AND senha = ?";
         //2. Estabelecer uma conexão com o SQBD (MySQL)
         
         //3.Preparar o comando 
@@ -51,6 +55,27 @@ public class DAO {
 
         }
     
+    }
+    public List <Usuario> obterUsuarios() throws Exception{
+        var usuarios = new ArrayList<Usuario>();
+        var sql = "SELECT * FROM usuario";
+        try(
+                var conexao = new ConnectionFactory().obterConexao();
+                var ps = conexao.prepareStatement(sql);
+                var rs = ps.executeQuery()
+            ){
+                while(rs.next()){
+                    var id = rs.getInt("id_usuario");
+                    var nome = rs.getString("nome");
+                    var login = rs.getString("login");
+                    var senha = rs.getString("senha");
+                    var instrutor = rs.getBoolean("instrutor");
+                    var usuario = new Usuario(id, nome, login, senha, instrutor);
+                    usuarios.add(usuario);
+                }
+                return usuarios;
+            
+            }   
     }
     
 
