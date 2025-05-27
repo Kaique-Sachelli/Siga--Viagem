@@ -62,8 +62,8 @@ public class DAO {
         try(
                 var conexao = new ConnectionFactory().obterConexao();
                 var ps = conexao.prepareStatement(sql);
-                var rs = ps.executeQuery()
-            ){
+                var rs = ps.executeQuery();
+        ){
                 while(rs.next()){
                     var id = rs.getInt("id_usuario");
                     var nome = rs.getString("nome");
@@ -73,8 +73,8 @@ public class DAO {
                     var usuario = new Usuario(id, nome, login, senha, instrutor);
                     usuarios.add(usuario);
                 }
-                return usuarios;
             
+                return usuarios;
             }   
     }
     

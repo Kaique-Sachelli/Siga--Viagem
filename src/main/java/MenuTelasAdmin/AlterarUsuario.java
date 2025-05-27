@@ -1,5 +1,6 @@
 package MenuTelasAdmin;
 
+import Persistencia.DAO;
 import Persistencia.Usuario;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
@@ -11,8 +12,10 @@ import java.util.ArrayList;
 public class AlterarUsuario extends javax.swing.JFrame {
     private void obterUsuarios(){
         try{
+            var dao = new DAO();
+            var usuarios = dao.obterUsuarios();
             usuariosComboBox.setModel(
-            new DefaultComboBoxModel<Usuario>(usuarios.toArray(new Usuario[]{}))
+                new DefaultComboBoxModel<Usuario>(usuarios.toArray(new Usuario[]{}))
             );
         }
         catch (Exception e){
