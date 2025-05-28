@@ -23,6 +23,7 @@ public class TelaPortaEsquerda extends javax.swing.JFrame {
 
         SetaDireitaButton = new javax.swing.JButton();
         AreaExternaButton = new javax.swing.JButton();
+        botoeiraAcessaButton = new javax.swing.JButton();
         PortaEsquerdaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -49,6 +50,15 @@ public class TelaPortaEsquerda extends javax.swing.JFrame {
         });
         getContentPane().add(AreaExternaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 170, 610));
 
+        botoeiraAcessaButton.setContentAreaFilled(false);
+        botoeiraAcessaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botoeiraAcessaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botoeiraAcessaButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botoeiraAcessaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, -1, 190));
+
         PortaEsquerdaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Porta de cabine lateral esquerda.jpg"))); // NOI18N
         getContentPane().add(PortaEsquerdaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 750));
 
@@ -65,6 +75,11 @@ public class TelaPortaEsquerda extends javax.swing.JFrame {
         TelaAreaExterna janelaAreaExterna = new TelaAreaExterna(this);
         janelaAreaExterna.setVisible(true);
     }//GEN-LAST:event_AreaExternaButtonActionPerformed
+
+    private void botoeiraAcessaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botoeiraAcessaButtonActionPerformed
+        TelaBotoeiraAcessa janelaBotoeiraAcessa = new TelaBotoeiraAcessa(this);
+        janelaBotoeiraAcessa.setVisible(true);
+    }//GEN-LAST:event_botoeiraAcessaButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -105,5 +120,6 @@ public class TelaPortaEsquerda extends javax.swing.JFrame {
     private javax.swing.JButton AreaExternaButton;
     private javax.swing.JLabel PortaEsquerdaLabel;
     private javax.swing.JButton SetaDireitaButton;
+    private javax.swing.JButton botoeiraAcessaButton;
     // End of variables declaration//GEN-END:variables
 }
