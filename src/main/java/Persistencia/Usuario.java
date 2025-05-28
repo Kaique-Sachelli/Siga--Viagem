@@ -7,6 +7,7 @@ public class Usuario {
     boolean instrutor ; 
     
      public Usuario(int id, String nome, String login, String senha, boolean instrutor){
+        this.id = id;
         this.nome = nome;
         this.login = login;
         this.senha = senha;
@@ -52,6 +53,7 @@ public class Usuario {
     public void setNome(String nome) {
         this.nome = nome;
     }
+    @Override
     public String toString(){
         return String.format(
             "%s - %s", id, nome
