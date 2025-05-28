@@ -41,6 +41,7 @@ public class TelaCabineTras extends javax.swing.JFrame {
         getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
         fitaButton.setContentAreaFilled(false);
+        fitaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         fitaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fitaButtonActionPerformed(evt);

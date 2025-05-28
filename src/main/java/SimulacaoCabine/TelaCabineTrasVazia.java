@@ -22,7 +22,6 @@ public class TelaCabineTrasVazia extends javax.swing.JFrame {
     private void initComponents() {
 
         setaBaixoButton = new javax.swing.JButton();
-        fitaButton = new javax.swing.JButton();
         cabineTrasVaziaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -39,9 +38,6 @@ public class TelaCabineTrasVazia extends javax.swing.JFrame {
             }
         });
         getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
-
-        fitaButton.setContentAreaFilled(false);
-        getContentPane().add(fitaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 190, 110, 120));
 
         cabineTrasVaziaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Cabine - parte de trás (sem fita).jpg"))); // NOI18N
         getContentPane().add(cabineTrasVaziaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
@@ -94,7 +90,6 @@ public class TelaCabineTrasVazia extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel cabineTrasVaziaLabel;
-    private javax.swing.JButton fitaButton;
     private javax.swing.JButton setaBaixoButton;
     // End of variables declaration//GEN-END:variables
 }
