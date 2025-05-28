@@ -59,9 +59,9 @@ public class TelaReversoraNeutro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SetaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButtonActionPerformed
-        EstadoReversora.setPosicaoAtual(EstadoReversora.Posicao.NEUTRO); // Salva estado atual
-        frame.setVisible(true); // Volta para a cabine
-        this.dispose(); // Fecha esta tela
+        EstadoReversora.setPosicaoAtual(EstadoReversora.Posicao.NEUTRO); 
+        frame.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_SetaBaixoButtonActionPerformed
 
     private void ReversoraNeutroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReversoraNeutroButtonActionPerformed

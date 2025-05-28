@@ -11,11 +11,6 @@ public class TelaReversoraFrente extends javax.swing.JFrame {
         initComponents();
     }
 
-    
-    
-    
-    
-    
     public TelaReversoraFrente(JFrame frame) {
         this();
         frame.setVisible(false);
@@ -63,9 +58,9 @@ public class TelaReversoraFrente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SetaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButtonActionPerformed
-        EstadoReversora.setPosicaoAtual(EstadoReversora.Posicao.FRENTE); // Salva estado atual
-        frame.setVisible(true); // Volta para a cabine
-        this.dispose(); // Fecha esta tela
+        EstadoReversora.setPosicaoAtual(EstadoReversora.Posicao.FRENTE); 
+        frame.setVisible(true); 
+        this.dispose(); 
     }//GEN-LAST:event_SetaBaixoButtonActionPerformed
 
     private void ReversoraFrenteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReversoraFrenteButtonActionPerformed
