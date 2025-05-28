@@ -146,8 +146,8 @@ public class TelaLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_senhaPasswordFieldActionPerformed
 
     private void esqueceuSenhaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_esqueceuSenhaButtonActionPerformed
-        TelaEsqueceuSenha janelaEsqueceuSenha  = new TelaEsqueceuSenha();
-        janelaEsqueceuSenha.setVisible(true);
+
+        JOptionPane.showMessageDialog(null, "Contate seu intrutor para alterar a senha.", "Esqueceu senha", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_esqueceuSenhaButtonActionPerformed
 
     private void entrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarButtonActionPerformed
