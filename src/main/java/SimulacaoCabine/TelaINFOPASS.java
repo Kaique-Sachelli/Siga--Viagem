@@ -2,15 +2,15 @@ package SimulacaoCabine;
 
 import javax.swing.JFrame;
 
-public class TelaFE extends javax.swing.JFrame {
+public class TelaINFOPASS extends javax.swing.JFrame {
 
     private JFrame frame;
     
-    public TelaFE() {
+    public TelaINFOPASS() {
         initComponents();
     }
 
-    public TelaFE(JFrame frame) {
+    public TelaINFOPASS(JFrame frame) {
         this();
         frame.setVisible(false);
         this.frame = frame;
@@ -22,11 +22,11 @@ public class TelaFE extends javax.swing.JFrame {
     private void initComponents() {
 
         preparaButton = new javax.swing.JButton();
-        infopassButton = new javax.swing.JButton();
-        feLabel = new javax.swing.JLabel();
+        feButton = new javax.swing.JButton();
+        infopassLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tela FE");
+        setTitle("Tela INFOPASS");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         preparaButton.setContentAreaFilled(false);
@@ -36,19 +36,19 @@ public class TelaFE extends javax.swing.JFrame {
                 preparaButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(preparaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 520, 40, 40));
+        getContentPane().add(preparaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 490, 40, 40));
 
-        infopassButton.setContentAreaFilled(false);
-        infopassButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        infopassButton.addActionListener(new java.awt.event.ActionListener() {
+        feButton.setContentAreaFilled(false);
+        feButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        feButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                infopassButtonActionPerformed(evt);
+                feButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(infopassButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 520, 40, 40));
+        getContentPane().add(feButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 490, 40, 40));
 
-        feLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/DDU - tela FE- lista de emergência (1).jpg"))); // NOI18N
-        getContentPane().add(feLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        infopassLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/DDU - tela INFOPASS (1).jpg"))); // NOI18N
+        getContentPane().add(infopassLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
@@ -59,10 +59,10 @@ public class TelaFE extends javax.swing.JFrame {
         janelaDDU.setVisible(true);
     }//GEN-LAST:event_preparaButtonActionPerformed
 
-    private void infopassButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infopassButtonActionPerformed
-        TelaINFOPASS janelaINFOPASS = new TelaINFOPASS(this);
-        janelaINFOPASS.setVisible(true);
-    }//GEN-LAST:event_infopassButtonActionPerformed
+    private void feButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_feButtonActionPerformed
+        TelaFE janelaFe = new TelaFE(this);
+        janelaFe.setVisible(true);
+    }//GEN-LAST:event_feButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -81,27 +81,27 @@ public class TelaFE extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaFE.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaINFOPASS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaFE.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaINFOPASS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaFE.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaINFOPASS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaFE.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaINFOPASS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaFE().setVisible(true);
+                new TelaINFOPASS().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel feLabel;
-    private javax.swing.JButton infopassButton;
+    private javax.swing.JButton feButton;
+    private javax.swing.JLabel infopassLabel;
     private javax.swing.JButton preparaButton;
     // End of variables declaration//GEN-END:variables
 }

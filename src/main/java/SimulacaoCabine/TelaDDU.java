@@ -23,6 +23,7 @@ public class TelaDDU extends javax.swing.JFrame {
 
         setaBaixoButton = new javax.swing.JButton();
         feButton = new javax.swing.JButton();
+        infopassButton = new javax.swing.JButton();
         DDUImagemLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -49,6 +50,15 @@ public class TelaDDU extends javax.swing.JFrame {
         });
         getContentPane().add(feButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 480, 40, 40));
 
+        infopassButton.setContentAreaFilled(false);
+        infopassButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        infopassButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                infopassButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(infopassButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(439, 480, 30, 40));
+
         DDUImagemLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/DDU com fachada aberta.jpg"))); // NOI18N
         getContentPane().add(DDUImagemLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
@@ -57,14 +67,19 @@ public class TelaDDU extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
-        frame.setVisible(true);
-        this.dispose();
+        TelaCabine janelaCabine = new TelaCabine(this);
+        janelaCabine.setVisible(true);
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     private void feButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_feButtonActionPerformed
         TelaFE janelaFe = new TelaFE(this);
         janelaFe.setVisible(true);
     }//GEN-LAST:event_feButtonActionPerformed
+
+    private void infopassButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infopassButtonActionPerformed
+        TelaINFOPASS janelaINFOPASS = new TelaINFOPASS(this);
+        janelaINFOPASS.setVisible(true);
+    }//GEN-LAST:event_infopassButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -104,6 +119,7 @@ public class TelaDDU extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel DDUImagemLabel;
     private javax.swing.JButton feButton;
+    private javax.swing.JButton infopassButton;
     private javax.swing.JButton setaBaixoButton;
     // End of variables declaration//GEN-END:variables
 }
