@@ -1,6 +1,8 @@
 package SimulacaoCabine;
 
 import javax.swing.JFrame;
+import Utilidades.EstadoReversora;
+
 
 public class TelaReversoraNeutro extends javax.swing.JFrame {
 
@@ -57,13 +59,16 @@ public class TelaReversoraNeutro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SetaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButtonActionPerformed
-        frame.setVisible(true);
-        this.dispose();
+        EstadoReversora.setPosicaoAtual(EstadoReversora.Posicao.NEUTRO); // Salva estado atual
+        frame.setVisible(true); // Volta para a cabine
+        this.dispose(); // Fecha esta tela
     }//GEN-LAST:event_SetaBaixoButtonActionPerformed
 
     private void ReversoraNeutroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReversoraNeutroButtonActionPerformed
-        TelaReversoraFrente janelaFrente = new TelaReversoraFrente(this);
+        EstadoReversora.setPosicaoAtual(EstadoReversora.Posicao.FRENTE);
+        TelaReversoraFrente janelaFrente = new TelaReversoraFrente(frame); // passa o frame original
         janelaFrente.setVisible(true);
+        this.dispose(); // <- fecha a janela atual
     }//GEN-LAST:event_ReversoraNeutroButtonActionPerformed
 
     /**
