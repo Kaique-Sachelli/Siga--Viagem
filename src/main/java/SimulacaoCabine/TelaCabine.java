@@ -2,6 +2,8 @@ package SimulacaoCabine;
 
 import Utilidades.Inventario;
 import javax.swing.JFrame;
+import Utilidades.EstadoReversora;
+
 
 public class TelaCabine extends javax.swing.JFrame {
    
@@ -175,8 +177,14 @@ public class TelaCabine extends javax.swing.JFrame {
     }//GEN-LAST:event_ModuloComunicacaoButtonActionPerformed
 
     private void ReversoraButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReversoraButtonActionPerformed
-        TelaReversoraFrente janelaReversora = new TelaReversoraFrente(this);
-        janelaReversora.setVisible(true);
+        
+        if (EstadoReversora.getPosicaoAtual() == EstadoReversora.Posicao.FRENTE) {
+            new TelaReversoraFrente(this).setVisible(true);
+        } else {
+            new TelaReversoraNeutro(this).setVisible(true);
+        }
+        this.setVisible(false); // evita janelas empilhadas
+    
     }//GEN-LAST:event_ReversoraButtonActionPerformed
 
     private void SocoConsoleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SocoConsoleButtonActionPerformed
