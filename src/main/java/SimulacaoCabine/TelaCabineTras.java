@@ -61,6 +61,7 @@ public class TelaCabineTras extends javax.swing.JFrame {
     }//GEN-LAST:event_SetaBaixoButtonActionPerformed
 
     private void fitaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fitaButtonActionPerformed
+        Utilidades.Inventario.getInstance().setItemColetado(true);
         TelaCabineTrasVazia janelaCabineTrasVazia = new TelaCabineTrasVazia(this);
         janelaCabineTrasVazia.setVisible(true);
         this.dispose();

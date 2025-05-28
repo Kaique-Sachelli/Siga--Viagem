@@ -1,5 +1,5 @@
 
-package SimulacaoCabine;
+package Utilidades;
 
 public class Inventario {
     private static Inventario instance = new Inventario();

@@ -1,5 +1,6 @@
 package SimulacaoCabine;
 
+import Utilidades.Inventario;
 import javax.swing.JFrame;
 
 public class TelaCabine extends javax.swing.JFrame {
