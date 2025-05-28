@@ -69,8 +69,8 @@ public class TelaAreaExterna extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SetaEsquerdaButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaEsquerdaButton1ActionPerformed
-        frame.setVisible(true);
-        this.dispose();
+        TelaPortaEsquerda janelaPortaEsquerda = new TelaPortaEsquerda(this);
+        janelaPortaEsquerda.setVisible(true);
     }//GEN-LAST:event_SetaEsquerdaButton1ActionPerformed
 
     private void SetaCimaButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaCimaButton1ActionPerformed

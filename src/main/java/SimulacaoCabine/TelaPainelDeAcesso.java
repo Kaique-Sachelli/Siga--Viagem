@@ -58,8 +58,8 @@ public class TelaPainelDeAcesso extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SetaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButtonActionPerformed
-        frame.setVisible(true);
-        this.dispose();
+        TelaAreaExterna janelaExterna = new TelaAreaExterna(this);
+        janelaExterna.setVisible(true);
     }//GEN-LAST:event_SetaBaixoButtonActionPerformed
 
     private void PainelDeControleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PainelDeControleButtonActionPerformed

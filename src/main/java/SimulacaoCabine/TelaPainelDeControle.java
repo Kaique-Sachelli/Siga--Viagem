@@ -47,7 +47,7 @@ public class TelaPainelDeControle extends javax.swing.JFrame {
                 PainelAmpliadoButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(PainelAmpliadoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(279, 310, 400, 240));
+        getContentPane().add(PainelAmpliadoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 440, 60, 60));
 
         PainelDeControleLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Painel_de_Controle_em_Metal_Industrial.png"))); // NOI18N
         getContentPane().add(PainelDeControleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
@@ -57,13 +57,15 @@ public class TelaPainelDeControle extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SetaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButtonActionPerformed
-        frame.setVisible(true);
+        TelaPainelDeAcesso janelaPainelDeAcesso = new TelaPainelDeAcesso(this);
+        janelaPainelDeAcesso.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_SetaBaixoButtonActionPerformed
 
     private void PainelAmpliadoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PainelAmpliadoButtonActionPerformed
         TelaPainelAcessoAmpliado janelaAcessoAmpliado = new TelaPainelAcessoAmpliado(this);
         janelaAcessoAmpliado.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_PainelAmpliadoButtonActionPerformed
 
     /**

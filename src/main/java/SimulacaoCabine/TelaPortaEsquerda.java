@@ -67,8 +67,8 @@ public class TelaPortaEsquerda extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SetaDireitaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaDireitaButtonActionPerformed
-        frame.setVisible(true);
-        this.dispose();
+        TelaCabine janelaCabine = new TelaCabine(this);
+        janelaCabine.setVisible(true);
     }//GEN-LAST:event_SetaDireitaButtonActionPerformed
 
     private void AreaExternaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AreaExternaButtonActionPerformed
