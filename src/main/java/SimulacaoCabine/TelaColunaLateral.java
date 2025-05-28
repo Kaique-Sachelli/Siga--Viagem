@@ -74,7 +74,8 @@ public class TelaColunaLateral extends javax.swing.JFrame {
     }//GEN-LAST:event_SetaDireitaButtonActionPerformed
 
     private void SetaEsquerdaButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaEsquerdaButton1ActionPerformed
-        frame.setVisible(true);
+        TelaCabine janelaCabine = new TelaCabine(this);
+        janelaCabine.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_SetaEsquerdaButton1ActionPerformed
 

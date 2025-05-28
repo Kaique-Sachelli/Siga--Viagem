@@ -2,15 +2,15 @@ package SimulacaoCabine;
 
 import javax.swing.JFrame;
 
-public class TelaCBTC extends javax.swing.JFrame {
+public class TelaCBTC_RM extends javax.swing.JFrame {
 
     private JFrame frame;
     
-    public TelaCBTC() {
+    public TelaCBTC_RM() {
         initComponents();
     }
 
-    public TelaCBTC(JFrame frame) {
+    public TelaCBTC_RM(JFrame frame) {
         this();
         frame.setVisible(false);
         this.frame = frame;
@@ -21,24 +21,24 @@ public class TelaCBTC extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        SetaBaixoButton = new javax.swing.JButton();
+        SetaBaixoButton1 = new javax.swing.JButton();
         cbtcRMButton = new javax.swing.JButton();
-        cbtcLabel = new javax.swing.JLabel();
+        cbtcRMLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tela Chave do CBTC");
+        setTitle("Tela CBTC RM");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        SetaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
-        SetaBaixoButton.setContentAreaFilled(false);
-        SetaBaixoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        SetaBaixoButton.setPreferredSize(new java.awt.Dimension(100, 100));
-        SetaBaixoButton.addActionListener(new java.awt.event.ActionListener() {
+        SetaBaixoButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
+        SetaBaixoButton1.setContentAreaFilled(false);
+        SetaBaixoButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        SetaBaixoButton1.setPreferredSize(new java.awt.Dimension(100, 100));
+        SetaBaixoButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SetaBaixoButtonActionPerformed(evt);
+                SetaBaixoButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
+        getContentPane().add(SetaBaixoButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
         cbtcRMButton.setContentAreaFilled(false);
         cbtcRMButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -47,24 +47,24 @@ public class TelaCBTC extends javax.swing.JFrame {
                 cbtcRMButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(cbtcRMButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 300, 230, 230));
+        getContentPane().add(cbtcRMButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 290, 230, 230));
 
-        cbtcLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Chave do CBTC - AM (1).jpg"))); // NOI18N
-        getContentPane().add(cbtcLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        cbtcRMLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Chave do CBTC - RM (1).jpg"))); // NOI18N
+        getContentPane().add(cbtcRMLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, -1));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SetaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButtonActionPerformed
+    private void SetaBaixoButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButton1ActionPerformed
         TelaColunaLateral janelaColunaLateral = new TelaColunaLateral(this);
         janelaColunaLateral.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_SetaBaixoButtonActionPerformed
+    }//GEN-LAST:event_SetaBaixoButton1ActionPerformed
 
     private void cbtcRMButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbtcRMButtonActionPerformed
-        TelaCBTC_RM janelaCBTC_RM = new TelaCBTC_RM(this);
-        janelaCBTC_RM.setVisible(true);
+        TelaCBTC janelaCBTC = new TelaCBTC(this);
+        janelaCBTC.setVisible(true);
     }//GEN-LAST:event_cbtcRMButtonActionPerformed
 
     /**
@@ -84,27 +84,27 @@ public class TelaCBTC extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaCBTC.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCBTC_RM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaCBTC.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCBTC_RM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaCBTC.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCBTC_RM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaCBTC.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCBTC_RM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaCBTC().setVisible(true);
+                new TelaCBTC_RM().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton SetaBaixoButton;
-    private javax.swing.JLabel cbtcLabel;
+    private javax.swing.JButton SetaBaixoButton1;
     private javax.swing.JButton cbtcRMButton;
+    private javax.swing.JLabel cbtcRMLabel;
     // End of variables declaration//GEN-END:variables
 }
