@@ -3,7 +3,7 @@ package SimulacaoCabine;
 import javax.swing.JFrame;
 
 public class TelaCabineTras extends javax.swing.JFrame {
-
+    
     private JFrame frame;
     
     public TelaCabineTras() {
@@ -22,6 +22,7 @@ public class TelaCabineTras extends javax.swing.JFrame {
     private void initComponents() {
 
         SetaBaixoButton = new javax.swing.JButton();
+        fitaButton = new javax.swing.JButton();
         CabineTrasLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -39,6 +40,14 @@ public class TelaCabineTras extends javax.swing.JFrame {
         });
         getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
+        fitaButton.setContentAreaFilled(false);
+        fitaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fitaButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(fitaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 190, 110, 120));
+
         CabineTrasLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Cabine - parte de trás.jpg"))); // NOI18N
         getContentPane().add(CabineTrasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
@@ -50,6 +59,12 @@ public class TelaCabineTras extends javax.swing.JFrame {
         frame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_SetaBaixoButtonActionPerformed
+
+    private void fitaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fitaButtonActionPerformed
+        TelaCabineTrasVazia janelaCabineTrasVazia = new TelaCabineTrasVazia(this);
+        janelaCabineTrasVazia.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_fitaButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -89,5 +104,6 @@ public class TelaCabineTras extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CabineTrasLabel;
     private javax.swing.JButton SetaBaixoButton;
+    private javax.swing.JButton fitaButton;
     // End of variables declaration//GEN-END:variables
 }
