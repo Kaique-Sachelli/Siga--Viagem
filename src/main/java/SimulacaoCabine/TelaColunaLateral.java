@@ -23,6 +23,7 @@ public class TelaColunaLateral extends javax.swing.JFrame {
 
         SetaDireitaButton = new javax.swing.JButton();
         SetaEsquerdaButton1 = new javax.swing.JButton();
+        chaveCBTCButton = new javax.swing.JButton();
         ColunaLateralLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -51,6 +52,15 @@ public class TelaColunaLateral extends javax.swing.JFrame {
         });
         getContentPane().add(SetaEsquerdaButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, -1, -1));
 
+        chaveCBTCButton.setContentAreaFilled(false);
+        chaveCBTCButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        chaveCBTCButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chaveCBTCButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(chaveCBTCButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 420, 150, 160));
+
         ColunaLateralLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Coluna lateral direita - DIC, Derivação de Portas e Chave do CBTC.jpg"))); // NOI18N
         getContentPane().add(ColunaLateralLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
@@ -67,6 +77,11 @@ public class TelaColunaLateral extends javax.swing.JFrame {
         frame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_SetaEsquerdaButton1ActionPerformed
+
+    private void chaveCBTCButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chaveCBTCButtonActionPerformed
+        TelaCBTC janelaCBTC = new TelaCBTC(this);
+        janelaCBTC.setVisible(true);
+    }//GEN-LAST:event_chaveCBTCButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -107,5 +122,6 @@ public class TelaColunaLateral extends javax.swing.JFrame {
     private javax.swing.JLabel ColunaLateralLabel;
     private javax.swing.JButton SetaDireitaButton;
     private javax.swing.JButton SetaEsquerdaButton1;
+    private javax.swing.JButton chaveCBTCButton;
     // End of variables declaration//GEN-END:variables
 }
