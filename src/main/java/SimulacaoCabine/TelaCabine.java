@@ -1,9 +1,10 @@
 package SimulacaoCabine;
 
+import Utilidades.Inventario;
 import javax.swing.JFrame;
 
 public class TelaCabine extends javax.swing.JFrame {
-
+   
    private JFrame frame;
    
     public TelaCabine() {
@@ -205,8 +206,14 @@ public class TelaCabine extends javax.swing.JFrame {
     }//GEN-LAST:event_SetaDireitaButtonActionPerformed
 
     private void SetaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButtonActionPerformed
-        TelaCabineTras janelaCabineTras = new TelaCabineTras(this);
-        janelaCabineTras.setVisible(true);
+        if(Inventario.getInstance().isItemColetado()){
+            TelaCabineTrasVazia janelaCabineTrasVazia = new TelaCabineTrasVazia(this);
+            janelaCabineTrasVazia.setVisible(true);
+        }else{
+            TelaCabineTras janelaCabineTras = new TelaCabineTras(this);
+            janelaCabineTras.setVisible(true);
+        }
+        this.dispose();
     }//GEN-LAST:event_SetaBaixoButtonActionPerformed
      
     /**
