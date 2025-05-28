@@ -26,11 +26,13 @@ public class AlterarUsuario extends javax.swing.JFrame {
     
     }
 
+    
     private JFrame frame;
     
     public AlterarUsuario() {
         initComponents();
         setResizable(false);
+        obterUsuarios();
     }
 
     public AlterarUsuario(JFrame frame) {
