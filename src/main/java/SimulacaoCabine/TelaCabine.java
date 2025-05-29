@@ -1,6 +1,6 @@
 package SimulacaoCabine;
 
-import Utilidades.Inventario;
+import Utilidades.EstadoItem;
 import javax.swing.JFrame;
 import Utilidades.EstadoReversora;
 
@@ -214,7 +214,7 @@ public class TelaCabine extends javax.swing.JFrame {
     }//GEN-LAST:event_setaDireitaButtonActionPerformed
 
     private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
-        if(Inventario.getInstance().isItemColetado()){
+        if(EstadoItem.getInstance().isItemColetado()){
             TelaCabineTrasVazia janelaCabineTrasVazia = new TelaCabineTrasVazia(this);
             janelaCabineTrasVazia.setVisible(true);
         }else{

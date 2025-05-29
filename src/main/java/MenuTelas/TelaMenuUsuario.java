@@ -1,5 +1,6 @@
 package MenuTelas;
 
+import SimulacaoCabine.TelaCabine;
 import javax.swing.JFrame;
 
 public class TelaMenuUsuario extends javax.swing.JFrame {
@@ -131,7 +132,8 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jogarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jogarButtonActionPerformed
-
+        TelaCabine janelaCabine = new TelaCabine(this);
+        janelaCabine.setVisible(true);
     }//GEN-LAST:event_jogarButtonActionPerformed
 
     private void selecionarFaseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selecionarFaseButtonActionPerformed

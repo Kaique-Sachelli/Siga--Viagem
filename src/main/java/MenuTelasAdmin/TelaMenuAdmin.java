@@ -1,4 +1,5 @@
 package MenuTelasAdmin;
+import SimulacaoCabine.TelaCabine;
 import javax.swing.JFrame;
 
 public class TelaMenuAdmin extends javax.swing.JFrame {
@@ -145,7 +146,8 @@ public class TelaMenuAdmin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jogarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jogarButtonActionPerformed
-        // TODO add your handling code here:
+        TelaCabine janelaCabine = new TelaCabine(this);
+        janelaCabine.setVisible(true);
     }//GEN-LAST:event_jogarButtonActionPerformed
 
     private void alterarUsuarioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarUsuarioButtonActionPerformed
