@@ -1,6 +1,7 @@
 package SimulacaoCabine;
 
 import javax.swing.JFrame;
+import Utilidades.EstadoPainelControle;
 
 public class TelaPainelControleNormal extends javax.swing.JFrame {
 
@@ -68,19 +69,18 @@ public class TelaPainelControleNormal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SetaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButtonActionPerformed
-        TelaPainelDeControleIsol janelaPainelDeControle = new TelaPainelDeControleIsol(this);
-        janelaPainelDeControle.setVisible(true);
-        this.dispose();
+
     }//GEN-LAST:event_SetaBaixoButtonActionPerformed
 
     private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
-        TelaPainelDeControleIsol janelaPainelDeControle = new TelaPainelDeControleIsol(this);
-        janelaPainelDeControle.setVisible(true);
+        TelaPainelDeAcesso janelaPainelDeAcesso = new TelaPainelDeAcesso(this);
+        janelaPainelDeAcesso.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     private void painelDeControleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_painelDeControleButtonActionPerformed
-        TelaPainelDeControleIsol janelaPainelDeControle = new TelaPainelDeControleIsol(this);
+        EstadoPainelControle.setPosicaoAtual(EstadoPainelControle.Posicao.ISOL);
+        TelaPainelControleIsol janelaPainelDeControle = new TelaPainelControleIsol(this);
         janelaPainelDeControle.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_painelDeControleButtonActionPerformed

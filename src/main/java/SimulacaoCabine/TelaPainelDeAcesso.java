@@ -1,6 +1,7 @@
 package SimulacaoCabine;
 
 import javax.swing.JFrame;
+import Utilidades.EstadoPainelControle;
 
 public class TelaPainelDeAcesso extends javax.swing.JFrame {
 
@@ -63,8 +64,14 @@ public class TelaPainelDeAcesso extends javax.swing.JFrame {
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     private void painelDeControleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_painelDeControleButtonActionPerformed
-        TelaPainelDeControleIsol janelaPainelDeControle = new TelaPainelDeControleIsol(this);
-        janelaPainelDeControle.setVisible(true);
+        
+        if (EstadoPainelControle.getPosicaoAtual() == EstadoPainelControle.Posicao.NORMAL) {
+            new TelaPainelControleNormal(this).setVisible(true);
+        } else {
+            new TelaPainelControleIsol(this).setVisible(true);
+        }
+        this.setVisible(false); // evita janelas empilhadas
+    
     }//GEN-LAST:event_painelDeControleButtonActionPerformed
 
     /**
