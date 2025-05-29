@@ -21,7 +21,7 @@ public class TelaCBTC_RM extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        SetaBaixoButton1 = new javax.swing.JButton();
+        setaBaixoButton = new javax.swing.JButton();
         cbtcRMButton = new javax.swing.JButton();
         cbtcRMLabel = new javax.swing.JLabel();
 
@@ -29,16 +29,16 @@ public class TelaCBTC_RM extends javax.swing.JFrame {
         setTitle("Tela CBTC RM");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        SetaBaixoButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
-        SetaBaixoButton1.setContentAreaFilled(false);
-        SetaBaixoButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        SetaBaixoButton1.setPreferredSize(new java.awt.Dimension(100, 100));
-        SetaBaixoButton1.addActionListener(new java.awt.event.ActionListener() {
+        setaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
+        setaBaixoButton.setContentAreaFilled(false);
+        setaBaixoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaBaixoButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaBaixoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SetaBaixoButton1ActionPerformed(evt);
+                setaBaixoButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SetaBaixoButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
+        getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
         cbtcRMButton.setContentAreaFilled(false);
         cbtcRMButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -49,21 +49,21 @@ public class TelaCBTC_RM extends javax.swing.JFrame {
         });
         getContentPane().add(cbtcRMButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 290, 230, 230));
 
-        cbtcRMLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Chave do CBTC - RM (1).jpg"))); // NOI18N
-        getContentPane().add(cbtcRMLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, -1));
+        cbtcRMLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Chave do CBTC - RM.jpg"))); // NOI18N
+        getContentPane().add(cbtcRMLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SetaBaixoButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButton1ActionPerformed
+    private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
         TelaColunaLateral janelaColunaLateral = new TelaColunaLateral(this);
         janelaColunaLateral.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_SetaBaixoButton1ActionPerformed
+    }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     private void cbtcRMButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbtcRMButtonActionPerformed
-        TelaCBTC janelaCBTC = new TelaCBTC(this);
+        TelaCBTC_AM janelaCBTC = new TelaCBTC_AM(this);
         janelaCBTC.setVisible(true);
     }//GEN-LAST:event_cbtcRMButtonActionPerformed
 
@@ -103,8 +103,8 @@ public class TelaCBTC_RM extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton SetaBaixoButton1;
     private javax.swing.JButton cbtcRMButton;
     private javax.swing.JLabel cbtcRMLabel;
+    private javax.swing.JButton setaBaixoButton;
     // End of variables declaration//GEN-END:variables
 }

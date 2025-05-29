@@ -21,24 +21,24 @@ public class TelaCabineTras extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        SetaBaixoButton = new javax.swing.JButton();
+        setaBaixoButton = new javax.swing.JButton();
         fitaButton = new javax.swing.JButton();
-        CabineTrasLabel = new javax.swing.JLabel();
+        cabineTrasLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Cabine parte de Trás");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        SetaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
-        SetaBaixoButton.setContentAreaFilled(false);
-        SetaBaixoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        SetaBaixoButton.setPreferredSize(new java.awt.Dimension(100, 100));
-        SetaBaixoButton.addActionListener(new java.awt.event.ActionListener() {
+        setaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
+        setaBaixoButton.setContentAreaFilled(false);
+        setaBaixoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaBaixoButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaBaixoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SetaBaixoButtonActionPerformed(evt);
+                setaBaixoButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
+        getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
         fitaButton.setContentAreaFilled(false);
         fitaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -49,17 +49,17 @@ public class TelaCabineTras extends javax.swing.JFrame {
         });
         getContentPane().add(fitaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 190, 110, 120));
 
-        CabineTrasLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Cabine - parte de trás.jpg"))); // NOI18N
-        getContentPane().add(CabineTrasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        cabineTrasLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Cabine - parte de trás.jpg"))); // NOI18N
+        getContentPane().add(cabineTrasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SetaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButtonActionPerformed
+    private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
         frame.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_SetaBaixoButtonActionPerformed
+    }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     private void fitaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fitaButtonActionPerformed
         Utilidades.Inventario.getInstance().setItemColetado(true);
@@ -104,8 +104,8 @@ public class TelaCabineTras extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel CabineTrasLabel;
-    private javax.swing.JButton SetaBaixoButton;
+    private javax.swing.JLabel cabineTrasLabel;
     private javax.swing.JButton fitaButton;
+    private javax.swing.JButton setaBaixoButton;
     // End of variables declaration//GEN-END:variables
 }

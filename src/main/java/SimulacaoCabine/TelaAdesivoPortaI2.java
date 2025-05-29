@@ -21,14 +21,14 @@ public class TelaAdesivoPortaI2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        AdesivoPortaIsolada2Label = new javax.swing.JLabel();
+        adesivoPortaIsolada2Label = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Adesivo Porta Isolada 2");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        AdesivoPortaIsolada2Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/22 - Adesivo de porta isolada - 2 terços instalado (1).jpg"))); // NOI18N
-        getContentPane().add(AdesivoPortaIsolada2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        adesivoPortaIsolada2Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Adesivo de porta isolada - 2 terços instalado.jpg"))); // NOI18N
+        getContentPane().add(adesivoPortaIsolada2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
@@ -71,6 +71,6 @@ public class TelaAdesivoPortaI2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel AdesivoPortaIsolada2Label;
+    private javax.swing.JLabel adesivoPortaIsolada2Label;
     // End of variables declaration//GEN-END:variables
 }

@@ -21,35 +21,35 @@ public class TelaSinalizacaoExternaApagada extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        SetaEsquerdaButton1 = new javax.swing.JButton();
+        setaEsquerdaButton = new javax.swing.JButton();
         sinalizacaoExternaApagadaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Sinalizacao Externa Apagada");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        SetaEsquerdaButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaEsquerda.png"))); // NOI18N
-        SetaEsquerdaButton1.setContentAreaFilled(false);
-        SetaEsquerdaButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        SetaEsquerdaButton1.setPreferredSize(new java.awt.Dimension(100, 100));
-        SetaEsquerdaButton1.addActionListener(new java.awt.event.ActionListener() {
+        setaEsquerdaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaEsquerda.png"))); // NOI18N
+        setaEsquerdaButton.setContentAreaFilled(false);
+        setaEsquerdaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaEsquerdaButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaEsquerdaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SetaEsquerdaButton1ActionPerformed(evt);
+                setaEsquerdaButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SetaEsquerdaButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, -1, -1));
+        getContentPane().add(setaEsquerdaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, -1, -1));
 
-        sinalizacaoExternaApagadaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/24 - Sinalização externa apagada (2).jpg"))); // NOI18N
+        sinalizacaoExternaApagadaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Sinalização externa apagada.jpg"))); // NOI18N
         getContentPane().add(sinalizacaoExternaApagadaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SetaEsquerdaButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaEsquerdaButton1ActionPerformed
+    private void setaEsquerdaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaEsquerdaButtonActionPerformed
         frame.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_SetaEsquerdaButton1ActionPerformed
+    }//GEN-LAST:event_setaEsquerdaButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -87,7 +87,7 @@ public class TelaSinalizacaoExternaApagada extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton SetaEsquerdaButton1;
+    private javax.swing.JButton setaEsquerdaButton;
     private javax.swing.JLabel sinalizacaoExternaApagadaLabel;
     // End of variables declaration//GEN-END:variables
 }

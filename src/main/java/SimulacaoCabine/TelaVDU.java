@@ -22,35 +22,35 @@ public class TelaVDU extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        SetaBaixoButton = new javax.swing.JButton();
-        VDULabel = new javax.swing.JLabel();
+        setaBaixoButton = new javax.swing.JButton();
+        vduLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela VDU");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        SetaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
-        SetaBaixoButton.setContentAreaFilled(false);
-        SetaBaixoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        SetaBaixoButton.setPreferredSize(new java.awt.Dimension(100, 100));
-        SetaBaixoButton.addActionListener(new java.awt.event.ActionListener() {
+        setaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
+        setaBaixoButton.setContentAreaFilled(false);
+        setaBaixoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaBaixoButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaBaixoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SetaBaixoButtonActionPerformed(evt);
+                setaBaixoButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
+        getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        VDULabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/VDU.jpg"))); // NOI18N
-        getContentPane().add(VDULabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        vduLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/VDU.jpg"))); // NOI18N
+        getContentPane().add(vduLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SetaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButtonActionPerformed
+    private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
         frame.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_SetaBaixoButtonActionPerformed
+    }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -88,7 +88,7 @@ public class TelaVDU extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton SetaBaixoButton;
-    private javax.swing.JLabel VDULabel;
+    private javax.swing.JButton setaBaixoButton;
+    private javax.swing.JLabel vduLabel;
     // End of variables declaration//GEN-END:variables
 }

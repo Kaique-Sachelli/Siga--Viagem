@@ -26,10 +26,10 @@
     <Property name="useNullLayout" type="boolean" value="false"/>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="AdesivoPortaIsolada1Label">
+    <Component class="javax.swing.JLabel" name="adesivoPortaIsolada1Label">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/SimulacaoImagens/21 - Adesivo de porta isolada - 1 ter&#xe7;o instalado (1).jpg"/>
+          <Image iconType="3" name="/SimulacaoImagens/Adesivo de porta isolada - 1 ter&#xe7;o instalado.jpg"/>
         </Property>
       </Properties>
       <Constraints>

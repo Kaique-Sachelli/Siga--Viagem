@@ -21,34 +21,34 @@ public class TelaPortaEsquerda extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        SetaDireitaButton = new javax.swing.JButton();
-        AreaExternaButton = new javax.swing.JButton();
+        setaDireitaButton = new javax.swing.JButton();
+        areaExternaButton = new javax.swing.JButton();
         botoeiraAcessaButton = new javax.swing.JButton();
-        PortaEsquerdaLabel = new javax.swing.JLabel();
+        portaEsquerdaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Porta Esquerda");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        SetaDireitaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaDireita.png"))); // NOI18N
-        SetaDireitaButton.setContentAreaFilled(false);
-        SetaDireitaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        SetaDireitaButton.setPreferredSize(new java.awt.Dimension(100, 100));
-        SetaDireitaButton.addActionListener(new java.awt.event.ActionListener() {
+        setaDireitaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaDireita.png"))); // NOI18N
+        setaDireitaButton.setContentAreaFilled(false);
+        setaDireitaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaDireitaButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaDireitaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SetaDireitaButtonActionPerformed(evt);
+                setaDireitaButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SetaDireitaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, -1, -1));
+        getContentPane().add(setaDireitaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, -1, -1));
 
-        AreaExternaButton.setContentAreaFilled(false);
-        AreaExternaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        AreaExternaButton.addActionListener(new java.awt.event.ActionListener() {
+        areaExternaButton.setContentAreaFilled(false);
+        areaExternaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        areaExternaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AreaExternaButtonActionPerformed(evt);
+                areaExternaButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(AreaExternaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 170, 610));
+        getContentPane().add(areaExternaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 170, 610));
 
         botoeiraAcessaButton.setContentAreaFilled(false);
         botoeiraAcessaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -59,22 +59,22 @@ public class TelaPortaEsquerda extends javax.swing.JFrame {
         });
         getContentPane().add(botoeiraAcessaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, -1, 190));
 
-        PortaEsquerdaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Porta de cabine lateral esquerda.jpg"))); // NOI18N
-        getContentPane().add(PortaEsquerdaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 750));
+        portaEsquerdaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Porta de cabine lateral esquerda.jpg"))); // NOI18N
+        getContentPane().add(portaEsquerdaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 750));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SetaDireitaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaDireitaButtonActionPerformed
+    private void setaDireitaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaDireitaButtonActionPerformed
         TelaCabine janelaCabine = new TelaCabine(this);
         janelaCabine.setVisible(true);
-    }//GEN-LAST:event_SetaDireitaButtonActionPerformed
+    }//GEN-LAST:event_setaDireitaButtonActionPerformed
 
-    private void AreaExternaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AreaExternaButtonActionPerformed
+    private void areaExternaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_areaExternaButtonActionPerformed
         TelaAreaExterna janelaAreaExterna = new TelaAreaExterna(this);
         janelaAreaExterna.setVisible(true);
-    }//GEN-LAST:event_AreaExternaButtonActionPerformed
+    }//GEN-LAST:event_areaExternaButtonActionPerformed
 
     private void botoeiraAcessaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botoeiraAcessaButtonActionPerformed
         TelaBotoeiraAcessa janelaBotoeiraAcessa = new TelaBotoeiraAcessa(this);
@@ -117,9 +117,9 @@ public class TelaPortaEsquerda extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton AreaExternaButton;
-    private javax.swing.JLabel PortaEsquerdaLabel;
-    private javax.swing.JButton SetaDireitaButton;
+    private javax.swing.JButton areaExternaButton;
     private javax.swing.JButton botoeiraAcessaButton;
+    private javax.swing.JLabel portaEsquerdaLabel;
+    private javax.swing.JButton setaDireitaButton;
     // End of variables declaration//GEN-END:variables
 }

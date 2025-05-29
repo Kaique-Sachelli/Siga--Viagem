@@ -26,76 +26,76 @@ public class TelaDeReferencia extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        SetaBaixoButton = new javax.swing.JButton();
-        SetaDireitaButton = new javax.swing.JButton();
-        SetaEsquerdaButton1 = new javax.swing.JButton();
-        SetaCimaButton1 = new javax.swing.JButton();
+        setaBaixoButton = new javax.swing.JButton();
+        setaDireitaButton = new javax.swing.JButton();
+        setaEsquerdaButton = new javax.swing.JButton();
+        setaCimaButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        SetaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
-        SetaBaixoButton.setContentAreaFilled(false);
-        SetaBaixoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        SetaBaixoButton.setPreferredSize(new java.awt.Dimension(100, 100));
-        SetaBaixoButton.addActionListener(new java.awt.event.ActionListener() {
+        setaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
+        setaBaixoButton.setContentAreaFilled(false);
+        setaBaixoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaBaixoButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaBaixoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SetaBaixoButtonActionPerformed(evt);
+                setaBaixoButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
+        getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        SetaDireitaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaDireita.png"))); // NOI18N
-        SetaDireitaButton.setContentAreaFilled(false);
-        SetaDireitaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        SetaDireitaButton.setPreferredSize(new java.awt.Dimension(100, 100));
-        SetaDireitaButton.addActionListener(new java.awt.event.ActionListener() {
+        setaDireitaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaDireita.png"))); // NOI18N
+        setaDireitaButton.setContentAreaFilled(false);
+        setaDireitaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaDireitaButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaDireitaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SetaDireitaButtonActionPerformed(evt);
+                setaDireitaButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SetaDireitaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 260, -1, -1));
+        getContentPane().add(setaDireitaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 260, -1, -1));
 
-        SetaEsquerdaButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaEsquerda.png"))); // NOI18N
-        SetaEsquerdaButton1.setContentAreaFilled(false);
-        SetaEsquerdaButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        SetaEsquerdaButton1.setPreferredSize(new java.awt.Dimension(100, 100));
-        SetaEsquerdaButton1.addActionListener(new java.awt.event.ActionListener() {
+        setaEsquerdaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaEsquerda.png"))); // NOI18N
+        setaEsquerdaButton.setContentAreaFilled(false);
+        setaEsquerdaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaEsquerdaButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaEsquerdaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SetaEsquerdaButton1ActionPerformed(evt);
+                setaEsquerdaButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SetaEsquerdaButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, -1, -1));
+        getContentPane().add(setaEsquerdaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, -1, -1));
 
-        SetaCimaButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaCima.png"))); // NOI18N
-        SetaCimaButton1.setContentAreaFilled(false);
-        SetaCimaButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        SetaCimaButton1.setPreferredSize(new java.awt.Dimension(100, 100));
-        SetaCimaButton1.addActionListener(new java.awt.event.ActionListener() {
+        setaCimaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaCima.png"))); // NOI18N
+        setaCimaButton.setContentAreaFilled(false);
+        setaCimaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaCimaButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaCimaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SetaCimaButton1ActionPerformed(evt);
+                setaCimaButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SetaCimaButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, -1, -1));
+        getContentPane().add(setaCimaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SetaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButtonActionPerformed
+    private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SetaBaixoButtonActionPerformed
+    }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
-    private void SetaDireitaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaDireitaButtonActionPerformed
+    private void setaDireitaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaDireitaButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SetaDireitaButtonActionPerformed
+    }//GEN-LAST:event_setaDireitaButtonActionPerformed
 
-    private void SetaEsquerdaButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaEsquerdaButton1ActionPerformed
+    private void setaEsquerdaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaEsquerdaButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SetaEsquerdaButton1ActionPerformed
+    }//GEN-LAST:event_setaEsquerdaButtonActionPerformed
 
-    private void SetaCimaButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaCimaButton1ActionPerformed
+    private void setaCimaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaCimaButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SetaCimaButton1ActionPerformed
+    }//GEN-LAST:event_setaCimaButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -133,9 +133,9 @@ public class TelaDeReferencia extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton SetaBaixoButton;
-    private javax.swing.JButton SetaCimaButton1;
-    private javax.swing.JButton SetaDireitaButton;
-    private javax.swing.JButton SetaEsquerdaButton1;
+    private javax.swing.JButton setaBaixoButton;
+    private javax.swing.JButton setaCimaButton;
+    private javax.swing.JButton setaDireitaButton;
+    private javax.swing.JButton setaEsquerdaButton;
     // End of variables declaration//GEN-END:variables
 }

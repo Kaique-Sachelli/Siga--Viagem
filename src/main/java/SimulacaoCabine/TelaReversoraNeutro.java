@@ -23,53 +23,53 @@ public class TelaReversoraNeutro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        SetaBaixoButton = new javax.swing.JButton();
-        ReversoraNeutroButton = new javax.swing.JButton();
-        ReversoraNeutroLabel = new javax.swing.JLabel();
+        setaBaixoButton = new javax.swing.JButton();
+        reversoraNeutroButton = new javax.swing.JButton();
+        reversoraNeutroLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Reversora Neutro");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        SetaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
-        SetaBaixoButton.setContentAreaFilled(false);
-        SetaBaixoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        SetaBaixoButton.setPreferredSize(new java.awt.Dimension(100, 100));
-        SetaBaixoButton.addActionListener(new java.awt.event.ActionListener() {
+        setaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
+        setaBaixoButton.setContentAreaFilled(false);
+        setaBaixoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaBaixoButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaBaixoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SetaBaixoButtonActionPerformed(evt);
+                setaBaixoButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
+        getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        ReversoraNeutroButton.setContentAreaFilled(false);
-        ReversoraNeutroButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ReversoraNeutroButton.addActionListener(new java.awt.event.ActionListener() {
+        reversoraNeutroButton.setContentAreaFilled(false);
+        reversoraNeutroButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        reversoraNeutroButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ReversoraNeutroButtonActionPerformed(evt);
+                reversoraNeutroButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(ReversoraNeutroButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 530, 350));
+        getContentPane().add(reversoraNeutroButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 530, 350));
 
-        ReversoraNeutroLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Reversora em neutro.jpg"))); // NOI18N
-        getContentPane().add(ReversoraNeutroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        reversoraNeutroLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Reversora em neutro.jpg"))); // NOI18N
+        getContentPane().add(reversoraNeutroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SetaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButtonActionPerformed
+    private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
         EstadoReversora.setPosicaoAtual(EstadoReversora.Posicao.NEUTRO); 
         frame.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_SetaBaixoButtonActionPerformed
+    }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
-    private void ReversoraNeutroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReversoraNeutroButtonActionPerformed
+    private void reversoraNeutroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reversoraNeutroButtonActionPerformed
         EstadoReversora.setPosicaoAtual(EstadoReversora.Posicao.FRENTE);
         TelaReversoraFrente janelaFrente = new TelaReversoraFrente(frame); // passa o frame original
         janelaFrente.setVisible(true);
         this.dispose(); // <- fecha a janela atual
-    }//GEN-LAST:event_ReversoraNeutroButtonActionPerformed
+    }//GEN-LAST:event_reversoraNeutroButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -107,8 +107,8 @@ public class TelaReversoraNeutro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ReversoraNeutroButton;
-    private javax.swing.JLabel ReversoraNeutroLabel;
-    private javax.swing.JButton SetaBaixoButton;
+    private javax.swing.JButton reversoraNeutroButton;
+    private javax.swing.JLabel reversoraNeutroLabel;
+    private javax.swing.JButton setaBaixoButton;
     // End of variables declaration//GEN-END:variables
 }

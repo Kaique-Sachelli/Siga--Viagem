@@ -27,156 +27,156 @@ public class TelaCabine extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
-        DDUButton = new javax.swing.JButton();
-        ADUButton = new javax.swing.JButton();
-        VDUButton = new javax.swing.JButton();
-        ModuloComunicacaoButton = new javax.swing.JButton();
-        ReversoraButton = new javax.swing.JButton();
-        SocoConsoleButton = new javax.swing.JButton();
-        ChavesPainelButton = new javax.swing.JButton();
-        LimpadorParabrisaButton = new javax.swing.JButton();
-        SetaEsquerdaButton1 = new javax.swing.JButton();
-        SetaDireitaButton = new javax.swing.JButton();
-        SetaBaixoButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        dduButton = new javax.swing.JButton();
+        aduButton = new javax.swing.JButton();
+        vduButton = new javax.swing.JButton();
+        moduloComunicacaoButton = new javax.swing.JButton();
+        reversoraButton = new javax.swing.JButton();
+        socoConsoleButton = new javax.swing.JButton();
+        chavesPainelButton = new javax.swing.JButton();
+        limpadorParabrisaButton = new javax.swing.JButton();
+        setaEsquerdaButton = new javax.swing.JButton();
+        setaDireitaButton = new javax.swing.JButton();
+        setaBaixoButton = new javax.swing.JButton();
+        cabineLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cabine");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        DDUButton.setContentAreaFilled(false);
-        DDUButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        DDUButton.addActionListener(new java.awt.event.ActionListener() {
+        dduButton.setContentAreaFilled(false);
+        dduButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        dduButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DDUButtonActionPerformed(evt);
+                dduButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(DDUButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 170, 80));
+        getContentPane().add(dduButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 170, 80));
 
-        ADUButton.setContentAreaFilled(false);
-        ADUButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ADUButton.addActionListener(new java.awt.event.ActionListener() {
+        aduButton.setContentAreaFilled(false);
+        aduButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        aduButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ADUButtonActionPerformed(evt);
+                aduButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(ADUButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, 200, 110));
+        getContentPane().add(aduButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, 200, 110));
 
-        VDUButton.setContentAreaFilled(false);
-        VDUButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        VDUButton.addActionListener(new java.awt.event.ActionListener() {
+        vduButton.setContentAreaFilled(false);
+        vduButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        vduButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VDUButtonActionPerformed(evt);
+                vduButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(VDUButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 250, 200, 100));
+        getContentPane().add(vduButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 250, 200, 100));
 
-        ModuloComunicacaoButton.setContentAreaFilled(false);
-        ModuloComunicacaoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ModuloComunicacaoButton.addActionListener(new java.awt.event.ActionListener() {
+        moduloComunicacaoButton.setContentAreaFilled(false);
+        moduloComunicacaoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        moduloComunicacaoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModuloComunicacaoButtonActionPerformed(evt);
+                moduloComunicacaoButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(ModuloComunicacaoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 100, 50));
+        getContentPane().add(moduloComunicacaoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 100, 50));
 
-        ReversoraButton.setContentAreaFilled(false);
-        ReversoraButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ReversoraButton.addActionListener(new java.awt.event.ActionListener() {
+        reversoraButton.setContentAreaFilled(false);
+        reversoraButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        reversoraButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ReversoraButtonActionPerformed(evt);
+                reversoraButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(ReversoraButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, -1, 60));
+        getContentPane().add(reversoraButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, -1, 60));
 
-        SocoConsoleButton.setContentAreaFilled(false);
-        SocoConsoleButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        SocoConsoleButton.addActionListener(new java.awt.event.ActionListener() {
+        socoConsoleButton.setContentAreaFilled(false);
+        socoConsoleButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        socoConsoleButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SocoConsoleButtonActionPerformed(evt);
+                socoConsoleButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SocoConsoleButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 360, 180, 60));
+        getContentPane().add(socoConsoleButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 360, 180, 60));
 
-        ChavesPainelButton.setContentAreaFilled(false);
-        ChavesPainelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ChavesPainelButton.addActionListener(new java.awt.event.ActionListener() {
+        chavesPainelButton.setContentAreaFilled(false);
+        chavesPainelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        chavesPainelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ChavesPainelButtonActionPerformed(evt);
+                chavesPainelButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(ChavesPainelButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(576, 230, 120, 110));
+        getContentPane().add(chavesPainelButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(576, 230, 120, 110));
 
-        LimpadorParabrisaButton.setContentAreaFilled(false);
-        LimpadorParabrisaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        LimpadorParabrisaButton.addActionListener(new java.awt.event.ActionListener() {
+        limpadorParabrisaButton.setContentAreaFilled(false);
+        limpadorParabrisaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        limpadorParabrisaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LimpadorParabrisaButtonActionPerformed(evt);
+                limpadorParabrisaButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(LimpadorParabrisaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 357, 150, 30));
+        getContentPane().add(limpadorParabrisaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 357, 150, 30));
 
-        SetaEsquerdaButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaEsquerda.png"))); // NOI18N
-        SetaEsquerdaButton1.setContentAreaFilled(false);
-        SetaEsquerdaButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        SetaEsquerdaButton1.setPreferredSize(new java.awt.Dimension(100, 100));
-        SetaEsquerdaButton1.addActionListener(new java.awt.event.ActionListener() {
+        setaEsquerdaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaEsquerda.png"))); // NOI18N
+        setaEsquerdaButton.setContentAreaFilled(false);
+        setaEsquerdaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaEsquerdaButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaEsquerdaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SetaEsquerdaButton1ActionPerformed(evt);
+                setaEsquerdaButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SetaEsquerdaButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, -1, -1));
+        getContentPane().add(setaEsquerdaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, -1, -1));
 
-        SetaDireitaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaDireita.png"))); // NOI18N
-        SetaDireitaButton.setContentAreaFilled(false);
-        SetaDireitaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        SetaDireitaButton.setPreferredSize(new java.awt.Dimension(100, 100));
-        SetaDireitaButton.addActionListener(new java.awt.event.ActionListener() {
+        setaDireitaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaDireita.png"))); // NOI18N
+        setaDireitaButton.setContentAreaFilled(false);
+        setaDireitaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaDireitaButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaDireitaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SetaDireitaButtonActionPerformed(evt);
+                setaDireitaButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SetaDireitaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 150, -1, -1));
+        getContentPane().add(setaDireitaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 150, -1, -1));
 
-        SetaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
-        SetaBaixoButton.setContentAreaFilled(false);
-        SetaBaixoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        SetaBaixoButton.setPreferredSize(new java.awt.Dimension(100, 100));
-        SetaBaixoButton.addActionListener(new java.awt.event.ActionListener() {
+        setaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
+        setaBaixoButton.setContentAreaFilled(false);
+        setaBaixoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaBaixoButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaBaixoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SetaBaixoButtonActionPerformed(evt);
+                setaBaixoButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
+        getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Painel.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        cabineLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Painel.jpg"))); // NOI18N
+        getContentPane().add(cabineLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ADUButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ADUButtonActionPerformed
+    private void aduButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aduButtonActionPerformed
         TelaADU janelaADU  = new TelaADU(this);
         janelaADU.setVisible(true);
-    }//GEN-LAST:event_ADUButtonActionPerformed
+    }//GEN-LAST:event_aduButtonActionPerformed
 
-    private void DDUButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DDUButtonActionPerformed
+    private void dduButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dduButtonActionPerformed
         TelaDDU janelaDDU = new TelaDDU(this);
         janelaDDU.setVisible(true);
-    }//GEN-LAST:event_DDUButtonActionPerformed
+    }//GEN-LAST:event_dduButtonActionPerformed
 
-    private void VDUButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VDUButtonActionPerformed
+    private void vduButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vduButtonActionPerformed
         TelaVDU janelaVDU = new TelaVDU(this);
         janelaVDU.setVisible(true);
-    }//GEN-LAST:event_VDUButtonActionPerformed
+    }//GEN-LAST:event_vduButtonActionPerformed
 
-    private void ModuloComunicacaoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModuloComunicacaoButtonActionPerformed
+    private void moduloComunicacaoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moduloComunicacaoButtonActionPerformed
         TelaModuloComunicacao janelaModulo= new TelaModuloComunicacao(this);
         janelaModulo.setVisible(true);
-    }//GEN-LAST:event_ModuloComunicacaoButtonActionPerformed
+    }//GEN-LAST:event_moduloComunicacaoButtonActionPerformed
 
-    private void ReversoraButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReversoraButtonActionPerformed
+    private void reversoraButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reversoraButtonActionPerformed
         
         if (EstadoReversora.getPosicaoAtual() == EstadoReversora.Posicao.FRENTE) {
             new TelaReversoraFrente(this).setVisible(true);
@@ -185,35 +185,35 @@ public class TelaCabine extends javax.swing.JFrame {
         }
         this.setVisible(false); // evita janelas empilhadas
     
-    }//GEN-LAST:event_ReversoraButtonActionPerformed
+    }//GEN-LAST:event_reversoraButtonActionPerformed
 
-    private void SocoConsoleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SocoConsoleButtonActionPerformed
+    private void socoConsoleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_socoConsoleButtonActionPerformed
         TelaSocoConsole janelaConsole = new TelaSocoConsole(this);
         janelaConsole.setVisible(true);
-    }//GEN-LAST:event_SocoConsoleButtonActionPerformed
+    }//GEN-LAST:event_socoConsoleButtonActionPerformed
 
-    private void ChavesPainelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChavesPainelButtonActionPerformed
+    private void chavesPainelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chavesPainelButtonActionPerformed
         TelaChavesPainel janelaChavesPainel = new TelaChavesPainel(this);
         janelaChavesPainel.setVisible(true);
-    }//GEN-LAST:event_ChavesPainelButtonActionPerformed
+    }//GEN-LAST:event_chavesPainelButtonActionPerformed
 
-    private void LimpadorParabrisaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LimpadorParabrisaButtonActionPerformed
+    private void limpadorParabrisaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpadorParabrisaButtonActionPerformed
         TelaLimpadorParabrisa janelaLimpadorParabrisa = new TelaLimpadorParabrisa(this);
         janelaLimpadorParabrisa.setVisible(true);
-    }//GEN-LAST:event_LimpadorParabrisaButtonActionPerformed
+    }//GEN-LAST:event_limpadorParabrisaButtonActionPerformed
 
-    private void SetaEsquerdaButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaEsquerdaButton1ActionPerformed
+    private void setaEsquerdaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaEsquerdaButtonActionPerformed
         TelaPortaEsquerda janelaPortaEsquerda = new TelaPortaEsquerda(this);
         janelaPortaEsquerda.setVisible(true);
-    }//GEN-LAST:event_SetaEsquerdaButton1ActionPerformed
+    }//GEN-LAST:event_setaEsquerdaButtonActionPerformed
 
-    private void SetaDireitaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaDireitaButtonActionPerformed
+    private void setaDireitaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaDireitaButtonActionPerformed
         TelaColunaLateral janelaColunaLateral = new TelaColunaLateral(this);
         janelaColunaLateral.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_SetaDireitaButtonActionPerformed
+    }//GEN-LAST:event_setaDireitaButtonActionPerformed
 
-    private void SetaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButtonActionPerformed
+    private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
         if(Inventario.getInstance().isItemColetado()){
             TelaCabineTrasVazia janelaCabineTrasVazia = new TelaCabineTrasVazia(this);
             janelaCabineTrasVazia.setVisible(true);
@@ -222,7 +222,7 @@ public class TelaCabine extends javax.swing.JFrame {
             janelaCabineTras.setVisible(true);
         }
         this.dispose();
-    }//GEN-LAST:event_SetaBaixoButtonActionPerformed
+    }//GEN-LAST:event_setaBaixoButtonActionPerformed
      
     /**
      * @param args the command line arguments
@@ -260,20 +260,20 @@ public class TelaCabine extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ADUButton;
-    private javax.swing.JButton ChavesPainelButton;
-    private javax.swing.JButton DDUButton;
-    private javax.swing.JButton LimpadorParabrisaButton;
-    private javax.swing.JButton ModuloComunicacaoButton;
-    private javax.swing.JButton ReversoraButton;
-    private javax.swing.JButton SetaBaixoButton;
-    private javax.swing.JButton SetaDireitaButton;
-    private javax.swing.JButton SetaEsquerdaButton1;
-    private javax.swing.JButton SocoConsoleButton;
-    private javax.swing.JButton VDUButton;
+    private javax.swing.JButton aduButton;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel cabineLabel;
+    private javax.swing.JButton chavesPainelButton;
+    private javax.swing.JButton dduButton;
+    private javax.swing.JButton limpadorParabrisaButton;
+    private javax.swing.JButton moduloComunicacaoButton;
+    private javax.swing.JButton reversoraButton;
+    private javax.swing.JButton setaBaixoButton;
+    private javax.swing.JButton setaDireitaButton;
+    private javax.swing.JButton setaEsquerdaButton;
+    private javax.swing.JButton socoConsoleButton;
+    private javax.swing.JButton vduButton;
     // End of variables declaration//GEN-END:variables
 }
 ;

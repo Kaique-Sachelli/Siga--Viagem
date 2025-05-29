@@ -21,67 +21,67 @@ public class TelaAreaExterna extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        SetaEsquerdaButton1 = new javax.swing.JButton();
-        SetaCimaButton1 = new javax.swing.JButton();
-        PainelDeAcessoButton = new javax.swing.JButton();
-        AreaExternaLabel = new javax.swing.JLabel();
+        setaEsquerdaButton = new javax.swing.JButton();
+        setaCimaButton = new javax.swing.JButton();
+        painelDeAcessoButton = new javax.swing.JButton();
+        areaExternaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Área Externa");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        SetaEsquerdaButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaEsquerda.png"))); // NOI18N
-        SetaEsquerdaButton1.setContentAreaFilled(false);
-        SetaEsquerdaButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        SetaEsquerdaButton1.setPreferredSize(new java.awt.Dimension(100, 100));
-        SetaEsquerdaButton1.addActionListener(new java.awt.event.ActionListener() {
+        setaEsquerdaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaEsquerda.png"))); // NOI18N
+        setaEsquerdaButton.setContentAreaFilled(false);
+        setaEsquerdaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaEsquerdaButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaEsquerdaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SetaEsquerdaButton1ActionPerformed(evt);
+                setaEsquerdaButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SetaEsquerdaButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, -1, -1));
+        getContentPane().add(setaEsquerdaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, -1, -1));
 
-        SetaCimaButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaCima.png"))); // NOI18N
-        SetaCimaButton1.setContentAreaFilled(false);
-        SetaCimaButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        SetaCimaButton1.setPreferredSize(new java.awt.Dimension(100, 100));
-        SetaCimaButton1.addActionListener(new java.awt.event.ActionListener() {
+        setaCimaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaCima.png"))); // NOI18N
+        setaCimaButton.setContentAreaFilled(false);
+        setaCimaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaCimaButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaCimaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SetaCimaButton1ActionPerformed(evt);
+                setaCimaButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SetaCimaButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, -1, -1));
+        getContentPane().add(setaCimaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, -1, -1));
 
-        PainelDeAcessoButton.setContentAreaFilled(false);
-        PainelDeAcessoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        PainelDeAcessoButton.addActionListener(new java.awt.event.ActionListener() {
+        painelDeAcessoButton.setContentAreaFilled(false);
+        painelDeAcessoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        painelDeAcessoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PainelDeAcessoButtonActionPerformed(evt);
+                painelDeAcessoButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(PainelDeAcessoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 500, -1, 130));
+        getContentPane().add(painelDeAcessoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 500, -1, 130));
 
-        AreaExternaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Sinalização externa de portas fechadas.jpg"))); // NOI18N
-        getContentPane().add(AreaExternaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        areaExternaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Sinalização externa de portas fechadas.jpg"))); // NOI18N
+        getContentPane().add(areaExternaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SetaEsquerdaButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaEsquerdaButton1ActionPerformed
+    private void setaEsquerdaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaEsquerdaButtonActionPerformed
         TelaPortaEsquerda janelaPortaEsquerda = new TelaPortaEsquerda(this);
         janelaPortaEsquerda.setVisible(true);
-    }//GEN-LAST:event_SetaEsquerdaButton1ActionPerformed
+    }//GEN-LAST:event_setaEsquerdaButtonActionPerformed
 
-    private void SetaCimaButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaCimaButton1ActionPerformed
+    private void setaCimaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaCimaButtonActionPerformed
         TelaVisaoGeral janelaVisaoGeral = new TelaVisaoGeral(this);
         janelaVisaoGeral.setVisible(true);
-    }//GEN-LAST:event_SetaCimaButton1ActionPerformed
+    }//GEN-LAST:event_setaCimaButtonActionPerformed
 
-    private void PainelDeAcessoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PainelDeAcessoButtonActionPerformed
+    private void painelDeAcessoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_painelDeAcessoButtonActionPerformed
         TelaPainelDeAcesso janelaPainelDeAcesso = new TelaPainelDeAcesso(this);
         janelaPainelDeAcesso.setVisible(true);
-    }//GEN-LAST:event_PainelDeAcessoButtonActionPerformed
+    }//GEN-LAST:event_painelDeAcessoButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -119,9 +119,9 @@ public class TelaAreaExterna extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel AreaExternaLabel;
-    private javax.swing.JButton PainelDeAcessoButton;
-    private javax.swing.JButton SetaCimaButton1;
-    private javax.swing.JButton SetaEsquerdaButton1;
+    private javax.swing.JLabel areaExternaLabel;
+    private javax.swing.JButton painelDeAcessoButton;
+    private javax.swing.JButton setaCimaButton;
+    private javax.swing.JButton setaEsquerdaButton;
     // End of variables declaration//GEN-END:variables
 }

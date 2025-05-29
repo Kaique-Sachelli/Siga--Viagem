@@ -61,7 +61,7 @@
     <Component class="javax.swing.JLabel" name="feLabel">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/SimulacaoImagens/DDU - tela FE- lista de emerg&#xea;ncia (1).jpg"/>
+          <Image iconType="3" name="/SimulacaoImagens/DDU - tela FE- lista de emerg&#xea;ncia.jpg"/>
         </Property>
       </Properties>
       <Constraints>

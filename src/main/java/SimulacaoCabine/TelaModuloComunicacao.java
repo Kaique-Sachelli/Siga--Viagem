@@ -22,50 +22,50 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        SetaBaixoButton = new javax.swing.JButton();
-        ListaPASButton = new javax.swing.JButton();
-        ModuloComunicacaoLabel = new javax.swing.JLabel();
+        setaBaixoButton = new javax.swing.JButton();
+        listaPASButton = new javax.swing.JButton();
+        moduloComunicacaoLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Modulo Comunicacao");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        SetaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
-        SetaBaixoButton.setContentAreaFilled(false);
-        SetaBaixoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        SetaBaixoButton.setPreferredSize(new java.awt.Dimension(100, 100));
-        SetaBaixoButton.addActionListener(new java.awt.event.ActionListener() {
+        setaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
+        setaBaixoButton.setContentAreaFilled(false);
+        setaBaixoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaBaixoButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaBaixoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SetaBaixoButtonActionPerformed(evt);
+                setaBaixoButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
+        getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        ListaPASButton.setContentAreaFilled(false);
-        ListaPASButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ListaPASButton.addActionListener(new java.awt.event.ActionListener() {
+        listaPASButton.setContentAreaFilled(false);
+        listaPASButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        listaPASButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ListaPASButtonActionPerformed(evt);
+                listaPASButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(ListaPASButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 60, 50));
+        getContentPane().add(listaPASButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 60, 50));
 
-        ModuloComunicacaoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Módulo de Comunicação - tela de início.jpg"))); // NOI18N
-        getContentPane().add(ModuloComunicacaoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        moduloComunicacaoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Módulo de Comunicação - tela de início.jpg"))); // NOI18N
+        getContentPane().add(moduloComunicacaoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SetaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButtonActionPerformed
+    private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
         frame.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_SetaBaixoButtonActionPerformed
+    }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
-    private void ListaPASButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListaPASButtonActionPerformed
+    private void listaPASButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaPASButtonActionPerformed
         TelaListaPAS janelaPAS = new TelaListaPAS(this);
         janelaPAS.setVisible(true);
-    }//GEN-LAST:event_ListaPASButtonActionPerformed
+    }//GEN-LAST:event_listaPASButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -103,8 +103,8 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ListaPASButton;
-    private javax.swing.JLabel ModuloComunicacaoLabel;
-    private javax.swing.JButton SetaBaixoButton;
+    private javax.swing.JButton listaPASButton;
+    private javax.swing.JLabel moduloComunicacaoLabel;
+    private javax.swing.JButton setaBaixoButton;
     // End of variables declaration//GEN-END:variables
 }

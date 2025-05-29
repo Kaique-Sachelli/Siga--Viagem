@@ -21,50 +21,50 @@ public class TelaPortaSemiAbertaInterna extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        PortaSemiAbertaButton = new javax.swing.JButton();
-        SetaDireitaButton = new javax.swing.JButton();
-        PortSemiAbertaInternaLabel = new javax.swing.JLabel();
+        portaSemiAbertaButton = new javax.swing.JButton();
+        setaDireitaButton = new javax.swing.JButton();
+        portaSemiAbertaInternaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Porta Semi Aberta Interno");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        PortaSemiAbertaButton.setContentAreaFilled(false);
-        PortaSemiAbertaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        PortaSemiAbertaButton.addActionListener(new java.awt.event.ActionListener() {
+        portaSemiAbertaButton.setContentAreaFilled(false);
+        portaSemiAbertaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        portaSemiAbertaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PortaSemiAbertaButtonActionPerformed(evt);
+                portaSemiAbertaButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(PortaSemiAbertaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 117, 150, 520));
+        getContentPane().add(portaSemiAbertaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 117, 150, 520));
 
-        SetaDireitaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaDireita.png"))); // NOI18N
-        SetaDireitaButton.setContentAreaFilled(false);
-        SetaDireitaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        SetaDireitaButton.setPreferredSize(new java.awt.Dimension(100, 100));
-        SetaDireitaButton.addActionListener(new java.awt.event.ActionListener() {
+        setaDireitaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaDireita.png"))); // NOI18N
+        setaDireitaButton.setContentAreaFilled(false);
+        setaDireitaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaDireitaButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaDireitaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SetaDireitaButtonActionPerformed(evt);
+                setaDireitaButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SetaDireitaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 270, -1, -1));
+        getContentPane().add(setaDireitaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 270, -1, -1));
 
-        PortSemiAbertaInternaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Porta semi aberta - interno.jpg"))); // NOI18N
-        getContentPane().add(PortSemiAbertaInternaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        portaSemiAbertaInternaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Porta semi aberta - interno.jpg"))); // NOI18N
+        getContentPane().add(portaSemiAbertaInternaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void PortaSemiAbertaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PortaSemiAbertaButtonActionPerformed
+    private void portaSemiAbertaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_portaSemiAbertaButtonActionPerformed
         frame.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_PortaSemiAbertaButtonActionPerformed
+    }//GEN-LAST:event_portaSemiAbertaButtonActionPerformed
 
-    private void SetaDireitaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaDireitaButtonActionPerformed
+    private void setaDireitaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaDireitaButtonActionPerformed
         TelaPaineisEmergencia janelaEmergencia = new TelaPaineisEmergencia(this);
         janelaEmergencia.setVisible(true);
-    }//GEN-LAST:event_SetaDireitaButtonActionPerformed
+    }//GEN-LAST:event_setaDireitaButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -102,8 +102,8 @@ public class TelaPortaSemiAbertaInterna extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel PortSemiAbertaInternaLabel;
-    private javax.swing.JButton PortaSemiAbertaButton;
-    private javax.swing.JButton SetaDireitaButton;
+    private javax.swing.JButton portaSemiAbertaButton;
+    private javax.swing.JLabel portaSemiAbertaInternaLabel;
+    private javax.swing.JButton setaDireitaButton;
     // End of variables declaration//GEN-END:variables
 }

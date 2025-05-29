@@ -24,7 +24,7 @@ public class TelaDDU extends javax.swing.JFrame {
         setaBaixoButton = new javax.swing.JButton();
         feButton = new javax.swing.JButton();
         infopassButton = new javax.swing.JButton();
-        DDUImagemLabel = new javax.swing.JLabel();
+        dduImagemLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("DDU Com Fachada Aberta");
@@ -59,8 +59,8 @@ public class TelaDDU extends javax.swing.JFrame {
         });
         getContentPane().add(infopassButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(439, 480, 30, 40));
 
-        DDUImagemLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/DDU com fachada aberta.jpg"))); // NOI18N
-        getContentPane().add(DDUImagemLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        dduImagemLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/DDU com fachada aberta.jpg"))); // NOI18N
+        getContentPane().add(dduImagemLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
@@ -117,7 +117,7 @@ public class TelaDDU extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel DDUImagemLabel;
+    private javax.swing.JLabel dduImagemLabel;
     private javax.swing.JButton feButton;
     private javax.swing.JButton infopassButton;
     private javax.swing.JButton setaBaixoButton;

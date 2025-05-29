@@ -23,7 +23,7 @@ public class TelaVisaoPortaIsolada extends javax.swing.JFrame {
     private void initComponents() {
 
         sinalizacaoExternaApagadaButton = new javax.swing.JButton();
-        VisaoPortaIsoladaLabel = new javax.swing.JLabel();
+        visaoPortaIsoladaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Visão Geral Porta Isolada");
@@ -38,8 +38,8 @@ public class TelaVisaoPortaIsolada extends javax.swing.JFrame {
         });
         getContentPane().add(sinalizacaoExternaApagadaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 190, 130, 80));
 
-        VisaoPortaIsoladaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/23 - Adesivo de porta isolada instalado visão geral (1).jpg"))); // NOI18N
-        getContentPane().add(VisaoPortaIsoladaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        visaoPortaIsoladaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Adesivo de porta isolada instalado visão geral.jpg"))); // NOI18N
+        getContentPane().add(visaoPortaIsoladaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
@@ -86,7 +86,7 @@ public class TelaVisaoPortaIsolada extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel VisaoPortaIsoladaLabel;
     private javax.swing.JButton sinalizacaoExternaApagadaButton;
+    private javax.swing.JLabel visaoPortaIsoladaLabel;
     // End of variables declaration//GEN-END:variables
 }

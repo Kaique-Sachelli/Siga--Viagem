@@ -27,7 +27,7 @@ public class TelaPortaNaoFecha extends javax.swing.JFrame {
         setTitle("Tela Porta Não Fecha");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        dduLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Uma porta não fecha (1).jpg"))); // NOI18N
+        dduLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Uma porta não fecha.jpg"))); // NOI18N
         getContentPane().add(dduLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

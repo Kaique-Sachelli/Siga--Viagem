@@ -22,8 +22,8 @@ public class TelaChavesPainel extends javax.swing.JFrame {
     private void initComponents() {
 
         SetaBaixoButton1 = new javax.swing.JButton();
-        SetaBaixoButton = new javax.swing.JButton();
-        ChavesPainelLabel = new javax.swing.JLabel();
+        setaBaixoButton = new javax.swing.JButton();
+        chavesPainelLabel = new javax.swing.JLabel();
 
         SetaBaixoButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
         SetaBaixoButton1.setContentAreaFilled(false);
@@ -39,19 +39,19 @@ public class TelaChavesPainel extends javax.swing.JFrame {
         setTitle("Tela Chaves Painel");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        SetaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
-        SetaBaixoButton.setContentAreaFilled(false);
-        SetaBaixoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        SetaBaixoButton.setPreferredSize(new java.awt.Dimension(100, 100));
-        SetaBaixoButton.addActionListener(new java.awt.event.ActionListener() {
+        setaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
+        setaBaixoButton.setContentAreaFilled(false);
+        setaBaixoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaBaixoButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaBaixoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SetaBaixoButtonActionPerformed(evt);
+                setaBaixoButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, -1, -1));
+        getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, -1, -1));
 
-        ChavesPainelLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/chaves painel cabine.png"))); // NOI18N
-        getContentPane().add(ChavesPainelLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 470));
+        chavesPainelLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/chaves painel cabine.png"))); // NOI18N
+        getContentPane().add(chavesPainelLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 470));
 
         pack();
         setLocationRelativeTo(null);
@@ -61,10 +61,10 @@ public class TelaChavesPainel extends javax.swing.JFrame {
         
     }//GEN-LAST:event_SetaBaixoButton1ActionPerformed
 
-    private void SetaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButtonActionPerformed
+    private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
         frame.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_SetaBaixoButtonActionPerformed
+    }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -102,8 +102,8 @@ public class TelaChavesPainel extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel ChavesPainelLabel;
-    private javax.swing.JButton SetaBaixoButton;
     private javax.swing.JButton SetaBaixoButton1;
+    private javax.swing.JLabel chavesPainelLabel;
+    private javax.swing.JButton setaBaixoButton;
     // End of variables declaration//GEN-END:variables
 }

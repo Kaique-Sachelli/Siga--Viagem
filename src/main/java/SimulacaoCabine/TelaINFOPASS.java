@@ -47,7 +47,7 @@ public class TelaINFOPASS extends javax.swing.JFrame {
         });
         getContentPane().add(feButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 490, 40, 40));
 
-        infopassLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/DDU - tela INFOPASS (1).jpg"))); // NOI18N
+        infopassLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/DDU - tela INFOPASS.jpg"))); // NOI18N
         getContentPane().add(infopassLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

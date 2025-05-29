@@ -21,53 +21,53 @@ public class TelaPortaDireita extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        SetaEsquerdaButton1 = new javax.swing.JButton();
-        BotoeirasSinaleirasButton = new javax.swing.JButton();
-        PortaDireitaLabel = new javax.swing.JLabel();
+        setaEsquerdaButton = new javax.swing.JButton();
+        botoeirasSinaleirasButton = new javax.swing.JButton();
+        portaDireitaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Porta Direita");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        SetaEsquerdaButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaEsquerda.png"))); // NOI18N
-        SetaEsquerdaButton1.setContentAreaFilled(false);
-        SetaEsquerdaButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        SetaEsquerdaButton1.setPreferredSize(new java.awt.Dimension(100, 100));
-        SetaEsquerdaButton1.addActionListener(new java.awt.event.ActionListener() {
+        setaEsquerdaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaEsquerda.png"))); // NOI18N
+        setaEsquerdaButton.setContentAreaFilled(false);
+        setaEsquerdaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaEsquerdaButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaEsquerdaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SetaEsquerdaButton1ActionPerformed(evt);
+                setaEsquerdaButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SetaEsquerdaButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, -1, -1));
+        getContentPane().add(setaEsquerdaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, -1, -1));
 
-        BotoeirasSinaleirasButton.setContentAreaFilled(false);
-        BotoeirasSinaleirasButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BotoeirasSinaleirasButton.setMaximumSize(new java.awt.Dimension(70, 180));
-        BotoeirasSinaleirasButton.setMinimumSize(new java.awt.Dimension(70, 180));
-        BotoeirasSinaleirasButton.setPreferredSize(new java.awt.Dimension(70, 180));
-        BotoeirasSinaleirasButton.addActionListener(new java.awt.event.ActionListener() {
+        botoeirasSinaleirasButton.setContentAreaFilled(false);
+        botoeirasSinaleirasButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botoeirasSinaleirasButton.setMaximumSize(new java.awt.Dimension(70, 180));
+        botoeirasSinaleirasButton.setMinimumSize(new java.awt.Dimension(70, 180));
+        botoeirasSinaleirasButton.setPreferredSize(new java.awt.Dimension(70, 180));
+        botoeirasSinaleirasButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotoeirasSinaleirasButtonActionPerformed(evt);
+                botoeirasSinaleirasButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(BotoeirasSinaleirasButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, 70, 180));
+        getContentPane().add(botoeirasSinaleirasButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, 70, 180));
 
-        PortaDireitaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Porta de cabine lateral direita.jpg"))); // NOI18N
-        getContentPane().add(PortaDireitaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 750));
+        portaDireitaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Porta de cabine lateral direita.jpg"))); // NOI18N
+        getContentPane().add(portaDireitaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 750));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SetaEsquerdaButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaEsquerdaButton1ActionPerformed
+    private void setaEsquerdaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaEsquerdaButtonActionPerformed
         frame.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_SetaEsquerdaButton1ActionPerformed
+    }//GEN-LAST:event_setaEsquerdaButtonActionPerformed
 
-    private void BotoeirasSinaleirasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotoeirasSinaleirasButtonActionPerformed
+    private void botoeirasSinaleirasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botoeirasSinaleirasButtonActionPerformed
         TelaBotoeiraAcessa janelaBotoeiraAcessa = new TelaBotoeiraAcessa(this);
         janelaBotoeiraAcessa.setVisible(true);
-    }//GEN-LAST:event_BotoeirasSinaleirasButtonActionPerformed
+    }//GEN-LAST:event_botoeirasSinaleirasButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -105,8 +105,8 @@ public class TelaPortaDireita extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotoeirasSinaleirasButton;
-    private javax.swing.JLabel PortaDireitaLabel;
-    private javax.swing.JButton SetaEsquerdaButton1;
+    private javax.swing.JButton botoeirasSinaleirasButton;
+    private javax.swing.JLabel portaDireitaLabel;
+    private javax.swing.JButton setaEsquerdaButton;
     // End of variables declaration//GEN-END:variables
 }

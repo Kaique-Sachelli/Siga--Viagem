@@ -21,33 +21,33 @@ public class TelaListaPAS extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        VoltarButton = new javax.swing.JButton();
-        ListaPASLabel = new javax.swing.JLabel();
+        voltarButton = new javax.swing.JButton();
+        listaPASLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Lista PAS");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        VoltarButton.setContentAreaFilled(false);
-        VoltarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        VoltarButton.addActionListener(new java.awt.event.ActionListener() {
+        voltarButton.setContentAreaFilled(false);
+        voltarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        voltarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VoltarButtonActionPerformed(evt);
+                voltarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(VoltarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 550, 50, 50));
+        getContentPane().add(voltarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 550, 50, 50));
 
-        ListaPASLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Módulo de Comunicação - Lista de PA's E1.jpg"))); // NOI18N
-        getContentPane().add(ListaPASLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        listaPASLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Módulo de Comunicação - Lista de PA's E1.jpg"))); // NOI18N
+        getContentPane().add(listaPASLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void VoltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarButtonActionPerformed
+    private void voltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarButtonActionPerformed
         frame.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_VoltarButtonActionPerformed
+    }//GEN-LAST:event_voltarButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -85,7 +85,7 @@ public class TelaListaPAS extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel ListaPASLabel;
-    private javax.swing.JButton VoltarButton;
+    private javax.swing.JLabel listaPASLabel;
+    private javax.swing.JButton voltarButton;
     // End of variables declaration//GEN-END:variables
 }

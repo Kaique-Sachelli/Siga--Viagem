@@ -2,15 +2,15 @@ package SimulacaoCabine;
 
 import javax.swing.JFrame;
 
-public class TelaCBTC extends javax.swing.JFrame {
+public class TelaCBTC_AM extends javax.swing.JFrame {
 
     private JFrame frame;
     
-    public TelaCBTC() {
+    public TelaCBTC_AM() {
         initComponents();
     }
 
-    public TelaCBTC(JFrame frame) {
+    public TelaCBTC_AM(JFrame frame) {
         this();
         frame.setVisible(false);
         this.frame = frame;
@@ -21,7 +21,7 @@ public class TelaCBTC extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        SetaBaixoButton = new javax.swing.JButton();
+        setaBaixoButton = new javax.swing.JButton();
         cbtcRMButton = new javax.swing.JButton();
         cbtcLabel = new javax.swing.JLabel();
 
@@ -29,16 +29,16 @@ public class TelaCBTC extends javax.swing.JFrame {
         setTitle("Tela Chave do CBTC");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        SetaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
-        SetaBaixoButton.setContentAreaFilled(false);
-        SetaBaixoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        SetaBaixoButton.setPreferredSize(new java.awt.Dimension(100, 100));
-        SetaBaixoButton.addActionListener(new java.awt.event.ActionListener() {
+        setaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
+        setaBaixoButton.setContentAreaFilled(false);
+        setaBaixoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaBaixoButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaBaixoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SetaBaixoButtonActionPerformed(evt);
+                setaBaixoButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SetaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
+        getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
         cbtcRMButton.setContentAreaFilled(false);
         cbtcRMButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -49,18 +49,18 @@ public class TelaCBTC extends javax.swing.JFrame {
         });
         getContentPane().add(cbtcRMButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 300, 230, 230));
 
-        cbtcLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Chave do CBTC - AM (1).jpg"))); // NOI18N
+        cbtcLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Chave do CBTC - AM.jpg"))); // NOI18N
         getContentPane().add(cbtcLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SetaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButtonActionPerformed
+    private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
         TelaColunaLateral janelaColunaLateral = new TelaColunaLateral(this);
         janelaColunaLateral.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_SetaBaixoButtonActionPerformed
+    }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     private void cbtcRMButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbtcRMButtonActionPerformed
         TelaCBTC_RM janelaCBTC_RM = new TelaCBTC_RM(this);
@@ -84,27 +84,28 @@ public class TelaCBTC extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaCBTC.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCBTC_AM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaCBTC.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCBTC_AM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaCBTC.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCBTC_AM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaCBTC.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCBTC_AM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaCBTC().setVisible(true);
+                new TelaCBTC_AM().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton SetaBaixoButton;
     private javax.swing.JLabel cbtcLabel;
     private javax.swing.JButton cbtcRMButton;
+    private javax.swing.JButton setaBaixoButton;
     // End of variables declaration//GEN-END:variables
 }

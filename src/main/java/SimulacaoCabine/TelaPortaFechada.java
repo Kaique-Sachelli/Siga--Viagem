@@ -22,14 +22,14 @@ public class TelaPortaFechada extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        PortaFechadaLabel = new javax.swing.JLabel();
+        portaFechadaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Porta Fechada");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        PortaFechadaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/20 - Porta fechada (1).jpg"))); // NOI18N
-        getContentPane().add(PortaFechadaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        portaFechadaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Porta fechada.jpg"))); // NOI18N
+        getContentPane().add(portaFechadaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
@@ -71,6 +71,6 @@ public class TelaPortaFechada extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel PortaFechadaLabel;
+    private javax.swing.JLabel portaFechadaLabel;
     // End of variables declaration//GEN-END:variables
 }
