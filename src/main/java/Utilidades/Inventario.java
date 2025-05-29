@@ -1,4 +1,3 @@
-
 package Utilidades;
 
 public class Inventario {
