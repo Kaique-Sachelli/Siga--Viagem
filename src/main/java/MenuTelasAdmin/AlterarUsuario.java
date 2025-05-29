@@ -54,6 +54,9 @@ public class AlterarUsuario extends javax.swing.JFrame {
         loginTextField = new javax.swing.JTextField();
         loginTextField1 = new javax.swing.JTextField();
         loginTextField2 = new javax.swing.JTextField();
+        alterarSenhaBotton = new javax.swing.JButton();
+        alterarCategoriaButton = new javax.swing.JButton();
+        apagarUsuarioButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Alterar usuário");
@@ -89,13 +92,18 @@ public class AlterarUsuario extends javax.swing.JFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 530, 230, 110));
 
         usuariosComboBox.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        usuariosComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usuariosComboBoxActionPerformed(evt);
+            }
+        });
         getContentPane().add(usuariosComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, 480, 60));
 
         confirmarButton.setBackground(new java.awt.Color(0, 20, 137));
         confirmarButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         confirmarButton.setForeground(new java.awt.Color(255, 255, 255));
         confirmarButton.setText("CONFIRMAR");
-        getContentPane().add(confirmarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 490, 290, 60));
+        getContentPane().add(confirmarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 570, 290, 60));
 
         loginTextField.setText("jTextField1");
         loginTextField.setEnabled(false);
@@ -124,6 +132,30 @@ public class AlterarUsuario extends javax.swing.JFrame {
         });
         getContentPane().add(loginTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 280, 50));
 
+        alterarSenhaBotton.setText("Alterar Senha");
+        alterarSenhaBotton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                alterarSenhaBottonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(alterarSenhaBotton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 200, 50));
+
+        alterarCategoriaButton.setText("Alterar Categoria");
+        alterarCategoriaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                alterarCategoriaButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(alterarCategoriaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 430, 200, 50));
+
+        apagarUsuarioButton.setText("Apagar usuario");
+        apagarUsuarioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                apagarUsuarioButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(apagarUsuarioButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 200, 50));
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -144,6 +176,25 @@ public class AlterarUsuario extends javax.swing.JFrame {
     private void loginTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_loginTextField2ActionPerformed
+
+    private void alterarSenhaBottonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarSenhaBottonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_alterarSenhaBottonActionPerformed
+
+    private void alterarCategoriaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarCategoriaButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_alterarCategoriaButtonActionPerformed
+
+    private void apagarUsuarioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apagarUsuarioButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_apagarUsuarioButtonActionPerformed
+
+    private void usuariosComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuariosComboBoxActionPerformed
+        var selecionado = (Usuario) usuariosComboBox.getSelectedItem();
+        if (selecionado != null){
+            
+        }
+    }//GEN-LAST:event_usuariosComboBoxActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,6 +232,9 @@ public class AlterarUsuario extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton alterarCategoriaButton;
+    private javax.swing.JButton alterarSenhaBotton;
+    private javax.swing.JButton apagarUsuarioButton;
     private javax.swing.JButton confirmarButton;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField loginTextField;
