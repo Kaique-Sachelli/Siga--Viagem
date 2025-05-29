@@ -2,15 +2,15 @@ package SimulacaoCabine;
 
 import javax.swing.JFrame;
 
-public class TelaSinalizacaoExternaApagada extends javax.swing.JFrame {
+public class TelaSinalizacaoExternaAcessa extends javax.swing.JFrame {
 
     private JFrame frame;
     
-    public TelaSinalizacaoExternaApagada() {
+    public TelaSinalizacaoExternaAcessa() {
         initComponents();
     }
 
-    public TelaSinalizacaoExternaApagada(JFrame frame) {
+    public TelaSinalizacaoExternaAcessa(JFrame frame) {
         this();
         frame.setVisible(false);
         this.frame = frame;
@@ -39,7 +39,7 @@ public class TelaSinalizacaoExternaApagada extends javax.swing.JFrame {
         });
         getContentPane().add(setaEsquerdaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, -1, -1));
 
-        sinalizacaoExternaApagadaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Sinalização externa apagada.jpg"))); // NOI18N
+        sinalizacaoExternaApagadaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Sinalização externa acesa 1 (1).jpg"))); // NOI18N
         getContentPane().add(sinalizacaoExternaApagadaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
@@ -68,20 +68,21 @@ public class TelaSinalizacaoExternaApagada extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaSinalizacaoExternaApagada.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaSinalizacaoExternaAcessa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaSinalizacaoExternaApagada.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaSinalizacaoExternaAcessa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaSinalizacaoExternaApagada.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaSinalizacaoExternaAcessa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaSinalizacaoExternaApagada.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaSinalizacaoExternaAcessa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaSinalizacaoExternaApagada().setVisible(true);
+                new TelaSinalizacaoExternaAcessa().setVisible(true);
             }
         });
     }

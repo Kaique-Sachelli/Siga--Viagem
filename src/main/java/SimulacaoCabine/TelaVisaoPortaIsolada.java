@@ -46,7 +46,7 @@ public class TelaVisaoPortaIsolada extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void sinalizacaoExternaApagadaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sinalizacaoExternaApagadaButtonActionPerformed
-        TelaSinalizacaoExternaApagada janelaExternaApagada = new TelaSinalizacaoExternaApagada(this);
+        TelaSinalizacaoExternaAcessa janelaExternaApagada = new TelaSinalizacaoExternaAcessa(this);
         janelaExternaApagada.setVisible(true);
     }//GEN-LAST:event_sinalizacaoExternaApagadaButtonActionPerformed
 
