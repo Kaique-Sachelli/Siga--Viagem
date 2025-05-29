@@ -1,6 +1,7 @@
 package SimulacaoCabine;
 
 import javax.swing.JFrame;
+import Utilidades.EstadoCBTC;
 
 public class TelaColunaLateral extends javax.swing.JFrame {
 
@@ -80,8 +81,13 @@ public class TelaColunaLateral extends javax.swing.JFrame {
     }//GEN-LAST:event_setaEsquerdaButtonActionPerformed
 
     private void chaveCBTCButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chaveCBTCButtonActionPerformed
-        TelaCBTC_AM janelaCBTC = new TelaCBTC_AM(this);
-        janelaCBTC.setVisible(true);
+        if (EstadoCBTC.getPosicaoAtual() == EstadoCBTC.Posicao.AM) {
+            new TelaCBTC_AM(this).setVisible(true);
+        } else {
+            new TelaCBTC_RM(this).setVisible(true);
+        }
+        this.setVisible(false);
+
     }//GEN-LAST:event_chaveCBTCButtonActionPerformed
 
     /**
