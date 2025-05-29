@@ -2,15 +2,15 @@ package SimulacaoCabine;
 
 import javax.swing.JFrame;
 
-public class TelaPainelAcessoAmpliado extends javax.swing.JFrame {
+public class TelaPainelControleNormal extends javax.swing.JFrame {
 
     private JFrame frame;
     
-    public TelaPainelAcessoAmpliado() {
+    public TelaPainelControleNormal() {
         initComponents();
     }
 
-    public TelaPainelAcessoAmpliado(JFrame frame) {
+    public TelaPainelControleNormal(JFrame frame) {
         this();
         frame.setVisible(false);
         this.frame = frame;
@@ -37,7 +37,7 @@ public class TelaPainelAcessoAmpliado extends javax.swing.JFrame {
         });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tela Painel de Controle Ampliado");
+        setTitle("Tela Painel de Controle Normal");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         setaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
@@ -68,19 +68,19 @@ public class TelaPainelAcessoAmpliado extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SetaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetaBaixoButtonActionPerformed
-        TelaPainelDeControle janelaPainelDeControle = new TelaPainelDeControle(this);
+        TelaPainelDeControleIsol janelaPainelDeControle = new TelaPainelDeControleIsol(this);
         janelaPainelDeControle.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_SetaBaixoButtonActionPerformed
 
     private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
-        TelaPainelDeControle janelaPainelDeControle = new TelaPainelDeControle(this);
+        TelaPainelDeControleIsol janelaPainelDeControle = new TelaPainelDeControleIsol(this);
         janelaPainelDeControle.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     private void painelDeControleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_painelDeControleButtonActionPerformed
-        TelaPainelDeControle janelaPainelDeControle = new TelaPainelDeControle(this);
+        TelaPainelDeControleIsol janelaPainelDeControle = new TelaPainelDeControleIsol(this);
         janelaPainelDeControle.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_painelDeControleButtonActionPerformed
@@ -102,20 +102,23 @@ public class TelaPainelAcessoAmpliado extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaPainelAcessoAmpliado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPainelControleNormal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaPainelAcessoAmpliado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPainelControleNormal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaPainelAcessoAmpliado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPainelControleNormal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaPainelAcessoAmpliado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPainelControleNormal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaPainelAcessoAmpliado().setVisible(true);
+                new TelaPainelControleNormal().setVisible(true);
             }
         });
     }

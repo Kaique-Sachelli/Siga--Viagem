@@ -63,7 +63,7 @@ public class TelaPainelDeAcesso extends javax.swing.JFrame {
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     private void painelDeControleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_painelDeControleButtonActionPerformed
-        TelaPainelDeControle janelaPainelDeControle = new TelaPainelDeControle(this);
+        TelaPainelDeControleIsol janelaPainelDeControle = new TelaPainelDeControleIsol(this);
         janelaPainelDeControle.setVisible(true);
     }//GEN-LAST:event_painelDeControleButtonActionPerformed
 
