@@ -51,9 +51,9 @@ public class AlterarUsuario extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         usuariosComboBox = new javax.swing.JComboBox<Usuario>();
         confirmarButton = new javax.swing.JButton();
-        loginTextField = new javax.swing.JTextField();
+        instrutorTextField = new javax.swing.JTextField();
         loginTextField1 = new javax.swing.JTextField();
-        loginTextField2 = new javax.swing.JTextField();
+        senhaTextField = new javax.swing.JTextField();
         alterarSenhaBotton = new javax.swing.JButton();
         alterarCategoriaButton = new javax.swing.JButton();
         apagarUsuarioButton = new javax.swing.JButton();
@@ -105,16 +105,17 @@ public class AlterarUsuario extends javax.swing.JFrame {
         confirmarButton.setText("CONFIRMAR");
         getContentPane().add(confirmarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 570, 290, 60));
 
-        loginTextField.setText("jTextField1");
-        loginTextField.setEnabled(false);
-        loginTextField.addActionListener(new java.awt.event.ActionListener() {
+        instrutorTextField.setText("CATEGORIA");
+        instrutorTextField.setEnabled(false);
+        instrutorTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginTextFieldActionPerformed(evt);
+                instrutorTextFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(loginTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 210, 280, 50));
+        getContentPane().add(instrutorTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 210, 280, 50));
 
-        loginTextField1.setText("jTextField1");
+        loginTextField1.setBackground(new java.awt.Color(255, 255, 255));
+        loginTextField1.setText("LOGIN");
         loginTextField1.setEnabled(false);
         loginTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,14 +124,14 @@ public class AlterarUsuario extends javax.swing.JFrame {
         });
         getContentPane().add(loginTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 280, 50));
 
-        loginTextField2.setText("jTextField1");
-        loginTextField2.setEnabled(false);
-        loginTextField2.addActionListener(new java.awt.event.ActionListener() {
+        senhaTextField.setText("SENHA");
+        senhaTextField.setEnabled(false);
+        senhaTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginTextField2ActionPerformed(evt);
+                senhaTextFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(loginTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 280, 50));
+        getContentPane().add(senhaTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 280, 50));
 
         alterarSenhaBotton.setText("Alterar Senha");
         alterarSenhaBotton.addActionListener(new java.awt.event.ActionListener() {
@@ -165,17 +166,17 @@ public class AlterarUsuario extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_voltarMenuButtonActionPerformed
 
-    private void loginTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginTextFieldActionPerformed
+    private void instrutorTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_instrutorTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_loginTextFieldActionPerformed
+    }//GEN-LAST:event_instrutorTextFieldActionPerformed
 
     private void loginTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_loginTextField1ActionPerformed
 
-    private void loginTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginTextField2ActionPerformed
+    private void senhaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_loginTextField2ActionPerformed
+    }//GEN-LAST:event_senhaTextFieldActionPerformed
 
     private void alterarSenhaBottonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarSenhaBottonActionPerformed
         // TODO add your handling code here:
@@ -192,8 +193,25 @@ public class AlterarUsuario extends javax.swing.JFrame {
     private void usuariosComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuariosComboBoxActionPerformed
         var selecionado = (Usuario) usuariosComboBox.getSelectedItem();
         if (selecionado != null){
+            try{
+            var dao = new DAO();
+            dao.buscarUsuario(selecionado.getId());
+            loginTextField1.setText(selecionado.getLogin());
+            senhaTextField.setText(selecionado.getSenha());
+            if(selecionado.getInstrutor()){
+                instrutorTextField.setText("Instrutor");
+            }
+            else{
+                instrutorTextField.setText("Operador");
+            }
             
+            }catch (Exception e){
+                JOptionPane.showMessageDialog(null, "Dado de usuarios não disponíveis");
+            
+            }
         }
+                
+               
     }//GEN-LAST:event_usuariosComboBoxActionPerformed
 
     /**
@@ -236,10 +254,10 @@ public class AlterarUsuario extends javax.swing.JFrame {
     private javax.swing.JButton alterarSenhaBotton;
     private javax.swing.JButton apagarUsuarioButton;
     private javax.swing.JButton confirmarButton;
+    private javax.swing.JTextField instrutorTextField;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField loginTextField;
     private javax.swing.JTextField loginTextField1;
-    private javax.swing.JTextField loginTextField2;
+    private javax.swing.JTextField senhaTextField;
     private javax.swing.JLabel tituloMenuLabel;
     private javax.swing.JComboBox<Usuario> usuariosComboBox;
     private javax.swing.JButton voltarMenuButton;
