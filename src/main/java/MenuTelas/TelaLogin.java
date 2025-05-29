@@ -26,7 +26,6 @@ public class TelaLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         tituloMenuLabel = new javax.swing.JLabel();
         loginLabel = new javax.swing.JLabel();
         loginTextField = new javax.swing.JTextField();
@@ -37,12 +36,11 @@ public class TelaLogin extends javax.swing.JFrame {
         entrarButton = new javax.swing.JButton();
         criarContaButton = new javax.swing.JButton();
         mostrarSenhaButton = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        loginImagemLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela de Login");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 155, 37, -1));
 
         tituloMenuLabel.setFont(new java.awt.Font("Impact", 0, 60)); // NOI18N
         tituloMenuLabel.setForeground(new java.awt.Color(0, 20, 137));
@@ -130,8 +128,8 @@ public class TelaLogin extends javax.swing.JFrame {
         });
         getContentPane().add(mostrarSenhaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 360, 20, 20));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/login.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        loginImagemLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/login.png"))); // NOI18N
+        getContentPane().add(loginImagemLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
@@ -241,8 +239,7 @@ private boolean mostrarSenha = false;
     private javax.swing.JButton criarContaButton;
     private javax.swing.JButton entrarButton;
     private javax.swing.JButton esqueceuSenhaButton;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel loginImagemLabel;
     private javax.swing.JLabel loginLabel;
     private javax.swing.JTextField loginTextField;
     private javax.swing.JButton mostrarSenhaButton;

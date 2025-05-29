@@ -33,12 +33,12 @@ public class CriarConta extends javax.swing.JFrame {
         loginTextField = new javax.swing.JTextField();
         senhaLabel = new javax.swing.JLabel();
         confirmarSenhaPasswordField = new javax.swing.JPasswordField();
-        senhaLabel1 = new javax.swing.JLabel();
+        confirmarSenhaLabel = new javax.swing.JLabel();
         senhaPasswordField = new javax.swing.JPasswordField();
         confirmarButton = new javax.swing.JButton();
         mostrarSenhaButton = new javax.swing.JButton();
         nomeTextField = new javax.swing.JTextField();
-        loginLabel1 = new javax.swing.JLabel();
+        loginLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Criar Conta!");
@@ -92,10 +92,10 @@ public class CriarConta extends javax.swing.JFrame {
         });
         getContentPane().add(confirmarSenhaPasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, 510, 50));
 
-        senhaLabel1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        senhaLabel1.setForeground(new java.awt.Color(0, 20, 137));
-        senhaLabel1.setText("Confirmar Senha: ");
-        getContentPane().add(senhaLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, -1, 30));
+        confirmarSenhaLabel.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        confirmarSenhaLabel.setForeground(new java.awt.Color(0, 20, 137));
+        confirmarSenhaLabel.setText("Confirmar Senha: ");
+        getContentPane().add(confirmarSenhaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, -1, 30));
 
         senhaPasswordField.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         senhaPasswordField.addActionListener(new java.awt.event.ActionListener() {
@@ -131,10 +131,10 @@ public class CriarConta extends javax.swing.JFrame {
         });
         getContentPane().add(nomeTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 510, 50));
 
-        loginLabel1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        loginLabel1.setForeground(new java.awt.Color(0, 20, 137));
-        loginLabel1.setText("Login:");
-        getContentPane().add(loginLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 80, -1));
+        loginLabel.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        loginLabel.setForeground(new java.awt.Color(0, 20, 137));
+        loginLabel.setText("Login:");
+        getContentPane().add(loginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 80, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -247,15 +247,15 @@ private boolean mostrarSenha = false;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton confirmarButton;
+    private javax.swing.JLabel confirmarSenhaLabel;
     private javax.swing.JPasswordField confirmarSenhaPasswordField;
     private javax.swing.JLabel criarContaLabel;
-    private javax.swing.JLabel loginLabel1;
+    private javax.swing.JLabel loginLabel;
     private javax.swing.JTextField loginTextField;
     private javax.swing.JButton mostrarSenhaButton;
     private javax.swing.JLabel nomeLabel;
     private javax.swing.JTextField nomeTextField;
     private javax.swing.JLabel senhaLabel;
-    private javax.swing.JLabel senhaLabel1;
     private javax.swing.JPasswordField senhaPasswordField;
     private javax.swing.JButton voltarMenuButton;
     // End of variables declaration//GEN-END:variables

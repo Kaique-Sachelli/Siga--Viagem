@@ -1,4 +1,6 @@
 package MenuTelas;
+
+import SimulacaoCabine.TelaCabine;
 import javax.swing.*;
 
 public class SelecionarFase extends javax.swing.JFrame {
@@ -23,10 +25,9 @@ public class SelecionarFase extends javax.swing.JFrame {
     private void initComponents() {
 
         tituloMenuLabel = new javax.swing.JLabel();
-        logoMauaLabel = new javax.swing.JLabel();
         voltarMenuButton = new javax.swing.JButton();
+        fasePortasButton = new javax.swing.JButton();
         selecaoDeFasesLabel = new javax.swing.JLabel();
-        selecaoFasesLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Seleção de Fases");
@@ -39,9 +40,6 @@ public class SelecionarFase extends javax.swing.JFrame {
         tituloMenuLabel.setMinimumSize(new java.awt.Dimension(320, 75));
         tituloMenuLabel.setPreferredSize(new java.awt.Dimension(320, 75));
         getContentPane().add(tituloMenuLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 430, 80));
-
-        logoMauaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/logoMaua.png"))); // NOI18N
-        getContentPane().add(logoMauaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 530, 230, 110));
 
         voltarMenuButton.setBackground(new java.awt.Color(246, 246, 246));
         voltarMenuButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
@@ -63,11 +61,19 @@ public class SelecionarFase extends javax.swing.JFrame {
                 voltarMenuButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(voltarMenuButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 560, 220, 60));
+        getContentPane().add(voltarMenuButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, 130, 40));
 
-        selecaoDeFasesLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/SeleçãoFases.png"))); // NOI18N
+        fasePortasButton.setContentAreaFilled(false);
+        fasePortasButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        fasePortasButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fasePortasButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(fasePortasButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 100, 300, 220));
+
+        selecaoDeFasesLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/SelecaoDeFases.png"))); // NOI18N
         getContentPane().add(selecaoDeFasesLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
-        getContentPane().add(selecaoFasesLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -84,6 +90,11 @@ public class SelecionarFase extends javax.swing.JFrame {
     private void voltarMenuButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_voltarMenuButtonMouseEntered
         
     }//GEN-LAST:event_voltarMenuButtonMouseEntered
+
+    private void fasePortasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fasePortasButtonActionPerformed
+        TelaCabine janelaCabine = new TelaCabine(this);
+        janelaCabine.setVisible(true);
+    }//GEN-LAST:event_fasePortasButtonActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -118,9 +129,8 @@ public class SelecionarFase extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel logoMauaLabel;
+    private javax.swing.JButton fasePortasButton;
     private javax.swing.JLabel selecaoDeFasesLabel;
-    private javax.swing.JLabel selecaoFasesLabel;
     private javax.swing.JLabel tituloMenuLabel;
     private javax.swing.JButton voltarMenuButton;
     // End of variables declaration//GEN-END:variables

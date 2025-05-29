@@ -22,7 +22,7 @@ public class TelaMenuAdmin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel3 = new javax.swing.JLabel();
+        logoMauaLabel = new javax.swing.JLabel();
         tituloMenuLabel = new javax.swing.JLabel();
         alterarUsuarioButton = new javax.swing.JButton();
         configuracoesButton = new javax.swing.JButton();
@@ -37,8 +37,8 @@ public class TelaMenuAdmin extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(960, 640));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/logoMaua.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 520, 230, 110));
+        logoMauaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/logoMaua.png"))); // NOI18N
+        getContentPane().add(logoMauaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 520, 230, 110));
 
         tituloMenuLabel.setFont(new java.awt.Font("Impact", 0, 60)); // NOI18N
         tituloMenuLabel.setForeground(new java.awt.Color(0, 20, 137));
@@ -217,8 +217,8 @@ public class TelaMenuAdmin extends javax.swing.JFrame {
     private javax.swing.JButton configuracoesButton;
     private javax.swing.JButton estatisticasButton;
     private javax.swing.JLabel imagemAdministradorLabel;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JButton jogarButton;
+    private javax.swing.JLabel logoMauaLabel;
     private javax.swing.JButton sairButton;
     private javax.swing.JButton selecionarFaseButton;
     private javax.swing.JLabel tituloMenuLabel;
