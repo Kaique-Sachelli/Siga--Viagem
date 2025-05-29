@@ -1,5 +1,12 @@
 package SimulacaoCabine;
 
+import java.io.IOException;
+import java.net.URL;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JFrame;
 
 public class TelaBotoeiraAcessa extends javax.swing.JFrame {
@@ -22,6 +29,7 @@ public class TelaBotoeiraAcessa extends javax.swing.JFrame {
     private void initComponents() {
 
         setaBaixoButton = new javax.swing.JButton();
+        portaFechandoButton = new javax.swing.JButton();
         botoeiraAcessaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -39,6 +47,15 @@ public class TelaBotoeiraAcessa extends javax.swing.JFrame {
         });
         getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 650, -1, -1));
 
+        portaFechandoButton.setContentAreaFilled(false);
+        portaFechandoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        portaFechandoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                portaFechandoButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(portaFechandoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 580, -1, 80));
+
         botoeiraAcessaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/boteira acesa.jpeg"))); // NOI18N
         getContentPane().add(botoeiraAcessaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 750));
 
@@ -50,6 +67,47 @@ public class TelaBotoeiraAcessa extends javax.swing.JFrame {
         frame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
+
+    private void portaFechandoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_portaFechandoButtonActionPerformed
+        try { //Protege o código dos erros, try / catch.
+            
+            URL somURL = getClass().getResource("/wav/Porta-fechando.wav");
+            
+            /*
+            getClass() retorna a classe atual.
+            .getResource(...) procura o arquivo dentro do src/main/resources.
+            */
+            
+            if (somURL == null) {
+                System.out.println("Som não encontrado!");
+                return;
+            }
+
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(somURL);
+            
+            /*
+            AudioInputStream: representa o áudio como um fluxo de dados.
+            AudioSystem.getAudioInputStream(...): carrega esse fluxo a partir da URL do arquivo.
+            */
+            
+            Clip clip = AudioSystem.getClip(); // Cria um objeto Clip, que pode ser iniciado, parado e reiniciado.
+            
+            clip.open(audioStream); // Carrega o som no Clip, prepara ele para ser tocado.
+
+            clip.start(); // Toca o som.
+
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            e.printStackTrace();
+            
+            /*
+            UnsupportedAudioFileException: se o som não for um .wav compatível.
+            IOException: erro ao acessar o arquivo.
+            LineUnavailableException: erro ao usar o sistema de som do computador.
+            e.printStackTrace()
+            Imprime o erro no console. Serve para debug, ou seja, para entender o que deu errado.
+            */
+    }
+    }//GEN-LAST:event_portaFechandoButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -88,6 +146,7 @@ public class TelaBotoeiraAcessa extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel botoeiraAcessaLabel;
+    private javax.swing.JButton portaFechandoButton;
     private javax.swing.JButton setaBaixoButton;
     // End of variables declaration//GEN-END:variables
 }
