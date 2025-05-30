@@ -1,11 +1,10 @@
-
 package Utilidades;
 
-public class Inventario {
-    private static Inventario instance = new Inventario();
+public class EstadoItem {
+    private static EstadoItem instance = new EstadoItem();
     private boolean itemColetado = false;
 
-    public static Inventario getInstance(){
+    public static EstadoItem getInstance(){
         return instance;
     }
     

@@ -1,5 +1,6 @@
 package MenuTelas;
 
+import SimulacaoCabine.TelaCabine;
 import javax.swing.JFrame;
 
 public class TelaMenuUsuario extends javax.swing.JFrame {
@@ -22,14 +23,14 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel3 = new javax.swing.JLabel();
+        logoMauaLabel = new javax.swing.JLabel();
         tituloMenuLabel = new javax.swing.JLabel();
         selecionarFaseButton = new javax.swing.JButton();
         configuracoesButton = new javax.swing.JButton();
         estatisticasButton = new javax.swing.JButton();
         sairButton = new javax.swing.JButton();
         jogarButton = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        mapaMetroLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Usuário");
@@ -37,8 +38,8 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(960, 640));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/logoMaua.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 520, 230, 110));
+        logoMauaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/logoMaua.png"))); // NOI18N
+        getContentPane().add(logoMauaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 520, 230, 110));
 
         tituloMenuLabel.setFont(new java.awt.Font("Impact", 0, 60)); // NOI18N
         tituloMenuLabel.setForeground(new java.awt.Color(0, 20, 137));
@@ -123,15 +124,16 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
         });
         getContentPane().add(jogarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 130, 220, 60));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/mapaMetro.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 580, 450));
+        mapaMetroLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/mapaMetro.png"))); // NOI18N
+        getContentPane().add(mapaMetroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 580, 450));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jogarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jogarButtonActionPerformed
-
+        TelaCabine janelaCabine = new TelaCabine(this);
+        janelaCabine.setVisible(true);
     }//GEN-LAST:event_jogarButtonActionPerformed
 
     private void selecionarFaseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selecionarFaseButtonActionPerformed
@@ -188,9 +190,9 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton configuracoesButton;
     private javax.swing.JButton estatisticasButton;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JButton jogarButton;
+    private javax.swing.JLabel logoMauaLabel;
+    private javax.swing.JLabel mapaMetroLabel;
     private javax.swing.JButton sairButton;
     private javax.swing.JButton selecionarFaseButton;
     private javax.swing.JLabel tituloMenuLabel;

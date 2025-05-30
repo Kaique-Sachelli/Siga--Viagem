@@ -48,7 +48,7 @@ public class AlterarUsuario extends javax.swing.JFrame {
 
         tituloMenuLabel = new javax.swing.JLabel();
         voltarMenuButton = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        logoMauaLabel = new javax.swing.JLabel();
         usuariosComboBox = new javax.swing.JComboBox<Usuario>();
         confirmarButton = new javax.swing.JButton();
         loginTextField = new javax.swing.JTextField();
@@ -85,8 +85,8 @@ public class AlterarUsuario extends javax.swing.JFrame {
         });
         getContentPane().add(voltarMenuButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, 220, 60));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/logoMaua.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 530, 230, 110));
+        logoMauaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/logoMaua.png"))); // NOI18N
+        getContentPane().add(logoMauaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 530, 230, 110));
 
         usuariosComboBox.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         getContentPane().add(usuariosComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, 480, 60));
@@ -182,10 +182,10 @@ public class AlterarUsuario extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton confirmarButton;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField loginTextField;
     private javax.swing.JTextField loginTextField1;
     private javax.swing.JTextField loginTextField2;
+    private javax.swing.JLabel logoMauaLabel;
     private javax.swing.JLabel tituloMenuLabel;
     private javax.swing.JComboBox<Usuario> usuariosComboBox;
     private javax.swing.JButton voltarMenuButton;

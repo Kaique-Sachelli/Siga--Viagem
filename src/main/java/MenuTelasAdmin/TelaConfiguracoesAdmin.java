@@ -8,21 +8,21 @@ public class TelaConfiguracoesAdmin extends javax.swing.JFrame {
     
     public TelaConfiguracoesAdmin() {
         initComponents();
-        jCheckBox1.setSelected(TelaConfiguracoesAdmin.EstadoSom.somDesligado);
+        desligarSomCheckBox.setSelected(TelaConfiguracoesAdmin.EstadoSom.somDesligado);
         setResizable(false);
     }
     
     private static int valorDoSlider = 10;
 
     private void configurarSlider() {
-        jSlider1.setMinimum(0);
-        jSlider1.setMaximum(10);
-        jSlider1.setMajorTickSpacing(1);
+        ajusteSomSlider.setMinimum(0);
+        ajusteSomSlider.setMaximum(10);
+        ajusteSomSlider.setMajorTickSpacing(1);
 
-        jSlider1.setValue(valorDoSlider);
-        jSlider1.addChangeListener(new javax.swing.event.ChangeListener() {
+        ajusteSomSlider.setValue(valorDoSlider);
+        ajusteSomSlider.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                valorDoSlider = jSlider1.getValue();
+                valorDoSlider = ajusteSomSlider.getValue();
             }
         });
     }
@@ -40,7 +40,7 @@ public class TelaConfiguracoesAdmin extends javax.swing.JFrame {
         this.frame.setVisible(false);
         initComponents();
         configurarSlider();
-        jCheckBox1.setSelected(TelaConfiguracoesAdmin.EstadoSom.somDesligado);
+        desligarSomCheckBox.setSelected(TelaConfiguracoesAdmin.EstadoSom.somDesligado);
         setResizable(false);
 
     }
@@ -49,12 +49,12 @@ public class TelaConfiguracoesAdmin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel3 = new javax.swing.JLabel();
+        logoMauaLabel = new javax.swing.JLabel();
         tituloMenuLabel = new javax.swing.JLabel();
-        jSlider1 = new javax.swing.JSlider();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        ajusteSomSlider = new javax.swing.JSlider();
+        desligarSomCheckBox = new javax.swing.JCheckBox();
+        ajustarVolumeLabel = new javax.swing.JLabel();
+        mapaMetroLabel = new javax.swing.JLabel();
         voltarMenuButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -63,8 +63,8 @@ public class TelaConfiguracoesAdmin extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(960, 640));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/logoMaua.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 520, 230, 110));
+        logoMauaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/logoMaua.png"))); // NOI18N
+        getContentPane().add(logoMauaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 520, 230, 110));
 
         tituloMenuLabel.setFont(new java.awt.Font("Impact", 0, 60)); // NOI18N
         tituloMenuLabel.setForeground(new java.awt.Color(0, 20, 137));
@@ -74,31 +74,31 @@ public class TelaConfiguracoesAdmin extends javax.swing.JFrame {
         tituloMenuLabel.setPreferredSize(new java.awt.Dimension(320, 75));
         getContentPane().add(tituloMenuLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 580, 80));
 
-        jSlider1.setCursor(new java.awt.Cursor(java.awt.Cursor.W_RESIZE_CURSOR));
-        jSlider1.addAncestorListener(new javax.swing.event.AncestorListener() {
+        ajusteSomSlider.setCursor(new java.awt.Cursor(java.awt.Cursor.W_RESIZE_CURSOR));
+        ajusteSomSlider.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
             }
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-                jSlider1AncestorMoved(evt);
+                ajusteSomSliderAncestorMoved(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
         });
-        getContentPane().add(jSlider1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 190, 220, 20));
+        getContentPane().add(ajusteSomSlider, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 190, 220, 20));
 
-        jCheckBox1.setText("Desligar som");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        desligarSomCheckBox.setText("Desligar som");
+        desligarSomCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                desligarSomCheckBoxActionPerformed(evt);
             }
         });
-        getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 140, -1, 20));
+        getContentPane().add(desligarSomCheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 140, -1, 20));
 
-        jLabel1.setText("Ajustar volume");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 170, -1, 20));
+        ajustarVolumeLabel.setText("Ajustar volume");
+        getContentPane().add(ajustarVolumeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 170, -1, 20));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/mapaMetro.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 580, 450));
+        mapaMetroLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/mapaMetro.png"))); // NOI18N
+        getContentPane().add(mapaMetroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 580, 450));
 
         voltarMenuButton.setBackground(new java.awt.Color(246, 246, 246));
         voltarMenuButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
@@ -121,17 +121,21 @@ public class TelaConfiguracoesAdmin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        TelaConfiguracoesAdmin.EstadoSom.somDesligado = jCheckBox1.isSelected();
+        TelaConfiguracoesAdmin.EstadoSom.somDesligado = desligarSomCheckBox.isSelected();
     }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void desligarSomCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desligarSomCheckBoxActionPerformed
+        TelaConfiguracoesAdmin.EstadoSom.somDesligado = desligarSomCheckBox.isSelected();
+    }//GEN-LAST:event_desligarSomCheckBoxActionPerformed
 
     private void voltarMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarMenuButtonActionPerformed
         frame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_voltarMenuButtonActionPerformed
 
-    private void jSlider1AncestorMoved(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jSlider1AncestorMoved
-        jSlider1.setValue(valorDoSlider);
-    }//GEN-LAST:event_jSlider1AncestorMoved
+    private void ajusteSomSliderAncestorMoved(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_ajusteSomSliderAncestorMoved
+        ajusteSomSlider.setValue(valorDoSlider);
+    }//GEN-LAST:event_ajusteSomSliderAncestorMoved
 
     /**
      * @param args the command line arguments
@@ -184,11 +188,11 @@ public class TelaConfiguracoesAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JSlider jSlider1;
+    private javax.swing.JLabel ajustarVolumeLabel;
+    private javax.swing.JSlider ajusteSomSlider;
+    private javax.swing.JCheckBox desligarSomCheckBox;
+    private javax.swing.JLabel logoMauaLabel;
+    private javax.swing.JLabel mapaMetroLabel;
     private javax.swing.JLabel tituloMenuLabel;
     private javax.swing.JButton voltarMenuButton;
     // End of variables declaration//GEN-END:variables
