@@ -25,7 +25,7 @@ public class TelaConfiguracoes extends javax.swing.JFrame {
             }
         });
     }
-    
+    // EstadoSom criado para facilitar um possível .java futuro
     public class EstadoSom {
 
         public static boolean somDesligado = false; // false = som ligado
