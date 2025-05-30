@@ -1,4 +1,4 @@
-package Persistencia;
+package Modelo;
 
 
 public class Usuario {

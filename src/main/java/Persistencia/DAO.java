@@ -5,7 +5,7 @@ package Persistencia;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import Persistencia.Usuario;
+import Modelo.Usuario;
 
 public class DAO {
     public boolean existe (Usuario u) throws Exception {

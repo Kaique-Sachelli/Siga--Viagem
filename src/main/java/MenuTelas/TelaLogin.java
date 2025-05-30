@@ -2,7 +2,7 @@ package MenuTelas;
 import MenuTelasAdmin.TelaMenuAdmin;
 import javax.swing.JFrame;
 import Persistencia.DAO;
-import Persistencia.Usuario;
+import Modelo.Usuario;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
