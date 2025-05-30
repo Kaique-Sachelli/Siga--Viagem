@@ -65,9 +65,9 @@ public class TelaReversoraFrente extends javax.swing.JFrame {
 
     private void reversoraFrenteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reversoraFrenteButtonActionPerformed
         EstadoReversora.setPosicaoAtual(EstadoReversora.Posicao.NEUTRO);
-        TelaReversoraNeutro janelaNeutro = new TelaReversoraNeutro(frame); // passa o frame original
+        TelaReversoraNeutro janelaNeutro = new TelaReversoraNeutro(frame); 
         janelaNeutro.setVisible(true);
-        this.dispose(); // <- fecha a janela atual
+        this.dispose(); 
     }//GEN-LAST:event_reversoraFrenteButtonActionPerformed
 
     /**

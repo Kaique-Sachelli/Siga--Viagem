@@ -8,10 +8,11 @@ public class TelaConfiguracoes extends javax.swing.JFrame {
     public TelaConfiguracoes() {
         initComponents();
         configurarSlider();
+        jCheckBox1.setSelected(TelaConfiguracoes.EstadoSom.somDesligado);
         setResizable(false);
     }
     
-    private static int valorDoSlider = 0;
+    private static int valorDoSlider = 10;
 
     private void configurarSlider() {
         jSlider1.setMinimum(0);
@@ -23,7 +24,11 @@ public class TelaConfiguracoes extends javax.swing.JFrame {
                 valorDoSlider = jSlider1.getValue();
             }
         });
+    }
+    
+    public class EstadoSom {
 
+        public static boolean somDesligado = false; // false = som ligado
     }
     
     public TelaConfiguracoes(JFrame frame){
@@ -31,6 +36,7 @@ public class TelaConfiguracoes extends javax.swing.JFrame {
         this.frame.setVisible(false);
         initComponents();
         configurarSlider();
+        jCheckBox1.setSelected(TelaConfiguracoes.EstadoSom.somDesligado);
         setResizable(false);
     }
     
@@ -110,7 +116,7 @@ public class TelaConfiguracoes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        
+        TelaConfiguracoes.EstadoSom.somDesligado = jCheckBox1.isSelected();
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void voltarMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarMenuButtonActionPerformed

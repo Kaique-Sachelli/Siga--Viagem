@@ -183,7 +183,7 @@ public class TelaCabine extends javax.swing.JFrame {
         } else {
             new TelaReversoraNeutro(this).setVisible(true);
         }
-        this.setVisible(false); // evita janelas empilhadas
+        this.setVisible(false); 
     
     }//GEN-LAST:event_reversoraButtonActionPerformed
 
