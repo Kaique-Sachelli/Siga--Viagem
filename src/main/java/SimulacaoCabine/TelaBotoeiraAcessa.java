@@ -54,9 +54,9 @@ public class TelaBotoeiraAcessa extends javax.swing.JFrame {
                 portaFechandoButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(portaFechandoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 580, -1, 80));
+        getContentPane().add(portaFechandoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 480, -1, 80));
 
-        botoeiraAcessaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/boteira acesa.jpeg"))); // NOI18N
+        botoeiraAcessaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/boteira 1 (1).jpg"))); // NOI18N
         getContentPane().add(botoeiraAcessaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 750));
 
         pack();
