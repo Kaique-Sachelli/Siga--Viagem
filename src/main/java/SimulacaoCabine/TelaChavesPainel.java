@@ -48,10 +48,10 @@ public class TelaChavesPainel extends javax.swing.JFrame {
                 setaBaixoButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, -1, -1));
+        getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        chavesPainelLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/chaves painel cabine.png"))); // NOI18N
-        getContentPane().add(chavesPainelLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 470));
+        chavesPainelLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/painel de chaves do console (2).jpg"))); // NOI18N
+        getContentPane().add(chavesPainelLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);

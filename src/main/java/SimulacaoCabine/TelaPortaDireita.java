@@ -65,8 +65,8 @@ public class TelaPortaDireita extends javax.swing.JFrame {
     }//GEN-LAST:event_setaEsquerdaButtonActionPerformed
 
     private void botoeirasSinaleirasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botoeirasSinaleirasButtonActionPerformed
-        TelaBotoeiraAcessa janelaBotoeiraAcessa = new TelaBotoeiraAcessa(this);
-        janelaBotoeiraAcessa.setVisible(true);
+        TelaBotoeirasSinaleiras janelaBotoeirasSinaleiras = new TelaBotoeirasSinaleiras(this);
+        janelaBotoeirasSinaleiras.setVisible(true);
     }//GEN-LAST:event_botoeirasSinaleirasButtonActionPerformed
 
     /**
