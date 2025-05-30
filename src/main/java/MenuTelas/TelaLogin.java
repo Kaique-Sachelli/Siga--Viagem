@@ -3,6 +3,7 @@ import MenuTelasAdmin.TelaMenuAdmin;
 import javax.swing.JFrame;
 import Persistencia.DAO;
 import Modelo.Usuario;
+import Modelo.UsuarioLogado;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -161,6 +162,8 @@ public class TelaLogin extends javax.swing.JFrame {
             //3. Perguntar, por meio do DAO, se o usuario existe ou nao 
             //4. Se existe, dar boas vinndas, senão, avisar que não existe
             if (dao.existe(u) == true) {
+                var usuarioLogado = new UsuarioLogado();
+                usuarioLogado.setUsuario(u);
                 if (u.getInstrutor()){
                     var dt = new TelaMenuAdmin();
                     dt.setVisible(true);
