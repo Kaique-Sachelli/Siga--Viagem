@@ -1,5 +1,6 @@
 package SimulacaoCabine;
 
+import Simulacao.Pontuacao;
 import javax.swing.JFrame;
 
 public class TelaCBTC_AM extends javax.swing.JFrame {
@@ -65,6 +66,7 @@ public class TelaCBTC_AM extends javax.swing.JFrame {
     private void cbtcRMButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbtcRMButtonActionPerformed
         TelaCBTC_RM janelaCBTC_RM = new TelaCBTC_RM(this);
         janelaCBTC_RM.setVisible(true);
+        Pontuacao.registrarAtividade("RM");
     }//GEN-LAST:event_cbtcRMButtonActionPerformed
 
     /**
