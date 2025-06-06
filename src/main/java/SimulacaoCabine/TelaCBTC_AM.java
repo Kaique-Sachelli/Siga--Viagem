@@ -64,12 +64,19 @@ public class TelaCBTC_AM extends javax.swing.JFrame {
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     private void cbtcRMButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbtcRMButtonActionPerformed
+<<<<<<< Updated upstream
        
         EstadoCBTC.setPosicaoAtual(EstadoCBTC.Posicao.RM);
         TelaCBTC_RM telaRM = new TelaCBTC_RM(this);
         telaRM.setVisible(true);
         this.dispose();
     
+=======
+        EstadoCBTC.setPosicaoAtual(EstadoCBTC.Posicao.RM);
+        TelaCBTC_RM janelaCBTC_RM = new TelaCBTC_RM(this);
+        janelaCBTC_RM.setVisible(true);
+        Pontuacao.registrarAtividade("RM");
+>>>>>>> Stashed changes
     }//GEN-LAST:event_cbtcRMButtonActionPerformed
 
     /**
