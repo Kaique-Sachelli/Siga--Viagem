@@ -1,5 +1,6 @@
 package SimulacaoCabine;
 
+import Simulacao.Pontuacao;
 import java.io.IOException;
 import java.net.URL;
 import javax.sound.sampled.AudioInputStream;
@@ -106,6 +107,7 @@ public class TelaBotoeiraAcessa extends javax.swing.JFrame {
             e.printStackTrace()
             Imprime o erro no console. Serve para debug, ou seja, para entender o que deu errado.
             */
+            Pontuacao.registrarAtividade("FBL");
     }
     }//GEN-LAST:event_portaFechandoButtonActionPerformed
 

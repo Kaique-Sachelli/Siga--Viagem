@@ -1,5 +1,6 @@
 package SimulacaoCabine;
 
+import Simulacao.Pontuacao;
 import javax.swing.JFrame;
 
 public class TelaVisaoGeral extends javax.swing.JFrame {
@@ -97,6 +98,7 @@ public class TelaVisaoGeral extends javax.swing.JFrame {
     private void sinalizacaoAcessaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sinalizacaoAcessaButtonActionPerformed
         TelaSinalizacaoExternaAcessa janelaExternaAcessa = new TelaSinalizacaoExternaAcessa(this);
         janelaExternaAcessa.setVisible(true);
+        Pontuacao.registrarAtividade("LPE");
     }//GEN-LAST:event_sinalizacaoAcessaButtonActionPerformed
 
     /**
