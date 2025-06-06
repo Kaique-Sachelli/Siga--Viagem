@@ -13,5 +13,6 @@ public class UsuarioLogado {
     public static Usuario getUsuario(){
         return usuario;
     }
+
     
 }

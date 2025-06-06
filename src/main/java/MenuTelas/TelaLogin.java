@@ -160,11 +160,11 @@ public class TelaLogin extends javax.swing.JFrame {
             //2.Construir um DAO 
             var dao = new DAO();
             //3. Perguntar, por meio do DAO, se o usuario existe ou nao 
-            //4. Se existe, dar boas vinndas, senão, avisar que não existe
+            //4. Se existe, dar boas vindas, senão, avisar que não existe
             if (dao.existe(u) == true) {
                 var usuarioLogado = new UsuarioLogado();
                 usuarioLogado.setUsuario(u);
-                if (u.getInstrutor()){
+                if (usuarioLogado.getUsuario().getInstrutor()){
                     var dt = new TelaMenuAdmin();
                     dt.setVisible(true);
                     this.dispose();
