@@ -3,7 +3,7 @@ package Persistencia;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import Persistencia.Usuario;
+import Modelo.Usuario;
 
 public class DAO {
     public boolean existe (Usuario u) throws Exception {
@@ -75,7 +75,33 @@ public class DAO {
                 return usuarios;
             }   
     }
+    public Usuario buscarUsuario(int id) throws Exception{
+        
+        
+        var sql = "SELECT id_usuario, nome, login, senha, instrutor FROM usuario WHERE id_usuario = ?";
     
+        try(
+            var conexao = new ConnectionFactory().obterConexao();
+            var ps = conexao.prepareStatement(sql);
+        ){
+            ps.setInt(1,id);
+            try(
+                ResultSet rs = ps.executeQuery();
+            
+            ){
+                if (rs.next()){
+                    return new Usuario(
+                        rs.getInt("id_usuario"),
+                        rs.getString("nome"),
+                        rs.getString("login"),
+                        rs.getString("senha"),
+                        rs.getBoolean("instrutor")
+                    );
+                }   
+            }
+            return null;
+        }
+    }
 
     
     

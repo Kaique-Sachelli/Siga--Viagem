@@ -1,7 +1,7 @@
 package MenuTelas;
 
 import Persistencia.DAO;
-import Persistencia.Usuario;
+import Modelo.Usuario;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 

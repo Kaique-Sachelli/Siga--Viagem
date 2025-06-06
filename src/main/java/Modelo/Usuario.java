@@ -1,4 +1,4 @@
-package Persistencia;
+package Modelo;
 
 public class Usuario {
     private int id;
@@ -23,6 +23,10 @@ public class Usuario {
     public Usuario(String login, String senha){
         this.login = login;
         this.senha = senha;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getNome() {
