@@ -5,8 +5,8 @@ public class EstadoPorta {
     public enum Posicao {
         ABERTA,
         CINTURAO,
-        FITA,
-        FECHADA
+        FECHADA,
+        FITA
     }
 
     private static Posicao posicaoAtual = Posicao.ABERTA;

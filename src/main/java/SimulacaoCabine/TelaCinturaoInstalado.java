@@ -24,6 +24,7 @@ public class TelaCinturaoInstalado extends javax.swing.JFrame {
 
         setaBaixoButton = new javax.swing.JButton();
         setaEsquerdaButton = new javax.swing.JButton();
+        fecharPortaButton = new javax.swing.JButton();
         cinturaoInstaladoLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -52,6 +53,15 @@ public class TelaCinturaoInstalado extends javax.swing.JFrame {
         });
         getContentPane().add(setaEsquerdaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, -1, -1));
 
+        fecharPortaButton.setContentAreaFilled(false);
+        fecharPortaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        fecharPortaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fecharPortaButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(fecharPortaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 7, 700, 530));
+
         cinturaoInstaladoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Cinturão instalado - externo (1).jpg"))); // NOI18N
         getContentPane().add(cinturaoInstaladoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
@@ -70,6 +80,12 @@ public class TelaCinturaoInstalado extends javax.swing.JFrame {
         janelaVisaoGeral.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_setaEsquerdaButtonActionPerformed
+
+    private void fecharPortaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fecharPortaButtonActionPerformed
+        TelaPortaFechada janelaPortaFechada = new TelaPortaFechada(this);
+        janelaPortaFechada.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_fecharPortaButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -108,6 +124,7 @@ public class TelaCinturaoInstalado extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel cinturaoInstaladoLabel;
+    private javax.swing.JButton fecharPortaButton;
     private javax.swing.JButton setaBaixoButton;
     private javax.swing.JButton setaEsquerdaButton;
     // End of variables declaration//GEN-END:variables

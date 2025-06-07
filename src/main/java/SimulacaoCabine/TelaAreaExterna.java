@@ -1,5 +1,6 @@
 package SimulacaoCabine;
 
+import Utilidades.EstadoPorta;
 import javax.swing.JFrame;
 
 public class TelaAreaExterna extends javax.swing.JFrame {
@@ -74,8 +75,14 @@ public class TelaAreaExterna extends javax.swing.JFrame {
     }//GEN-LAST:event_setaEsquerdaButtonActionPerformed
 
     private void setaCimaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaCimaButtonActionPerformed
-        TelaVisaoGeral janelaVisaoGeral = new TelaVisaoGeral(this);
-        janelaVisaoGeral.setVisible(true);
+        if(Utilidades.EstadoPorta.getPosicaoAtual() == EstadoPorta.Posicao.FITA){
+            TelaVisaoPortaIsolada janelaPortaIsolada = new TelaVisaoPortaIsolada(this);
+            janelaPortaIsolada.setVisible(true);
+            this.dispose();
+        } else{
+            TelaVisaoGeral janelaVisaoGeral = new TelaVisaoGeral(this);
+            janelaVisaoGeral.setVisible(true);   
+        }
     }//GEN-LAST:event_setaCimaButtonActionPerformed
 
     private void painelDeAcessoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_painelDeAcessoButtonActionPerformed

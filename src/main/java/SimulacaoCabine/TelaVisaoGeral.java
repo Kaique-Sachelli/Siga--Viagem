@@ -100,13 +100,20 @@ public class TelaVisaoGeral extends javax.swing.JFrame {
         } else if(Utilidades.EstadoPorta.getPosicaoAtual() == EstadoPorta.Posicao.CINTURAO){
             TelaCinturaoInstalado janelaCinturaoInstalado = new TelaCinturaoInstalado(this);
             janelaCinturaoInstalado.setVisible(true);
+        } else if(Utilidades.EstadoPorta.getPosicaoAtual() == EstadoPorta.Posicao.FECHADA){
+            TelaPortaFechada janelaPortaFechada = new TelaPortaFechada(this);
+            janelaPortaFechada.setVisible(true);
+            this.dispose();
+        } else{
+            TelaVisaoPortaIsolada janelaPortaIsolada = new TelaVisaoPortaIsolada(this);
+            janelaPortaIsolada.setVisible(true);
+            this.dispose();
         }
     }//GEN-LAST:event_setaDireitaButtonActionPerformed
 
     private void sinalizacaoAcessaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sinalizacaoAcessaButtonActionPerformed
-        TelaSinalizacaoExternaAcessa janelaExternaAcessa = new TelaSinalizacaoExternaAcessa(this);
+        TelaSinalizacaoExternaAcesa janelaExternaAcessa = new TelaSinalizacaoExternaAcesa(this);
         janelaExternaAcessa.setVisible(true);
-        Pontuacao.registrarAtividade("LPE");
     }//GEN-LAST:event_sinalizacaoAcessaButtonActionPerformed
 
     /**
