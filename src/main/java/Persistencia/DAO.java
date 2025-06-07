@@ -104,7 +104,18 @@ public class DAO {
             return null;
         }
     }
-
-    
-    
+    public boolean atualizaSenha(String senha, int id) throws Exception{
+        var sql = "UPDATE usuario SET senha = ? WHERE id_usuario = ?";
+        try(
+                
+            var conexao = new ConnectionFactory().obterConexao();  
+            var ps = conexao.prepareStatement(sql)
+        ){
+            ps.setString(1, senha);
+            ps.setInt(2, id);
+            
+            int atualizou = ps.executeUpdate();
+            return atualizou > 0; 
+        }
+    }
 }
