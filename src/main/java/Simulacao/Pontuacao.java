@@ -26,9 +26,9 @@ public class Pontuacao {
         gabarito.put("AM", 1); // Chave CBTC em AM
         gabarito.put("R", 1); // Reversora em Frente
         
-        // FIM
-                
+        // FIM        
     }
+    
     private static ArrayList <String> atividadesRealizadas = new ArrayList<>();
     
     public static void registrarAtividade(String atividadeRealizada){

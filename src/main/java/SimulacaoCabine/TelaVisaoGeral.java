@@ -1,6 +1,7 @@
 package SimulacaoCabine;
 
 import Simulacao.Pontuacao;
+import Utilidades.EstadoPorta;
 import javax.swing.JFrame;
 
 public class TelaVisaoGeral extends javax.swing.JFrame {
@@ -91,8 +92,13 @@ public class TelaVisaoGeral extends javax.swing.JFrame {
     }//GEN-LAST:event_setaEsquerdaButtonActionPerformed
 
     private void setaDireitaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaDireitaButtonActionPerformed
-        TelaPortaSemiAberta janelaPortaSemiAberta = new TelaPortaSemiAberta(this);
-        janelaPortaSemiAberta.setVisible(true);
+        if(Utilidades.EstadoPorta.getPosicaoAtual() == EstadoPorta.Posicao.ABERTA){
+            TelaPortaSemiAberta janelaPortaSemiAberta = new TelaPortaSemiAberta(this);
+            janelaPortaSemiAberta.setVisible(true);
+            this.dispose();
+        } else if(Utilidades.EstadoPorta.getPosicaoAtual() == EstadoPorta.Posicao.CINTURAO){
+            
+        }
     }//GEN-LAST:event_setaDireitaButtonActionPerformed
 
     private void sinalizacaoAcessaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sinalizacaoAcessaButtonActionPerformed

@@ -1,5 +1,6 @@
 package SimulacaoCabine;
 
+import Simulacao.Pontuacao;
 import javax.swing.JFrame;
 
 public class TelaCinturaoInstalado extends javax.swing.JFrame {
@@ -21,11 +22,35 @@ public class TelaCinturaoInstalado extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        setaBaixoButton = new javax.swing.JButton();
+        setaEsquerdaButton = new javax.swing.JButton();
         cinturaoInstaladoLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Cinturao Instalado");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        setaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
+        setaBaixoButton.setContentAreaFilled(false);
+        setaBaixoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaBaixoButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaBaixoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                setaBaixoButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
+
+        setaEsquerdaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaEsquerda.png"))); // NOI18N
+        setaEsquerdaButton.setContentAreaFilled(false);
+        setaEsquerdaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaEsquerdaButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaEsquerdaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                setaEsquerdaButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(setaEsquerdaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, -1, -1));
 
         cinturaoInstaladoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Cinturão instalado - externo (1).jpg"))); // NOI18N
         getContentPane().add(cinturaoInstaladoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
@@ -33,6 +58,18 @@ public class TelaCinturaoInstalado extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
+        TelaSoleira janelaSoleira = new TelaSoleira(this);
+        janelaSoleira.setVisible(true);
+        Pontuacao.registrarAtividade("OS");
+    }//GEN-LAST:event_setaBaixoButtonActionPerformed
+
+    private void setaEsquerdaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaEsquerdaButtonActionPerformed
+        TelaVisaoGeral janelaVisaoGeral = new TelaVisaoGeral(this);
+        janelaVisaoGeral.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_setaEsquerdaButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -71,5 +108,7 @@ public class TelaCinturaoInstalado extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel cinturaoInstaladoLabel;
+    private javax.swing.JButton setaBaixoButton;
+    private javax.swing.JButton setaEsquerdaButton;
     // End of variables declaration//GEN-END:variables
 }

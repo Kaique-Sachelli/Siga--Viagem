@@ -1,6 +1,7 @@
 package SimulacaoCabine;
 
 import Simulacao.Pontuacao;
+import Utilidades.EstadoPorta;
 import javax.swing.JFrame;
 
 public class TelaPortaSemiAbertaInterna extends javax.swing.JFrame {
@@ -24,6 +25,7 @@ public class TelaPortaSemiAbertaInterna extends javax.swing.JFrame {
 
         portaSemiAbertaButton = new javax.swing.JButton();
         setaDireitaButton = new javax.swing.JButton();
+        colocarCinturaoButton = new javax.swing.JButton();
         portaSemiAbertaInternaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -50,6 +52,15 @@ public class TelaPortaSemiAbertaInterna extends javax.swing.JFrame {
         });
         getContentPane().add(setaDireitaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 270, -1, -1));
 
+        colocarCinturaoButton.setContentAreaFilled(false);
+        colocarCinturaoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        colocarCinturaoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                colocarCinturaoButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(colocarCinturaoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 107, 520, 530));
+
         portaSemiAbertaInternaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Porta semi aberta - interno.jpg"))); // NOI18N
         getContentPane().add(portaSemiAbertaInternaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
@@ -67,6 +78,14 @@ public class TelaPortaSemiAbertaInterna extends javax.swing.JFrame {
         janelaEmergencia.setVisible(true);
         Pontuacao.registrarAtividade("EM");
     }//GEN-LAST:event_setaDireitaButtonActionPerformed
+
+    private void colocarCinturaoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colocarCinturaoButtonActionPerformed
+        if(Utilidades.EstadoItem.getInstance().isItemColetado()){
+            TelaCinturaoInstalado janelaCinturaoInstalado = new TelaCinturaoInstalado(this);
+            janelaCinturaoInstalado.setVisible(true);
+            Utilidades.EstadoPorta.setPosicaoAtual(EstadoPorta.Posicao.CINTURAO);
+        }
+    }//GEN-LAST:event_colocarCinturaoButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -104,6 +123,7 @@ public class TelaPortaSemiAbertaInterna extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton colocarCinturaoButton;
     private javax.swing.JButton portaSemiAbertaButton;
     private javax.swing.JLabel portaSemiAbertaInternaLabel;
     private javax.swing.JButton setaDireitaButton;
