@@ -30,6 +30,9 @@ public class TelaListaPAS extends javax.swing.JFrame {
 
         voltarButton.setContentAreaFilled(false);
         voltarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        voltarButton.setMaximumSize(new java.awt.Dimension(50, 50));
+        voltarButton.setMinimumSize(new java.awt.Dimension(50, 50));
+        voltarButton.setPreferredSize(new java.awt.Dimension(50, 50));
         voltarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 voltarButtonActionPerformed(evt);

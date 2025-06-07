@@ -55,6 +55,9 @@ public class TelaCinturaoInstalado extends javax.swing.JFrame {
 
         fecharPortaButton.setContentAreaFilled(false);
         fecharPortaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        fecharPortaButton.setMaximumSize(new java.awt.Dimension(700, 530));
+        fecharPortaButton.setMinimumSize(new java.awt.Dimension(700, 530));
+        fecharPortaButton.setPreferredSize(new java.awt.Dimension(700, 530));
         fecharPortaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fecharPortaButtonActionPerformed(evt);

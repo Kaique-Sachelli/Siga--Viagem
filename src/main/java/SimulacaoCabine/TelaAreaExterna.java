@@ -55,12 +55,15 @@ public class TelaAreaExterna extends javax.swing.JFrame {
 
         painelDeAcessoButton.setContentAreaFilled(false);
         painelDeAcessoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        painelDeAcessoButton.setMaximumSize(new java.awt.Dimension(72, 130));
+        painelDeAcessoButton.setMinimumSize(new java.awt.Dimension(72, 130));
+        painelDeAcessoButton.setPreferredSize(new java.awt.Dimension(72, 130));
         painelDeAcessoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 painelDeAcessoButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(painelDeAcessoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 500, -1, 130));
+        getContentPane().add(painelDeAcessoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 500, 72, 130));
 
         areaExternaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Sinalização externa de portas fechadas.jpg"))); // NOI18N
         getContentPane().add(areaExternaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));

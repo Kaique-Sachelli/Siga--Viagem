@@ -33,6 +33,9 @@ public class TelaVisaoPortaIsolada extends javax.swing.JFrame {
 
         sinalizacaoExternaApagadaButton.setContentAreaFilled(false);
         sinalizacaoExternaApagadaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        sinalizacaoExternaApagadaButton.setMaximumSize(new java.awt.Dimension(130, 80));
+        sinalizacaoExternaApagadaButton.setMinimumSize(new java.awt.Dimension(130, 80));
+        sinalizacaoExternaApagadaButton.setPreferredSize(new java.awt.Dimension(130, 80));
         sinalizacaoExternaApagadaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sinalizacaoExternaApagadaButtonActionPerformed(evt);

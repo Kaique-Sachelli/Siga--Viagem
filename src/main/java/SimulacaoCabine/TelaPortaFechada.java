@@ -45,6 +45,9 @@ public class TelaPortaFechada extends javax.swing.JFrame {
 
         colocarFitaButton.setContentAreaFilled(false);
         colocarFitaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        colocarFitaButton.setMaximumSize(new java.awt.Dimension(690, 540));
+        colocarFitaButton.setMinimumSize(new java.awt.Dimension(690, 540));
+        colocarFitaButton.setPreferredSize(new java.awt.Dimension(690, 540));
         colocarFitaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 colocarFitaButtonActionPerformed(evt);

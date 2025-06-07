@@ -43,6 +43,9 @@ public class TelaPortaEsquerda extends javax.swing.JFrame {
 
         areaExternaButton.setContentAreaFilled(false);
         areaExternaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        areaExternaButton.setMaximumSize(new java.awt.Dimension(170, 610));
+        areaExternaButton.setMinimumSize(new java.awt.Dimension(170, 610));
+        areaExternaButton.setPreferredSize(new java.awt.Dimension(170, 610));
         areaExternaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 areaExternaButtonActionPerformed(evt);
@@ -52,12 +55,15 @@ public class TelaPortaEsquerda extends javax.swing.JFrame {
 
         botoeiraAcessaButton.setContentAreaFilled(false);
         botoeiraAcessaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botoeiraAcessaButton.setMaximumSize(new java.awt.Dimension(72, 190));
+        botoeiraAcessaButton.setMinimumSize(new java.awt.Dimension(72, 190));
+        botoeiraAcessaButton.setPreferredSize(new java.awt.Dimension(72, 190));
         botoeiraAcessaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botoeiraAcessaButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(botoeiraAcessaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, -1, 190));
+        getContentPane().add(botoeiraAcessaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, 72, 190));
 
         portaEsquerdaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Porta de cabine lateral esquerda.jpg"))); // NOI18N
         getContentPane().add(portaEsquerdaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 750));

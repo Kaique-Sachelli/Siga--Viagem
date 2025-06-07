@@ -34,6 +34,9 @@ public class TelaPortaSemiAbertaInterna extends javax.swing.JFrame {
 
         portaSemiAbertaButton.setContentAreaFilled(false);
         portaSemiAbertaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        portaSemiAbertaButton.setMaximumSize(new java.awt.Dimension(150, 520));
+        portaSemiAbertaButton.setMinimumSize(new java.awt.Dimension(150, 520));
+        portaSemiAbertaButton.setPreferredSize(new java.awt.Dimension(150, 520));
         portaSemiAbertaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 portaSemiAbertaButtonActionPerformed(evt);
@@ -54,6 +57,9 @@ public class TelaPortaSemiAbertaInterna extends javax.swing.JFrame {
 
         colocarCinturaoButton.setContentAreaFilled(false);
         colocarCinturaoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        colocarCinturaoButton.setMaximumSize(new java.awt.Dimension(520, 530));
+        colocarCinturaoButton.setMinimumSize(new java.awt.Dimension(520, 530));
+        colocarCinturaoButton.setPreferredSize(new java.awt.Dimension(520, 530));
         colocarCinturaoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 colocarCinturaoButtonActionPerformed(evt);

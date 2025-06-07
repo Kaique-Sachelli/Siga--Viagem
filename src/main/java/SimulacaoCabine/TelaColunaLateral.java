@@ -55,6 +55,9 @@ public class TelaColunaLateral extends javax.swing.JFrame {
 
         chaveCBTCButton.setContentAreaFilled(false);
         chaveCBTCButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        chaveCBTCButton.setMaximumSize(new java.awt.Dimension(150, 160));
+        chaveCBTCButton.setMinimumSize(new java.awt.Dimension(150, 160));
+        chaveCBTCButton.setPreferredSize(new java.awt.Dimension(150, 160));
         chaveCBTCButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chaveCBTCButtonActionPerformed(evt);

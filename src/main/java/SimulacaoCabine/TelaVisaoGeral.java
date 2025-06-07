@@ -67,12 +67,15 @@ public class TelaVisaoGeral extends javax.swing.JFrame {
 
         sinalizacaoAcessaButton.setContentAreaFilled(false);
         sinalizacaoAcessaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        sinalizacaoAcessaButton.setMaximumSize(new java.awt.Dimension(72, 50));
+        sinalizacaoAcessaButton.setMinimumSize(new java.awt.Dimension(72, 50));
+        sinalizacaoAcessaButton.setPreferredSize(new java.awt.Dimension(72, 50));
         sinalizacaoAcessaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sinalizacaoAcessaButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(sinalizacaoAcessaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 190, -1, 50));
+        getContentPane().add(sinalizacaoAcessaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 190, 72, 50));
 
         visaoGeralLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Visão geral do carro.jpg"))); // NOI18N
         getContentPane().add(visaoGeralLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));

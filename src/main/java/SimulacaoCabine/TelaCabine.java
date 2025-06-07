@@ -45,6 +45,9 @@ public class TelaCabine extends javax.swing.JFrame {
 
         dduButton.setContentAreaFilled(false);
         dduButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        dduButton.setMaximumSize(new java.awt.Dimension(170, 80));
+        dduButton.setMinimumSize(new java.awt.Dimension(170, 80));
+        dduButton.setPreferredSize(new java.awt.Dimension(170, 80));
         dduButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dduButtonActionPerformed(evt);
@@ -54,6 +57,9 @@ public class TelaCabine extends javax.swing.JFrame {
 
         aduButton.setContentAreaFilled(false);
         aduButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        aduButton.setMaximumSize(new java.awt.Dimension(200, 110));
+        aduButton.setMinimumSize(new java.awt.Dimension(200, 110));
+        aduButton.setPreferredSize(new java.awt.Dimension(200, 110));
         aduButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 aduButtonActionPerformed(evt);
@@ -63,6 +69,9 @@ public class TelaCabine extends javax.swing.JFrame {
 
         vduButton.setContentAreaFilled(false);
         vduButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        vduButton.setMaximumSize(new java.awt.Dimension(200, 100));
+        vduButton.setMinimumSize(new java.awt.Dimension(200, 100));
+        vduButton.setPreferredSize(new java.awt.Dimension(200, 100));
         vduButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 vduButtonActionPerformed(evt);
@@ -72,6 +81,9 @@ public class TelaCabine extends javax.swing.JFrame {
 
         moduloComunicacaoButton.setContentAreaFilled(false);
         moduloComunicacaoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        moduloComunicacaoButton.setMaximumSize(new java.awt.Dimension(100, 50));
+        moduloComunicacaoButton.setMinimumSize(new java.awt.Dimension(100, 50));
+        moduloComunicacaoButton.setPreferredSize(new java.awt.Dimension(100, 50));
         moduloComunicacaoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 moduloComunicacaoButtonActionPerformed(evt);
@@ -81,15 +93,21 @@ public class TelaCabine extends javax.swing.JFrame {
 
         reversoraButton.setContentAreaFilled(false);
         reversoraButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        reversoraButton.setMaximumSize(new java.awt.Dimension(72, 60));
+        reversoraButton.setMinimumSize(new java.awt.Dimension(72, 60));
+        reversoraButton.setPreferredSize(new java.awt.Dimension(72, 60));
         reversoraButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 reversoraButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(reversoraButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, -1, 60));
+        getContentPane().add(reversoraButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, 72, 60));
 
         socoConsoleButton.setContentAreaFilled(false);
         socoConsoleButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        socoConsoleButton.setMaximumSize(new java.awt.Dimension(180, 60));
+        socoConsoleButton.setMinimumSize(new java.awt.Dimension(180, 60));
+        socoConsoleButton.setPreferredSize(new java.awt.Dimension(180, 60));
         socoConsoleButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 socoConsoleButtonActionPerformed(evt);
@@ -99,6 +117,9 @@ public class TelaCabine extends javax.swing.JFrame {
 
         chavesPainelButton.setContentAreaFilled(false);
         chavesPainelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        chavesPainelButton.setMaximumSize(new java.awt.Dimension(120, 110));
+        chavesPainelButton.setMinimumSize(new java.awt.Dimension(120, 110));
+        chavesPainelButton.setPreferredSize(new java.awt.Dimension(120, 110));
         chavesPainelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chavesPainelButtonActionPerformed(evt);
@@ -108,6 +129,9 @@ public class TelaCabine extends javax.swing.JFrame {
 
         limpadorParabrisaButton.setContentAreaFilled(false);
         limpadorParabrisaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        limpadorParabrisaButton.setMaximumSize(new java.awt.Dimension(150, 30));
+        limpadorParabrisaButton.setMinimumSize(new java.awt.Dimension(150, 30));
+        limpadorParabrisaButton.setPreferredSize(new java.awt.Dimension(150, 30));
         limpadorParabrisaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 limpadorParabrisaButtonActionPerformed(evt);

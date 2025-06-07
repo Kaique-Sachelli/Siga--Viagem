@@ -43,6 +43,9 @@ public class TelaDDU extends javax.swing.JFrame {
 
         feButton.setContentAreaFilled(false);
         feButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        feButton.setMaximumSize(new java.awt.Dimension(40, 40));
+        feButton.setMinimumSize(new java.awt.Dimension(40, 40));
+        feButton.setPreferredSize(new java.awt.Dimension(40, 40));
         feButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 feButtonActionPerformed(evt);
@@ -52,6 +55,9 @@ public class TelaDDU extends javax.swing.JFrame {
 
         infopassButton.setContentAreaFilled(false);
         infopassButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        infopassButton.setMaximumSize(new java.awt.Dimension(30, 40));
+        infopassButton.setMinimumSize(new java.awt.Dimension(30, 40));
+        infopassButton.setPreferredSize(new java.awt.Dimension(30, 40));
         infopassButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 infopassButtonActionPerformed(evt);

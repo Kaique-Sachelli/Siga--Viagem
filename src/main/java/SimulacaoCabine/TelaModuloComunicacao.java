@@ -59,6 +59,9 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
 
         listaPASButton.setContentAreaFilled(false);
         listaPASButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        listaPASButton.setMaximumSize(new java.awt.Dimension(60, 50));
+        listaPASButton.setMinimumSize(new java.awt.Dimension(60, 50));
+        listaPASButton.setPreferredSize(new java.awt.Dimension(60, 50));
         listaPASButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 listaPASButtonMousePressed(evt);
@@ -76,6 +79,9 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
 
         informandoCCOButton.setContentAreaFilled(false);
         informandoCCOButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        informandoCCOButton.setMaximumSize(new java.awt.Dimension(60, 60));
+        informandoCCOButton.setMinimumSize(new java.awt.Dimension(60, 60));
+        informandoCCOButton.setPreferredSize(new java.awt.Dimension(60, 60));
         informandoCCOButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 informandoCCOButtonMousePressed(evt);
