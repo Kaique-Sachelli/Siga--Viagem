@@ -2,18 +2,18 @@ package SimulacaoCabine;
 
 import javax.swing.JFrame;
 
-public class TelaCabineTrasVazia extends javax.swing.JFrame {
+public class TelaADU_AM extends javax.swing.JFrame {
 
     private JFrame frame;
     
-    public TelaCabineTrasVazia() {
+    public TelaADU_AM() {
         initComponents();
     }
 
-    public TelaCabineTrasVazia(JFrame frame) {
-        this();
-        frame.setVisible(false);
+    public TelaADU_AM(JFrame frame) {
         this.frame = frame;
+        this.frame.setVisible(false);
+        initComponents();
         setResizable(false);
     }
     
@@ -22,11 +22,8 @@ public class TelaCabineTrasVazia extends javax.swing.JFrame {
     private void initComponents() {
 
         setaBaixoButton = new javax.swing.JButton();
-        cabineTrasVaziaLabel = new javax.swing.JLabel();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tela Cabine parte de Trás");
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setaBaixoButton1 = new javax.swing.JButton();
+        aduAMLabel = new javax.swing.JLabel();
 
         setaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
         setaBaixoButton.setContentAreaFilled(false);
@@ -37,20 +34,37 @@ public class TelaCabineTrasVazia extends javax.swing.JFrame {
                 setaBaixoButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        cabineTrasVaziaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Cabine parte de Trás - Sem Fita (1).jpeg"))); // NOI18N
-        getContentPane().add(cabineTrasVaziaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Tela ADU AM");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        setaBaixoButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
+        setaBaixoButton1.setContentAreaFilled(false);
+        setaBaixoButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaBaixoButton1.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaBaixoButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                setaBaixoButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(setaBaixoButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
+
+        aduAMLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/ADU e sinaleiras AM.jpg"))); // NOI18N
+        getContentPane().add(aduAMLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
-        TelaCabine janelaCabine = new TelaCabine(this);
-        janelaCabine.setVisible(true);
-        this.dispose();
+
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
+
+    private void setaBaixoButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButton1ActionPerformed
+        frame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_setaBaixoButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -69,27 +83,27 @@ public class TelaCabineTrasVazia extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaCabineTrasVazia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaADU_AM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaCabineTrasVazia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaADU_AM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaCabineTrasVazia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaADU_AM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaCabineTrasVazia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaADU_AM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaCabineTrasVazia().setVisible(true);
+                new TelaADU_AM().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel cabineTrasVaziaLabel;
+    private javax.swing.JLabel aduAMLabel;
     private javax.swing.JButton setaBaixoButton;
+    private javax.swing.JButton setaBaixoButton1;
     // End of variables declaration//GEN-END:variables
 }

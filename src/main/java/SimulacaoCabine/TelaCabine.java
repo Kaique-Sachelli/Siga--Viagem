@@ -156,8 +156,8 @@ public class TelaCabine extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void aduButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aduButtonActionPerformed
-        TelaADU janelaADU  = new TelaADU(this);
-        janelaADU.setVisible(true);
+        TelaADU_AM janelaADU_AM  = new TelaADU_AM(this);
+        janelaADU_AM.setVisible(true);
     }//GEN-LAST:event_aduButtonActionPerformed
 
     private void dduButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dduButtonActionPerformed
