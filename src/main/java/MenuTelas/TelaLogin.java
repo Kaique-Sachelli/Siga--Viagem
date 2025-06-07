@@ -49,7 +49,7 @@ public class TelaLogin extends javax.swing.JFrame {
         tituloMenuLabel.setMaximumSize(new java.awt.Dimension(320, 75));
         tituloMenuLabel.setMinimumSize(new java.awt.Dimension(320, 75));
         tituloMenuLabel.setPreferredSize(new java.awt.Dimension(320, 75));
-        getContentPane().add(tituloMenuLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 320, 80));
+        getContentPane().add(tituloMenuLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 320, 80));
 
         loginLabel.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         loginLabel.setForeground(new java.awt.Color(0, 20, 137));
@@ -74,7 +74,7 @@ public class TelaLogin extends javax.swing.JFrame {
         areaLoginLabel.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
         areaLoginLabel.setForeground(new java.awt.Color(0, 20, 137));
         areaLoginLabel.setText("ÁREA DE LOGIN");
-        getContentPane().add(areaLoginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 160, 210, 40));
+        getContentPane().add(areaLoginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 170, 210, 40));
 
         esqueceuSenhaButton.setBackground(new java.awt.Color(0, 152, 218));
         esqueceuSenhaButton.setFont(new java.awt.Font("Impact", 2, 16)); // NOI18N
