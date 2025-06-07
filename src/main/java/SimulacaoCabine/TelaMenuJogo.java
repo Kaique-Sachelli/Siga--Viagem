@@ -26,20 +26,33 @@ public class TelaMenuJogo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel1 = new javax.swing.JLabel();
+        sairButton = new javax.swing.JButton();
+        somButton = new javax.swing.JButton();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Tela Menu Jogo");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 20, 137));
+        jLabel1.setText("Menu Jogo");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, -1, -1));
+
+        sairButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        sairButton.setForeground(new java.awt.Color(0, 20, 137));
+        sairButton.setText("Sair");
+        sairButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(sairButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, 340, 100));
+
+        somButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        somButton.setForeground(new java.awt.Color(0, 20, 137));
+        somButton.setText("Som");
+        somButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(somButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, 340, 100));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -78,5 +91,8 @@ public class TelaMenuJogo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton sairButton;
+    private javax.swing.JButton somButton;
     // End of variables declaration//GEN-END:variables
 }
