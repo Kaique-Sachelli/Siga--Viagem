@@ -1,5 +1,7 @@
 package SimulacaoCabine;
 
+import Simulacao.Pontuacao;
+import Utilidades.EstadoPorta;
 import javax.swing.JFrame;
 
 public class TelaPortaFechada extends javax.swing.JFrame {
@@ -22,11 +24,33 @@ public class TelaPortaFechada extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        setaEsquerdaButton = new javax.swing.JButton();
+        colocarFitaButton = new javax.swing.JButton();
         portaFechadaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Porta Fechada");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        setaEsquerdaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaEsquerda.png"))); // NOI18N
+        setaEsquerdaButton.setContentAreaFilled(false);
+        setaEsquerdaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaEsquerdaButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaEsquerdaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                setaEsquerdaButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(setaEsquerdaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, -1, -1));
+
+        colocarFitaButton.setContentAreaFilled(false);
+        colocarFitaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        colocarFitaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                colocarFitaButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(colocarFitaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 97, 690, 540));
 
         portaFechadaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Porta fechada.jpg"))); // NOI18N
         getContentPane().add(portaFechadaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
@@ -34,6 +58,21 @@ public class TelaPortaFechada extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void setaEsquerdaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaEsquerdaButtonActionPerformed
+        Utilidades.EstadoPorta.setPosicaoAtual(EstadoPorta.Posicao.FECHADA);
+        TelaVisaoGeral janelaVisaoGeral = new TelaVisaoGeral(this);
+        janelaVisaoGeral.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_setaEsquerdaButtonActionPerformed
+
+    private void colocarFitaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colocarFitaButtonActionPerformed
+        Utilidades.EstadoPorta.setPosicaoAtual(EstadoPorta.Posicao.FITA);
+        TelaVisaoPortaIsolada janelaPortaIsolada = new TelaVisaoPortaIsolada(this);
+        janelaPortaIsolada.setVisible(true);
+        this.dispose();
+        Pontuacao.registrarAtividade("ADE");
+    }//GEN-LAST:event_colocarFitaButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -71,6 +110,8 @@ public class TelaPortaFechada extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton colocarFitaButton;
     private javax.swing.JLabel portaFechadaLabel;
+    private javax.swing.JButton setaEsquerdaButton;
     // End of variables declaration//GEN-END:variables
 }

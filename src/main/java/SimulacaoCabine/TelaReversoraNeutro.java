@@ -1,5 +1,6 @@
 package SimulacaoCabine;
 
+import Simulacao.Pontuacao;
 import javax.swing.JFrame;
 import Utilidades.EstadoReversora;
 
@@ -69,6 +70,7 @@ public class TelaReversoraNeutro extends javax.swing.JFrame {
         TelaReversoraFrente janelaFrente = new TelaReversoraFrente(frame);
         janelaFrente.setVisible(true);
         this.dispose();
+        Pontuacao.registrarAtividade("R");
     }//GEN-LAST:event_reversoraNeutroButtonActionPerformed
 
     /**

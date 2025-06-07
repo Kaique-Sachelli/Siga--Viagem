@@ -1,5 +1,7 @@
 package SimulacaoCabine;
 
+import Simulacao.Pontuacao;
+import Utilidades.EstadoPorta;
 import javax.swing.JFrame;
 
 public class TelaVisaoGeral extends javax.swing.JFrame {
@@ -85,17 +87,32 @@ public class TelaVisaoGeral extends javax.swing.JFrame {
     }//GEN-LAST:event_SetaEsquerdaButton1ActionPerformed
 
     private void setaEsquerdaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaEsquerdaButtonActionPerformed
-        frame.setVisible(true);
+        TelaAreaExterna janelaAreaExterna = new TelaAreaExterna(this);
+        janelaAreaExterna.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_setaEsquerdaButtonActionPerformed
 
     private void setaDireitaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaDireitaButtonActionPerformed
-        TelaPortaSemiAberta janelaPortaSemiAberta = new TelaPortaSemiAberta(this);
-        janelaPortaSemiAberta.setVisible(true);
+        if(Utilidades.EstadoPorta.getPosicaoAtual() == EstadoPorta.Posicao.ABERTA){
+            TelaPortaSemiAberta janelaPortaSemiAberta = new TelaPortaSemiAberta(this);
+            janelaPortaSemiAberta.setVisible(true);
+            this.dispose();
+        } else if(Utilidades.EstadoPorta.getPosicaoAtual() == EstadoPorta.Posicao.CINTURAO){
+            TelaCinturaoInstalado janelaCinturaoInstalado = new TelaCinturaoInstalado(this);
+            janelaCinturaoInstalado.setVisible(true);
+        } else if(Utilidades.EstadoPorta.getPosicaoAtual() == EstadoPorta.Posicao.FECHADA){
+            TelaPortaFechada janelaPortaFechada = new TelaPortaFechada(this);
+            janelaPortaFechada.setVisible(true);
+            this.dispose();
+        } else{
+            TelaVisaoPortaIsolada janelaPortaIsolada = new TelaVisaoPortaIsolada(this);
+            janelaPortaIsolada.setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_setaDireitaButtonActionPerformed
 
     private void sinalizacaoAcessaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sinalizacaoAcessaButtonActionPerformed
-        TelaSinalizacaoExternaAcessa janelaExternaAcessa = new TelaSinalizacaoExternaAcessa(this);
+        TelaSinalizacaoExternaAcesa janelaExternaAcessa = new TelaSinalizacaoExternaAcesa(this);
         janelaExternaAcessa.setVisible(true);
     }//GEN-LAST:event_sinalizacaoAcessaButtonActionPerformed
 

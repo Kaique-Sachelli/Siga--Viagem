@@ -1,5 +1,6 @@
 package SimulacaoCabine;
 
+import Simulacao.Pontuacao;
 import javax.swing.JFrame;
 
 public class TelaVisaoPortaIsolada extends javax.swing.JFrame {
@@ -23,6 +24,7 @@ public class TelaVisaoPortaIsolada extends javax.swing.JFrame {
     private void initComponents() {
 
         sinalizacaoExternaApagadaButton = new javax.swing.JButton();
+        setaEsquerdaButton = new javax.swing.JButton();
         visaoPortaIsoladaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -38,6 +40,17 @@ public class TelaVisaoPortaIsolada extends javax.swing.JFrame {
         });
         getContentPane().add(sinalizacaoExternaApagadaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 190, 130, 80));
 
+        setaEsquerdaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaEsquerda.png"))); // NOI18N
+        setaEsquerdaButton.setContentAreaFilled(false);
+        setaEsquerdaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaEsquerdaButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaEsquerdaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                setaEsquerdaButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(setaEsquerdaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, -1, -1));
+
         visaoPortaIsoladaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Adesivo de porta isolada instalado visão geral.jpg"))); // NOI18N
         getContentPane().add(visaoPortaIsoladaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
@@ -46,9 +59,16 @@ public class TelaVisaoPortaIsolada extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void sinalizacaoExternaApagadaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sinalizacaoExternaApagadaButtonActionPerformed
-        TelaSinalizacaoExternaAcessa janelaExternaApagada = new TelaSinalizacaoExternaAcessa(this);
-        janelaExternaApagada.setVisible(true);
+        TelaSinalizacaoExternaAcesa janelaExternaAcesa = new TelaSinalizacaoExternaAcesa(this);
+        janelaExternaAcesa.setVisible(true);
+        Pontuacao.registrarAtividade("LPE");
     }//GEN-LAST:event_sinalizacaoExternaApagadaButtonActionPerformed
+
+    private void setaEsquerdaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaEsquerdaButtonActionPerformed
+        TelaAreaExterna janelaAreaExterna = new TelaAreaExterna(this);
+        janelaAreaExterna.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_setaEsquerdaButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -86,6 +106,7 @@ public class TelaVisaoPortaIsolada extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton setaEsquerdaButton;
     private javax.swing.JButton sinalizacaoExternaApagadaButton;
     private javax.swing.JLabel visaoPortaIsoladaLabel;
     // End of variables declaration//GEN-END:variables

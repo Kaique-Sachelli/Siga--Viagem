@@ -1,5 +1,6 @@
 package SimulacaoCabine;
 
+import Simulacao.Pontuacao;
 import javax.swing.JFrame;
 
 public class TelaPortaSemiAberta extends javax.swing.JFrame {
@@ -76,11 +77,13 @@ public class TelaPortaSemiAberta extends javax.swing.JFrame {
     private void portasemiinternaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_portasemiinternaButtonActionPerformed
         TelaPortaSemiAbertaInterna janelaPortaSemiAbertaInterna = new TelaPortaSemiAbertaInterna(this);
         janelaPortaSemiAbertaInterna.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_portasemiinternaButtonActionPerformed
 
     private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
         TelaSoleira janelaSoleira = new TelaSoleira(this);
         janelaSoleira.setVisible(true);
+        Pontuacao.registrarAtividade("OS");
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     /**

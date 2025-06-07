@@ -2,15 +2,15 @@ package SimulacaoCabine;
 
 import javax.swing.JFrame;
 
-public class TelaSinalizacaoExternaAcessa extends javax.swing.JFrame {
+public class TelaSinalizacaoExternaAcesa extends javax.swing.JFrame {
 
     private JFrame frame;
     
-    public TelaSinalizacaoExternaAcessa() {
+    public TelaSinalizacaoExternaAcesa() {
         initComponents();
     }
 
-    public TelaSinalizacaoExternaAcessa(JFrame frame) {
+    public TelaSinalizacaoExternaAcesa(JFrame frame) {
         this();
         frame.setVisible(false);
         this.frame = frame;
@@ -68,21 +68,23 @@ public class TelaSinalizacaoExternaAcessa extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaSinalizacaoExternaAcessa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaSinalizacaoExternaAcesa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaSinalizacaoExternaAcessa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaSinalizacaoExternaAcesa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaSinalizacaoExternaAcessa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaSinalizacaoExternaAcesa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaSinalizacaoExternaAcessa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaSinalizacaoExternaAcesa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaSinalizacaoExternaAcessa().setVisible(true);
+                new TelaSinalizacaoExternaAcesa().setVisible(true);
             }
         });
     }

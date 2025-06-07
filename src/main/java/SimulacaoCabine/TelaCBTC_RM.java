@@ -1,5 +1,6 @@
 package SimulacaoCabine;
 
+import Simulacao.Pontuacao;
 import javax.swing.JFrame;
 import Utilidades.EstadoCBTC;
 
@@ -64,13 +65,11 @@ public class TelaCBTC_RM extends javax.swing.JFrame {
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     private void cbtcRMButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbtcRMButtonActionPerformed
-       
         EstadoCBTC.setPosicaoAtual(EstadoCBTC.Posicao.AM);
         TelaCBTC_AM telaAM = new TelaCBTC_AM(this);
         telaAM.setVisible(true);
         this.dispose();
-    
-
+        Pontuacao.registrarAtividade("AM");
     }//GEN-LAST:event_cbtcRMButtonActionPerformed
 
     /**

@@ -1,5 +1,6 @@
 package SimulacaoCabine;
 
+import Simulacao.Pontuacao;
 import javax.swing.JFrame;
 
 public class TelaCabineTras extends javax.swing.JFrame {
@@ -62,6 +63,9 @@ public class TelaCabineTras extends javax.swing.JFrame {
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     private void fitaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fitaButtonActionPerformed
+        if(Utilidades.EstadoItem.getInstance().isItemColetado()){
+            Pontuacao.registrarAtividade("CACS");
+        }
         Utilidades.EstadoItem.getInstance().setItemColetado(true);
         TelaCabineTrasVazia janelaCabineTrasVazia = new TelaCabineTrasVazia(this);
         janelaCabineTrasVazia.setVisible(true);
