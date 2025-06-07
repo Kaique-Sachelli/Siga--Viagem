@@ -4,11 +4,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.Timer;
+import static javax.swing.WindowConstants.HIDE_ON_CLOSE;
 
-public class TelaEmitindoPA extends javax.swing.JFrame { // Cria uma nova classe que herda da classe JFrame.
+public class TelaInformandoCCO extends javax.swing.JFrame { // Cria uma nova classe que herda da classe JFrame.
+
     private JFrame telaAnterior;
-    
-    public TelaEmitindoPA(JFrame telaAnterior) {
+
+    public TelaInformandoCCO(JFrame telaAnterior) {
         this.telaAnterior = telaAnterior;
 
         initComponents();
@@ -29,24 +31,24 @@ public class TelaEmitindoPA extends javax.swing.JFrame { // Cria uma nova classe
         autoCloseTimer.setRepeats(false);
         autoCloseTimer.start();
     }
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        emitindoPALabel = new javax.swing.JLabel();
+        informandoCCOLabel = new javax.swing.JLabel();
 
-        setTitle("Tela Emitindo PA");
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Informando CCO");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        emitindoPALabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Módulo de Comunicação - Microfone aberto PA ao vivo.jpg"))); // NOI18N
-        getContentPane().add(emitindoPALabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        informandoCCOLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Informando CCO.jpg"))); // NOI18N
+        getContentPane().add(informandoCCOLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel emitindoPALabel;
+    private javax.swing.JLabel informandoCCOLabel;
     // End of variables declaration//GEN-END:variables
 }

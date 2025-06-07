@@ -39,6 +39,7 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
 
         setaBaixoButton = new javax.swing.JButton();
         listaPASButton = new javax.swing.JButton();
+        informandoCCOButton = new javax.swing.JButton();
         moduloComunicacaoLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -73,6 +74,23 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
         });
         getContentPane().add(listaPASButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 60, 50));
 
+        informandoCCOButton.setContentAreaFilled(false);
+        informandoCCOButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        informandoCCOButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                informandoCCOButtonMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                informandoCCOButtonMouseReleased(evt);
+            }
+        });
+        informandoCCOButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                informandoCCOButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(informandoCCOButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 350, 60, 60));
+
         moduloComunicacaoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Módulo de Comunicação - tela de início.jpg"))); // NOI18N
         getContentPane().add(moduloComunicacaoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
@@ -104,10 +122,33 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
             this.setVisible(false); // Esconde a tela atual
 
             // Cria e exibe TelaEmitindoPA, passando a tela atual como referência
-            TelaEmitindoPA tela = new TelaEmitindoPA(this);
-            tela.setVisible(true);
+            TelaEmitindoPA janelaEmitindoPA = new TelaEmitindoPA(this);
+            janelaEmitindoPA.setVisible(true);
         }
     }//GEN-LAST:event_listaPASButtonMouseReleased
+
+    private void informandoCCOButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_informandoCCOButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_informandoCCOButtonActionPerformed
+
+    private void informandoCCOButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_informandoCCOButtonMousePressed
+        pressStartTime = System.currentTimeMillis(); // Registra o exato momento em que o botão foi precionado.
+        timer.start(); // Inicia o timer.
+    }//GEN-LAST:event_informandoCCOButtonMousePressed
+
+    private void informandoCCOButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_informandoCCOButtonMouseReleased
+        timer.stop(); // Para o temporizador.
+        long pressDuration = System.currentTimeMillis() - pressStartTime;
+        // Subtrai o tempo inicial(botão precionado), com o tempo final.
+        
+        if (pressDuration >= DELAY_MS) { // Verifica se o botão foi precionado pelo tempo necessario.
+            this.setVisible(false); // Esconde a tela atual
+
+            // Cria e exibe TelaEmitindoPA, passando a tela atual como referência
+            TelaInformandoCCO janelaInformandoCCO = new TelaInformandoCCO(this);
+            janelaInformandoCCO.setVisible(true);
+        }
+    }//GEN-LAST:event_informandoCCOButtonMouseReleased
 
     /**
      * @param args the command line arguments
@@ -145,6 +186,7 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton informandoCCOButton;
     private javax.swing.JButton listaPASButton;
     private javax.swing.JLabel moduloComunicacaoLabel;
     private javax.swing.JButton setaBaixoButton;
