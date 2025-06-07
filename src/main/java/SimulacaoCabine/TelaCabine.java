@@ -4,7 +4,6 @@ import Utilidades.EstadoItem;
 import javax.swing.JFrame;
 import Utilidades.EstadoReversora;
 
-
 public class TelaCabine extends javax.swing.JFrame {
    
    private JFrame frame;
@@ -172,19 +171,18 @@ public class TelaCabine extends javax.swing.JFrame {
     }//GEN-LAST:event_vduButtonActionPerformed
 
     private void moduloComunicacaoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moduloComunicacaoButtonActionPerformed
-        TelaModuloComunicacao janelaModulo= new TelaModuloComunicacao(this);
+        TelaModuloComunicacao janelaModulo= new TelaModuloComunicacao();
         janelaModulo.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_moduloComunicacaoButtonActionPerformed
 
     private void reversoraButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reversoraButtonActionPerformed
-        
         if (EstadoReversora.getPosicaoAtual() == EstadoReversora.Posicao.FRENTE) {
             new TelaReversoraFrente(this).setVisible(true);
         } else {
             new TelaReversoraNeutro(this).setVisible(true);
         }
-        this.setVisible(false); 
-    
+        this.setVisible(false);
     }//GEN-LAST:event_reversoraButtonActionPerformed
 
     private void socoConsoleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_socoConsoleButtonActionPerformed

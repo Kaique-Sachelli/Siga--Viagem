@@ -1,22 +1,37 @@
 package SimulacaoCabine;
 
+import javax.swing.Timer;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 import javax.swing.JFrame;
 
 public class TelaModuloComunicacao extends javax.swing.JFrame {
-
-    private JFrame frame;
     
+    private JFrame frame;
+    private Timer timer;
+    private long pressStartTime;
+    private final int DELAY_MS = 3000; // 3 segundos em milissegundos
+
+    // 1. DECLARE A INSTÂNCIA ÚNICA DA TELAEMITINDOPA AQUI
+    private TelaEmitindoPA telaEmitindoPAUnica;
+
+    // 2. CONSTRUTOR PRINCIPAL (APENAS UM!)
     public TelaModuloComunicacao() {
         initComponents();
         setResizable(false);
-    }
 
-    public TelaModuloComunicacao(JFrame frame) {
-        this.frame = frame;
-        this.frame.setVisible(false);
-        initComponents();
-        setResizable(false);
-    }
+        // 3. INICIALIZE A TELAEMITINDOPA UMA ÚNICA VEZ AQUI
+        telaEmitindoPAUnica = new TelaEmitindoPA(this);
+
+        // Inicialização do timer para o botão de 3 segundos
+        timer = new Timer(DELAY_MS, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("TelaModuloComunicacao: Timer do botão disparado - Botão ainda pressionado (erro ou teste)");
+            }
+        });
+        timer.setRepeats(false);
+    } 
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -43,6 +58,14 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
 
         listaPASButton.setContentAreaFilled(false);
         listaPASButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        listaPASButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                listaPASButtonMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                listaPASButtonMouseReleased(evt);
+            }
+        });
         listaPASButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 listaPASButtonActionPerformed(evt);
@@ -58,14 +81,33 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
-        frame.setVisible(true);
-        this.dispose();
+        TelaCabine janelaCabine = new TelaCabine(this);
+        janelaCabine.setVisible(true);
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     private void listaPASButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaPASButtonActionPerformed
-        TelaListaPAS janelaPAS = new TelaListaPAS(this);
-        janelaPAS.setVisible(true);
+     TelaListaPAS janelaListaPAS = new TelaListaPAS(this);
+     janelaListaPAS.setVisible(true);
     }//GEN-LAST:event_listaPASButtonActionPerformed
+
+    private void listaPASButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listaPASButtonMousePressed
+        pressStartTime = System.currentTimeMillis(); // Registra o exato momento em que o botão foi precionado.
+        timer.start(); // Inicia o timer.
+    }//GEN-LAST:event_listaPASButtonMousePressed
+
+    private void listaPASButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listaPASButtonMouseReleased
+        timer.stop(); // Para o temporizador.
+        long pressDuration = System.currentTimeMillis() - pressStartTime;
+        // Subtrai o tempo inicial(botão precionado), com o tempo final.
+        
+        if (pressDuration >= DELAY_MS) { // Verifica se o botão foi precionado pelo tempo necessario.
+            this.setVisible(false); // Esconde a tela atual
+
+            // Cria e exibe TelaEmitindoPA, passando a tela atual como referência
+            TelaEmitindoPA tela = new TelaEmitindoPA(this);
+            tela.setVisible(true);
+        }
+    }//GEN-LAST:event_listaPASButtonMouseReleased
 
     /**
      * @param args the command line arguments
