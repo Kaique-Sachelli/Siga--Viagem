@@ -28,6 +28,7 @@ public class AlterarUsuario extends javax.swing.JFrame {
         }
     
     }
+    
 
     
     private JFrame frame;
@@ -48,6 +49,8 @@ public class AlterarUsuario extends javax.swing.JFrame {
             @Override
             public void insertUpdate(javax.swing.event.DocumentEvent e) {
                 senhaAlterada = true;
+                var novaSenha = senhaTextField.getText();
+                confirmarButton.setEnabled(novaSenha != null && !novaSenha.trim().isEmpty());
             }
             @Override
             public void removeUpdate(javax.swing.event.DocumentEvent e) {
@@ -214,9 +217,6 @@ public class AlterarUsuario extends javax.swing.JFrame {
         senhaTextField.requestFocus();
         senhaTextField.setText("");
         
-        if (senhaAlterada = true){
-                confirmarButton.setEnabled(true);    
-        }    
     }//GEN-LAST:event_alterarSenhaBottonActionPerformed
 
     private void alterarCategoriaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarCategoriaButtonActionPerformed
@@ -241,7 +241,10 @@ public class AlterarUsuario extends javax.swing.JFrame {
             else{
                 categoriaComboBox.setSelectedItem("Operario");
             }
-            categoriaSelecionada = (String) categoriaComboBox.getSelectedItem(); ;
+            categoriaSelecionada = (String) categoriaComboBox.getSelectedItem(); 
+            confirmarButton.setEnabled(false);
+            categoriaComboBox.setEnabled(false);
+            senhaAlterada = false;
             
             }catch (Exception e){
                 JOptionPane.showMessageDialog(null, "Dados de usuarios não disponíveis");
@@ -276,8 +279,8 @@ public class AlterarUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_confirmarButtonActionPerformed
 
     private void categoriaComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoriaComboBoxActionPerformed
-        String categoria = (String) categoriaComboBox.getSelectedItem();
-        if(!categoria.equals(categoriaSelecionada)){
+        String novaCategoria = (String) categoriaComboBox.getSelectedItem();
+        if(!novaCategoria.equals(categoriaSelecionada)){
             categoriaAlterada= true;
             confirmarButton.setEnabled(true);
         }
