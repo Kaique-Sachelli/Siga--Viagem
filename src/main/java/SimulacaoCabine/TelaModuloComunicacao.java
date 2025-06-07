@@ -1,5 +1,6 @@
 package SimulacaoCabine;
 
+import Simulacao.Pontuacao;
 import javax.swing.Timer;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -124,6 +125,7 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
             // Cria e exibe TelaEmitindoPA, passando a tela atual como referência
             TelaEmitindoPA janelaEmitindoPA = new TelaEmitindoPA(this);
             janelaEmitindoPA.setVisible(true);
+            Pontuacao.registrarAtividade("PA");
         }
     }//GEN-LAST:event_listaPASButtonMouseReleased
 
@@ -147,6 +149,7 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
             // Cria e exibe TelaEmitindoPA, passando a tela atual como referência
             TelaInformandoCCO janelaInformandoCCO = new TelaInformandoCCO(this);
             janelaInformandoCCO.setVisible(true);
+            Pontuacao.registrarAtividade("CCO");
         }
     }//GEN-LAST:event_informandoCCOButtonMouseReleased
 
