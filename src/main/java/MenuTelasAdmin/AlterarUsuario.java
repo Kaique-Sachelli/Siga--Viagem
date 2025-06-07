@@ -181,7 +181,7 @@ public class AlterarUsuario extends javax.swing.JFrame {
         });
         getContentPane().add(confirmarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 570, 290, 60));
 
-        categoriaComboBox.setEditable(true);
+        categoriaComboBox.setEditable(false);
         categoriaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"CATEGORIA"}));
         categoriaComboBox.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -241,6 +241,7 @@ public class AlterarUsuario extends javax.swing.JFrame {
             else{
                 categoriaComboBox.setSelectedItem("Operario");
             }
+            
             categoriaSelecionada = (String) categoriaComboBox.getSelectedItem(); 
             confirmarButton.setEnabled(false);
             categoriaComboBox.setEnabled(false);
@@ -256,14 +257,14 @@ public class AlterarUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_usuariosComboBoxActionPerformed
 
     private void confirmarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarButtonActionPerformed
-        if(senhaAlterada = true){
+        if(senhaAlterada == true){
             var novaSenha = senhaTextField.getText();
             var selecionado = (Usuario) usuariosComboBox.getSelectedItem();
            try{
                var dao = new DAO();
                var atualizou = dao.atualizaSenha(novaSenha,selecionado.getId());
                if(atualizou){
-                    JOptionPane.showMessageDialog(null, "Atualização concluida com sucesso!");
+                    JOptionPane.showMessageDialog(null, "Atualização de senha concluida com sucesso!");
                     this.dispose();
                     var tl = new AlterarUsuario();
                     tl.setVisible(true);
@@ -276,13 +277,43 @@ public class AlterarUsuario extends javax.swing.JFrame {
                
            }
         }
+        
+        else if(categoriaAlterada == true){
+            String novaCategoria = (String) categoriaComboBox.getSelectedItem();
+            var selecionado = (Usuario) usuariosComboBox.getSelectedItem();
+            boolean instrutor;
+            // tratamento de dados para passar como parametro a dao.
+            if (novaCategoria.toLowerCase().equals("instrutor")){
+            instrutor = true; 
+            }
+            else{
+                instrutor = false;
+            }
+                try{
+                    var dao = new DAO();
+                    var atualizou = dao.atualizaCategoria(instrutor, selecionado.getId());
+                    if(atualizou){
+                        JOptionPane.showMessageDialog(null, "Atualização de categoria concluida com sucesso");
+                        this.dispose();
+                        var tl = new AlterarUsuario();
+                        tl.setVisible(true);
+                    }
+                }
+                catch(Exception e){
+                    e.printStackTrace();
+                    JOptionPane.showMessageDialog(null, "Atualização de dados não disponivel."); 
+                
+                }
+            
+        }
     }//GEN-LAST:event_confirmarButtonActionPerformed
 
     private void categoriaComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoriaComboBoxActionPerformed
         String novaCategoria = (String) categoriaComboBox.getSelectedItem();
-        if(!novaCategoria.equals(categoriaSelecionada)){
+        if(!novaCategoria.equals(categoriaSelecionada) && !novaCategoria.equals("CATEGORIA")){
             categoriaAlterada= true;
             confirmarButton.setEnabled(true);
+     
         }
     }//GEN-LAST:event_categoriaComboBoxActionPerformed
 
