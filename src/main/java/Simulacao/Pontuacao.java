@@ -16,7 +16,7 @@ public class Pontuacao {
         gabarito.put("OS", 1); // Olhar soleira (verficar se há algo obstruindo a porta)
         gabarito.put("EM", 1); // Verficar se há Emergência dentro do carro
         gabarito.put("RAD", 2); // Informa o CCO pelo rádio -----
-        gabarito.put("ISO", 3); // Ir no painel e isolar a porta com o cinturão *****
+        gabarito.put("ISO", 3); // Ir no painel e isolar a porta com o cinturão
         gabarito.put("FEC", 2); // Puxar a porta para fechar, depois confirmar se travou *****
         gabarito.put("ADE", 2); // Colar o adesivo na porta *****
         gabarito.put("LPE", 2); // Conferir luz externas do carro

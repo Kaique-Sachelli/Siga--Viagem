@@ -87,7 +87,8 @@ public class TelaVisaoGeral extends javax.swing.JFrame {
     }//GEN-LAST:event_SetaEsquerdaButton1ActionPerformed
 
     private void setaEsquerdaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaEsquerdaButtonActionPerformed
-        frame.setVisible(true);
+        TelaAreaExterna janelaAreaExterna = new TelaAreaExterna(this);
+        janelaAreaExterna.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_setaEsquerdaButtonActionPerformed
 
@@ -97,7 +98,8 @@ public class TelaVisaoGeral extends javax.swing.JFrame {
             janelaPortaSemiAberta.setVisible(true);
             this.dispose();
         } else if(Utilidades.EstadoPorta.getPosicaoAtual() == EstadoPorta.Posicao.CINTURAO){
-            
+            TelaCinturaoInstalado janelaCinturaoInstalado = new TelaCinturaoInstalado(this);
+            janelaCinturaoInstalado.setVisible(true);
         }
     }//GEN-LAST:event_setaDireitaButtonActionPerformed
 
