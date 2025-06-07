@@ -80,7 +80,7 @@ public class TelaPortaSemiAbertaInterna extends javax.swing.JFrame {
     }//GEN-LAST:event_setaDireitaButtonActionPerformed
 
     private void colocarCinturaoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colocarCinturaoButtonActionPerformed
-        if(Utilidades.EstadoItem.getInstance().isItemColetado()){
+        if(Utilidades.EstadoItem.getInstance().isFitaCinturao()){
             TelaCinturaoInstalado janelaCinturaoInstalado = new TelaCinturaoInstalado(this);
             janelaCinturaoInstalado.setVisible(true);
             Utilidades.EstadoPorta.setPosicaoAtual(EstadoPorta.Posicao.CINTURAO);

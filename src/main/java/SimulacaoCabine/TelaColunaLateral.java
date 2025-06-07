@@ -25,6 +25,7 @@ public class TelaColunaLateral extends javax.swing.JFrame {
         setaDireitaButton = new javax.swing.JButton();
         setaEsquerdaButton = new javax.swing.JButton();
         chaveCBTCButton = new javax.swing.JButton();
+        chaveButton = new javax.swing.JButton();
         colunaLateralLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -62,6 +63,18 @@ public class TelaColunaLateral extends javax.swing.JFrame {
         });
         getContentPane().add(chaveCBTCButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 420, 150, 160));
 
+        chaveButton.setContentAreaFilled(false);
+        chaveButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        chaveButton.setMaximumSize(new java.awt.Dimension(76, 80));
+        chaveButton.setMinimumSize(new java.awt.Dimension(76, 80));
+        chaveButton.setPreferredSize(new java.awt.Dimension(76, 80));
+        chaveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chaveButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(chaveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 76, 80));
+
         colunaLateralLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Coluna lateral direita - DIC, Derivação de Portas e Chave do CBTC.jpg"))); // NOI18N
         getContentPane().add(colunaLateralLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
@@ -89,6 +102,13 @@ public class TelaColunaLateral extends javax.swing.JFrame {
         this.setVisible(false);
 
     }//GEN-LAST:event_chaveCBTCButtonActionPerformed
+
+    private void chaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chaveButtonActionPerformed
+        Utilidades.EstadoItem.getInstance().setChaveServico(false);
+        TelaColunaLateralChave janelaColunaLateralChave = new TelaColunaLateralChave(this);
+        janelaColunaLateralChave.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_chaveButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -126,6 +146,7 @@ public class TelaColunaLateral extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton chaveButton;
     private javax.swing.JButton chaveCBTCButton;
     private javax.swing.JLabel colunaLateralLabel;
     private javax.swing.JButton setaDireitaButton;

@@ -42,6 +42,9 @@ public class TelaColunaLateralChave extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Coluna Latera Chave");
+        setMaximumSize(new java.awt.Dimension(960, 640));
+        setMinimumSize(new java.awt.Dimension(960, 640));
+        setPreferredSize(new java.awt.Dimension(960, 640));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         setaDireitaButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaDireita.png"))); // NOI18N
@@ -77,12 +80,15 @@ public class TelaColunaLateralChave extends javax.swing.JFrame {
 
         chaveButton.setContentAreaFilled(false);
         chaveButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        chaveButton.setMaximumSize(new java.awt.Dimension(76, 80));
+        chaveButton.setMinimumSize(new java.awt.Dimension(76, 80));
+        chaveButton.setPreferredSize(new java.awt.Dimension(76, 80));
         chaveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chaveButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(chaveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, -1, 80));
+        getContentPane().add(chaveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 76, 80));
 
         colunaLateralChaveLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Tela Coluna Lateral Chave (1).jpeg"))); // NOI18N
         getContentPane().add(colunaLateralChaveLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
@@ -118,7 +124,10 @@ public class TelaColunaLateralChave extends javax.swing.JFrame {
     }//GEN-LAST:event_chaveCBTCButtonActionPerformed
 
     private void chaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chaveButtonActionPerformed
-        
+        Utilidades.EstadoItem.getInstance().setChaveServico(true);
+        TelaColunaLateral janelaColunaLateral = new TelaColunaLateral(this);
+        janelaColunaLateral.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_chaveButtonActionPerformed
 
     /**
