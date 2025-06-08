@@ -1,5 +1,6 @@
 package MenuTelas;
 
+import Modelo.UsuarioLogado;
 import javax.swing.JFrame;
 
 public class TelaEstatistica extends javax.swing.JFrame {
@@ -8,6 +9,7 @@ public class TelaEstatistica extends javax.swing.JFrame {
     
     public TelaEstatistica() {
         initComponents();
+        usuarioLabel.setText(UsuarioLogado.getUsuario().getNome());
     }
 
     public TelaEstatistica(JFrame frame){
@@ -31,6 +33,12 @@ public class TelaEstatistica extends javax.swing.JFrame {
         errosFataisLabel = new javax.swing.JLabel();
         tempoJogoLabel = new javax.swing.JLabel();
         jogadorLabel = new javax.swing.JLabel();
+        usuarioLabel = new java.awt.Label();
+        simulacaoComboBox = new javax.swing.JComboBox<>();
+        errosTextField = new javax.swing.JTextField();
+        acertosTextField = new javax.swing.JTextField();
+        errosGravesTextField = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Estatística");
@@ -57,7 +65,7 @@ public class TelaEstatistica extends javax.swing.JFrame {
         linhaAzulLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/linhaAzul.png"))); // NOI18N
 
         rankingLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        rankingLabel.setText("Ranking:");
+        rankingLabel.setText("Simulação:");
 
         acertosLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         acertosLabel.setText("Acertos:");
@@ -74,11 +82,53 @@ public class TelaEstatistica extends javax.swing.JFrame {
         jogadorLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jogadorLabel.setText("Jogador:");
 
+        usuarioLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        usuarioLabel.setText("Usuario");
+
+        simulacaoComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        simulacaoComboBox.setName("Simulação"); // NOI18N
+
+        errosTextField.setEditable(false);
+        errosTextField.setText("Erros");
+
+        acertosTextField.setEditable(false);
+        acertosTextField.setText("Acertos");
+
+        errosGravesTextField.setEditable(false);
+        errosGravesTextField.setText("Erros Graves");
+
+        jTextField4.setEditable(false);
+        jTextField4.setText("Data simulação");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 960, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(297, 297, 297)
+                        .addComponent(simulacaoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 586, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(174, 174, 174)
+                        .addComponent(errosLabel)
+                        .addGap(47, 47, 47)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(usuarioLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(errosTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(286, 286, 286)
+                        .addComponent(acertosTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(178, 178, 178)
+                        .addComponent(errosFataisLabel)
+                        .addGap(31, 31, 31)
+                        .addComponent(errosGravesTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(169, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(336, 336, 336))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -91,8 +141,6 @@ public class TelaEstatistica extends javax.swing.JFrame {
                         .addComponent(jogadorLabel)
                         .addComponent(rankingLabel)
                         .addComponent(acertosLabel)
-                        .addComponent(errosLabel)
-                        .addComponent(errosFataisLabel)
                         .addComponent(tempoJogoLabel)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(560, 560, 560)
@@ -101,7 +149,24 @@ public class TelaEstatistica extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 640, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(104, 104, 104)
+                .addComponent(usuarioLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25)
+                .addComponent(simulacaoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(76, 76, 76)
+                .addComponent(acertosTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(errosTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(errosLabel))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(errosFataisLabel)
+                    .addComponent(errosGravesTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(216, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -115,16 +180,14 @@ public class TelaEstatistica extends javax.swing.JFrame {
                             .addComponent(rankingLabel)
                             .addGap(68, 68, 68)
                             .addComponent(acertosLabel)
-                            .addGap(8, 8, 8)
-                            .addComponent(errosLabel)
-                            .addGap(18, 18, 18)
-                            .addComponent(errosFataisLabel)
-                            .addGap(18, 18, 18)
+                            .addGap(108, 108, 108)
                             .addComponent(tempoJogoLabel)
                             .addGap(118, 118, 118)
                             .addComponent(voltarMenuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
+
+        usuarioLabel.getAccessibleContext().setAccessibleName("Usuario");
 
         pack();
         setLocationRelativeTo(null);
@@ -171,13 +234,19 @@ public class TelaEstatistica extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel acertosLabel;
+    private javax.swing.JTextField acertosTextField;
     private javax.swing.JLabel errosFataisLabel;
+    private javax.swing.JTextField errosGravesTextField;
     private javax.swing.JLabel errosLabel;
+    private javax.swing.JTextField errosTextField;
     private javax.swing.JLabel estatisticasLabel;
+    private javax.swing.JTextField jTextField4;
     private javax.swing.JLabel jogadorLabel;
     private javax.swing.JLabel linhaAzulLabel;
     private javax.swing.JLabel rankingLabel;
+    private javax.swing.JComboBox<String> simulacaoComboBox;
     private javax.swing.JLabel tempoJogoLabel;
+    private java.awt.Label usuarioLabel;
     private javax.swing.JButton voltarMenuButton;
     // End of variables declaration//GEN-END:variables
 }
