@@ -11,7 +11,7 @@ public class Pontuacao {
         gabarito.put("FBL", 1); // Fecha portas pela Boleira Lateral
         gabarito.put("CCO", 2); // Informa o CCO
         gabarito.put("PA", 1); // Dar PA
-        gabarito.put("CACS", 3); // Pega cinturão, chave e adesivo *****
+        gabarito.put("CACS", 3); // Pega cinturão, chave e adesivo
         gabarito.put("OS", 1); // Olhar soleira (verficar se há algo obstruindo a porta)
         gabarito.put("EM", 1); // Verficar se há Emergência dentro do carro
         gabarito.put("RAD", 2); // Informa o CCO pelo rádio
@@ -21,7 +21,7 @@ public class Pontuacao {
         gabarito.put("LPE", 2); // Conferir luz externas do carro
         gabarito.put("CCO", 2); // Informa o CCO
         gabarito.put("PA", 1); // Dar PA
-        gabarito.put("ICS", 1); // Inserir Chave de Serviço -----
+        gabarito.put("ICS", 1); // Inserir Chave de Serviço
         gabarito.put("AM", 1); // Chave CBTC em AM
         gabarito.put("R", 1); // Reversora em Frente
         

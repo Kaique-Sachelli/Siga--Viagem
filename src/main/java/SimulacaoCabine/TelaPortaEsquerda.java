@@ -78,8 +78,14 @@ public class TelaPortaEsquerda extends javax.swing.JFrame {
     }//GEN-LAST:event_setaDireitaButtonActionPerformed
 
     private void areaExternaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_areaExternaButtonActionPerformed
-        TelaAreaExterna janelaAreaExterna = new TelaAreaExterna(this);
-        janelaAreaExterna.setVisible(true);
+        if(Utilidades.EstadoItem.getInstance().isChaveFitaCinturao()){
+            TelaAreaExterna janelaAreaExterna = new TelaAreaExterna(this);
+            janelaAreaExterna.setVisible(true);
+        } else{
+            Utilidades.DetectarErroFatal.getInstance().setErroFatal(true);
+            TelaGameOver janelaGameOver = new TelaGameOver(this);
+            janelaGameOver.setVisible(true);
+        }
     }//GEN-LAST:event_areaExternaButtonActionPerformed
 
     private void botoeiraAcessaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botoeiraAcessaButtonActionPerformed

@@ -25,32 +25,38 @@ public class TelaGameOver extends javax.swing.JFrame {
 
         gameOverLabel = new javax.swing.JLabel();
         voltarButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        erroFatalLabel = new javax.swing.JLabel();
+        imagemGameOverLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Game Over");
-        setMaximumSize(new java.awt.Dimension(345, 460));
         setMinimumSize(new java.awt.Dimension(345, 460));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        gameOverLabel.setFont(new java.awt.Font("Impact", 0, 48)); // NOI18N
+        gameOverLabel.setFont(new java.awt.Font("Impact", 0, 60)); // NOI18N
         gameOverLabel.setForeground(new java.awt.Color(255, 255, 255));
         gameOverLabel.setText("GAME OVER");
-        getContentPane().add(gameOverLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 230, 140));
+        getContentPane().add(gameOverLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 270, 70));
 
+        voltarButton.setBackground(new java.awt.Color(255, 255, 255));
         voltarButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         voltarButton.setForeground(new java.awt.Color(0, 20, 137));
-        voltarButton.setText("VOLTAR");
+        voltarButton.setText("VOLTAR AO MENU");
         voltarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         voltarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 voltarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(voltarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 460, 120, 60));
+        getContentPane().add(voltarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 440, 270, 80));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/TM de Rosa (1).jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 750));
+        erroFatalLabel.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
+        erroFatalLabel.setForeground(new java.awt.Color(255, 255, 255));
+        erroFatalLabel.setText("Você cometeu um erro fatal!");
+        getContentPane().add(erroFatalLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 420, 70));
+
+        imagemGameOverLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/TelaGameOver.png"))); // NOI18N
+        getContentPane().add(imagemGameOverLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
@@ -59,6 +65,7 @@ public class TelaGameOver extends javax.swing.JFrame {
     private void voltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarButtonActionPerformed
         TelaMenuUsuario janelaMenuUsuario = new TelaMenuUsuario(this);
         janelaMenuUsuario.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_voltarButtonActionPerformed
 
     /**
@@ -97,8 +104,9 @@ public class TelaGameOver extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel erroFatalLabel;
     private javax.swing.JLabel gameOverLabel;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel imagemGameOverLabel;
     private javax.swing.JButton voltarButton;
     // End of variables declaration//GEN-END:variables
 }
