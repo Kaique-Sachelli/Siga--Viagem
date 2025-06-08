@@ -24,14 +24,18 @@ public class Pontuacao {
         gabarito.put("ICS", 1); // Inserir Chave de Serviço
         gabarito.put("AM", 1); // Chave CBTC em AM
         gabarito.put("R", 1); // Reversora em Frente
-        
-        // FIM 
+
+        // FIM 19 passos
     }
     
     private static ArrayList <String> atividadesRealizadas = new ArrayList<>();
     
     public static void zerarAtividadesRealizadas(){
         atividadesRealizadas.clear();
+    }
+    
+    public static int contarAtividadesRealizadas(){
+        return atividadesRealizadas.size();
     }
 
     public static void registrarAtividade(String atividadeRealizada){

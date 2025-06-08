@@ -78,7 +78,7 @@ public class TelaPortaEsquerda extends javax.swing.JFrame {
     }//GEN-LAST:event_setaDireitaButtonActionPerformed
 
     private void areaExternaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_areaExternaButtonActionPerformed
-        if(Utilidades.EstadoItem.getInstance().isChaveFitaCinturao()){
+        if(Utilidades.EstadoItem.getInstance().isChaveFitaCinturao() && Utilidades.EstadoItem.getInstance().isChaveServico()){
             TelaAreaExterna janelaAreaExterna = new TelaAreaExterna(this);
             janelaAreaExterna.setVisible(true);
         } else{
