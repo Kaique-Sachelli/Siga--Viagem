@@ -54,12 +54,15 @@ public class TelaPainelControleNormal extends javax.swing.JFrame {
 
         painelDeControleButton.setContentAreaFilled(false);
         painelDeControleButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        painelDeControleButton.setMaximumSize(new java.awt.Dimension(72, 70));
+        painelDeControleButton.setMinimumSize(new java.awt.Dimension(72, 70));
+        painelDeControleButton.setPreferredSize(new java.awt.Dimension(72, 70));
         painelDeControleButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 painelDeControleButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(painelDeControleButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 440, -1, 70));
+        getContentPane().add(painelDeControleButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 440, 72, 70));
 
         PainelAcessoAmpliadoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Painel_de_Controle_em_Metal_Industrial (2) (1).png"))); // NOI18N
         getContentPane().add(PainelAcessoAmpliadoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));

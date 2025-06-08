@@ -43,6 +43,9 @@ public class TelaCabineTras extends javax.swing.JFrame {
 
         fitaButton.setContentAreaFilled(false);
         fitaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        fitaButton.setMaximumSize(new java.awt.Dimension(110, 120));
+        fitaButton.setMinimumSize(new java.awt.Dimension(110, 120));
+        fitaButton.setPreferredSize(new java.awt.Dimension(110, 120));
         fitaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fitaButtonActionPerformed(evt);

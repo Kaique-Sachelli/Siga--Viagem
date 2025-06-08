@@ -44,6 +44,9 @@ public class TelaPainelDeAcesso extends javax.swing.JFrame {
 
         painelDeControleButton.setContentAreaFilled(false);
         painelDeControleButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        painelDeControleButton.setMaximumSize(new java.awt.Dimension(330, 250));
+        painelDeControleButton.setMinimumSize(new java.awt.Dimension(330, 250));
+        painelDeControleButton.setPreferredSize(new java.awt.Dimension(330, 250));
         painelDeControleButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 painelDeControleButtonActionPerformed(evt);

@@ -44,6 +44,9 @@ public class TelaPortaSemiAberta extends javax.swing.JFrame {
 
         portasemiinternaButton.setContentAreaFilled(false);
         portasemiinternaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        portasemiinternaButton.setMaximumSize(new java.awt.Dimension(160, 420));
+        portasemiinternaButton.setMinimumSize(new java.awt.Dimension(160, 420));
+        portasemiinternaButton.setPreferredSize(new java.awt.Dimension(160, 420));
         portasemiinternaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 portasemiinternaButtonActionPerformed(evt);

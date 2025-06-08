@@ -31,6 +31,9 @@ public class TelaINFOPASS extends javax.swing.JFrame {
 
         preparaButton.setContentAreaFilled(false);
         preparaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        preparaButton.setMaximumSize(new java.awt.Dimension(40, 40));
+        preparaButton.setMinimumSize(new java.awt.Dimension(40, 40));
+        preparaButton.setPreferredSize(new java.awt.Dimension(40, 40));
         preparaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 preparaButtonActionPerformed(evt);
@@ -40,6 +43,9 @@ public class TelaINFOPASS extends javax.swing.JFrame {
 
         feButton.setContentAreaFilled(false);
         feButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        feButton.setMaximumSize(new java.awt.Dimension(40, 40));
+        feButton.setMinimumSize(new java.awt.Dimension(40, 40));
+        feButton.setPreferredSize(new java.awt.Dimension(40, 40));
         feButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 feButtonActionPerformed(evt);

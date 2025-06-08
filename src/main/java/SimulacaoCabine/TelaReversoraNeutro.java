@@ -45,6 +45,9 @@ public class TelaReversoraNeutro extends javax.swing.JFrame {
 
         reversoraNeutroButton.setContentAreaFilled(false);
         reversoraNeutroButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        reversoraNeutroButton.setMaximumSize(new java.awt.Dimension(530, 350));
+        reversoraNeutroButton.setMinimumSize(new java.awt.Dimension(530, 350));
+        reversoraNeutroButton.setPreferredSize(new java.awt.Dimension(530, 350));
         reversoraNeutroButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 reversoraNeutroButtonActionPerformed(evt);

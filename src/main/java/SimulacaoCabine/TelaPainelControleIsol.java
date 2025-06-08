@@ -43,6 +43,9 @@ public class TelaPainelControleIsol extends javax.swing.JFrame {
 
         painelAmpliadoButton.setContentAreaFilled(false);
         painelAmpliadoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        painelAmpliadoButton.setMaximumSize(new java.awt.Dimension(60, 60));
+        painelAmpliadoButton.setMinimumSize(new java.awt.Dimension(60, 60));
+        painelAmpliadoButton.setPreferredSize(new java.awt.Dimension(60, 60));
         painelAmpliadoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 painelAmpliadoButtonActionPerformed(evt);

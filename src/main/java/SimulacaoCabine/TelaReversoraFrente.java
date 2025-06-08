@@ -44,6 +44,9 @@ public class TelaReversoraFrente extends javax.swing.JFrame {
 
         reversoraFrenteButton.setContentAreaFilled(false);
         reversoraFrenteButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        reversoraFrenteButton.setMaximumSize(new java.awt.Dimension(530, 350));
+        reversoraFrenteButton.setMinimumSize(new java.awt.Dimension(530, 350));
+        reversoraFrenteButton.setPreferredSize(new java.awt.Dimension(530, 350));
         reversoraFrenteButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 reversoraFrenteButtonActionPerformed(evt);

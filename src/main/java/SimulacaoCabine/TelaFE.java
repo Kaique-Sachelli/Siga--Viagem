@@ -31,6 +31,9 @@ public class TelaFE extends javax.swing.JFrame {
 
         preparaButton.setContentAreaFilled(false);
         preparaButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        preparaButton.setMaximumSize(new java.awt.Dimension(40, 40));
+        preparaButton.setMinimumSize(new java.awt.Dimension(40, 40));
+        preparaButton.setPreferredSize(new java.awt.Dimension(40, 40));
         preparaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 preparaButtonActionPerformed(evt);
@@ -40,6 +43,9 @@ public class TelaFE extends javax.swing.JFrame {
 
         infopassButton.setContentAreaFilled(false);
         infopassButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        infopassButton.setMaximumSize(new java.awt.Dimension(40, 40));
+        infopassButton.setMinimumSize(new java.awt.Dimension(40, 40));
+        infopassButton.setPreferredSize(new java.awt.Dimension(40, 40));
         infopassButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 infopassButtonActionPerformed(evt);

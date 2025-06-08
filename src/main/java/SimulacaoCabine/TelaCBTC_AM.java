@@ -44,6 +44,9 @@ public class TelaCBTC_AM extends javax.swing.JFrame {
 
         cbtcRMButton.setContentAreaFilled(false);
         cbtcRMButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cbtcRMButton.setMaximumSize(new java.awt.Dimension(230, 230));
+        cbtcRMButton.setMinimumSize(new java.awt.Dimension(230, 230));
+        cbtcRMButton.setPreferredSize(new java.awt.Dimension(230, 230));
         cbtcRMButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbtcRMButtonActionPerformed(evt);
