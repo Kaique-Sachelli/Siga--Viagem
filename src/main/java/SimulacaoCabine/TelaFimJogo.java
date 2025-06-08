@@ -8,15 +8,15 @@ import Utilidades.EstadoReversora;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-public class TelaGameOver extends javax.swing.JFrame {
+public class TelaFimJogo extends javax.swing.JFrame {
     
     private JFrame frame;
     
-    public TelaGameOver() {
+    public TelaFimJogo() {
         initComponents();
     }
     
-    public TelaGameOver(JFrame frame) {
+    public TelaFimJogo(JFrame frame) {
         this();
         frame.setVisible(false);
         this.frame = frame;
@@ -31,9 +31,9 @@ public class TelaGameOver extends javax.swing.JFrame {
         gameOverLabel = new javax.swing.JLabel();
         reiniciarButton = new javax.swing.JButton();
         pontuacaoLabel = new javax.swing.JLabel();
-        erroFatalLabel = new javax.swing.JLabel();
+        parabensLabel = new javax.swing.JLabel();
         voltarButton = new javax.swing.JButton();
-        imagemGameOverLabel = new javax.swing.JLabel();
+        imagemFimJogoLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Game Over");
@@ -43,7 +43,7 @@ public class TelaGameOver extends javax.swing.JFrame {
         gameOverLabel.setFont(new java.awt.Font("Impact", 0, 60)); // NOI18N
         gameOverLabel.setForeground(new java.awt.Color(255, 255, 255));
         gameOverLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        gameOverLabel.setText("GAME OVER");
+        gameOverLabel.setText("Fim de Jogo");
         getContentPane().add(gameOverLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 960, 70));
 
         reiniciarButton.setBackground(new java.awt.Color(255, 255, 255));
@@ -64,11 +64,11 @@ public class TelaGameOver extends javax.swing.JFrame {
         pontuacaoLabel.setText("Sua pontuação foi de: " + Integer.toString(Simulacao.Pontuacao.calcularPontuacao()));
         getContentPane().add(pontuacaoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 960, 70));
 
-        erroFatalLabel.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
-        erroFatalLabel.setForeground(new java.awt.Color(255, 255, 255));
-        erroFatalLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        erroFatalLabel.setText("Você cometeu um erro fatal!");
-        getContentPane().add(erroFatalLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 960, 70));
+        parabensLabel.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
+        parabensLabel.setForeground(new java.awt.Color(255, 255, 255));
+        parabensLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        parabensLabel.setText("Parabéns! Você concluiu a simulação");
+        getContentPane().add(parabensLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 960, 70));
 
         voltarButton.setBackground(new java.awt.Color(255, 255, 255));
         voltarButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
@@ -82,8 +82,8 @@ public class TelaGameOver extends javax.swing.JFrame {
         });
         getContentPane().add(voltarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 440, 270, 80));
 
-        imagemGameOverLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/TelaGameOver.png"))); // NOI18N
-        getContentPane().add(imagemGameOverLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        imagemFimJogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/TelaFimJogo.png"))); // NOI18N
+        getContentPane().add(imagemFimJogoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
@@ -127,28 +127,29 @@ public class TelaGameOver extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaGameOver.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaFimJogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaGameOver.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaFimJogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaGameOver.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaFimJogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaGameOver.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaFimJogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaGameOver().setVisible(true);
+                new TelaFimJogo().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel erroFatalLabel;
     private javax.swing.JLabel gameOverLabel;
-    private javax.swing.JLabel imagemGameOverLabel;
+    private javax.swing.JLabel imagemFimJogoLabel;
+    private javax.swing.JLabel parabensLabel;
     private javax.swing.JLabel pontuacaoLabel;
     private javax.swing.JButton reiniciarButton;
     private javax.swing.JButton voltarButton;

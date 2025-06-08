@@ -38,7 +38,7 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="GAME OVER"/>
+        <Property name="text" type="java.lang.String" value="Fim de Jogo"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -90,7 +90,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="erroFatalLabel">
+    <Component class="javax.swing.JLabel" name="parabensLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Impact" size="36" style="0"/>
@@ -99,7 +99,7 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Voc&#xea; cometeu um erro fatal!"/>
+        <Property name="text" type="java.lang.String" value="Parab&#xe9;ns! Voc&#xea; concluiu a simula&#xe7;&#xe3;o"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -132,10 +132,10 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="imagemGameOverLabel">
+    <Component class="javax.swing.JLabel" name="imagemFimJogoLabel">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/SimulacaoImagens/TelaGameOver.png"/>
+          <Image iconType="3" name="/SimulacaoImagens/TelaFimJogo.png"/>
         </Property>
       </Properties>
       <Constraints>
