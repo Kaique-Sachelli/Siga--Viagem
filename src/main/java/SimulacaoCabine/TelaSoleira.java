@@ -8,6 +8,7 @@ public class TelaSoleira extends javax.swing.JFrame {
     
     public TelaSoleira() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaSoleira(JFrame frame) {

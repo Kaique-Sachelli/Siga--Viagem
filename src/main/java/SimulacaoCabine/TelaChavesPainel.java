@@ -8,6 +8,7 @@ public class TelaChavesPainel extends javax.swing.JFrame {
     
     public TelaChavesPainel() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaChavesPainel(JFrame frame) {

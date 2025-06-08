@@ -16,6 +16,7 @@ public class TelaBotoeiraAcessa extends javax.swing.JFrame {
     
     public TelaBotoeiraAcessa() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
     
     public TelaBotoeiraAcessa(JFrame frame) {

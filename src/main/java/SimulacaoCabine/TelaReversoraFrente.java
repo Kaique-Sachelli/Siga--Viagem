@@ -10,6 +10,7 @@ public class TelaReversoraFrente extends javax.swing.JFrame {
     
     public TelaReversoraFrente() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaReversoraFrente(JFrame frame) {

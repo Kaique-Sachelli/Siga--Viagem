@@ -10,6 +10,7 @@ public class TelaPainelDeAcesso extends javax.swing.JFrame {
     public TelaPainelDeAcesso() {
         initComponents();
         setResizable(false);
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaPainelDeAcesso(JFrame frame) {

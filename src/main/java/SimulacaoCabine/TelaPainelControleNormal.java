@@ -9,6 +9,7 @@ public class TelaPainelControleNormal extends javax.swing.JFrame {
     
     public TelaPainelControleNormal() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaPainelControleNormal(JFrame frame) {

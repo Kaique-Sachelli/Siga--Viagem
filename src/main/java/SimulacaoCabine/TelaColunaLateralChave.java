@@ -11,6 +11,7 @@ public class TelaColunaLateralChave extends javax.swing.JFrame {
     
     public TelaColunaLateralChave() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
     
     public TelaColunaLateralChave(JFrame frame) {

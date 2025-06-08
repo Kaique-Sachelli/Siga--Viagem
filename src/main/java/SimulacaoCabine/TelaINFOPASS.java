@@ -8,6 +8,7 @@ public class TelaINFOPASS extends javax.swing.JFrame {
     
     public TelaINFOPASS() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaINFOPASS(JFrame frame) {

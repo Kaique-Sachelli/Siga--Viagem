@@ -11,6 +11,7 @@ public class TelaReversoraNeutro extends javax.swing.JFrame {
     
     public TelaReversoraNeutro() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaReversoraNeutro(JFrame frame) {

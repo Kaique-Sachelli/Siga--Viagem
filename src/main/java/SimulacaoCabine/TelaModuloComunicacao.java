@@ -20,6 +20,7 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
     public TelaModuloComunicacao() {
         initComponents();
         setResizable(false);
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
 
         // 3. INICIALIZE A TELAEMITINDOPA UMA ÚNICA VEZ AQUI
         telaEmitindoPAUnica = new TelaEmitindoPA(this);

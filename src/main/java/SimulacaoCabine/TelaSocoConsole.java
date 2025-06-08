@@ -8,6 +8,7 @@ public class TelaSocoConsole extends javax.swing.JFrame {
     
     public TelaSocoConsole() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaSocoConsole(JFrame frame) {

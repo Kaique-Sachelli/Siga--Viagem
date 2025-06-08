@@ -55,6 +55,11 @@ public class TelaMenuJogo extends javax.swing.JFrame {
         continuarButton.setForeground(new java.awt.Color(0, 20, 137));
         continuarButton.setText("CONTINUAR");
         continuarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        continuarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                continuarButtonActionPerformed(evt);
+            }
+        });
         getContentPane().add(continuarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, 340, 100));
 
         somButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
@@ -84,6 +89,10 @@ public class TelaMenuJogo extends javax.swing.JFrame {
        TelaConfiguracoes janelaConfiguracoes = new TelaConfiguracoes(this);
        janelaConfiguracoes.setVisible(true);
     }//GEN-LAST:event_somButtonActionPerformed
+
+    private void continuarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continuarButtonActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_continuarButtonActionPerformed
 
     /**
      * @param args the command line arguments

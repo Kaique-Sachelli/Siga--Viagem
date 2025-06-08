@@ -8,6 +8,7 @@ public class TelaListaPAS extends javax.swing.JFrame {
     
     public TelaListaPAS() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
     
     public TelaListaPAS(JFrame frame) {

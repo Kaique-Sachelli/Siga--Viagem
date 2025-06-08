@@ -8,6 +8,7 @@ public class TelaFE extends javax.swing.JFrame {
     
     public TelaFE() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaFE(JFrame frame) {

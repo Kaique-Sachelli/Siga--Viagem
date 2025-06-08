@@ -11,6 +11,7 @@ public class TelaCabine extends javax.swing.JFrame {
     public TelaCabine() {
         initComponents();
         setResizable(false);
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaCabine(JFrame frame) {
@@ -19,6 +20,8 @@ public class TelaCabine extends javax.swing.JFrame {
         this.frame = frame;
         setResizable(false);
     }
+
+    
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

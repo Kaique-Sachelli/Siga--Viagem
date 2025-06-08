@@ -15,6 +15,7 @@ public class TelaDDU extends javax.swing.JFrame {
         this.frame.setVisible(false);
         initComponents();
         setResizable(false);
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
     
     @SuppressWarnings("unchecked")
