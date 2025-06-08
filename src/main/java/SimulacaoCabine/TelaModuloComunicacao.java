@@ -138,6 +138,7 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
         } else {
             TelaListaPAS janelaListaPAS = new TelaListaPAS(this);
             janelaListaPAS.setVisible(true);
+            this.dispose();
         }
         
     }//GEN-LAST:event_listaPASButtonMouseReleased
