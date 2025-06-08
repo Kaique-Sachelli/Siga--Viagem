@@ -1,6 +1,7 @@
 package SimulacaoCabine;
 
 import Simulacao.Pontuacao;
+import Utilidades.EstadoPainelControle;
 import Utilidades.EstadoPorta;
 import javax.swing.JFrame;
 
@@ -91,7 +92,9 @@ public class TelaPortaSemiAbertaInterna extends javax.swing.JFrame {
             janelaCinturaoInstalado.setVisible(true);
             Utilidades.EstadoPorta.setPosicaoAtual(EstadoPorta.Posicao.CINTURAO);
             this.dispose();
-            Pontuacao.registrarAtividade("ISO");
+            if(Utilidades.EstadoPainelControle.getPosicaoAtual() == EstadoPainelControle.Posicao.ISOL){
+                Pontuacao.registrarAtividade("ISO");
+            }
         }
     }//GEN-LAST:event_colocarCinturaoButtonActionPerformed
 
