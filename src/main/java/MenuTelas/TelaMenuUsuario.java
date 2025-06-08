@@ -47,7 +47,7 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
         tituloMenuLabel.setMaximumSize(new java.awt.Dimension(320, 75));
         tituloMenuLabel.setMinimumSize(new java.awt.Dimension(320, 75));
         tituloMenuLabel.setPreferredSize(new java.awt.Dimension(320, 75));
-        getContentPane().add(tituloMenuLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, -1, 80));
+        getContentPane().add(tituloMenuLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, -1, 80));
 
         selecionarFaseButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         selecionarFaseButton.setForeground(new java.awt.Color(0, 20, 137));
