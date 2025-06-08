@@ -62,9 +62,15 @@ public class TelaCBTC_RM extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
-        TelaColunaLateral janelaColunaLateral = new TelaColunaLateral(this);
-        janelaColunaLateral.setVisible(true);
-        this.dispose();
+        if(Utilidades.EstadoItem.getInstance().isChaveServico()){
+            TelaColunaLateral janelaColunaLateral = new TelaColunaLateral(this);
+            janelaColunaLateral.setVisible(true);
+            this.dispose();
+        } else{
+            TelaColunaLateralChave janelaColunaLateralChave = new TelaColunaLateralChave(this);
+            janelaColunaLateralChave.setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     private void cbtcRMButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbtcRMButtonActionPerformed

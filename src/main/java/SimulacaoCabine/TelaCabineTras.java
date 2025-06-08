@@ -66,13 +66,14 @@ public class TelaCabineTras extends javax.swing.JFrame {
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     private void fitaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fitaButtonActionPerformed
-        if(Utilidades.EstadoItem.getInstance().isItemColetado()){
-            Pontuacao.registrarAtividade("CACS");
-        }
-        Utilidades.EstadoItem.getInstance().setItemColetado(true);
+        Utilidades.EstadoItem.getInstance().setFitaCinturao(true);
         TelaCabineTrasVazia janelaCabineTrasVazia = new TelaCabineTrasVazia(this);
         janelaCabineTrasVazia.setVisible(true);
         this.dispose();
+        if(Utilidades.EstadoItem.getInstance().isChaveServico()){
+            Pontuacao.registrarAtividade("CACS");
+            Utilidades.EstadoItem.getInstance().setChaveFitaCinturao(true);
+        }
     }//GEN-LAST:event_fitaButtonActionPerformed
 
     /**

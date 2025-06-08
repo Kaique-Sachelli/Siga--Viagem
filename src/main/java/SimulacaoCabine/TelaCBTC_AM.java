@@ -62,12 +62,19 @@ public class TelaCBTC_AM extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
-        TelaColunaLateral janelaColunaLateral = new TelaColunaLateral(this);
-        janelaColunaLateral.setVisible(true);
-        this.dispose();
+        if(Utilidades.EstadoItem.getInstance().isChaveServico()){
+            TelaColunaLateral janelaColunaLateral = new TelaColunaLateral(this);
+            janelaColunaLateral.setVisible(true);
+            this.dispose();
+        } else{
+            TelaColunaLateralChave janelaColunaLateralChave = new TelaColunaLateralChave(this);
+            janelaColunaLateralChave.setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     private void cbtcRMButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbtcRMButtonActionPerformed
+        EstadoCBTC.setPosicaoAtual(EstadoCBTC.Posicao.RM);
         TelaCBTC_RM janelaCBTC_RM = new TelaCBTC_RM(this);
         janelaCBTC_RM.setVisible(true);
         Pontuacao.registrarAtividade("RM");

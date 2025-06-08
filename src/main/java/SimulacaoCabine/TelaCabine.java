@@ -230,13 +230,19 @@ public class TelaCabine extends javax.swing.JFrame {
     }//GEN-LAST:event_setaEsquerdaButtonActionPerformed
 
     private void setaDireitaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaDireitaButtonActionPerformed
-        TelaColunaLateralChave janelaColunaLateralChave = new TelaColunaLateralChave(this);
-        janelaColunaLateralChave.setVisible(true);
-        this.dispose();
+        if(Utilidades.EstadoItem.getInstance().isChaveServico()){
+            TelaColunaLateral janelaColunaLateral = new TelaColunaLateral(this);
+            janelaColunaLateral.setVisible(true);
+            this.dispose();
+        } else{
+            TelaColunaLateralChave janelaColunaLateralChave = new TelaColunaLateralChave(this);
+            janelaColunaLateralChave.setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_setaDireitaButtonActionPerformed
 
     private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
-        if(EstadoItem.getInstance().isItemColetado()){
+        if(EstadoItem.getInstance().isFitaCinturao()){
             TelaCabineTrasVazia janelaCabineTrasVazia = new TelaCabineTrasVazia(this);
             janelaCabineTrasVazia.setVisible(true);
         }else{

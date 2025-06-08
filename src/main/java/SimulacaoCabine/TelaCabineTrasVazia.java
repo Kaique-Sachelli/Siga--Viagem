@@ -1,5 +1,6 @@
 package SimulacaoCabine;
 
+import Simulacao.Pontuacao;
 import javax.swing.JFrame;
 
 public class TelaCabineTrasVazia extends javax.swing.JFrame {
