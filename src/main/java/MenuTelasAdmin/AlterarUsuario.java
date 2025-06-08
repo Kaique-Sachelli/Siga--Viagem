@@ -10,6 +10,9 @@ import java.util.ArrayList;
 
 
 public class AlterarUsuario extends javax.swing.JFrame {
+    private String categoriaSelecionada;
+    private boolean categoriaAlterada; 
+    private boolean senhaAlterada;
     private void obterUsuarios(){
         try{
             var dao = new DAO();
@@ -25,6 +28,7 @@ public class AlterarUsuario extends javax.swing.JFrame {
         }
     
     }
+    
 
     
     private JFrame frame;
@@ -33,6 +37,32 @@ public class AlterarUsuario extends javax.swing.JFrame {
         initComponents();
         setResizable(false);
         obterUsuarios();
+        senhaTextField.setEditable(false);
+        loginTextField.setEditable(false);
+        categoriaComboBox.addItem("Operario");
+        categoriaComboBox.addItem("Instrutor");
+        categoriaComboBox.setEnabled(false);
+        confirmarButton.setEnabled(false);
+        
+        
+        senhaTextField.getDocument().addDocumentListener(new javax.swing.event.DocumentListener(){
+            @Override
+            public void insertUpdate(javax.swing.event.DocumentEvent e) {
+                senhaAlterada = true;
+                var novaSenha = senhaTextField.getText();
+                confirmarButton.setEnabled(novaSenha != null && !novaSenha.trim().isEmpty());
+            }
+            @Override
+            public void removeUpdate(javax.swing.event.DocumentEvent e) {
+                senhaAlterada = false;
+            }
+            @Override
+            public void changedUpdate(javax.swing.event.DocumentEvent e) {
+                senhaAlterada = false;
+            }
+        });   
+        
+        
     }
 
     public AlterarUsuario(JFrame frame) {
@@ -50,13 +80,13 @@ public class AlterarUsuario extends javax.swing.JFrame {
         voltarMenuButton = new javax.swing.JButton();
         logoMauaLabel = new javax.swing.JLabel();
         usuariosComboBox = new javax.swing.JComboBox<Usuario>();
-        confirmarButton = new javax.swing.JButton();
-        instrutorTextField = new javax.swing.JTextField();
-        loginTextField1 = new javax.swing.JTextField();
+        loginTextField = new javax.swing.JTextField();
         senhaTextField = new javax.swing.JTextField();
         alterarSenhaBotton = new javax.swing.JButton();
         alterarCategoriaButton = new javax.swing.JButton();
         apagarUsuarioButton = new javax.swing.JButton();
+        confirmarButton = new javax.swing.JButton();
+        categoriaComboBox = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Alterar usuário");
@@ -99,39 +129,22 @@ public class AlterarUsuario extends javax.swing.JFrame {
         });
         getContentPane().add(usuariosComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, 480, 60));
 
-        confirmarButton.setBackground(new java.awt.Color(0, 20, 137));
-        confirmarButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        confirmarButton.setForeground(new java.awt.Color(255, 255, 255));
-        confirmarButton.setText("CONFIRMAR");
-        getContentPane().add(confirmarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 570, 290, 60));
-
-        instrutorTextField.setText("CATEGORIA");
-        instrutorTextField.setEnabled(false);
-        instrutorTextField.addActionListener(new java.awt.event.ActionListener() {
+        loginTextField.setBackground(new java.awt.Color(255, 255, 255));
+        loginTextField.setText("LOGIN");
+        loginTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                instrutorTextFieldActionPerformed(evt);
+                loginTextFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(instrutorTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 210, 280, 50));
-
-        loginTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        loginTextField1.setText("LOGIN");
-        loginTextField1.setEnabled(false);
-        loginTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginTextField1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(loginTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 280, 50));
+        getContentPane().add(loginTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 280, 50));
 
         senhaTextField.setText("SENHA");
-        senhaTextField.setEnabled(false);
         senhaTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 senhaTextFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(senhaTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 280, 50));
+        getContentPane().add(senhaTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 280, 50));
 
         alterarSenhaBotton.setText("Alterar Senha");
         alterarSenhaBotton.addActionListener(new java.awt.event.ActionListener() {
@@ -157,6 +170,31 @@ public class AlterarUsuario extends javax.swing.JFrame {
         });
         getContentPane().add(apagarUsuarioButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 200, 50));
 
+        confirmarButton.setBackground(new java.awt.Color(0, 20, 137));
+        confirmarButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        confirmarButton.setForeground(new java.awt.Color(255, 255, 255));
+        confirmarButton.setText("CONFIRMAR");
+        confirmarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                confirmarButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(confirmarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 570, 290, 60));
+
+        categoriaComboBox.setEditable(false);
+        categoriaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"CATEGORIA"}));
+        categoriaComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                categoriaComboBoxItemStateChanged(evt);
+            }
+        });
+        categoriaComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                categoriaComboBoxActionPerformed(evt);
+            }
+        });
+        getContentPane().add(categoriaComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 210, 280, 50));
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -166,24 +204,23 @@ public class AlterarUsuario extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_voltarMenuButtonActionPerformed
 
-    private void instrutorTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_instrutorTextFieldActionPerformed
+    private void loginTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_instrutorTextFieldActionPerformed
-
-    private void loginTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_loginTextField1ActionPerformed
+    }//GEN-LAST:event_loginTextFieldActionPerformed
 
     private void senhaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaTextFieldActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_senhaTextFieldActionPerformed
 
     private void alterarSenhaBottonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarSenhaBottonActionPerformed
-        // TODO add your handling code here:
+        senhaTextField.setEditable(true);
+        senhaTextField.requestFocus();
+        senhaTextField.setText("");
+        
     }//GEN-LAST:event_alterarSenhaBottonActionPerformed
 
     private void alterarCategoriaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarCategoriaButtonActionPerformed
-        // TODO add your handling code here:
+        categoriaComboBox.setEnabled(true);    
     }//GEN-LAST:event_alterarCategoriaButtonActionPerformed
 
     private void apagarUsuarioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apagarUsuarioButtonActionPerformed
@@ -196,23 +233,93 @@ public class AlterarUsuario extends javax.swing.JFrame {
             try{
             var dao = new DAO();
             dao.buscarUsuario(selecionado.getId());
-            loginTextField1.setText(selecionado.getLogin());
+            loginTextField.setText(selecionado.getLogin());
             senhaTextField.setText(selecionado.getSenha());
             if(selecionado.getInstrutor()){
-                instrutorTextField.setText("Instrutor");
+                categoriaComboBox.setSelectedItem("Instrutor");
             }
             else{
-                instrutorTextField.setText("Operador");
+                categoriaComboBox.setSelectedItem("Operario");
             }
             
+            categoriaSelecionada = (String) categoriaComboBox.getSelectedItem(); 
+            confirmarButton.setEnabled(false);
+            categoriaComboBox.setEnabled(false);
+            senhaAlterada = false;
+            
             }catch (Exception e){
-                JOptionPane.showMessageDialog(null, "Dado de usuarios não disponíveis");
+                JOptionPane.showMessageDialog(null, "Dados de usuarios não disponíveis");
             
             }
         }
                 
                
     }//GEN-LAST:event_usuariosComboBoxActionPerformed
+
+    private void confirmarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarButtonActionPerformed
+        if(senhaAlterada == true){
+            var novaSenha = senhaTextField.getText();
+            var selecionado = (Usuario) usuariosComboBox.getSelectedItem();
+           try{
+               var dao = new DAO();
+               var atualizou = dao.atualizaSenha(novaSenha,selecionado.getId());
+               if(atualizou){
+                    JOptionPane.showMessageDialog(null, "Atualização de senha concluida com sucesso!");
+                    this.dispose();
+                    var tl = new AlterarUsuario();
+                    tl.setVisible(true);
+               }
+                   
+           }
+           catch(Exception e){
+               e.printStackTrace();
+               JOptionPane.showMessageDialog(null, "Atualização de dados não disponivel."); 
+               
+           }
+        }
+        
+        else if(categoriaAlterada == true){
+            String novaCategoria = (String) categoriaComboBox.getSelectedItem();
+            var selecionado = (Usuario) usuariosComboBox.getSelectedItem();
+            boolean instrutor;
+            // tratamento de dados para passar como parametro a dao.
+            if (novaCategoria.toLowerCase().equals("instrutor")){
+            instrutor = true; 
+            }
+            else{
+                instrutor = false;
+            }
+                try{
+                    var dao = new DAO();
+                    var atualizou = dao.atualizaCategoria(instrutor, selecionado.getId());
+                    if(atualizou){
+                        JOptionPane.showMessageDialog(null, "Atualização de categoria concluida com sucesso");
+                        this.dispose();
+                        var tl = new AlterarUsuario();
+                        tl.setVisible(true);
+                    }
+                }
+                catch(Exception e){
+                    e.printStackTrace();
+                    JOptionPane.showMessageDialog(null, "Atualização de dados não disponivel."); 
+                
+                }
+            
+        }
+    }//GEN-LAST:event_confirmarButtonActionPerformed
+
+    private void categoriaComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoriaComboBoxActionPerformed
+        String novaCategoria = (String) categoriaComboBox.getSelectedItem();
+        if(!novaCategoria.equals(categoriaSelecionada) && !novaCategoria.equals("CATEGORIA")){
+            categoriaAlterada= true;
+            confirmarButton.setEnabled(true);
+     
+        }
+    }//GEN-LAST:event_categoriaComboBoxActionPerformed
+
+    private void categoriaComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_categoriaComboBoxItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_categoriaComboBoxItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -253,10 +360,10 @@ public class AlterarUsuario extends javax.swing.JFrame {
     private javax.swing.JButton alterarCategoriaButton;
     private javax.swing.JButton alterarSenhaBotton;
     private javax.swing.JButton apagarUsuarioButton;
+    private javax.swing.JComboBox<String> categoriaComboBox;
     private javax.swing.JButton confirmarButton;
-    private javax.swing.JTextField instrutorTextField;
     private javax.swing.JLabel logoMauaLabel;
-    private javax.swing.JTextField loginTextField1;
+    private javax.swing.JTextField loginTextField;
     private javax.swing.JTextField senhaTextField;
     private javax.swing.JLabel tituloMenuLabel;
     private javax.swing.JComboBox<Usuario> usuariosComboBox;
