@@ -24,6 +24,40 @@ public class Estatistica {
         
         
     }
+
+    public int getNumeroSimulacao() {
+        return numeroSimulacao;
+    }
+
+    public LocalDateTime getDataSimulacao() {
+        return dataSimulacao;
+    }
+
+    public int getErros() {
+        return erros;
+    }
+
+    public int getAcertos() {
+        return acertos;
+    }
+
+    public int getPontuacao() {
+        return pontuacao;
+    }
+
+    public int getErrosFatais() {
+        return errosFatais;
+    }
+
+    public boolean isAbandonada() {
+        return abandonada;
+    }
+    public String toString(){
+        return String.format(
+            "Simulação: %s", numeroSimulacao
+        );
+    }
+    
 }
 
 
