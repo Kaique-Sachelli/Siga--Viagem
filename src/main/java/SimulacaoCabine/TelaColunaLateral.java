@@ -15,6 +15,7 @@ public class TelaColunaLateral extends javax.swing.JFrame {
         this();
         frame.setVisible(false);
         this.frame = frame;
+        EstadoCBTC.getPosicaoAtual();
         setResizable(false);
     }
     
