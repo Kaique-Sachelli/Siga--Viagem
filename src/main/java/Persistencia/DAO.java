@@ -129,4 +129,22 @@ public class DAO {
             return atualizou > 0; 
         }
     }
+    
+    public boolean deletaUsuario(int id) throws Exception{
+        var sql = "DELETE FROM usuario WHERE id_usuario = ?";
+        
+        try(
+                var conexao = new ConnectionFactory().obterConexao();
+                var ps = conexao.prepareStatement(sql);
+        ){
+            ps.setInt(1, id);
+            
+            int atualizou = ps.executeUpdate();
+            return atualizou > 0;
+        }
+        
+        
+        
+        
+    }
 }
