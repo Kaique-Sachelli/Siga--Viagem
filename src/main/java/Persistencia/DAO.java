@@ -1,9 +1,11 @@
 package Persistencia;
 
+import Modelo.Estatistica;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import Modelo.Usuario;
+import java.time.LocalDateTime;
 
 public class DAO {
     public boolean existe (Usuario u) throws Exception {
@@ -129,7 +131,6 @@ public class DAO {
             return atualizou > 0; 
         }
     }
-    
     public boolean deletaUsuario(int id) throws Exception{
         var sql = "DELETE FROM usuario WHERE id_usuario = ?";
         
@@ -146,5 +147,46 @@ public class DAO {
         
         
         
+    }
+    
+    public List <Estatistica> obterEstatistica(int id) throws Exception{
+        var estatisticas = new ArrayList<Estatistica>();
+        
+        var sql = "SELECT\n" +
+                "s.numero_simulacao,\n" +
+                "s.data_simulacao,\n" +
+                "e.erros,\n" +
+                "e.acertos,\n" +
+                "e.erros_fatais,\n" +
+                "e.abandonada,\n" +
+                "e.pontuacao\n" +
+                "FROM estatistica e\n" +
+                "JOIN usuario u ON (e.id_usuario = u.id_usuario)\n" +
+                "JOIN simulacao s ON (e.numero_simulacao = s.numero_simulacao)\n" +
+                "WHERE u.id_usuario = ? ;";
+        
+        try(
+            var conexao = new ConnectionFactory().obterConexao();
+            var ps = conexao.prepareStatement(sql);       
+        ){
+            ps.setInt(1, id);
+            try(
+                    ResultSet rs = ps.executeQuery();     
+            ){
+                while(rs.next()){
+
+                    var numeroSimulacao = rs.getInt("numero_simulacao");
+                    var dataSimulacao = rs.getObject("data_simulacao", LocalDateTime.class);
+                    var erros = rs.getInt("erros");
+                    var acertos = rs.getInt("acertos");
+                    var pontuacao = rs.getInt("pontuacao");
+                    var errosFatais = rs.getInt("erros_fatais");
+                    var abandonada = rs.getBoolean("abandonada");
+                    var estatistica = new Estatistica(numeroSimulacao, dataSimulacao, erros, acertos, pontuacao,errosFatais, abandonada);
+                    estatisticas.add(estatistica);
+                }
+            return estatisticas;
+            }
+        }
     }
 }
