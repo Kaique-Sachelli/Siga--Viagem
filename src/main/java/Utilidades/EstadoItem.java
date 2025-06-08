@@ -4,7 +4,8 @@ public class EstadoItem {
     private static EstadoItem instance = new EstadoItem();
     private boolean fitaCinturao = false;
     private boolean chaveServico = false;
-
+    private boolean chaveFitaCinturao = false;
+    
     public static EstadoItem getInstance(){
         return instance;
     }
@@ -23,5 +24,13 @@ public class EstadoItem {
 
     public void setChaveServico(boolean chaveServico) {
         this.chaveServico = chaveServico;
+    }
+
+    public boolean isChaveFitaCinturao() {
+        return chaveFitaCinturao;
+    }
+
+    public void setChaveFitaCinturao(boolean chaveFitaCinturao) {
+        this.chaveFitaCinturao = chaveFitaCinturao;
     }
 }

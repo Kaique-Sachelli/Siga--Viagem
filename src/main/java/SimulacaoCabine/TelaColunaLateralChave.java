@@ -1,5 +1,6 @@
 package SimulacaoCabine;
 
+import Simulacao.Pontuacao;
 import javax.swing.JFrame;
 import Utilidades.EstadoCBTC;
 
@@ -128,6 +129,12 @@ public class TelaColunaLateralChave extends javax.swing.JFrame {
         TelaColunaLateral janelaColunaLateral = new TelaColunaLateral(this);
         janelaColunaLateral.setVisible(true);
         this.dispose();
+        if(Utilidades.EstadoItem.getInstance().isChaveFitaCinturao() == false){
+            Utilidades.EstadoItem.getInstance().setChaveFitaCinturao(true);
+            if(Utilidades.EstadoItem.getInstance().isFitaCinturao()){
+                Pontuacao.registrarAtividade("CACS");
+            }
+        }
     }//GEN-LAST:event_chaveButtonActionPerformed
 
     /**
