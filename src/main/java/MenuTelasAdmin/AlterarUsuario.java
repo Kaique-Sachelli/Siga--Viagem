@@ -95,6 +95,7 @@ public class AlterarUsuario extends javax.swing.JFrame {
 
         tituloMenuLabel.setFont(new java.awt.Font("Impact", 0, 60)); // NOI18N
         tituloMenuLabel.setForeground(new java.awt.Color(0, 20, 137));
+        tituloMenuLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tituloMenuLabel.setText("ALTERAR USUÁRIO");
         tituloMenuLabel.setMaximumSize(new java.awt.Dimension(320, 75));
         tituloMenuLabel.setMinimumSize(new java.awt.Dimension(320, 75));
@@ -127,7 +128,7 @@ public class AlterarUsuario extends javax.swing.JFrame {
                 usuariosComboBoxActionPerformed(evt);
             }
         });
-        getContentPane().add(usuariosComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, 480, 60));
+        getContentPane().add(usuariosComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 480, 60));
 
         loginTextField.setBackground(new java.awt.Color(255, 255, 255));
         loginTextField.setText("LOGIN");
@@ -136,15 +137,16 @@ public class AlterarUsuario extends javax.swing.JFrame {
                 loginTextFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(loginTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 280, 50));
+        getContentPane().add(loginTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 280, 50));
 
+        senhaTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         senhaTextField.setText("SENHA");
         senhaTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 senhaTextFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(senhaTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 280, 50));
+        getContentPane().add(senhaTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 210, 280, 50));
 
         alterarSenhaBotton.setText("Alterar Senha");
         alterarSenhaBotton.addActionListener(new java.awt.event.ActionListener() {
@@ -152,7 +154,7 @@ public class AlterarUsuario extends javax.swing.JFrame {
                 alterarSenhaBottonActionPerformed(evt);
             }
         });
-        getContentPane().add(alterarSenhaBotton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 200, 50));
+        getContentPane().add(alterarSenhaBotton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 360, 200, 50));
 
         alterarCategoriaButton.setText("Alterar Categoria");
         alterarCategoriaButton.addActionListener(new java.awt.event.ActionListener() {
@@ -160,15 +162,16 @@ public class AlterarUsuario extends javax.swing.JFrame {
                 alterarCategoriaButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(alterarCategoriaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 430, 200, 50));
+        getContentPane().add(alterarCategoriaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 420, 200, 50));
 
         apagarUsuarioButton.setText("Apagar usuario");
+        apagarUsuarioButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         apagarUsuarioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 apagarUsuarioButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(apagarUsuarioButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 200, 50));
+        getContentPane().add(apagarUsuarioButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, 200, 50));
 
         confirmarButton.setBackground(new java.awt.Color(0, 20, 137));
         confirmarButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
@@ -181,7 +184,7 @@ public class AlterarUsuario extends javax.swing.JFrame {
         });
         getContentPane().add(confirmarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 570, 290, 60));
 
-        categoriaComboBox.setEditable(false);
+        categoriaComboBox.setEditable(true);
         categoriaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"CATEGORIA"}));
         categoriaComboBox.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -193,7 +196,7 @@ public class AlterarUsuario extends javax.swing.JFrame {
                 categoriaComboBoxActionPerformed(evt);
             }
         });
-        getContentPane().add(categoriaComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 210, 280, 50));
+        getContentPane().add(categoriaComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 210, 280, 50));
 
         pack();
         setLocationRelativeTo(null);
@@ -263,7 +266,7 @@ public class AlterarUsuario extends javax.swing.JFrame {
                 categoriaComboBox.setSelectedItem("Instrutor");
             }
             else{
-                categoriaComboBox.setSelectedItem("Operario");
+                categoriaComboBox.setSelectedItem("Operador");
             }
             
             categoriaSelecionada = (String) categoriaComboBox.getSelectedItem(); 
@@ -386,8 +389,8 @@ public class AlterarUsuario extends javax.swing.JFrame {
     private javax.swing.JButton apagarUsuarioButton;
     private javax.swing.JComboBox<String> categoriaComboBox;
     private javax.swing.JButton confirmarButton;
-    private javax.swing.JLabel logoMauaLabel;
     private javax.swing.JTextField loginTextField;
+    private javax.swing.JLabel logoMauaLabel;
     private javax.swing.JTextField senhaTextField;
     private javax.swing.JLabel tituloMenuLabel;
     private javax.swing.JComboBox<Usuario> usuariosComboBox;
