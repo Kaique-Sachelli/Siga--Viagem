@@ -224,7 +224,31 @@ public class AlterarUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_alterarCategoriaButtonActionPerformed
 
     private void apagarUsuarioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apagarUsuarioButtonActionPerformed
-        // TODO add your handling code here:
+        var selecionado = (Usuario) usuariosComboBox.getSelectedItem();
+        var escolha = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja excluir usuario \"" + selecionado.getNome() +
+                "\"? Todos os dados e estatisticas relacionados a este usuario serão perdidos.",
+                "confirmar exclusão", JOptionPane.YES_NO_OPTION);
+        
+        if (escolha == JOptionPane.YES_OPTION ){
+            
+            try{
+                var dao = new DAO();
+                var deletou  = dao.deletaUsuario(selecionado.getId());
+                
+                if(deletou){
+                    
+                JOptionPane.showMessageDialog(null, "Usuario excluido da base de dados.");
+                this.dispose();
+                var tl = new AlterarUsuario();
+                tl.setVisible(true);
+                
+                }
+            }
+            catch(Exception e){
+                e.printStackTrace();
+                JOptionPane.showMessageDialog(null, "Usuario não pode ser deletado no momento.");
+            }
+        }
     }//GEN-LAST:event_apagarUsuarioButtonActionPerformed
 
     private void usuariosComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuariosComboBoxActionPerformed
