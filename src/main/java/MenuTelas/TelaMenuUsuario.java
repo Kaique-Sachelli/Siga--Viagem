@@ -149,7 +149,7 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_configuracoesButtonActionPerformed
 
     private void estatisticasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estatisticasButtonActionPerformed
-        TelaEstatistica janelaEstatistica = new TelaEstatistica(this);
+        TelaEstatistica janelaEstatistica = new TelaEstatistica();
         janelaEstatistica.setVisible(true);
         // 
     }//GEN-LAST:event_estatisticasButtonActionPerformed
