@@ -11,7 +11,7 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
     private JFrame frame;
     private Timer timer;
     private long pressStartTime;
-    private final int DELAY_MS = 3000; // 3 segundos em milissegundos
+    private final int DELAY_MS = 1500; // 3 segundos em milissegundos
 
     // 1. DECLARE A INSTÂNCIA ÚNICA DA TELAEMITINDOPA AQUI
     private TelaEmitindoPA telaEmitindoPAUnica;

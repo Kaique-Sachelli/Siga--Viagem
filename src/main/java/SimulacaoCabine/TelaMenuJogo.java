@@ -26,8 +26,9 @@ public class TelaMenuJogo extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         sairButton = new javax.swing.JButton();
-        continuarButton = new javax.swing.JButton();
+        guiaDeComoJogarButton = new javax.swing.JButton();
         somButton = new javax.swing.JButton();
+        continuarButton1 = new javax.swing.JButton();
         metroConceitoLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -49,18 +50,18 @@ public class TelaMenuJogo extends javax.swing.JFrame {
                 sairButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(sairButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 380, 340, 100));
+        getContentPane().add(sairButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 470, 340, 100));
 
-        continuarButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        continuarButton.setForeground(new java.awt.Color(0, 20, 137));
-        continuarButton.setText("CONTINUAR");
-        continuarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        continuarButton.addActionListener(new java.awt.event.ActionListener() {
+        guiaDeComoJogarButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        guiaDeComoJogarButton.setForeground(new java.awt.Color(0, 20, 137));
+        guiaDeComoJogarButton.setText("GUIA DE COMO JOGAR");
+        guiaDeComoJogarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        guiaDeComoJogarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                continuarButtonActionPerformed(evt);
+                guiaDeComoJogarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(continuarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, 340, 100));
+        getContentPane().add(guiaDeComoJogarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, 340, 100));
 
         somButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         somButton.setForeground(new java.awt.Color(0, 20, 137));
@@ -71,7 +72,18 @@ public class TelaMenuJogo extends javax.swing.JFrame {
                 somButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(somButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, 340, 100));
+        getContentPane().add(somButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, 340, 100));
+
+        continuarButton1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        continuarButton1.setForeground(new java.awt.Color(0, 20, 137));
+        continuarButton1.setText("CONTINUAR");
+        continuarButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        continuarButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                continuarButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(continuarButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 340, 100));
 
         metroConceitoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Metro Conceito.png"))); // NOI18N
         getContentPane().add(metroConceitoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 640));
@@ -90,9 +102,14 @@ public class TelaMenuJogo extends javax.swing.JFrame {
        janelaConfiguracoes.setVisible(true);
     }//GEN-LAST:event_somButtonActionPerformed
 
-    private void continuarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continuarButtonActionPerformed
+    private void guiaDeComoJogarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guiaDeComoJogarButtonActionPerformed
+        TelaGuiaDeComoJogar janelaGuiaDeComoJogar = new TelaGuiaDeComoJogar(this);
+        janelaGuiaDeComoJogar.setVisible(true);
+    }//GEN-LAST:event_guiaDeComoJogarButtonActionPerformed
+
+    private void continuarButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continuarButton1ActionPerformed
         this.dispose();
-    }//GEN-LAST:event_continuarButtonActionPerformed
+    }//GEN-LAST:event_continuarButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,7 +147,8 @@ public class TelaMenuJogo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton continuarButton;
+    private javax.swing.JButton continuarButton1;
+    private javax.swing.JButton guiaDeComoJogarButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel metroConceitoLabel;
     private javax.swing.JButton sairButton;
