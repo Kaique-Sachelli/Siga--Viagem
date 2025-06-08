@@ -1,6 +1,10 @@
 package MenuTelas;
 
 import SimulacaoCabine.TelaCabine;
+import Utilidades.EstadoCBTC;
+import Utilidades.EstadoPainelControle;
+import Utilidades.EstadoPorta;
+import Utilidades.EstadoReversora;
 import javax.swing.JFrame;
 
 public class TelaMenuUsuario extends javax.swing.JFrame {
@@ -49,6 +53,7 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
         tituloMenuLabel.setPreferredSize(new java.awt.Dimension(320, 75));
         getContentPane().add(tituloMenuLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, -1, 80));
 
+        selecionarFaseButton.setBackground(new java.awt.Color(255, 255, 255));
         selecionarFaseButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         selecionarFaseButton.setForeground(new java.awt.Color(0, 20, 137));
         selecionarFaseButton.setText("SELECIONAR FASE");
@@ -64,6 +69,7 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
         });
         getContentPane().add(selecionarFaseButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 200, 220, 60));
 
+        configuracoesButton.setBackground(new java.awt.Color(255, 255, 255));
         configuracoesButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         configuracoesButton.setForeground(new java.awt.Color(0, 20, 137));
         configuracoesButton.setText("CONFIGURAÇÕES");
@@ -79,6 +85,7 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
         });
         getContentPane().add(configuracoesButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 270, 220, 60));
 
+        estatisticasButton.setBackground(new java.awt.Color(255, 255, 255));
         estatisticasButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         estatisticasButton.setForeground(new java.awt.Color(0, 20, 137));
         estatisticasButton.setText("ESTATÍSTICAS");
@@ -94,6 +101,7 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
         });
         getContentPane().add(estatisticasButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 340, 220, 60));
 
+        sairButton.setBackground(new java.awt.Color(255, 255, 255));
         sairButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         sairButton.setForeground(new java.awt.Color(0, 20, 137));
         sairButton.setText("SAIR");
@@ -109,6 +117,7 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
         });
         getContentPane().add(sairButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 410, 220, 60));
 
+        jogarButton.setBackground(new java.awt.Color(255, 255, 255));
         jogarButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         jogarButton.setForeground(new java.awt.Color(0, 20, 137));
         jogarButton.setText("JOGAR");
@@ -132,8 +141,18 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jogarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jogarButtonActionPerformed
+        Utilidades.DetectarErroFatal.getInstance().setErroFatal(false);
+        Utilidades.EstadoCBTC.setPosicaoAtual(EstadoCBTC.Posicao.AM);
+        Utilidades.EstadoItem.getInstance().setChaveFitaCinturao(false);
+        Utilidades.EstadoItem.getInstance().setFitaCinturao(false);
+        Utilidades.EstadoItem.getInstance().setChaveServico(false);
+        Utilidades.EstadoPainelControle.setPosicaoAtual(EstadoPainelControle.Posicao.NORMAL);
+        Utilidades.EstadoPorta.setPosicaoAtual(EstadoPorta.Posicao.ABERTA);
+        Utilidades.EstadoReversora.setPosicaoAtual(EstadoReversora.Posicao.FRENTE);
+        Simulacao.Pontuacao.zerarAtividadesRealizadas();
         TelaCabine janelaCabine = new TelaCabine(this);
         janelaCabine.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jogarButtonActionPerformed
 
     private void selecionarFaseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selecionarFaseButtonActionPerformed

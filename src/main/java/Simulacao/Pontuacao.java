@@ -30,6 +30,10 @@ public class Pontuacao {
     
     private static ArrayList <String> atividadesRealizadas = new ArrayList<>();
     
+    public static void zerarAtividadesRealizadas(){
+        atividadesRealizadas.clear();
+    }
+
     public static void registrarAtividade(String atividadeRealizada){
         atividadesRealizadas.add(atividadeRealizada);
     }

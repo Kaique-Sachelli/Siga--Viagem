@@ -7,8 +7,8 @@ public class EstadoReversora {
     
 
         public enum Posicao {
-            NEUTRO,
-            FRENTE
+            FRENTE,
+            NEUTRO
         }
 
         private static Posicao posicaoAtual = Posicao.FRENTE;

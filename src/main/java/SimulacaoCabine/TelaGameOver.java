@@ -1,7 +1,12 @@
 package SimulacaoCabine;
 
 import MenuTelas.TelaMenuUsuario;
+import Utilidades.EstadoCBTC;
+import Utilidades.EstadoPainelControle;
+import Utilidades.EstadoPorta;
+import Utilidades.EstadoReversora;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 public class TelaGameOver extends javax.swing.JFrame {
     
@@ -24,8 +29,10 @@ public class TelaGameOver extends javax.swing.JFrame {
     private void initComponents() {
 
         gameOverLabel = new javax.swing.JLabel();
-        voltarButton = new javax.swing.JButton();
+        reiniciarButton = new javax.swing.JButton();
+        pontuacaoLabel = new javax.swing.JLabel();
         erroFatalLabel = new javax.swing.JLabel();
+        voltarButton = new javax.swing.JButton();
         imagemGameOverLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -37,6 +44,29 @@ public class TelaGameOver extends javax.swing.JFrame {
         gameOverLabel.setForeground(new java.awt.Color(255, 255, 255));
         gameOverLabel.setText("GAME OVER");
         getContentPane().add(gameOverLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 270, 70));
+
+        reiniciarButton.setBackground(new java.awt.Color(255, 255, 255));
+        reiniciarButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        reiniciarButton.setForeground(new java.awt.Color(0, 20, 137));
+        reiniciarButton.setText("REINICIAR SIMULAÇÃO");
+        reiniciarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        reiniciarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reiniciarButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(reiniciarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, 270, 80));
+
+        pontuacaoLabel.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
+        pontuacaoLabel.setForeground(new java.awt.Color(255, 255, 255));
+        pontuacaoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pontuacaoLabel.setText("Sua pontuação foi de: " + Integer.toString(Simulacao.Pontuacao.calcularPontuacao()));
+        getContentPane().add(pontuacaoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 960, 70));
+
+        erroFatalLabel.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
+        erroFatalLabel.setForeground(new java.awt.Color(255, 255, 255));
+        erroFatalLabel.setText("Você cometeu um erro fatal!");
+        getContentPane().add(erroFatalLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 420, 70));
 
         voltarButton.setBackground(new java.awt.Color(255, 255, 255));
         voltarButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
@@ -50,11 +80,6 @@ public class TelaGameOver extends javax.swing.JFrame {
         });
         getContentPane().add(voltarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 440, 270, 80));
 
-        erroFatalLabel.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
-        erroFatalLabel.setForeground(new java.awt.Color(255, 255, 255));
-        erroFatalLabel.setText("Você cometeu um erro fatal!");
-        getContentPane().add(erroFatalLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 420, 70));
-
         imagemGameOverLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/TelaGameOver.png"))); // NOI18N
         getContentPane().add(imagemGameOverLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
@@ -62,8 +87,23 @@ public class TelaGameOver extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void reiniciarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reiniciarButtonActionPerformed
+        Utilidades.DetectarErroFatal.getInstance().setErroFatal(false);
+        Utilidades.EstadoCBTC.setPosicaoAtual(EstadoCBTC.Posicao.AM);
+        Utilidades.EstadoItem.getInstance().setChaveFitaCinturao(false);
+        Utilidades.EstadoItem.getInstance().setFitaCinturao(false);
+        Utilidades.EstadoItem.getInstance().setChaveServico(false);
+        Utilidades.EstadoPainelControle.setPosicaoAtual(EstadoPainelControle.Posicao.NORMAL);
+        Utilidades.EstadoPorta.setPosicaoAtual(EstadoPorta.Posicao.ABERTA);
+        Utilidades.EstadoReversora.setPosicaoAtual(EstadoReversora.Posicao.FRENTE);
+        Simulacao.Pontuacao.zerarAtividadesRealizadas();
+        TelaCabine janelaCabine = new TelaCabine(this);
+        janelaCabine.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_reiniciarButtonActionPerformed
+
     private void voltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarButtonActionPerformed
-        TelaMenuUsuario janelaMenuUsuario = new TelaMenuUsuario(this);
+        TelaMenuUsuario janelaMenuUsuario = new TelaMenuUsuario();
         janelaMenuUsuario.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_voltarButtonActionPerformed
@@ -107,6 +147,8 @@ public class TelaGameOver extends javax.swing.JFrame {
     private javax.swing.JLabel erroFatalLabel;
     private javax.swing.JLabel gameOverLabel;
     private javax.swing.JLabel imagemGameOverLabel;
+    private javax.swing.JLabel pontuacaoLabel;
+    private javax.swing.JButton reiniciarButton;
     private javax.swing.JButton voltarButton;
     // End of variables declaration//GEN-END:variables
 }

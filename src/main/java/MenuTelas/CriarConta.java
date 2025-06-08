@@ -42,6 +42,9 @@ public class CriarConta extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Criar Conta!");
+        setMaximumSize(new java.awt.Dimension(960, 640));
+        setMinimumSize(new java.awt.Dimension(960, 640));
+        setPreferredSize(new java.awt.Dimension(960, 640));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         criarContaLabel.setFont(new java.awt.Font("Impact", 0, 60)); // NOI18N
@@ -49,7 +52,7 @@ public class CriarConta extends javax.swing.JFrame {
         criarContaLabel.setText("CRIAR CONTA");
         getContentPane().add(criarContaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(329, 0, -1, 80));
 
-        voltarMenuButton.setBackground(new java.awt.Color(246, 246, 246));
+        voltarMenuButton.setBackground(new java.awt.Color(255, 255, 255));
         voltarMenuButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         voltarMenuButton.setForeground(new java.awt.Color(0, 20, 137));
         voltarMenuButton.setText("VOLTAR");
@@ -64,7 +67,7 @@ public class CriarConta extends javax.swing.JFrame {
                 voltarMenuButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(voltarMenuButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 540, 220, 60));
+        getContentPane().add(voltarMenuButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 520, 220, 60));
 
         nomeLabel.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         nomeLabel.setForeground(new java.awt.Color(0, 20, 137));
