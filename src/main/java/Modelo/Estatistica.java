@@ -2,6 +2,7 @@
 package Modelo;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Estatistica {
     private int numeroSimulacao;
@@ -24,7 +25,15 @@ public class Estatistica {
         
         
     }
-
+    
+    public String getDataSimulacaoFormatada(){
+        if (this.dataSimulacao == null){
+            return "";
+        }
+        DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        return this.dataSimulacao.format(formatador);
+    }
+    
     public int getNumeroSimulacao() {
         return numeroSimulacao;
     }
@@ -54,7 +63,7 @@ public class Estatistica {
     }
     public String toString(){
         return String.format(
-            "Simulação: %s", numeroSimulacao
+            "%s", numeroSimulacao
         );
     }
     
