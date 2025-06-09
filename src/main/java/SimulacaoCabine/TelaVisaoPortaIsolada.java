@@ -29,7 +29,7 @@ public class TelaVisaoPortaIsolada extends javax.swing.JFrame {
         visaoPortaIsoladaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tela Visão Geral Porta Isolada");
+        setTitle("Tela Visão Porta Isolada");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         sinalizacaoExternaApagadaButton.setContentAreaFilled(false);
@@ -63,8 +63,8 @@ public class TelaVisaoPortaIsolada extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void sinalizacaoExternaApagadaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sinalizacaoExternaApagadaButtonActionPerformed
-        TelaSinalizacaoExternaAcesa janelaExternaAcesa = new TelaSinalizacaoExternaAcesa(this);
-        janelaExternaAcesa.setVisible(true);
+        TelaSinalizacaoExternaApagada janelaExternaApagada = new TelaSinalizacaoExternaApagada(this);
+        janelaExternaApagada.setVisible(true);
         Pontuacao.registrarAtividade("LPE");
     }//GEN-LAST:event_sinalizacaoExternaApagadaButtonActionPerformed
 
