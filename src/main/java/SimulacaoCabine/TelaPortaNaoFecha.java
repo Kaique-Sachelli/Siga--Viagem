@@ -8,6 +8,7 @@ public class TelaPortaNaoFecha extends javax.swing.JFrame {
     
     public TelaPortaNaoFecha() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaPortaNaoFecha(JFrame frame) {

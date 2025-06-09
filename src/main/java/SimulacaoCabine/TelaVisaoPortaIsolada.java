@@ -10,6 +10,7 @@ public class TelaVisaoPortaIsolada extends javax.swing.JFrame {
     public TelaVisaoPortaIsolada() {
         initComponents();
         setResizable(false);
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaVisaoPortaIsolada(JFrame frame) {

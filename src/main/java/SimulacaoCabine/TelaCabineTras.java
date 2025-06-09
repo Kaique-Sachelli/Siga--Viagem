@@ -9,6 +9,7 @@ public class TelaCabineTras extends javax.swing.JFrame {
     
     public TelaCabineTras() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaCabineTras(JFrame frame) {

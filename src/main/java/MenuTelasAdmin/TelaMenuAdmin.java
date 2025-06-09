@@ -173,6 +173,9 @@ public class TelaMenuAdmin extends javax.swing.JFrame {
     private void alterarUsuarioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarUsuarioButtonActionPerformed
         var janelaAlterar = new AlterarUsuario();
         janelaAlterar.setVisible(true);
+        
+        // AlterarUsuario janelaAlterarUsuario = new AlterarUsuario(this);
+        // janelaAlterarUsuario.setVisible(true);
     }//GEN-LAST:event_alterarUsuarioButtonActionPerformed
 
     private void configuracoesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_configuracoesButtonActionPerformed

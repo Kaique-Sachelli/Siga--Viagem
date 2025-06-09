@@ -9,6 +9,7 @@ public class TelaCinturaoInstalado extends javax.swing.JFrame {
     
     public TelaCinturaoInstalado() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaCinturaoInstalado(JFrame frame) {

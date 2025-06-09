@@ -9,6 +9,7 @@ public class TelaPortaSemiAberta extends javax.swing.JFrame {
     
     public TelaPortaSemiAberta() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaPortaSemiAberta(JFrame frame) {

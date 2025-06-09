@@ -1,5 +1,6 @@
 package SimulacaoCabine;
 
+import Utilidades.EstadoCBTC;
 import Utilidades.EstadoItem;
 import javax.swing.JFrame;
 import Utilidades.EstadoReversora;
@@ -11,6 +12,7 @@ public class TelaCabine extends javax.swing.JFrame {
     public TelaCabine() {
         initComponents();
         setResizable(false);
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaCabine(JFrame frame) {
@@ -19,7 +21,7 @@ public class TelaCabine extends javax.swing.JFrame {
         this.frame = frame;
         setResizable(false);
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -180,8 +182,12 @@ public class TelaCabine extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void aduButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aduButtonActionPerformed
-        TelaADU_AM janelaADU_AM  = new TelaADU_AM(this);
-        janelaADU_AM.setVisible(true);
+        if (EstadoCBTC.getPosicaoAtual() == EstadoCBTC.Posicao.AM) {
+            new TelaADU_AM(this).setVisible(true);
+        } else {
+            new TelaADU_RM(this).setVisible(true);
+        }
+        this.setVisible(false);
     }//GEN-LAST:event_aduButtonActionPerformed
 
     private void dduButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dduButtonActionPerformed

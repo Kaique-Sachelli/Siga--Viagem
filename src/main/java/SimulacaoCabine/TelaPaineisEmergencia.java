@@ -8,6 +8,7 @@ public class TelaPaineisEmergencia extends javax.swing.JFrame {
     
     public TelaPaineisEmergencia() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
     
     public TelaPaineisEmergencia(JFrame frame) {

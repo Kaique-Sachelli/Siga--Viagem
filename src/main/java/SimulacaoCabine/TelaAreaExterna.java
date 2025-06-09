@@ -9,6 +9,7 @@ public class TelaAreaExterna extends javax.swing.JFrame {
     
     public TelaAreaExterna() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaAreaExterna(JFrame frame) {
@@ -53,6 +54,7 @@ public class TelaAreaExterna extends javax.swing.JFrame {
         });
         getContentPane().add(setaCimaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, -1, -1));
 
+        painelDeAcessoButton.setBorder(null);
         painelDeAcessoButton.setContentAreaFilled(false);
         painelDeAcessoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         painelDeAcessoButton.setMaximumSize(new java.awt.Dimension(72, 130));

@@ -8,6 +8,7 @@ public class TelaPortaEsquerda extends javax.swing.JFrame {
     
     public TelaPortaEsquerda() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
     
     public TelaPortaEsquerda(JFrame frame) {

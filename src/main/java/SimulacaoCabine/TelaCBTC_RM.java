@@ -10,6 +10,7 @@ public class TelaCBTC_RM extends javax.swing.JFrame {
     
     public TelaCBTC_RM() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaCBTC_RM(JFrame frame) {

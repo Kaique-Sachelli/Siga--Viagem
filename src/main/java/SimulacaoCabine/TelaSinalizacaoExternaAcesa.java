@@ -8,6 +8,7 @@ public class TelaSinalizacaoExternaAcesa extends javax.swing.JFrame {
     
     public TelaSinalizacaoExternaAcesa() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaSinalizacaoExternaAcesa(JFrame frame) {

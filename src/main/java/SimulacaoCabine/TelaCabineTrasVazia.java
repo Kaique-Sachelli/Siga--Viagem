@@ -9,6 +9,7 @@ public class TelaCabineTrasVazia extends javax.swing.JFrame {
     
     public TelaCabineTrasVazia() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaCabineTrasVazia(JFrame frame) {

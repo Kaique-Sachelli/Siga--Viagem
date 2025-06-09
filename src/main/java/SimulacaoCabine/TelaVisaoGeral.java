@@ -10,6 +10,7 @@ public class TelaVisaoGeral extends javax.swing.JFrame {
     
     public TelaVisaoGeral() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaVisaoGeral(JFrame frame) {

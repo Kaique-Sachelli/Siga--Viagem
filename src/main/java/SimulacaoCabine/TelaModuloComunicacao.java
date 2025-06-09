@@ -5,13 +5,14 @@ import javax.swing.Timer;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 public class TelaModuloComunicacao extends javax.swing.JFrame {
     
     private JFrame frame;
     private Timer timer;
     private long pressStartTime;
-    private final int DELAY_MS = 3000; // 3 segundos em milissegundos
+    private final int DELAY_MS = 1500; // 3 segundos em milissegundos
 
     // 1. DECLARE A INSTÂNCIA ÚNICA DA TELAEMITINDOPA AQUI
     private TelaEmitindoPA telaEmitindoPAUnica;
@@ -20,6 +21,7 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
     public TelaModuloComunicacao() {
         initComponents();
         setResizable(false);
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
 
         // 3. INICIALIZE A TELAEMITINDOPA UMA ÚNICA VEZ AQUI
         telaEmitindoPAUnica = new TelaEmitindoPA(this);
@@ -111,8 +113,9 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     private void listaPASButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaPASButtonActionPerformed
-     TelaListaPAS janelaListaPAS = new TelaListaPAS(this);
-     janelaListaPAS.setVisible(true);
+     //TelaListaPAS janelaListaPAS = new TelaListaPAS(this);
+     //janelaListaPAS.setVisible(true);
+     
     }//GEN-LAST:event_listaPASButtonActionPerformed
 
     private void listaPASButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listaPASButtonMousePressed
@@ -122,17 +125,22 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
 
     private void listaPASButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listaPASButtonMouseReleased
         timer.stop(); // Para o temporizador.
+        
         long pressDuration = System.currentTimeMillis() - pressStartTime;
         // Subtrai o tempo inicial(botão precionado), com o tempo final.
         
         if (pressDuration >= DELAY_MS) { // Verifica se o botão foi precionado pelo tempo necessario.
             this.setVisible(false); // Esconde a tela atual
-
             // Cria e exibe TelaEmitindoPA, passando a tela atual como referência
             TelaEmitindoPA janelaEmitindoPA = new TelaEmitindoPA(this);
             janelaEmitindoPA.setVisible(true);
             Pontuacao.registrarAtividade("PA");
+        } else {
+            TelaListaPAS janelaListaPAS = new TelaListaPAS(this);
+            janelaListaPAS.setVisible(true);
+            this.dispose();
         }
+        
     }//GEN-LAST:event_listaPASButtonMouseReleased
 
     private void informandoCCOButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_informandoCCOButtonActionPerformed
@@ -156,6 +164,8 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
             TelaInformandoCCO janelaInformandoCCO = new TelaInformandoCCO(this);
             janelaInformandoCCO.setVisible(true);
             Pontuacao.registrarAtividade("CCO");
+        } else {
+            JOptionPane.showMessageDialog(null, "Para informar CCO precione o botão por 2 segundos.", "Informar CCO", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_informandoCCOButtonMouseReleased
 

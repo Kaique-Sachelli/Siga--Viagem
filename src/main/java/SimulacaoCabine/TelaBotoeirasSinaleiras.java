@@ -9,6 +9,7 @@ public class TelaBotoeirasSinaleiras extends javax.swing.JFrame {
     
     public TelaBotoeirasSinaleiras() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaBotoeirasSinaleiras(JFrame frame) {

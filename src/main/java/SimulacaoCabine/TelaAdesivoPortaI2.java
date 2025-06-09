@@ -8,6 +8,7 @@ public class TelaAdesivoPortaI2 extends javax.swing.JFrame {
     
     public TelaAdesivoPortaI2() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaAdesivoPortaI2(JFrame frame) {

@@ -8,6 +8,7 @@ public class TelaADU_AM extends javax.swing.JFrame {
     
     public TelaADU_AM() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaADU_AM(JFrame frame) {

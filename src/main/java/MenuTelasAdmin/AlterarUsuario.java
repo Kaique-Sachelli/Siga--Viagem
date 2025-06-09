@@ -8,7 +8,6 @@ import javax.swing.JOptionPane;
 import java.util.List;
 import java.util.ArrayList; 
 
-
 public class AlterarUsuario extends javax.swing.JFrame {
     private String categoriaSelecionada;
     private boolean categoriaAlterada; 
@@ -28,8 +27,6 @@ public class AlterarUsuario extends javax.swing.JFrame {
         }
     
     }
-    
-
     
     private JFrame frame;
     

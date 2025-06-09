@@ -9,6 +9,7 @@ public class TelaPainelControleIsol extends javax.swing.JFrame {
     
     public TelaPainelControleIsol() {
         initComponents();
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaPainelControleIsol(JFrame frame) {

@@ -11,6 +11,7 @@ public class TelaPortaFechada extends javax.swing.JFrame {
     public TelaPortaFechada() {
         initComponents();
         setResizable(false);
+        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
     public TelaPortaFechada(JFrame frame) {
