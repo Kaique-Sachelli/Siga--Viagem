@@ -1,14 +1,63 @@
 package MenuTelasAdmin;
 
+import Modelo.Estatistica;
+import Modelo.Usuario;
+import Persistencia.DAO;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 public class TelaEstatisticaAdmin extends javax.swing.JFrame {
+    private void obterUsuarios(){
+    try{
+            var dao = new DAO();
+            var usuarios = dao.obterUsuarios();
+            usuarioComboBox.setModel(
+                new DefaultComboBoxModel<Usuario>(usuarios.toArray(new Usuario[]{}))
+            );
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null,"Lista de usuarios não disponivel");
+            
+        }
+}
+    private void obterEstatistica(Usuario u){
+        try{
+            var dao = new DAO();
+            var estatisticas = dao.obterEstatistica(u.getId());
+            estatisticaComboBox.setModel(
+                new DefaultComboBoxModel<Estatistica>(estatisticas.toArray(new Estatistica[]{}))
+            );
+            
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Lista de simulações não disponível");
+        }
+    }
+    
+    private int obterRanking(Usuario u, Estatistica est){
+        int rank;
+        try{
+            var dao = new DAO();
+            rank = dao.obterRanking(est.getNumeroSimulacao(), u.getId());
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Ranking de usuários não disponível.");
+            rank = 0;
+        }
+        
+        return rank;
+    }
 
     private JFrame frame;
     
     public TelaEstatisticaAdmin() {
         initComponents();
         setResizable(false);
+        obterUsuarios();
     }
 
     public TelaEstatisticaAdmin(JFrame frame){
@@ -26,12 +75,16 @@ public class TelaEstatisticaAdmin extends javax.swing.JFrame {
         voltarMenuButton = new javax.swing.JButton();
         estatisticasLabel = new javax.swing.JLabel();
         linhaAzulLabel = new javax.swing.JLabel();
-        rankingLabel = new javax.swing.JLabel();
+        simulacaoLabel = new javax.swing.JLabel();
         acertosLabel = new javax.swing.JLabel();
         errosLabel = new javax.swing.JLabel();
         errosFataisLabel = new javax.swing.JLabel();
         tempoJogoLabel = new javax.swing.JLabel();
         jogadorLabel = new javax.swing.JLabel();
+        rankingLabel = new javax.swing.JLabel();
+        estatisticaComboBox = new javax.swing.JComboBox<>();
+        usuarioComboBox = new javax.swing.JComboBox<>();
+        rankingLabel2 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -73,30 +126,55 @@ public class TelaEstatisticaAdmin extends javax.swing.JFrame {
         linhaAzulLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/linhaAzul.png"))); // NOI18N
         getContentPane().add(linhaAzulLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 70, 640));
 
-        rankingLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        rankingLabel.setText("Ranking:");
-        getContentPane().add(rankingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, -1, -1));
-        rankingLabel.getAccessibleContext().setAccessibleName("");
+        simulacaoLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        simulacaoLabel.setText("Simulação:");
+        getContentPane().add(simulacaoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 120, 40));
+        simulacaoLabel.getAccessibleContext().setAccessibleName("");
 
         acertosLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         acertosLabel.setText("Acertos:");
-        getContentPane().add(acertosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, -1, -1));
+        getContentPane().add(acertosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, -1, -1));
 
         errosLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         errosLabel.setText("Erros:");
-        getContentPane().add(errosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, -1, -1));
+        getContentPane().add(errosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 430, -1, -1));
 
         errosFataisLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         errosFataisLabel.setText("Erros Graves:");
-        getContentPane().add(errosFataisLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, -1, -1));
+        getContentPane().add(errosFataisLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 480, -1, -1));
 
         tempoJogoLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         tempoJogoLabel.setText("Tempo de Jogo:");
-        getContentPane().add(tempoJogoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, -1, -1));
+        getContentPane().add(tempoJogoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 530, -1, -1));
 
         jogadorLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jogadorLabel.setText("Jogador:");
-        getContentPane().add(jogadorLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, -1, -1));
+        jogadorLabel.setToolTipText("");
+        getContentPane().add(jogadorLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, 90, 50));
+
+        rankingLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        rankingLabel.setText("ranking");
+        getContentPane().add(rankingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, -1, -1));
+
+        estatisticaComboBox.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        estatisticaComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                estatisticaComboBoxActionPerformed(evt);
+            }
+        });
+        getContentPane().add(estatisticaComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, 380, 40));
+
+        usuarioComboBox.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        usuarioComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usuarioComboBoxActionPerformed(evt);
+            }
+        });
+        getContentPane().add(usuarioComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 380, 40));
+
+        rankingLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        rankingLabel2.setText("Ranking:");
+        getContentPane().add(rankingLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -106,6 +184,18 @@ public class TelaEstatisticaAdmin extends javax.swing.JFrame {
         frame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_voltarMenuButtonActionPerformed
+
+    private void estatisticaComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estatisticaComboBoxActionPerformed
+       var usuarioSelecionado = (Usuario) usuarioComboBox.getSelectedItem();
+       var estatisticaSelecionada = (Estatistica) estatisticaComboBox.getSelectedItem();
+       rankingLabel.setText(String.valueOf(obterRanking(usuarioSelecionado, estatisticaSelecionada)));
+       
+    }//GEN-LAST:event_estatisticaComboBoxActionPerformed
+
+    private void usuarioComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuarioComboBoxActionPerformed
+        var usuarioSelecionado = (Usuario) usuarioComboBox.getSelectedItem();
+        obterEstatistica(usuarioSelecionado);
+    }//GEN-LAST:event_usuarioComboBoxActionPerformed
 
     /**
      * @param args the command line arguments
@@ -149,12 +239,16 @@ public class TelaEstatisticaAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel acertosLabel;
     private javax.swing.JLabel errosFataisLabel;
     private javax.swing.JLabel errosLabel;
+    private javax.swing.JComboBox<Estatistica> estatisticaComboBox;
     private javax.swing.JLabel estatisticasLabel;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JLabel jogadorLabel;
     private javax.swing.JLabel linhaAzulLabel;
     private javax.swing.JLabel rankingLabel;
+    private javax.swing.JLabel rankingLabel2;
+    private javax.swing.JLabel simulacaoLabel;
     private javax.swing.JLabel tempoJogoLabel;
+    private javax.swing.JComboBox<Usuario> usuarioComboBox;
     private javax.swing.JButton voltarMenuButton;
     // End of variables declaration//GEN-END:variables
 }
