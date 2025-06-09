@@ -33,10 +33,11 @@ public class TelaFimJogo extends javax.swing.JFrame {
         pontuacaoLabel = new javax.swing.JLabel();
         parabensLabel = new javax.swing.JLabel();
         voltarButton = new javax.swing.JButton();
+        acertosLabel = new javax.swing.JLabel();
         imagemFimJogoLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tela Game Over");
+        setTitle("Tela Fim de Jogo");
         setMinimumSize(new java.awt.Dimension(345, 460));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -56,7 +57,7 @@ public class TelaFimJogo extends javax.swing.JFrame {
                 reiniciarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(reiniciarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, 270, 80));
+        getContentPane().add(reiniciarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 270, 80));
 
         pontuacaoLabel.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
         pontuacaoLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -80,7 +81,13 @@ public class TelaFimJogo extends javax.swing.JFrame {
                 voltarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(voltarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 440, 270, 80));
+        getContentPane().add(voltarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 500, 270, 80));
+
+        acertosLabel.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
+        acertosLabel.setForeground(new java.awt.Color(255, 255, 255));
+        acertosLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        acertosLabel.setText("Sua quantidade de acertos foi de: " + Integer.toString(Simulacao.Pontuacao.calcularAcertos()));
+        getContentPane().add(acertosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 960, 70));
 
         imagemFimJogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/TelaFimJogo.png"))); // NOI18N
         getContentPane().add(imagemFimJogoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
@@ -147,6 +154,7 @@ public class TelaFimJogo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel acertosLabel;
     private javax.swing.JLabel gameOverLabel;
     private javax.swing.JLabel imagemFimJogoLabel;
     private javax.swing.JLabel parabensLabel;

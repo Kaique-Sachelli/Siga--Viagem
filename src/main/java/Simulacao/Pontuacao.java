@@ -42,6 +42,15 @@ public class Pontuacao {
         atividadesRealizadas.add(atividadeRealizada);
     }
     
+    public static int calcularAcertos(){
+        int total = 0;
+        for (String atividadeRealizada : atividadesRealizadas){
+            if(gabarito.getOrDefault(atividadeRealizada, 0) > 0){
+                total += 1;
+            }
+        }
+        return total;
+    }
     public static int calcularPontuacao(){
         int total = 0;
         for (String atividadeRealizada : atividadesRealizadas){
