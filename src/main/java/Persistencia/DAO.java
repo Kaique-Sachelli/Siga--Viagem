@@ -148,7 +148,6 @@ public class DAO {
         
         
     }
-    
     public List <Estatistica> obterEstatistica(int id) throws Exception{
         var estatisticas = new ArrayList<Estatistica>();
         
@@ -188,5 +187,37 @@ public class DAO {
             return estatisticas;
             }
         }
+    }
+    public int obterRanking(int numSimulacao, int id)throws Exception{
+        var sql = "WITH ranking AS ("
+                + "SELECT e.id_usuario,"
+                + " RANK() OVER(ORDER BY e.pontuacao DESC) as posicao"
+                + " FROM estatistica e"
+                + " WHERE e.numero_simulacao = ?)"
+                + " SELECT posicao"
+                + " FROM ranking"
+                + " WHERE id_usuario = ?;";
+        
+        try(
+                var conexao = new ConnectionFactory().obterConexao();
+                var ps = conexao.prepareStatement(sql);
+        ){
+            ps.setInt(1, numSimulacao);
+            ps.setInt(2, id);
+            try(
+                    ResultSet rs = ps.executeQuery();
+            ){
+                if(rs.next()){
+                    
+                int rank = rs.getInt("posicao");
+                return rank;
+                
+                }
+                return 0;
+            }
+            
+        }
+        
+
     }
 }
