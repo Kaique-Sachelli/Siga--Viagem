@@ -56,7 +56,7 @@ public class TelaEstatistica extends javax.swing.JFrame {
         jogadorLabel = new javax.swing.JLabel();
         simulacaoComboBox = new javax.swing.JComboBox<>();
         acertosLabel = new javax.swing.JLabel();
-        errosFataisLabel = new javax.swing.JLabel();
+        erroFatalLabel = new javax.swing.JLabel();
         errosLabel = new javax.swing.JLabel();
         dataSimulacaoLabel = new javax.swing.JLabel();
         usuarioLabel = new javax.swing.JLabel();
@@ -97,7 +97,7 @@ public class TelaEstatistica extends javax.swing.JFrame {
         errosLabel1.setText("Erros:");
 
         errosFataisLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        errosFataisLabel1.setText("Erros Graves:");
+        errosFataisLabel1.setText("Erro Fatal:");
 
         tempoJogoLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         tempoJogoLabel1.setText("Data da Simulação:");
@@ -116,9 +116,9 @@ public class TelaEstatistica extends javax.swing.JFrame {
         acertosLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         acertosLabel.setText("Acertos");
 
-        errosFataisLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        errosFataisLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        errosFataisLabel.setText("Erros Graves");
+        erroFatalLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        erroFatalLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        erroFatalLabel.setText("Erro Fatal");
 
         errosLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         errosLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -159,7 +159,7 @@ public class TelaEstatistica extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(errosFataisLabel1)
                                 .addGap(18, 18, 18)
-                                .addComponent(errosFataisLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(erroFatalLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(acertosLabel1)
                                 .addGap(18, 18, 18)
@@ -213,7 +213,7 @@ public class TelaEstatistica extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(errosFataisLabel1)
-                    .addComponent(errosFataisLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(erroFatalLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(pontuaçãoLabel1)
@@ -251,7 +251,12 @@ public class TelaEstatistica extends javax.swing.JFrame {
         
         errosLabel.setText(String.valueOf((selecionado.getErros())));
         
-        errosFataisLabel.setText(String.valueOf(selecionado.getErrosFatais()));
+        if(selecionado.getErroFatal()){
+            erroFatalLabel.setText("Erro fatal cometido.");
+        }
+        else{
+            erroFatalLabel.setText("Não cometido.");
+        }
         
         pontuacaoLabel.setText(String.valueOf(selecionado.getPontuacao()));
         
@@ -299,7 +304,7 @@ public class TelaEstatistica extends javax.swing.JFrame {
     private javax.swing.JLabel acertosLabel;
     private javax.swing.JLabel acertosLabel1;
     private javax.swing.JLabel dataSimulacaoLabel;
-    private javax.swing.JLabel errosFataisLabel;
+    private javax.swing.JLabel erroFatalLabel;
     private javax.swing.JLabel errosFataisLabel1;
     private javax.swing.JLabel errosLabel;
     private javax.swing.JLabel errosLabel1;
