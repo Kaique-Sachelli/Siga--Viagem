@@ -10,17 +10,17 @@ public class Estatistica {
     private int erros;
     private int acertos;
     private int pontuacao;
-    private int errosFatais;
+    private boolean erroFatal;
     private boolean abandonada;
     
     public Estatistica(int numeroSimulacao, LocalDateTime dataSimulacao, int erros, 
-    int acertos, int pontuacao, int errosFatais, boolean abandonada){
+    int acertos, int pontuacao, boolean erroFatal, boolean abandonada){
         this.numeroSimulacao = numeroSimulacao;
         this.dataSimulacao = dataSimulacao;
         this.erros = erros;
         this.acertos = acertos;
         this.pontuacao = pontuacao;
-        this.errosFatais = errosFatais;
+        this.erroFatal = erroFatal;
         this.abandonada = abandonada;
         
         
@@ -54,8 +54,8 @@ public class Estatistica {
         return pontuacao;
     }
 
-    public int getErrosFatais() {
-        return errosFatais;
+    public boolean getErroFatal() {
+        return erroFatal;
     }
 
     public boolean isAbandonada() {

@@ -157,7 +157,7 @@ public class DAO {
                 "s.data_simulacao,\n" +
                 "e.erros,\n" +
                 "e.acertos,\n" +
-                "e.erros_fatais,\n" +
+                "e.erro_fatal,\n" +
                 "e.abandonada,\n" +
                 "e.pontuacao\n" +
                 "FROM estatistica e\n" +
@@ -180,7 +180,7 @@ public class DAO {
                     var erros = rs.getInt("erros");
                     var acertos = rs.getInt("acertos");
                     var pontuacao = rs.getInt("pontuacao");
-                    var errosFatais = rs.getInt("erros_fatais");
+                    var errosFatais = rs.getBoolean("erro_fatal");
                     var abandonada = rs.getBoolean("abandonada");
                     var estatistica = new Estatistica(numeroSimulacao, dataSimulacao, erros, acertos, pontuacao,errosFatais, abandonada);
                     estatisticas.add(estatistica);
