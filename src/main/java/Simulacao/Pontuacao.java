@@ -5,25 +5,25 @@ import java.util.*;
 public class Pontuacao {
     private static Map <String, Integer> gabarito = new LinkedHashMap<>();
     static {
-        gabarito.put("R", 1); // Reversora em Neutro -----
-        gabarito.put("RM", 1); // Chave CBTC em RM -----
-        gabarito.put("PA", 1); // Dar PA -----
-        gabarito.put("FBL", 1); // Fecha portas pela Boleira Lateral -----
-        gabarito.put("CCO", 2); // Informa o CCO -----
-        gabarito.put("PA", 1); // Dar PA -----
+        gabarito.put("R", 1); // Reversora em Neutro 
+        gabarito.put("RM", 1); // Chave CBTC em RM 
+        gabarito.put("PA", 1); // Dar PA 
+        gabarito.put("FBL", 1); // Fecha portas pela Boleira Lateral 
+        gabarito.put("CCO", 2); // Informa o CCO 
+        gabarito.put("PA", 1); // Dar PA 
         gabarito.put("CACS", 3); // Pega cinturão, chave e adesivo
-        gabarito.put("OS", 1); // Olhar soleira (verficar se há algo obstruindo a porta) -----
-        gabarito.put("EM", 1); // Verficar se há Emergência dentro do carro -----
-        gabarito.put("CCO", 2); // Informa o CCO pelo rádio -----
+        gabarito.put("OS", 1); // Olhar soleira (verficar se há algo obstruindo a porta) 
+        gabarito.put("EM", 1); // Verficar se há Emergência dentro do carro 
+        gabarito.put("CCO", 2); // Informa o CCO pelo rádio 
         gabarito.put("ISO", 3); // Ir no painel e isolar a porta com o cinturão
         gabarito.put("FEC", 2); // Puxar a porta para fechar, depois confirmar se travou
         gabarito.put("ADE", 2); // Colar o adesivo na porta
-        gabarito.put("LPE", 2); // Conferir luz externas do carro -----
-        gabarito.put("CCO", 2); // Informa o CCO -----
-        gabarito.put("PA", 1); // Dar PA -----
+        gabarito.put("LPE", 2); // Conferir luz externas do carro 
+        gabarito.put("CCO", 2); // Informa o CCO 
+        gabarito.put("PA", 1); // Dar PA 
         gabarito.put("ICS", 1); // Inserir Chave de Serviço
-        gabarito.put("AM", 1); // Chave CBTC em AM -----
-        gabarito.put("R", 1); // Reversora em Frente -----
+        gabarito.put("AM", 1); // Chave CBTC em AM 
+        gabarito.put("R", 1); // Reversora em Frente 
 
         // FIM 19 passos
     }
@@ -65,8 +65,8 @@ public class Pontuacao {
         // ***** Pode ser repetido
         // ----- Não pode ser repetido
         // ANTES DA RESOLUÇÃO DO PROBLEMA DO LADO DE FORA
-        erros.put("RF", -1); // Reversora em Frente -----
-        erros.put("AM", -1); // Chave CBTC em AM -----
+        erros.put("RF", -1); // Reversora em Frente
+        erros.put("AM", -1); // Chave CBTC em AM
         erros.put("PA", 0); // Dar PA ***** 
         erros.put("FBL", -1); // Abrir portas pela Boleira Lateral ----- IMPOSSIVEL
         erros.put("CCO", 0); // Informa o CCO ***** 
@@ -79,8 +79,8 @@ public class Pontuacao {
         erros.put("LPE", 0); // Conferir luz externas do carro *****
         erros.put("CCO", 0); // Informa o CCO ***** 
         erros.put("PA", 0); // Dar PA ***** 
-        erros.put("RM", -1); // Chave CBTC em RM -----
-        erros.put("RN", -1); // Reversora em Neutro -----
+        erros.put("RM", -1); // Chave CBTC em RM
+        erros.put("RN", -1); // Reversora em Neutro
         
     }
     private static ArrayList <String> errosCometidos = new ArrayList<>();
