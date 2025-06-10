@@ -27,7 +27,7 @@ public class Pontuacao {
 
         // FIM 19 passos
     }
-    
+
     private static ArrayList <String> atividadesRealizadas = new ArrayList<>();
     
     public static void zerarAtividadesRealizadas(){

@@ -6,7 +6,6 @@ import Utilidades.EstadoPainelControle;
 import Utilidades.EstadoPorta;
 import Utilidades.EstadoReversora;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 
 public class TelaGameOver extends javax.swing.JFrame {
     
@@ -28,12 +27,19 @@ public class TelaGameOver extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        acertosLabel = new javax.swing.JLabel();
         gameOverLabel = new javax.swing.JLabel();
         reiniciarButton = new javax.swing.JButton();
         pontuacaoLabel = new javax.swing.JLabel();
         erroFatalLabel = new javax.swing.JLabel();
         voltarButton = new javax.swing.JButton();
+        acertosLabel1 = new javax.swing.JLabel();
         imagemGameOverLabel = new javax.swing.JLabel();
+
+        acertosLabel.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
+        acertosLabel.setForeground(new java.awt.Color(255, 255, 255));
+        acertosLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        acertosLabel.setText("Sua quantidade de acertos foi de: " + Integer.toString(Simulacao.Pontuacao.calcularAcertos()));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Game Over");
@@ -56,7 +62,7 @@ public class TelaGameOver extends javax.swing.JFrame {
                 reiniciarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(reiniciarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, 270, 80));
+        getContentPane().add(reiniciarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 270, 80));
 
         pontuacaoLabel.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
         pontuacaoLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -80,7 +86,13 @@ public class TelaGameOver extends javax.swing.JFrame {
                 voltarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(voltarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 440, 270, 80));
+        getContentPane().add(voltarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 500, 270, 80));
+
+        acertosLabel1.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
+        acertosLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        acertosLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        acertosLabel1.setText("Sua quantidade de acertos foi de: " + Integer.toString(Simulacao.Pontuacao.calcularAcertos()));
+        getContentPane().add(acertosLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 960, 70));
 
         imagemGameOverLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/TelaGameOver.png"))); // NOI18N
         getContentPane().add(imagemGameOverLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
@@ -146,6 +158,8 @@ public class TelaGameOver extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel acertosLabel;
+    private javax.swing.JLabel acertosLabel1;
     private javax.swing.JLabel erroFatalLabel;
     private javax.swing.JLabel gameOverLabel;
     private javax.swing.JLabel imagemGameOverLabel;

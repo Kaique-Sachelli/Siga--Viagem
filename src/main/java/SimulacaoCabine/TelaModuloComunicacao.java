@@ -110,6 +110,7 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
     private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
         TelaCabine janelaCabine = new TelaCabine(this);
         janelaCabine.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     private void listaPASButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaPASButtonActionPerformed

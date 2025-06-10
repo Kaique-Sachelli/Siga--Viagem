@@ -101,6 +101,7 @@ public class TelaBotoeiraAcessa extends javax.swing.JFrame {
 
             clip.start(); // Toca o som.
 
+            Pontuacao.registrarAtividade("FBL");
         } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
             e.printStackTrace();
             
@@ -111,7 +112,6 @@ public class TelaBotoeiraAcessa extends javax.swing.JFrame {
             e.printStackTrace()
             Imprime o erro no console. Serve para debug, ou seja, para entender o que deu errado.
             */
-            Pontuacao.registrarAtividade("FBL");
     }
     }//GEN-LAST:event_portaFechandoButtonActionPerformed
 
