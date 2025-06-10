@@ -27,26 +27,6 @@ public class Pontuacao {
 
         // FIM 19 passos
     }
-    private static Map <String, Integer> erros = new LinkedHashMap<>();
-    static {
-        // ANTES DA RESOLUÇÃO DO PROBLEMA DO LADO DE FORA
-        erros.put("R", -1); // Reversora em Frente -----
-        erros.put("RM", -1); // Chave CBTC em AM -----
-        erros.put("PA", 0); // Dar PA -----
-        erros.put("FBL", -1); // Abrir portas pela Boleira Lateral -----
-        erros.put("CCO", 0); // Informa o CCO -----
-        erros.put("PA", 0); // Dar PA -----
-        erros.put("OS", 0); // Olhar soleira (verficar se há algo obstruindo a porta) -----
-        erros.put("EM", 0); // Verficar se há Emergência dentro do carro -----
-        erros.put("CCO", 0); // Informa o CCO pelo rádio -----
-        
-        // APÓS A RESOLUÇÃO DO PROBLEMA DO LADO DE FORA
-        erros.put("LPE", 0); // Conferir luz externas do carro -----
-        erros.put("CCO", 0); // Informa o CCO -----
-        erros.put("PA", 0); // Dar PA -----
-        erros.put("AM", -1); // Chave CBTC em RM -----
-        erros.put("R", -1); // Reversora em Neutro -----
-    }
     private static ArrayList <String> atividadesRealizadas = new ArrayList<>();
     
     public static void zerarAtividadesRealizadas(){
@@ -77,6 +57,50 @@ public class Pontuacao {
         }
         for (String atividadeRealizada : atividadesRealizadas){
             total += gabarito.getOrDefault(atividadeRealizada, 0);
+        }
+        return total;
+    }
+    private static Map <String, Integer> erros = new LinkedHashMap<>();
+    static {
+        // ***** Pode ser repetido
+        // ----- Não pode ser repetido
+        // ANTES DA RESOLUÇÃO DO PROBLEMA DO LADO DE FORA
+        erros.put("R", -1); // Reversora em Frente -----
+        erros.put("RM", -1); // Chave CBTC em AM -----
+        erros.put("PA", 0); // Dar PA ***** 
+        erros.put("FBL", -1); // Abrir portas pela Boleira Lateral -----
+        erros.put("CCO", 0); // Informa o CCO ***** 
+        erros.put("PA", 0); // Dar PA ***** 
+        erros.put("OS", 0); // Olhar soleira (verficar se há algo obstruindo a porta) ***** 
+        erros.put("EM", 0); // Verficar se há Emergência dentro do carro ***** 
+        erros.put("CCO", 0); // Informa o CCO pelo rádio ***** 
+        
+        // APÓS A RESOLUÇÃO DO PROBLEMA DO LADO DE FORA
+        erros.put("LPE", 0); // Conferir luz externas do carro *****
+        erros.put("CCO", 0); // Informa o CCO ***** 
+        erros.put("PA", 0); // Dar PA ***** 
+        erros.put("AM", -1); // Chave CBTC em RM -----
+        erros.put("R", -1); // Reversora em Neutro -----
+        
+    }
+    private static ArrayList <String> errosCometidos = new ArrayList<>();
+    
+    public static void zerarErrosCometidos(){
+        errosCometidos.clear();
+    }
+    
+    public static int contarErrosCometidos(){
+        return errosCometidos.size();
+    }
+    
+    public static void registrarErro(String erroCometido){
+        errosCometidos.add(erroCometido);
+    }
+    
+    public static int calcularErros(){
+        int total = 0;
+        for(String erroCometido : errosCometidos){
+            total += erros.getOrDefault(erroCometido, 0);
         }
         return total;
     }
