@@ -65,10 +65,10 @@ public class Pontuacao {
         // ***** Pode ser repetido
         // ----- Não pode ser repetido
         // ANTES DA RESOLUÇÃO DO PROBLEMA DO LADO DE FORA
-        erros.put("R", -1); // Reversora em Frente -----
-        erros.put("RM", -1); // Chave CBTC em AM -----
+        erros.put("RF", -1); // Reversora em Frente -----
+        erros.put("AM", -1); // Chave CBTC em AM -----
         erros.put("PA", 0); // Dar PA ***** 
-        erros.put("FBL", -1); // Abrir portas pela Boleira Lateral -----
+        erros.put("FBL", -1); // Abrir portas pela Boleira Lateral ----- IMPOSSIVEL
         erros.put("CCO", 0); // Informa o CCO ***** 
         erros.put("PA", 0); // Dar PA ***** 
         erros.put("OS", 0); // Olhar soleira (verficar se há algo obstruindo a porta) ***** 
@@ -79,8 +79,8 @@ public class Pontuacao {
         erros.put("LPE", 0); // Conferir luz externas do carro *****
         erros.put("CCO", 0); // Informa o CCO ***** 
         erros.put("PA", 0); // Dar PA ***** 
-        erros.put("AM", -1); // Chave CBTC em RM -----
-        erros.put("R", -1); // Reversora em Neutro -----
+        erros.put("RM", -1); // Chave CBTC em RM -----
+        erros.put("RN", -1); // Reversora em Neutro -----
         
     }
     private static ArrayList <String> errosCometidos = new ArrayList<>();

@@ -67,7 +67,7 @@ public class TelaGameOver extends javax.swing.JFrame {
         pontuacaoLabel.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
         pontuacaoLabel.setForeground(new java.awt.Color(255, 255, 255));
         pontuacaoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        pontuacaoLabel.setText("Sua pontuação foi de: " + Integer.toString(Simulacao.Pontuacao.calcularPontuacao()));
+        pontuacaoLabel.setText("Sua pontuação foi de: " + Integer.toString(Simulacao.Pontuacao.calcularPontuacao() + Simulacao.Pontuacao.calcularErros()));
         getContentPane().add(pontuacaoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 960, 70));
 
         erroFatalLabel.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N

@@ -97,7 +97,7 @@
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="&quot;Sua pontua&#xe7;&#xe3;o foi de: &quot; + Integer.toString(Simulacao.Pontuacao.calcularPontuacao())" type="code"/>
+          <Connection code="&quot;Sua pontua&#xe7;&#xe3;o foi de: &quot; + Integer.toString(Simulacao.Pontuacao.calcularPontuacao() + Simulacao.Pontuacao.calcularErros())" type="code"/>
         </Property>
       </Properties>
       <Constraints>
