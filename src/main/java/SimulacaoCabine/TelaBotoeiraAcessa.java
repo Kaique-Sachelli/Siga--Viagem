@@ -34,6 +34,7 @@ public class TelaBotoeiraAcessa extends javax.swing.JFrame {
 
         setaBaixoButton = new javax.swing.JButton();
         portaFechandoButton = new javax.swing.JButton();
+        portaAbrindoButton = new javax.swing.JButton();
         botoeiraAcessaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -63,6 +64,16 @@ public class TelaBotoeiraAcessa extends javax.swing.JFrame {
         });
         getContentPane().add(portaFechandoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 480, 72, 80));
 
+        portaAbrindoButton.setBorderPainted(false);
+        portaAbrindoButton.setContentAreaFilled(false);
+        portaAbrindoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        portaAbrindoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                portaAbrindoButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(portaAbrindoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(215, 390, 80, 70));
+
         botoeiraAcessaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/boteira acessa.jpg"))); // NOI18N
         getContentPane().add(botoeiraAcessaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 750));
 
@@ -78,6 +89,10 @@ public class TelaBotoeiraAcessa extends javax.swing.JFrame {
     private void portaFechandoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_portaFechandoButtonActionPerformed
         TocadorSom.tocarSom("Sons/Porta-fechando.wav");
     }//GEN-LAST:event_portaFechandoButtonActionPerformed
+
+    private void portaAbrindoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_portaAbrindoButtonActionPerformed
+        TocadorSom.tocarSom("Sons/Porta-abrindo.wav");
+    }//GEN-LAST:event_portaAbrindoButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -116,6 +131,7 @@ public class TelaBotoeiraAcessa extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel botoeiraAcessaLabel;
+    private javax.swing.JButton portaAbrindoButton;
     private javax.swing.JButton portaFechandoButton;
     private javax.swing.JButton setaBaixoButton;
     // End of variables declaration//GEN-END:variables
