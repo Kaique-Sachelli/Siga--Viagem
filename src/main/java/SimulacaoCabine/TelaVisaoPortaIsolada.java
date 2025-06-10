@@ -65,7 +65,12 @@ public class TelaVisaoPortaIsolada extends javax.swing.JFrame {
     private void sinalizacaoExternaApagadaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sinalizacaoExternaApagadaButtonActionPerformed
         TelaSinalizacaoExternaAcesa janelaExternaAcesa = new TelaSinalizacaoExternaAcesa(this);
         janelaExternaAcesa.setVisible(true);
-        Pontuacao.registrarAtividade("LPE");
+        if(Simulacao.SituacaoPontuacao.getInstance().isSituacaoLuz() == false){
+            Pontuacao.registrarAtividade("LPE");
+            Simulacao.SituacaoPontuacao.getInstance().setSituacaoLuz(true);
+        } else {
+            Pontuacao.registrarErro("LPE");
+        }
     }//GEN-LAST:event_sinalizacaoExternaApagadaButtonActionPerformed
 
     private void setaEsquerdaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaEsquerdaButtonActionPerformed

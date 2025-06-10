@@ -135,9 +135,9 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
             // Cria e exibe TelaEmitindoPA, passando a tela atual como referência
             TelaEmitindoPA janelaEmitindoPA = new TelaEmitindoPA(this);
             janelaEmitindoPA.setVisible(true);
-            if(Simulacao.SituacaoPA.getInstance().isSituacaoPA() == false){
+            if(Simulacao.SituacaoPontuacao.getInstance().isSituacaoPA() == false){
                 Pontuacao.registrarAtividade("PA");
-                Simulacao.SituacaoPA.getInstance().setSituacaoPA(true);
+                Simulacao.SituacaoPontuacao.getInstance().setSituacaoPA(true);
             } else {
                 Pontuacao.registrarErro("PA");
             }
@@ -169,9 +169,9 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
             // Cria e exibe TelaEmitindoPA, passando a tela atual como referência
             TelaInformandoCCO janelaInformandoCCO = new TelaInformandoCCO(this);
             janelaInformandoCCO.setVisible(true);
-            if(Simulacao.SituacaoPA.getInstance().isSituacaoPA() == false){
+            if(Simulacao.SituacaoPontuacao.getInstance().isSituacaoCCO() == false){
                 Pontuacao.registrarAtividade("CCO");
-                Simulacao.SituacaoCCO.getInstance().setSituacaoCCO(true);
+                Simulacao.SituacaoPontuacao.getInstance().setSituacaoCCO(true);
             } else {
                 Pontuacao.registrarErro("CCO");
             }

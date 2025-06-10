@@ -87,7 +87,12 @@ public class TelaPortaSemiAberta extends javax.swing.JFrame {
     private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
         TelaSoleira janelaSoleira = new TelaSoleira(this);
         janelaSoleira.setVisible(true);
-        Pontuacao.registrarAtividade("OS");
+        if(Simulacao.SituacaoPontuacao.getInstance().isSituacaoSoleira() == false){
+            Pontuacao.registrarAtividade("OS");
+            Simulacao.SituacaoPontuacao.getInstance().setSituacaoSoleira(true);
+        } else {
+            Pontuacao.registrarErro("OS");
+        }
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     /**

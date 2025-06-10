@@ -84,7 +84,12 @@ public class TelaPortaSemiAbertaInterna extends javax.swing.JFrame {
     private void setaDireitaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaDireitaButtonActionPerformed
         TelaPaineisEmergencia janelaEmergencia = new TelaPaineisEmergencia(this);
         janelaEmergencia.setVisible(true);
-        Pontuacao.registrarAtividade("EM");
+        if(Simulacao.SituacaoPontuacao.getInstance().isSituacaoEmergencia() == false){
+            Pontuacao.registrarAtividade("EM");
+            Simulacao.SituacaoPontuacao.getInstance().setSituacaoEmergencia(true);
+        } else {
+            Pontuacao.registrarErro("EM");
+        }
     }//GEN-LAST:event_setaDireitaButtonActionPerformed
 
     private void colocarCinturaoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colocarCinturaoButtonActionPerformed
