@@ -14,7 +14,7 @@ public class TelaCabine extends javax.swing.JFrame {
         setResizable(false);
         Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
-
+  
     public TelaCabine(JFrame frame) {
         this();
         frame.setVisible(false);

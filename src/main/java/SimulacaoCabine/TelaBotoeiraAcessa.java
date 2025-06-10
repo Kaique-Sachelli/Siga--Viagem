@@ -4,11 +4,13 @@ import Simulacao.Pontuacao;
 import java.io.IOException;
 import java.net.URL;
 import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.AudioSystem; // Remover imports desnecessarios
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JFrame;
+import Utilidades.TocadorSom;
+
 
 public class TelaBotoeiraAcessa extends javax.swing.JFrame {
 
@@ -74,45 +76,7 @@ public class TelaBotoeiraAcessa extends javax.swing.JFrame {
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     private void portaFechandoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_portaFechandoButtonActionPerformed
-        try { //Protege o código dos erros, try / catch.
-            
-            URL somURL = getClass().getResource("/wav/Porta-fechando.wav");
-            
-            /*
-            getClass() retorna a classe atual.
-            .getResource(...) procura o arquivo dentro do src/main/resources.
-            */
-            
-            if (somURL == null) {
-                System.out.println("Som não encontrado!");
-                return;
-            }
-
-            AudioInputStream audioStream = AudioSystem.getAudioInputStream(somURL);
-            
-            /*
-            AudioInputStream: representa o áudio como um fluxo de dados.
-            AudioSystem.getAudioInputStream(...): carrega esse fluxo a partir da URL do arquivo.
-            */
-            
-            Clip clip = AudioSystem.getClip(); // Cria um objeto Clip, que pode ser iniciado, parado e reiniciado.
-            
-            clip.open(audioStream); // Carrega o som no Clip, prepara ele para ser tocado.
-
-            clip.start(); // Toca o som.
-
-        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
-            e.printStackTrace();
-            
-            /*
-            UnsupportedAudioFileException: se o som não for um .wav compatível.
-            IOException: erro ao acessar o arquivo.
-            LineUnavailableException: erro ao usar o sistema de som do computador.
-            e.printStackTrace()
-            Imprime o erro no console. Serve para debug, ou seja, para entender o que deu errado.
-            */
-            Pontuacao.registrarAtividade("FBL");
-    }
+        TocadorSom.tocarSom("Sons/Porta-fechando.wav");
     }//GEN-LAST:event_portaFechandoButtonActionPerformed
 
     /**
