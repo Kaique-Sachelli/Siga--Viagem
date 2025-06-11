@@ -5,6 +5,7 @@ import Utilidades.EstadoCBTC;
 import Utilidades.EstadoPainelControle;
 import Utilidades.EstadoPorta;
 import Utilidades.EstadoReversora;
+import Utilidades.EstadoSom;
 import Utilidades.TocadorSom;
 import javax.swing.JFrame;
 
@@ -151,9 +152,10 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
         Utilidades.EstadoPorta.setPosicaoAtual(EstadoPorta.Posicao.ABERTA);
         Utilidades.EstadoReversora.setPosicaoAtual(EstadoReversora.Posicao.FRENTE);
         Simulacao.Pontuacao.zerarAtividadesRealizadas();
+        TocadorSom.setVolume(EstadoSom.isSomDesligado() ? 0 : EstadoSom.getVolume());
+        TocadorSom.tocarSom("Sons/Gongo.wav");
         TelaCabine janelaCabine = new TelaCabine(this);
         janelaCabine.setVisible(true);
-        TocadorSom.tocarSom("Sons/Gongo.wav");
         this.dispose();
     }//GEN-LAST:event_jogarButtonActionPerformed
 

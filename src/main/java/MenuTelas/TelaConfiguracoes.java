@@ -1,5 +1,8 @@
 package MenuTelas;
+
 import javax.swing.*;
+import Utilidades.TocadorSom;
+import Utilidades.EstadoSom;
 
 public class TelaConfiguracoes extends javax.swing.JFrame {
 
@@ -8,7 +11,7 @@ public class TelaConfiguracoes extends javax.swing.JFrame {
     public TelaConfiguracoes() {
         initComponents();
         configurarSlider();
-        desligarSomCheckBox.setSelected(TelaConfiguracoes.EstadoSom.somDesligado);
+        desligarSomCheckBox.setSelected(EstadoSom.isSomDesligado());
         setResizable(false);
     }
     
@@ -21,32 +24,25 @@ public class TelaConfiguracoes extends javax.swing.JFrame {
         ajusteSomSlider.setPaintTicks(true);
         ajusteSomSlider.setPaintLabels(true);
 
-        ajusteSomSlider.setValue(valorDoSlider);
-        Utilidades.TocadorSom.setVolume(valorDoSlider);
+        ajusteSomSlider.setValue(Utilidades.EstadoSom.getVolume());
 
-        ajusteSomSlider.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                valorDoSlider = ajusteSomSlider.getValue();
-                if (!EstadoSom.somDesligado) {
-                    Utilidades.TocadorSom.setVolume(valorDoSlider);
-                }
-            }
+        ajusteSomSlider.addChangeListener(evt -> {
+            int valor = ajusteSomSlider.getValue();
+            valorDoSlider = valor;
+            Utilidades.EstadoSom.setVolume(valor);
+            TocadorSom.setVolume(EstadoSom.isSomDesligado() ? 0 : valor);
         });
     }
-    // EstadoSom criado para facilitar um possível .java futuro
-    public class EstadoSom {
 
-        public static boolean somDesligado = false; // false = som ligado
-    }
     
     public TelaConfiguracoes(JFrame frame){
         this.frame = frame;
         this.frame.setVisible(false);
         initComponents();
         configurarSlider();
-        desligarSomCheckBox.setSelected(TelaConfiguracoes.EstadoSom.somDesligado);
+        desligarSomCheckBox.setSelected(EstadoSom.somDesligado);
         setResizable(false);
-        Utilidades.TocadorSom.setVolume(EstadoSom.somDesligado ? 0 : valorDoSlider);
+        TocadorSom.setVolume(EstadoSom.isSomDesligado() ? 0 : EstadoSom.getVolume());
     }
     
     @SuppressWarnings("unchecked")
@@ -125,13 +121,12 @@ public class TelaConfiguracoes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        TelaConfiguracoes.EstadoSom.somDesligado = desligarSomCheckBox.isSelected();
+
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void desligarSomCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desligarSomCheckBoxActionPerformed
-        EstadoSom.somDesligado = desligarSomCheckBox.isSelected();
-        Utilidades.TocadorSom.setVolume(EstadoSom.somDesligado ? 0 : valorDoSlider);
-
+        EstadoSom.setSomDesligado(desligarSomCheckBox.isSelected());
+        TocadorSom.setVolume(EstadoSom.isSomDesligado() ? 0 : valorDoSlider);
     }//GEN-LAST:event_desligarSomCheckBoxActionPerformed
 
 

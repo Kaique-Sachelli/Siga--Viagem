@@ -24,7 +24,9 @@ public class TocadorSom {
             clip.open(audioInputStream);
 
             volumeControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
-            setVolume(10f);
+            
+            float volumeReal = EstadoSom.isSomDesligado() ? 0f : EstadoSom.getVolume() / 10f;
+            setVolume(volumeReal);
 
             clip.start();
         } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
@@ -41,13 +43,17 @@ public class TocadorSom {
 
     public static void setVolume(float valorSlider) {
         if (volumeControl != null) {
+            valorSlider = Math.max(0f, Math.min(1f, valorSlider)); // Clamp entre 0 e 1
             float min = volumeControl.getMinimum();
             float max = volumeControl.getMaximum();
-            float volume = min + (valorSlider / 10.0f) * (max - min);
+            float volume = min + valorSlider * (max - min);
             volumeControl.setValue(volume);
-            mudo = (valorSlider == 0);
+            mudo = (valorSlider <= 0f);
         }
     }
+
+
+
 
     public static float getVolumeAtual() {
         if (volumeControl != null) {
@@ -58,4 +64,8 @@ public class TocadorSom {
         }
         return 10f;
     }
+    public static boolean temSomTocando() {
+        return clip != null && clip.isRunning();
+    }
+
 }
