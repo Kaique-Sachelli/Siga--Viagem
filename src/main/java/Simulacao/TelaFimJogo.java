@@ -2,19 +2,44 @@ package Simulacao;
 
 import MenuTelas.TelaMenuUsuario;
 import MenuTelasAdmin.TelaMenuAdmin;
+import Modelo.Estatistica;
+import Persistencia.DAO;
+import Utilidades.AbandonouSimulacao;
+import Utilidades.DetectarErroFatal;
 import Utilidades.EstadoCBTC;
 import Utilidades.EstadoPainelControle;
 import Utilidades.EstadoPorta;
 import Utilidades.EstadoReversora;
+import Utilidades.Pontuacao;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class TelaFimJogo extends javax.swing.JFrame {
     
     private JFrame frame;
-    
+    private boolean salvarEstatistica(Estatistica est){
+        try{
+            var dao = new DAO();
+            boolean atualizou = dao.salvarEstatistica(est);
+            return atualizou;
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Salvamento de estatísticas não disponivel no momento.");
+            boolean atualizou = false;
+            return atualizou;
+        }
+    }
+   
     public TelaFimJogo() {
         initComponents();
+        var estatistica = new Estatistica(Pontuacao.contarErrosCometidos(), 
+                Pontuacao.calcularAcertos(), 
+                Pontuacao.calcularPontuacao() + Pontuacao.calcularErros(), 
+                DetectarErroFatal.getInstance().isErroFatal(),
+                AbandonouSimulacao.getInstance().isAbandonou()
+        );
+        salvarEstatistica(estatistica);
     }
     
     public TelaFimJogo(JFrame frame) {

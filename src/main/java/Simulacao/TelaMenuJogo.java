@@ -3,7 +3,13 @@ package Simulacao;
 import MenuTelas.TelaConfiguracoes;
 import MenuTelas.TelaMenuUsuario;
 import MenuTelasAdmin.TelaMenuAdmin;
+import Modelo.Estatistica;
+import Persistencia.DAO;
+import Utilidades.AbandonouSimulacao;
+import Utilidades.DetectarErroFatal;
+import Utilidades.Pontuacao;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 public class TelaMenuJogo extends javax.swing.JFrame {
 
@@ -98,6 +104,28 @@ public class TelaMenuJogo extends javax.swing.JFrame {
 
     private void sairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairButtonActionPerformed
         Utilidades.AbandonouSimulacao.getInstance().setAbandonou(true);
+        
+        try{
+            var estatistica = new Estatistica(Pontuacao.contarErrosCometidos(), 
+                Pontuacao.calcularAcertos(), 
+                Pontuacao.calcularPontuacao() + Pontuacao.calcularErros(), 
+                DetectarErroFatal.getInstance().isErroFatal(),
+                AbandonouSimulacao.getInstance().isAbandonou()
+            );
+            var dao = new DAO();
+            boolean atualizou = dao.salvarEstatistica(estatistica);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Salvamento de estatísticas não disponivel no momento.");
+            boolean atualizou = false;
+        }
+        
+        
+        
+        
+        
+        
         if(Modelo.UsuarioLogado.getUsuario().getInstrutor()){
             TelaMenuAdmin janelaMenuAdmin = new TelaMenuAdmin();
             janelaMenuAdmin.setVisible(true);
