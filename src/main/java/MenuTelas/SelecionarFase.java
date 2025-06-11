@@ -1,6 +1,11 @@
 package MenuTelas;
 
 import SimulacaoCabine.TelaCabine;
+import Utilidades.EstadoCBTC;
+import Utilidades.EstadoPainelControle;
+import Utilidades.EstadoPorta;
+import Utilidades.EstadoReversora;
+import Utilidades.TocadorSom;
 import javax.swing.*;
 
 public class SelecionarFase extends javax.swing.JFrame {
@@ -92,8 +97,19 @@ public class SelecionarFase extends javax.swing.JFrame {
     }//GEN-LAST:event_voltarMenuButtonMouseEntered
 
     private void fasePortasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fasePortasButtonActionPerformed
+        Utilidades.DetectarErroFatal.getInstance().setErroFatal(false);
+        Utilidades.EstadoCBTC.setPosicaoAtual(EstadoCBTC.Posicao.AM);
+        Utilidades.EstadoItem.getInstance().setChaveFitaCinturao(false);
+        Utilidades.EstadoItem.getInstance().setFitaCinturao(false);
+        Utilidades.EstadoItem.getInstance().setChaveServico(false);
+        Utilidades.EstadoPainelControle.setPosicaoAtual(EstadoPainelControle.Posicao.NORMAL);
+        Utilidades.EstadoPorta.setPosicaoAtual(EstadoPorta.Posicao.ABERTA);
+        Utilidades.EstadoReversora.setPosicaoAtual(EstadoReversora.Posicao.FRENTE);
+        Simulacao.Pontuacao.zerarAtividadesRealizadas();
         TelaCabine janelaCabine = new TelaCabine(this);
         janelaCabine.setVisible(true);
+        TocadorSom.tocarSom("Sons/Gongo.wav");
+        this.dispose();
     }//GEN-LAST:event_fasePortasButtonActionPerformed
 
     public static void main(String args[]) {

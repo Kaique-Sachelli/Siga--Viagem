@@ -4,6 +4,7 @@ import Utilidades.EstadoCBTC;
 import Utilidades.EstadoPainelControle;
 import Utilidades.EstadoPorta;
 import Utilidades.EstadoReversora;
+import Utilidades.TocadorSom;
 import javax.swing.JFrame;
 
 public class TelaMenuAdmin extends javax.swing.JFrame {
@@ -167,6 +168,7 @@ public class TelaMenuAdmin extends javax.swing.JFrame {
         Simulacao.Pontuacao.zerarAtividadesRealizadas();
         TelaCabine janelaCabine = new TelaCabine(this);
         janelaCabine.setVisible(true);
+        TocadorSom.tocarSom("Sons/Gongo.wav");
         this.dispose();
     }//GEN-LAST:event_jogarButtonActionPerformed
 
