@@ -65,6 +65,7 @@ public class TelaEstatisticaAdmin extends javax.swing.JFrame {
         this.frame = frame;
         this.frame.setVisible(false);
         initComponents();
+        obterUsuarios();
         setResizable(false);
     }
     
@@ -229,8 +230,7 @@ public class TelaEstatisticaAdmin extends javax.swing.JFrame {
 
     private void voltarMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarMenuButtonActionPerformed
 
-        var telaMenuInst = new TelaMenuAdmin();
-        telaMenuInst.setVisible(true);
+        frame.setVisible(true);
         this.dispose();
           
     }//GEN-LAST:event_voltarMenuButtonActionPerformed

@@ -36,7 +36,7 @@ public class AlterarUsuario extends javax.swing.JFrame {
         obterUsuarios();
         senhaTextField.setEditable(false);
         loginTextField.setEditable(false);
-        categoriaComboBox.addItem("Operario");
+        categoriaComboBox.addItem("Operador");
         categoriaComboBox.addItem("Instrutor");
         categoriaComboBox.setEnabled(false);
         confirmarButton.setEnabled(false);
@@ -63,10 +63,10 @@ public class AlterarUsuario extends javax.swing.JFrame {
     }
 
     public AlterarUsuario(JFrame frame) {
-        this.frame = frame;
-        this.frame.setVisible(false);
-        initComponents();
-        setResizable(false);
+       this();
+       this.frame = frame;
+       this.frame.setVisible(true);
+        
     }
     
     @SuppressWarnings("unchecked")
@@ -200,6 +200,7 @@ public class AlterarUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void voltarMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarMenuButtonActionPerformed
+
         frame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_voltarMenuButtonActionPerformed
