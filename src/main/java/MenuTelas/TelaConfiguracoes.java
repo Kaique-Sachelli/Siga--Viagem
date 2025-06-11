@@ -1,5 +1,8 @@
 package MenuTelas;
+
 import javax.swing.*;
+import Utilidades.TocadorSom;
+import Utilidades.EstadoSom;
 
 public class TelaConfiguracoes extends javax.swing.JFrame {
 
@@ -8,36 +11,38 @@ public class TelaConfiguracoes extends javax.swing.JFrame {
     public TelaConfiguracoes() {
         initComponents();
         configurarSlider();
-        desligarSomCheckBox.setSelected(TelaConfiguracoes.EstadoSom.somDesligado);
+        desligarSomCheckBox.setSelected(EstadoSom.isSomDesligado());
         setResizable(false);
     }
     
     private static int valorDoSlider = 10;
 
     private void configurarSlider() {
-        ajustarSomSlider.setMinimum(0);
-        ajustarSomSlider.setMaximum(10);
+        ajusteSomSlider.setMinimum(0);
+        ajusteSomSlider.setMaximum(10);
+        ajusteSomSlider.setMajorTickSpacing(1);
+        ajusteSomSlider.setPaintTicks(true);
+        ajusteSomSlider.setPaintLabels(true);
 
-        ajustarSomSlider.setValue(valorDoSlider);
-        ajustarSomSlider.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                valorDoSlider = ajustarSomSlider.getValue();
-            }
+        ajusteSomSlider.setValue(Utilidades.EstadoSom.getVolume());
+
+        ajusteSomSlider.addChangeListener(evt -> {
+            int valor = ajusteSomSlider.getValue();
+            valorDoSlider = valor;
+            Utilidades.EstadoSom.setVolume(valor);
+            TocadorSom.setVolume(EstadoSom.isSomDesligado() ? 0 : valor);
         });
     }
-    // EstadoSom criado para facilitar um possível .java futuro
-    public class EstadoSom {
 
-        public static boolean somDesligado = false; // false = som ligado
-    }
     
     public TelaConfiguracoes(JFrame frame){
         this.frame = frame;
         this.frame.setVisible(false);
         initComponents();
         configurarSlider();
-        desligarSomCheckBox.setSelected(TelaConfiguracoes.EstadoSom.somDesligado);
+        desligarSomCheckBox.setSelected(EstadoSom.somDesligado);
         setResizable(false);
+        TocadorSom.setVolume(EstadoSom.isSomDesligado() ? 0 : EstadoSom.getVolume());
     }
     
     @SuppressWarnings("unchecked")
@@ -46,7 +51,7 @@ public class TelaConfiguracoes extends javax.swing.JFrame {
 
         logoMauaLabel = new javax.swing.JLabel();
         tituloMenuLabel = new javax.swing.JLabel();
-        ajustarSomSlider = new javax.swing.JSlider();
+        ajusteSomSlider = new javax.swing.JSlider();
         mapaMetroLabel = new javax.swing.JLabel();
         desligarSomCheckBox = new javax.swing.JCheckBox();
         ajustarSomLabel = new javax.swing.JLabel();
@@ -69,17 +74,17 @@ public class TelaConfiguracoes extends javax.swing.JFrame {
         tituloMenuLabel.setPreferredSize(new java.awt.Dimension(320, 75));
         getContentPane().add(tituloMenuLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 580, 80));
 
-        ajustarSomSlider.setCursor(new java.awt.Cursor(java.awt.Cursor.W_RESIZE_CURSOR));
-        ajustarSomSlider.addAncestorListener(new javax.swing.event.AncestorListener() {
+        ajusteSomSlider.setCursor(new java.awt.Cursor(java.awt.Cursor.W_RESIZE_CURSOR));
+        ajusteSomSlider.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
             }
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-                ajustarSomSliderAncestorMoved(evt);
+                ajusteSomSliderAncestorMoved(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
         });
-        getContentPane().add(ajustarSomSlider, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 190, 220, 20));
+        getContentPane().add(ajusteSomSlider, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 190, 220, 20));
 
         mapaMetroLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/mapaMetro.png"))); // NOI18N
         getContentPane().add(mapaMetroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 580, 450));
@@ -116,11 +121,12 @@ public class TelaConfiguracoes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        TelaConfiguracoes.EstadoSom.somDesligado = desligarSomCheckBox.isSelected();
+
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void desligarSomCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desligarSomCheckBoxActionPerformed
-        TelaConfiguracoes.EstadoSom.somDesligado = desligarSomCheckBox.isSelected();
+        EstadoSom.setSomDesligado(desligarSomCheckBox.isSelected());
+        TocadorSom.setVolume(EstadoSom.isSomDesligado() ? 0 : valorDoSlider);
     }//GEN-LAST:event_desligarSomCheckBoxActionPerformed
 
 
@@ -129,9 +135,9 @@ public class TelaConfiguracoes extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_voltarMenuButtonActionPerformed
 
-    private void ajustarSomSliderAncestorMoved(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_ajustarSomSliderAncestorMoved
-        ajustarSomSlider.setValue(valorDoSlider);
-    }//GEN-LAST:event_ajustarSomSliderAncestorMoved
+    private void ajusteSomSliderAncestorMoved(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_ajusteSomSliderAncestorMoved
+        ajusteSomSlider.setValue(valorDoSlider);
+    }//GEN-LAST:event_ajusteSomSliderAncestorMoved
 
    
     public static void main(String args[]) {
@@ -171,7 +177,7 @@ public class TelaConfiguracoes extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ajustarSomLabel;
-    private javax.swing.JSlider ajustarSomSlider;
+    private javax.swing.JSlider ajusteSomSlider;
     private javax.swing.JCheckBox desligarSomCheckBox;
     private javax.swing.JLabel logoMauaLabel;
     private javax.swing.JLabel mapaMetroLabel;

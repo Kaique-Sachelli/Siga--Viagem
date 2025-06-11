@@ -1,5 +1,6 @@
 package MenuTelasAdmin;
-import Simulacao.TelaCabine;
+
+import SimulacaoCabine.TelaCabine;
 import Utilidades.EstadoCBTC;
 import Utilidades.EstadoPainelControle;
 import Utilidades.EstadoPorta;
