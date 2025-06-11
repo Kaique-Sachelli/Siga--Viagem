@@ -12,16 +12,16 @@ import javax.swing.JFrame;
 import Utilidades.TocadorSom;
 
 
-public class TelaBotoeiraAcessa extends javax.swing.JFrame {
+public class TelaBotoeiraAcesa extends javax.swing.JFrame {
 
     private JFrame frame;
     
-    public TelaBotoeiraAcessa() {
+    public TelaBotoeiraAcesa() {
         initComponents();
         Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
     
-    public TelaBotoeiraAcessa(JFrame frame) {
+    public TelaBotoeiraAcesa(JFrame frame) {
         this();
         frame.setVisible(false);
         this.frame = frame;
@@ -74,7 +74,7 @@ public class TelaBotoeiraAcessa extends javax.swing.JFrame {
         });
         getContentPane().add(portaAbrindoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(215, 390, 80, 70));
 
-        botoeiraAcessaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/boteira acessa.jpg"))); // NOI18N
+        botoeiraAcessaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaBotoeiraAcesa.jpg"))); // NOI18N
         getContentPane().add(botoeiraAcessaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 750));
 
         pack();
@@ -111,20 +111,21 @@ public class TelaBotoeiraAcessa extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaBotoeiraAcessa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaBotoeiraAcesa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaBotoeiraAcessa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaBotoeiraAcesa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaBotoeiraAcessa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaBotoeiraAcesa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaBotoeiraAcessa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaBotoeiraAcesa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaBotoeiraAcessa().setVisible(true);
+                new TelaBotoeiraAcesa().setVisible(true);
             }
         });
     }

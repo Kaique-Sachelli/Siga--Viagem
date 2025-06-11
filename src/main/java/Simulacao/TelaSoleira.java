@@ -40,7 +40,7 @@ public class TelaSoleira extends javax.swing.JFrame {
         });
         getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        soleiraLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Soleira.png"))); // NOI18N
+        soleiraLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaSoleira.png"))); // NOI18N
         getContentPane().add(soleiraLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

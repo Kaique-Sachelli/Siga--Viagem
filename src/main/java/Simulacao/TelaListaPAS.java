@@ -2,16 +2,16 @@ package Simulacao;
 
 import javax.swing.JFrame;
 
-public class TelaListaPAS extends javax.swing.JFrame {
+public class TelaListaPAs extends javax.swing.JFrame {
 
     private JFrame frame;
     
-    public TelaListaPAS() {
+    public TelaListaPAs() {
         initComponents();
         Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
     
-    public TelaListaPAS(JFrame frame) {
+    public TelaListaPAs(JFrame frame) {
         this();
         frame.setVisible(false);
         this.frame = frame;
@@ -41,7 +41,7 @@ public class TelaListaPAS extends javax.swing.JFrame {
         });
         getContentPane().add(voltarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 550, 50, 50));
 
-        listaPASLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Módulo de Comunicação - Lista de PA's E1.jpg"))); // NOI18N
+        listaPASLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaListaPAs.jpg"))); // NOI18N
         getContentPane().add(listaPASLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
@@ -70,20 +70,21 @@ public class TelaListaPAS extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaListaPAS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaListaPAs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaListaPAS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaListaPAs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaListaPAS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaListaPAs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaListaPAS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaListaPAs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaListaPAS().setVisible(true);
+                new TelaListaPAs().setVisible(true);
             }
         });
     }

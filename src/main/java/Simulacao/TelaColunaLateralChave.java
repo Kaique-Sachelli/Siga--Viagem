@@ -90,7 +90,7 @@ public class TelaColunaLateralChave extends javax.swing.JFrame {
         });
         getContentPane().add(chaveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 76, 80));
 
-        colunaLateralChaveLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Tela Coluna Lateral Chave (1).jpeg"))); // NOI18N
+        colunaLateralChaveLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaColunaLateralChave.jpeg"))); // NOI18N
         getContentPane().add(colunaLateralChaveLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

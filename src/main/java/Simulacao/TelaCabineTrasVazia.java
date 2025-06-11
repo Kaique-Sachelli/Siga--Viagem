@@ -41,7 +41,7 @@ public class TelaCabineTrasVazia extends javax.swing.JFrame {
         });
         getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        cabineTrasVaziaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Cabine parte de Trás - Sem Fita (1).jpeg"))); // NOI18N
+        cabineTrasVaziaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaCabineTrasVazia.jpeg"))); // NOI18N
         getContentPane().add(cabineTrasVaziaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

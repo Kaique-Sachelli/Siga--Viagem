@@ -56,7 +56,7 @@ public class TelaPortaFechada extends javax.swing.JFrame {
         });
         getContentPane().add(colocarFitaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 97, 690, 540));
 
-        portaFechadaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Porta fechada.jpg"))); // NOI18N
+        portaFechadaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaPortaFechada.jpg"))); // NOI18N
         getContentPane().add(portaFechadaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

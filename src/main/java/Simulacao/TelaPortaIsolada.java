@@ -29,7 +29,7 @@ public class TelaPortaIsolada extends javax.swing.JFrame {
         setTitle("Tela Porta Isolada");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        portaIsoladaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Adesivo de porta isolada instalado.jpg"))); // NOI18N
+        portaIsoladaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaPortaIsolada.jpg"))); // NOI18N
         getContentPane().add(portaIsoladaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

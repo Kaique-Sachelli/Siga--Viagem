@@ -51,7 +51,7 @@ public class TelaADU_AM extends javax.swing.JFrame {
         });
         getContentPane().add(setaBaixoButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        aduAMLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/ADU e sinaleiras AM.jpg"))); // NOI18N
+        aduAMLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaADU_AM.jpg"))); // NOI18N
         getContentPane().add(aduAMLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

@@ -39,8 +39,11 @@ public class TelaSinalizacaoExternaApagada extends javax.swing.JFrame {
         });
         getContentPane().add(setaEsquerdaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 260, 140, 130));
 
-        sinalizacaoExternaApagadaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Sinalizacao Externa Apagada.png"))); // NOI18N
-        getContentPane().add(sinalizacaoExternaApagadaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, -1));
+        sinalizacaoExternaApagadaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaSinalizacaoExternaApagada.png"))); // NOI18N
+        sinalizacaoExternaApagadaLabel.setMaximumSize(new java.awt.Dimension(960, 640));
+        sinalizacaoExternaApagadaLabel.setMinimumSize(new java.awt.Dimension(960, 640));
+        sinalizacaoExternaApagadaLabel.setPreferredSize(new java.awt.Dimension(960, 640));
+        getContentPane().add(sinalizacaoExternaApagadaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);

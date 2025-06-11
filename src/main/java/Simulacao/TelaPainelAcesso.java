@@ -3,17 +3,17 @@ package Simulacao;
 import javax.swing.JFrame;
 import Utilidades.EstadoPainelControle;
 
-public class TelaPainelDeAcesso extends javax.swing.JFrame {
+public class TelaPainelAcesso extends javax.swing.JFrame {
 
     private JFrame frame;
     
-    public TelaPainelDeAcesso() {
+    public TelaPainelAcesso() {
         initComponents();
         setResizable(false);
         Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
 
-    public TelaPainelDeAcesso(JFrame frame) {
+    public TelaPainelAcesso(JFrame frame) {
         this();
         frame.setVisible(false);
         this.frame = frame;
@@ -55,7 +55,7 @@ public class TelaPainelDeAcesso extends javax.swing.JFrame {
         });
         getContentPane().add(painelDeControleButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(289, 200, 330, 250));
 
-        painelDeAcessoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Painel_de_Acesso_em_Metal_Escovado.png"))); // NOI18N
+        painelDeAcessoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaPainelAcesso.png"))); // NOI18N
         getContentPane().add(painelDeAcessoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
@@ -95,20 +95,21 @@ public class TelaPainelDeAcesso extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaPainelDeAcesso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPainelAcesso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaPainelDeAcesso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPainelAcesso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaPainelDeAcesso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPainelAcesso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaPainelDeAcesso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaPainelAcesso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaPainelDeAcesso().setVisible(true);
+                new TelaPainelAcesso().setVisible(true);
             }
         });
     }

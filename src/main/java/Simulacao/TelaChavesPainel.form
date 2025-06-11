@@ -70,7 +70,7 @@
     <Component class="javax.swing.JLabel" name="chavesPainelLabel">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/SimulacaoImagens/painel de chaves do console.jpg"/>
+          <Image iconType="3" name="/SimulacaoImagens/telaChavesPainel.jpg"/>
         </Property>
       </Properties>
       <Constraints>

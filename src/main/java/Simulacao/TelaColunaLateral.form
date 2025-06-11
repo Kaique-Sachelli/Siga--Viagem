@@ -126,7 +126,7 @@
     <Component class="javax.swing.JLabel" name="colunaLateralLabel">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/SimulacaoImagens/Coluna lateral direita - DIC, Deriva&#xe7;&#xe3;o de Portas e Chave do CBTC.jpg"/>
+          <Image iconType="3" name="/SimulacaoImagens/telaColunaLateral.jpg"/>
         </Property>
       </Properties>
       <Constraints>

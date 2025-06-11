@@ -55,7 +55,7 @@ public class TelaCBTC_AM extends javax.swing.JFrame {
         });
         getContentPane().add(cbtcRMButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 300, 230, 230));
 
-        cbtcLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Chave do CBTC - AM.jpg"))); // NOI18N
+        cbtcLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaCBTC_AM.jpg"))); // NOI18N
         getContentPane().add(cbtcLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

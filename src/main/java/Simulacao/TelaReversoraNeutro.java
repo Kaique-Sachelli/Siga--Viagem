@@ -56,7 +56,7 @@ public class TelaReversoraNeutro extends javax.swing.JFrame {
         });
         getContentPane().add(reversoraNeutroButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 530, 350));
 
-        reversoraNeutroLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Reversora em neutro.jpg"))); // NOI18N
+        reversoraNeutroLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaReversoraNeutro.jpg"))); // NOI18N
         getContentPane().add(reversoraNeutroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

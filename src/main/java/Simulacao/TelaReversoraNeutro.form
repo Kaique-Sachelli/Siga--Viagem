@@ -76,7 +76,7 @@
     <Component class="javax.swing.JLabel" name="reversoraNeutroLabel">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/SimulacaoImagens/Reversora em neutro.jpg"/>
+          <Image iconType="3" name="/SimulacaoImagens/telaReversoraNeutro.jpg"/>
         </Property>
       </Properties>
       <Constraints>

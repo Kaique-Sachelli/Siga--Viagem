@@ -93,7 +93,7 @@
     <Component class="javax.swing.JLabel" name="botoeiraAcessaLabel">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/SimulacaoImagens/boteira acessa.jpg"/>
+          <Image iconType="3" name="/SimulacaoImagens/telaBotoeiraAcesa.jpg"/>
         </Property>
       </Properties>
       <Constraints>

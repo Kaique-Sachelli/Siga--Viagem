@@ -24,7 +24,7 @@ public class TelaMenuJogo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        menuLabel = new javax.swing.JLabel();
         sairButton = new javax.swing.JButton();
         somButton = new javax.swing.JButton();
         continuarButton = new javax.swing.JButton();
@@ -35,10 +35,10 @@ public class TelaMenuJogo extends javax.swing.JFrame {
         setTitle("Tela Menu Jogo");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Impact", 0, 60)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 20, 137));
-        jLabel1.setText("Menu");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 0, -1, -1));
+        menuLabel.setFont(new java.awt.Font("Impact", 0, 60)); // NOI18N
+        menuLabel.setForeground(new java.awt.Color(0, 20, 137));
+        menuLabel.setText("Menu");
+        getContentPane().add(menuLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 0, -1, -1));
 
         sairButton.setBackground(new java.awt.Color(0, 20, 137));
         sairButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
@@ -85,8 +85,11 @@ public class TelaMenuJogo extends javax.swing.JFrame {
         });
         getContentPane().add(guiaDeComoJogarButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, 340, 100));
 
-        metroConceitoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Metro Conceito.png"))); // NOI18N
-        getContentPane().add(metroConceitoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 640));
+        metroConceitoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaMenuJogo.png"))); // NOI18N
+        metroConceitoLabel.setMaximumSize(new java.awt.Dimension(960, 640));
+        metroConceitoLabel.setMinimumSize(new java.awt.Dimension(960, 640));
+        metroConceitoLabel.setPreferredSize(new java.awt.Dimension(960, 640));
+        getContentPane().add(metroConceitoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
@@ -149,7 +152,7 @@ public class TelaMenuJogo extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton continuarButton;
     private javax.swing.JButton guiaDeComoJogarButton1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel menuLabel;
     private javax.swing.JLabel metroConceitoLabel;
     private javax.swing.JButton sairButton;
     private javax.swing.JButton somButton;

@@ -40,7 +40,7 @@ public class TelaPaineisEmergencia extends javax.swing.JFrame {
         });
         getContentPane().add(setaEsquerdaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, -1, -1));
 
-        paineisEmergenciaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Paineis_de_Saida_de_Emergencia.png"))); // NOI18N
+        paineisEmergenciaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaPaineisEmergencia.png"))); // NOI18N
         getContentPane().add(paineisEmergenciaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

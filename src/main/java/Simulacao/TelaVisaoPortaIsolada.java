@@ -55,7 +55,7 @@ public class TelaVisaoPortaIsolada extends javax.swing.JFrame {
         });
         getContentPane().add(setaEsquerdaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, -1, -1));
 
-        visaoPortaIsoladaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Adesivo de porta isolada instalado visão geral.jpg"))); // NOI18N
+        visaoPortaIsoladaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaVisaoPortaIsolada.jpg"))); // NOI18N
         getContentPane().add(visaoPortaIsoladaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

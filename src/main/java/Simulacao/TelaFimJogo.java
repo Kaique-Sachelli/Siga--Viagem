@@ -89,7 +89,7 @@ public class TelaFimJogo extends javax.swing.JFrame {
         acertosLabel.setText("Sua quantidade de acertos foi de: " + Integer.toString(Utilidades.Pontuacao.calcularAcertos()));
         getContentPane().add(acertosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 960, 70));
 
-        imagemFimJogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/TelaFimJogo.png"))); // NOI18N
+        imagemFimJogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaFimJogo.png"))); // NOI18N
         getContentPane().add(imagemFimJogoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

@@ -66,7 +66,7 @@ public class TelaCinturaoInstalado extends javax.swing.JFrame {
         });
         getContentPane().add(fecharPortaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 7, 700, 530));
 
-        cinturaoInstaladoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Cinturão instalado - externo (1).jpg"))); // NOI18N
+        cinturaoInstaladoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaCinturaoInstalado.jpg"))); // NOI18N
         getContentPane().add(cinturaoInstaladoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

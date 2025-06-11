@@ -40,7 +40,7 @@ public class TelaADU_RM extends javax.swing.JFrame {
         });
         getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        aduLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/ADU e sinaleiras.jpg"))); // NOI18N
+        aduLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaADU_RM.jpg"))); // NOI18N
         getContentPane().add(aduLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

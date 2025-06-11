@@ -101,7 +101,7 @@
     <Component class="javax.swing.JLabel" name="portaSemiAbertaInternaLabel">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/SimulacaoImagens/Porta semi aberta - interno.jpg"/>
+          <Image iconType="3" name="/SimulacaoImagens/telaPortaSemiAbertaInterna.jpg"/>
         </Property>
       </Properties>
       <Constraints>

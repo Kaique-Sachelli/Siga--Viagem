@@ -51,7 +51,7 @@ public class TelaChavesPainel extends javax.swing.JFrame {
         });
         getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        chavesPainelLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/painel de chaves do console.jpg"))); // NOI18N
+        chavesPainelLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaChavesPainel.jpg"))); // NOI18N
         getContentPane().add(chavesPainelLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

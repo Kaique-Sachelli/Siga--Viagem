@@ -40,7 +40,7 @@ public class TelaLimpadorParabrisa extends javax.swing.JFrame {
         });
         getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        limpadorParabrisaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Limpador de parabrisa.jpg"))); // NOI18N
+        limpadorParabrisaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaLimpadorParabrisa.jpg"))); // NOI18N
         getContentPane().add(limpadorParabrisaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

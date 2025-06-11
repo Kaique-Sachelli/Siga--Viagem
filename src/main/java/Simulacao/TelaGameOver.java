@@ -94,7 +94,7 @@ public class TelaGameOver extends javax.swing.JFrame {
         acertosLabel1.setText("Sua quantidade de acertos foi de: " + Integer.toString(Utilidades.Pontuacao.calcularAcertos()));
         getContentPane().add(acertosLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 960, 70));
 
-        imagemGameOverLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/TelaGameOver.png"))); // NOI18N
+        imagemGameOverLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaGameOver.png"))); // NOI18N
         getContentPane().add(imagemGameOverLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

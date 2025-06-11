@@ -54,7 +54,7 @@ public class TelaFE extends javax.swing.JFrame {
         });
         getContentPane().add(infopassButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 520, 40, 40));
 
-        feLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/DDU - tela FE- lista de emergência.jpg"))); // NOI18N
+        feLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaFE.jpg"))); // NOI18N
         getContentPane().add(feLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

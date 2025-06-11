@@ -66,7 +66,7 @@ public class TelaDDU extends javax.swing.JFrame {
         });
         getContentPane().add(infopassButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(439, 480, 30, 40));
 
-        dduImagemLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/DDU com fachada aberta.jpg"))); // NOI18N
+        dduImagemLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaDDU.jpg"))); // NOI18N
         getContentPane().add(dduImagemLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

@@ -40,7 +40,7 @@ public class TelaSinalizacaoExternaAcesa extends javax.swing.JFrame {
         });
         getContentPane().add(setaEsquerdaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, -1, -1));
 
-        sinalizacaoExternaAcesaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Sinalização externa acesa 1 (1).jpg"))); // NOI18N
+        sinalizacaoExternaAcesaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaSinalizacaoExternaAcesa.jpg"))); // NOI18N
         getContentPane().add(sinalizacaoExternaAcesaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

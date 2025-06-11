@@ -39,7 +39,7 @@ public class TelaEmitindoPA extends javax.swing.JFrame { // Cria uma nova classe
         setTitle("Tela Emitindo PA");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        emitindoPALabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Módulo de Comunicação - Microfone aberto PA ao vivo.jpg"))); // NOI18N
+        emitindoPALabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaEmitindoPA.jpg"))); // NOI18N
         getContentPane().add(emitindoPALabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

@@ -174,7 +174,7 @@ public class TelaCabine extends javax.swing.JFrame {
         });
         getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        cabineLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Painel.jpg"))); // NOI18N
+        cabineLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaCabine.jpg"))); // NOI18N
         getContentPane().add(cabineLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

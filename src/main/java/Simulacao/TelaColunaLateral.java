@@ -82,7 +82,7 @@ public class TelaColunaLateral extends javax.swing.JFrame {
         });
         getContentPane().add(chaveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 76, 80));
 
-        colunaLateralLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Coluna lateral direita - DIC, Derivação de Portas e Chave do CBTC.jpg"))); // NOI18N
+        colunaLateralLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaColunaLateral.jpg"))); // NOI18N
         getContentPane().add(colunaLateralLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

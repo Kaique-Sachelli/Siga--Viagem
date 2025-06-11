@@ -55,7 +55,7 @@ public class TelaReversoraFrente extends javax.swing.JFrame {
         });
         getContentPane().add(reversoraFrenteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 130, 530, 350));
 
-        reversoraFrenteLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Reversora em frente.jpg"))); // NOI18N
+        reversoraFrenteLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaReversoraFrente.jpg"))); // NOI18N
         getContentPane().add(reversoraFrenteLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

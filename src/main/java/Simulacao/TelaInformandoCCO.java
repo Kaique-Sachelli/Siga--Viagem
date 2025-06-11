@@ -41,7 +41,7 @@ public class TelaInformandoCCO extends javax.swing.JFrame { // Cria uma nova cla
         setTitle("Informando CCO");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        informandoCCOLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Informando CCO.jpg"))); // NOI18N
+        informandoCCOLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaInformandoCCO.jpg"))); // NOI18N
         getContentPane().add(informandoCCOLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

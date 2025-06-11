@@ -54,7 +54,7 @@ public class TelaCabineTras extends javax.swing.JFrame {
         });
         getContentPane().add(fitaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 190, 110, 120));
 
-        cabineTrasLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Cabine - parte de trás.jpg"))); // NOI18N
+        cabineTrasLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaCabineTras.jpg"))); // NOI18N
         getContentPane().add(cabineTrasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();

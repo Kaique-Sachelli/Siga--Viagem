@@ -66,7 +66,7 @@ public class TelaPortaEsquerda extends javax.swing.JFrame {
         });
         getContentPane().add(botoeiraAcessaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, 72, 190));
 
-        portaEsquerdaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Porta de cabine lateral esquerda.jpg"))); // NOI18N
+        portaEsquerdaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaPortaEsquerda.jpg"))); // NOI18N
         getContentPane().add(portaEsquerdaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 750));
 
         pack();
@@ -90,7 +90,7 @@ public class TelaPortaEsquerda extends javax.swing.JFrame {
     }//GEN-LAST:event_areaExternaButtonActionPerformed
 
     private void botoeiraAcessaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botoeiraAcessaButtonActionPerformed
-        TelaBotoeiraAcessa janelaBotoeiraAcessa = new TelaBotoeiraAcessa(this);
+        TelaBotoeiraAcesa janelaBotoeiraAcessa = new TelaBotoeiraAcesa(this);
         janelaBotoeiraAcessa.setVisible(true);
     }//GEN-LAST:event_botoeiraAcessaButtonActionPerformed
 

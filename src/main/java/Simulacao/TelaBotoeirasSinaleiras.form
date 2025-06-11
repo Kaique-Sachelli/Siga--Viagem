@@ -51,7 +51,7 @@
     <Component class="javax.swing.JLabel" name="botoeirasSinaleirasLabel">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/SimulacaoImagens/Botoeiras e sinaleira lateral - detalhe.jpg"/>
+          <Image iconType="3" name="/SimulacaoImagens/telaBotoeirasSinaleiras.jpg"/>
         </Property>
       </Properties>
       <Constraints>

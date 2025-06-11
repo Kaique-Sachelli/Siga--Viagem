@@ -100,7 +100,7 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
         });
         getContentPane().add(informandoCCOButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 350, 60, 60));
 
-        moduloComunicacaoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/Módulo de Comunicação - tela de início.jpg"))); // NOI18N
+        moduloComunicacaoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaModuloComunicacao.jpg"))); // NOI18N
         getContentPane().add(moduloComunicacaoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
@@ -142,7 +142,7 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
                 Pontuacao.registrarErro("PA");
             }
         } else {
-            TelaListaPAS janelaListaPAS = new TelaListaPAS(this);
+            TelaListaPAs janelaListaPAS = new TelaListaPAs(this);
             janelaListaPAS.setVisible(true);
             this.dispose();
         }
