@@ -104,4 +104,33 @@ public class Pontuacao {
         }
         return total;
     }
+    
+    private static Map <String, Integer> errosComuns = new LinkedHashMap<>();
+    private static ArrayList <String> errosUnicos = new ArrayList<>();
+    private static ArrayList <String> erroMaisComum = new ArrayList<>();
+    
+    public static ArrayList getErroComum(){
+        try{
+            for(String erroCometido : errosCometidos){
+                if(!errosUnicos.contains(erroCometido)){
+                    errosUnicos.add(erroCometido);
+                }
+            int frequencia = Collections.frequency(errosUnicos, erroCometido);
+            if(frequencia > 0){
+                errosComuns.put(erroCometido, frequencia);
+            }
+            }
+            int maiorValor = (Collections.max(errosComuns.values()));
+            for (Map.Entry<String, Integer> entry : errosComuns.entrySet()) {
+                if (entry.getValue().equals(maiorValor)) {
+                    erroMaisComum.add(entry.getKey());
+                }
+            return erroMaisComum;    
+            } 
+        } catch(Exception e){
+            erroMaisComum.add("Lista vazia");
+            return erroMaisComum;
+        }
+    return erroMaisComum;
+    }
 }

@@ -61,6 +61,7 @@ public class TelaFimJogo extends javax.swing.JFrame {
         errosLabel = new javax.swing.JLabel();
         acertosLabel = new javax.swing.JLabel();
         voltarButton = new javax.swing.JButton();
+        erroComumLabel = new javax.swing.JLabel();
         imagemFimJogoLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -90,25 +91,25 @@ public class TelaFimJogo extends javax.swing.JFrame {
         pontuacaoLabel.setForeground(new java.awt.Color(255, 255, 255));
         pontuacaoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         pontuacaoLabel.setText("Sua pontuação foi de: " + Integer.toString(Utilidades.Pontuacao.calcularPontuacao() + Utilidades.Pontuacao.calcularErros()));
-        getContentPane().add(pontuacaoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 960, 70));
+        getContentPane().add(pontuacaoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 960, 70));
 
         parabensLabel.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
         parabensLabel.setForeground(new java.awt.Color(255, 255, 255));
         parabensLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         parabensLabel.setText("Parabéns! Você concluiu a simulação");
-        getContentPane().add(parabensLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 960, 70));
+        getContentPane().add(parabensLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 960, 70));
 
         errosLabel.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         errosLabel.setForeground(new java.awt.Color(255, 255, 255));
         errosLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         errosLabel.setText("Sua quantidade de erros foi de: " + Integer.toString(Utilidades.Pontuacao.contarErrosCometidos()));
-        getContentPane().add(errosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 960, 70));
+        getContentPane().add(errosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 960, 70));
 
         acertosLabel.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         acertosLabel.setForeground(new java.awt.Color(255, 255, 255));
         acertosLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         acertosLabel.setText("Sua quantidade de acertos foi de: " + Integer.toString(Utilidades.Pontuacao.calcularAcertos()));
-        getContentPane().add(acertosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 960, 70));
+        getContentPane().add(acertosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 960, 70));
 
         voltarButton.setBackground(new java.awt.Color(255, 255, 255));
         voltarButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
@@ -121,6 +122,12 @@ public class TelaFimJogo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(voltarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 500, 270, 80));
+
+        erroComumLabel.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        erroComumLabel.setForeground(new java.awt.Color(255, 255, 255));
+        erroComumLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        erroComumLabel.setText("Seu(s) erro(s) mais comum foi: " + Utilidades.Pontuacao.getErroComum().toString());
+        getContentPane().add(erroComumLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 960, 60));
 
         imagemFimJogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/TelaFimJogo.png"))); // NOI18N
         getContentPane().add(imagemFimJogoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
@@ -194,6 +201,7 @@ public class TelaFimJogo extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel acertosLabel;
+    private javax.swing.JLabel erroComumLabel;
     private javax.swing.JLabel errosLabel;
     private javax.swing.JLabel gameOverLabel;
     private javax.swing.JLabel imagemFimJogoLabel;

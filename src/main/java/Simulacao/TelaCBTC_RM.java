@@ -55,7 +55,7 @@ public class TelaCBTC_RM extends javax.swing.JFrame {
         });
         getContentPane().add(cbtcRMButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 290, 230, 230));
 
-        cbtcRMLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaADU_RM.jpg"))); // NOI18N
+        cbtcRMLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaCBTC_RM.jpg"))); // NOI18N
         getContentPane().add(cbtcRMLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
