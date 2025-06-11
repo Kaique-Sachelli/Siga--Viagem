@@ -1,6 +1,7 @@
 package Simulacao;
 
 import MenuTelas.TelaMenuUsuario;
+import MenuTelasAdmin.TelaMenuAdmin;
 import Utilidades.EstadoCBTC;
 import Utilidades.EstadoPainelControle;
 import Utilidades.EstadoPorta;
@@ -119,9 +120,15 @@ public class TelaFimJogo extends javax.swing.JFrame {
     }//GEN-LAST:event_reiniciarButtonActionPerformed
 
     private void voltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarButtonActionPerformed
-        TelaMenuUsuario janelaMenuUsuario = new TelaMenuUsuario();
-        janelaMenuUsuario.setVisible(true);
-        this.dispose();
+        if(Modelo.UsuarioLogado.getUsuario().getInstrutor()){
+            TelaMenuAdmin janelaMenuAdmin = new TelaMenuAdmin();
+            janelaMenuAdmin.setVisible(true);
+            this.dispose();
+        } else{
+            TelaMenuUsuario janelaMenuUsuario = new TelaMenuUsuario(this);
+            janelaMenuUsuario.setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_voltarButtonActionPerformed
 
     /**

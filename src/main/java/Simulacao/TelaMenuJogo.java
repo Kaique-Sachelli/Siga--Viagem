@@ -2,6 +2,7 @@ package Simulacao;
 
 import MenuTelas.TelaConfiguracoes;
 import MenuTelas.TelaMenuUsuario;
+import MenuTelasAdmin.TelaMenuAdmin;
 import javax.swing.JFrame;
 
 public class TelaMenuJogo extends javax.swing.JFrame {
@@ -52,6 +53,7 @@ public class TelaMenuJogo extends javax.swing.JFrame {
         });
         getContentPane().add(sairButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 470, 340, 100));
 
+        somButton.setBackground(new java.awt.Color(255, 255, 255));
         somButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         somButton.setForeground(new java.awt.Color(0, 20, 137));
         somButton.setText("SOM");
@@ -63,6 +65,7 @@ public class TelaMenuJogo extends javax.swing.JFrame {
         });
         getContentPane().add(somButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, 340, 100));
 
+        continuarButton.setBackground(new java.awt.Color(255, 255, 255));
         continuarButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         continuarButton.setForeground(new java.awt.Color(0, 20, 137));
         continuarButton.setText("CONTINUAR");
@@ -74,6 +77,7 @@ public class TelaMenuJogo extends javax.swing.JFrame {
         });
         getContentPane().add(continuarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 340, 100));
 
+        guiaDeComoJogarButton1.setBackground(new java.awt.Color(255, 255, 255));
         guiaDeComoJogarButton1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         guiaDeComoJogarButton1.setForeground(new java.awt.Color(0, 20, 137));
         guiaDeComoJogarButton1.setText("GUIA DE COMO JOGAR");
@@ -86,9 +90,6 @@ public class TelaMenuJogo extends javax.swing.JFrame {
         getContentPane().add(guiaDeComoJogarButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, 340, 100));
 
         metroConceitoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaMenuJogo.png"))); // NOI18N
-        metroConceitoLabel.setMaximumSize(new java.awt.Dimension(960, 640));
-        metroConceitoLabel.setMinimumSize(new java.awt.Dimension(960, 640));
-        metroConceitoLabel.setPreferredSize(new java.awt.Dimension(960, 640));
         getContentPane().add(metroConceitoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
@@ -97,8 +98,15 @@ public class TelaMenuJogo extends javax.swing.JFrame {
 
     private void sairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairButtonActionPerformed
         Utilidades.AbandonouSimulacao.getInstance().setAbandonou(true);
-        TelaMenuUsuario janelaMenuUsuario = new TelaMenuUsuario(this);
-        janelaMenuUsuario.setVisible(true);
+        if(Modelo.UsuarioLogado.getUsuario().getInstrutor()){
+            TelaMenuAdmin janelaMenuAdmin = new TelaMenuAdmin();
+            janelaMenuAdmin.setVisible(true);
+            this.dispose();
+        } else{
+            TelaMenuUsuario janelaMenuUsuario = new TelaMenuUsuario(this);
+            janelaMenuUsuario.setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_sairButtonActionPerformed
 
     private void somButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_somButtonActionPerformed

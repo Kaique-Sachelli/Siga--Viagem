@@ -1,4 +1,5 @@
 package MenuTelas;
+import MenuTelasAdmin.TelaMenuAdmin;
 import javax.swing.*;
 
 public class TelaConfiguracoes extends javax.swing.JFrame {
@@ -125,8 +126,15 @@ public class TelaConfiguracoes extends javax.swing.JFrame {
 
 
     private void voltarMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarMenuButtonActionPerformed
-        frame.setVisible(true);
-        this.dispose();
+        if(Modelo.UsuarioLogado.getUsuario().getInstrutor()){
+            TelaMenuAdmin janelaMenuAdmin = new TelaMenuAdmin();
+            janelaMenuAdmin.setVisible(true);
+            this.dispose();
+        } else{
+            TelaMenuUsuario janelaMenuUsuario = new TelaMenuUsuario(this);
+            janelaMenuUsuario.setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_voltarMenuButtonActionPerformed
 
     private void ajustarSomSliderAncestorMoved(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_ajustarSomSliderAncestorMoved
