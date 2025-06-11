@@ -1,6 +1,9 @@
 package MenuTelasAdmin;
 
+import Utilidades.TocadorSom;
 import javax.swing.*;
+import Utilidades.EstadoSom;
+
 
 public class TelaConfiguracoesAdmin extends javax.swing.JFrame {
 
@@ -8,40 +11,44 @@ public class TelaConfiguracoesAdmin extends javax.swing.JFrame {
     
     public TelaConfiguracoesAdmin() {
         initComponents();
+        configurarSlider();
         desligarSomCheckBox.setSelected(TelaConfiguracoesAdmin.EstadoSom.somDesligado);
         setResizable(false);
     }
     
     private static int valorDoSlider = 10;
 
-    private void configurarSlider() {
-        ajusteSomSlider.setMinimum(0);
-        ajusteSomSlider.setMaximum(10);
-        ajusteSomSlider.setMajorTickSpacing(1);
+private void configurarSlider() {
+    ajusteSomSlider.setMinimum(0);
+    ajusteSomSlider.setMaximum(10);
+    ajusteSomSlider.setMajorTickSpacing(1);
+    ajusteSomSlider.setPaintTicks(true);
+    ajusteSomSlider.setPaintLabels(true);
 
-        ajusteSomSlider.setValue(valorDoSlider);
+    ajusteSomSlider.setValue(valorDoSlider);
+    Utilidades.TocadorSom.setVolume(valorDoSlider);
+
         ajusteSomSlider.addChangeListener(new javax.swing.event.ChangeListener() {
+            @Override
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 valorDoSlider = ajusteSomSlider.getValue();
+                if (!EstadoSom.somDesligado) {
+                    Utilidades.TocadorSom.setVolume(valorDoSlider);
+                }
             }
         });
     }
     
 
-
-    public class EstadoSom {
-
-        public static boolean somDesligado = false; // false = som ligado
-    }
-    
     
     public TelaConfiguracoesAdmin(JFrame frame){
         this.frame = frame;
         this.frame.setVisible(false);
         initComponents();
         configurarSlider();
-        desligarSomCheckBox.setSelected(TelaConfiguracoesAdmin.EstadoSom.somDesligado);
+        desligarSomCheckBox.setSelected(EstadoSom.somDesligado);
         setResizable(false);
+        Utilidades.TocadorSom.setVolume(EstadoSom.somDesligado ? 0 : valorDoSlider);
 
     }
     
@@ -121,11 +128,13 @@ public class TelaConfiguracoesAdmin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        TelaConfiguracoesAdmin.EstadoSom.somDesligado = desligarSomCheckBox.isSelected();
+
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void desligarSomCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desligarSomCheckBoxActionPerformed
-        TelaConfiguracoesAdmin.EstadoSom.somDesligado = desligarSomCheckBox.isSelected();
+        EstadoSom.somDesligado = desligarSomCheckBox.isSelected();
+        Utilidades.TocadorSom.setVolume(EstadoSom.somDesligado ? 0 : valorDoSlider);
+
     }//GEN-LAST:event_desligarSomCheckBoxActionPerformed
 
     private void voltarMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarMenuButtonActionPerformed
