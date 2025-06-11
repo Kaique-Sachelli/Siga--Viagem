@@ -80,6 +80,9 @@ public class TelaCBTC_AM extends javax.swing.JFrame {
         janelaCBTC_RM.setVisible(true);
         if(Utilidades.EstadoPorta.getPosicaoAtual() == Utilidades.EstadoPorta.Posicao.ABERTA){
             Pontuacao.registrarAtividade("RM");
+            if(Utilidades.EstadoReversora.getPosicaoAtual() == Utilidades.EstadoReversora.Posicao.NEUTRO){
+                Pontuacao.registrarErro("RM");
+            }
         } else{
             Pontuacao.registrarErro("RM");
         }
