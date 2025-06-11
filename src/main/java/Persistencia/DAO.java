@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import Modelo.Usuario;
+import Modelo.UsuarioLogado;
 import java.time.LocalDateTime;
 
 public class DAO {
@@ -218,5 +219,40 @@ public class DAO {
         }
         
 
+    }
+    public int obterProximaTentativa(int idUsuario)throws Exception{
+        var sql = "SELECT IFNULL(MAX(tentativa), 0) + 1 AS proxima_tentativa FROM estatistica WHERE id_usuario = ?";
+        try(
+                var conexao = new ConnectionFactory().obterConexao();
+                var ps = conexao.prepareStatement(sql);         
+        ){
+            ps.setInt(1, idUsuario);
+            try(
+                    ResultSet rs = ps.executeQuery();
+            ){
+                return rs.getInt("proxima_tentativa");
+                
+            }
+            
+        }
+    }
+    public boolean salvarEstatistica(Estatistica e)throws Exception{
+        var sql = "INSERT INTO estatistica (id_usuario, tentativa, data_simulacao, erros, acertos, pontuacao, erro_fatal, abandonada) VALUES"
+                + "(?, ?, CURRENT_TIMESTAMP(), ?, ?, ?, ?, ?)";
+        var idUsuario = UsuarioLogado.getUsuario().getId();
+        try(
+                var conexao = new ConnectionFactory().obterConexao();
+                var ps = conexao.prepareStatement(sql);
+        ){
+            ps.setInt(1, idUsuario);
+            ps.setInt(2, this.obterProximaTentativa(idUsuario));
+            ps.setInt(3, e.getErros());
+            ps.setInt(4, e.getAcertos());
+            ps.setInt(5, e.getPontuacao());
+            ps.setBoolean(6, e.getErroFatal());
+            ps.setBoolean(7, e.isAbandonada());
+            int atualizou = ps.executeUpdate();
+            return atualizou > 0;
+        }
     }
 }
