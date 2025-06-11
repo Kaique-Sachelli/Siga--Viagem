@@ -11,26 +11,21 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
     
     private JFrame frame;
     private Timer timer;
-    private long pressStartTime;
-    private final int DELAY_MS = 1500; // 3 segundos em milissegundos
+    private long pressStartTime; // Declara um timer para ações com atraso.
+    private final int DELAY_MS = 1500; // Armazena o tempo em que o botão deve ser precionado.
+    private TelaEmitindoPA telaEmitindoPAUnica; // DECLARE A INSTÂNCIA ÚNICA DA TELAEMITINDOPA AQUI
 
-    // 1. DECLARE A INSTÂNCIA ÚNICA DA TELAEMITINDOPA AQUI
-    private TelaEmitindoPA telaEmitindoPAUnica;
-
-    // 2. CONSTRUTOR PRINCIPAL (APENAS UM!)
     public TelaModuloComunicacao() {
         initComponents();
         setResizable(false);
         Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
+        
 
-        // 3. INICIALIZE A TELAEMITINDOPA UMA ÚNICA VEZ AQUI
-        telaEmitindoPAUnica = new TelaEmitindoPA(this);
+        // telaEmitindoPAUnica = new TelaEmitindoPA(this);
 
-        // Inicialização do timer para o botão de 3 segundos
         timer = new Timer(DELAY_MS, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("TelaModuloComunicacao: Timer do botão disparado - Botão ainda pressionado (erro ou teste)");
             }
         });
         timer.setRepeats(false);
@@ -114,9 +109,7 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     private void listaPASButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaPASButtonActionPerformed
-     //TelaListaPAS janelaListaPAS = new TelaListaPAS(this);
-     //janelaListaPAS.setVisible(true);
-     
+
     }//GEN-LAST:event_listaPASButtonActionPerformed
 
     private void listaPASButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listaPASButtonMousePressed

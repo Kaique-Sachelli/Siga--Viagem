@@ -8,7 +8,7 @@ public class ConnectionFactory {
     private String port = "3306";
     private String db = "simulador";
     private String user = "root";
-    private String password = "imtdb"; //máquinas da Mauá: imtdb    
+    private String password = "6460"; //máquinas da Mauá: imtdb    
     public Connection obterConexao() throws Exception{
 
         //string de conexão

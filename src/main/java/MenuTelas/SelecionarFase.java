@@ -86,15 +86,8 @@ public class SelecionarFase extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void voltarMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarMenuButtonActionPerformed
-          if(Modelo.UsuarioLogado.getUsuario().getInstrutor()){
-            TelaMenuAdmin janelaMenuAdmin = new TelaMenuAdmin();
-            janelaMenuAdmin.setVisible(true);
-            this.dispose();
-        } else{
-            TelaMenuUsuario janelaMenuUsuario = new TelaMenuUsuario(this);
-            janelaMenuUsuario.setVisible(true);
-            this.dispose();
-        }
+        frame.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_voltarMenuButtonActionPerformed
 
     private void voltarMenuButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_voltarMenuButtonMouseEntered
