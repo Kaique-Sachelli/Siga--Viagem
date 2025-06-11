@@ -80,7 +80,7 @@ public class TelaReversoraNeutro extends javax.swing.JFrame {
             janelaFrente.setVisible(true);
             this.dispose();    
             if(Utilidades.EstadoPorta.getPosicaoAtual() == Utilidades.EstadoPorta.Posicao.FITA){
-                Pontuacao.registrarAtividade("R");
+                Pontuacao.registrarAtividade("RF");
             } else{
                 Pontuacao.registrarErro("RF");
             }

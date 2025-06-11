@@ -1,6 +1,7 @@
 package Simulacao;
 
 import MenuTelas.TelaMenuUsuario;
+import MenuTelasAdmin.TelaMenuAdmin;
 import Utilidades.EstadoCBTC;
 import Utilidades.EstadoPainelControle;
 import Utilidades.EstadoPorta;
@@ -30,10 +31,10 @@ public class TelaGameOver extends javax.swing.JFrame {
         acertosLabel = new javax.swing.JLabel();
         gameOverLabel = new javax.swing.JLabel();
         reiniciarButton = new javax.swing.JButton();
-        pontuacaoLabel = new javax.swing.JLabel();
         erroFatalLabel = new javax.swing.JLabel();
         voltarButton = new javax.swing.JButton();
         acertosLabel1 = new javax.swing.JLabel();
+        errosLabel = new javax.swing.JLabel();
         imagemGameOverLabel = new javax.swing.JLabel();
 
         acertosLabel.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
@@ -64,12 +65,6 @@ public class TelaGameOver extends javax.swing.JFrame {
         });
         getContentPane().add(reiniciarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 270, 80));
 
-        pontuacaoLabel.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
-        pontuacaoLabel.setForeground(new java.awt.Color(255, 255, 255));
-        pontuacaoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        pontuacaoLabel.setText("Sua pontuação foi de: " + Integer.toString(Utilidades.Pontuacao.calcularPontuacao() + Utilidades.Pontuacao.calcularErros()));
-        getContentPane().add(pontuacaoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 960, 70));
-
         erroFatalLabel.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
         erroFatalLabel.setForeground(new java.awt.Color(255, 255, 255));
         erroFatalLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -92,9 +87,15 @@ public class TelaGameOver extends javax.swing.JFrame {
         acertosLabel1.setForeground(new java.awt.Color(255, 255, 255));
         acertosLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         acertosLabel1.setText("Sua quantidade de acertos foi de: " + Integer.toString(Utilidades.Pontuacao.calcularAcertos()));
-        getContentPane().add(acertosLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 960, 70));
+        getContentPane().add(acertosLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 960, 70));
 
-        imagemGameOverLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaGameOver.png"))); // NOI18N
+        errosLabel.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
+        errosLabel.setForeground(new java.awt.Color(255, 255, 255));
+        errosLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        errosLabel.setText("Sua quantidade de erros foi de: " + Integer.toString(Utilidades.Pontuacao.contarErrosCometidos()));
+        getContentPane().add(errosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 960, 70));
+
+        imagemGameOverLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/TelaGameOver.png"))); // NOI18N
         getContentPane().add(imagemGameOverLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
@@ -117,9 +118,15 @@ public class TelaGameOver extends javax.swing.JFrame {
     }//GEN-LAST:event_reiniciarButtonActionPerformed
 
     private void voltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarButtonActionPerformed
-        TelaMenuUsuario janelaMenuUsuario = new TelaMenuUsuario();
-        janelaMenuUsuario.setVisible(true);
-        this.dispose();
+        if(Modelo.UsuarioLogado.getUsuario().getInstrutor()){
+            TelaMenuAdmin janelaMenuAdmin = new TelaMenuAdmin();
+            janelaMenuAdmin.setVisible(true);
+            this.dispose();
+        } else{
+            TelaMenuUsuario janelaMenuUsuario = new TelaMenuUsuario(this);
+            janelaMenuUsuario.setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_voltarButtonActionPerformed
 
     /**
@@ -161,9 +168,9 @@ public class TelaGameOver extends javax.swing.JFrame {
     private javax.swing.JLabel acertosLabel;
     private javax.swing.JLabel acertosLabel1;
     private javax.swing.JLabel erroFatalLabel;
+    private javax.swing.JLabel errosLabel;
     private javax.swing.JLabel gameOverLabel;
     private javax.swing.JLabel imagemGameOverLabel;
-    private javax.swing.JLabel pontuacaoLabel;
     private javax.swing.JButton reiniciarButton;
     private javax.swing.JButton voltarButton;
     // End of variables declaration//GEN-END:variables

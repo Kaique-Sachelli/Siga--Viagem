@@ -1,5 +1,6 @@
 package Simulacao;
 
+import Utilidades.TocadorSom;
 import javax.swing.JFrame;
 
 
@@ -24,6 +25,7 @@ public class TelaBotoeirasSinaleiras extends javax.swing.JFrame {
     private void initComponents() {
 
         setaBaixoButton = new javax.swing.JButton();
+        portaAbrindoButton = new javax.swing.JButton();
         botoeirasSinaleirasLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -41,6 +43,16 @@ public class TelaBotoeirasSinaleiras extends javax.swing.JFrame {
         });
         getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
+        portaAbrindoButton.setBorderPainted(false);
+        portaAbrindoButton.setContentAreaFilled(false);
+        portaAbrindoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        portaAbrindoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                portaAbrindoButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(portaAbrindoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 300, 80, 80));
+
         botoeirasSinaleirasLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaBotoeirasSinaleiras.jpg"))); // NOI18N
         getContentPane().add(botoeirasSinaleirasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
@@ -52,6 +64,13 @@ public class TelaBotoeirasSinaleiras extends javax.swing.JFrame {
         frame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
+
+    private void portaAbrindoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_portaAbrindoButtonActionPerformed
+        TocadorSom.tocarSom("Sons/Porta-abrindo.wav");
+        Utilidades.DetectarErroFatal.getInstance().setErroFatal(true);
+        TelaGameOver janelaGameOver = new TelaGameOver(this);
+        janelaGameOver.setVisible(true);
+    }//GEN-LAST:event_portaAbrindoButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -90,6 +109,7 @@ public class TelaBotoeirasSinaleiras extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel botoeirasSinaleirasLabel;
+    private javax.swing.JButton portaAbrindoButton;
     private javax.swing.JButton setaBaixoButton;
     // End of variables declaration//GEN-END:variables
 }

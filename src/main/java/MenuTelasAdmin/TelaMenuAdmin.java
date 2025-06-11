@@ -1,6 +1,8 @@
 package MenuTelasAdmin;
 
 import SimulacaoCabine.TelaCabine;
+import MenuTelas.SelecionarFase;
+import MenuTelas.TelaConfiguracoes;
 import Utilidades.EstadoCBTC;
 import Utilidades.EstadoPainelControle;
 import Utilidades.EstadoPorta;
@@ -182,7 +184,7 @@ public class TelaMenuAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_alterarUsuarioButtonActionPerformed
 
     private void configuracoesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_configuracoesButtonActionPerformed
-        TelaConfiguracoesAdmin janelaConfiguracoes = new TelaConfiguracoesAdmin(this);
+        TelaConfiguracoes janelaConfiguracoes = new TelaConfiguracoes(this);
         janelaConfiguracoes.setVisible(true);
     }//GEN-LAST:event_configuracoesButtonActionPerformed
 
@@ -196,7 +198,7 @@ public class TelaMenuAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_sairButtonActionPerformed
 
     private void selecionarFaseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selecionarFaseButtonActionPerformed
-        SelecionarFaseAdmin janelaSelecionar  = new SelecionarFaseAdmin(this);
+        SelecionarFase janelaSelecionar  = new SelecionarFase(this);
         janelaSelecionar.setVisible(true);
     }//GEN-LAST:event_selecionarFaseButtonActionPerformed
 

@@ -1,5 +1,6 @@
 package MenuTelas;
 
+import MenuTelasAdmin.TelaMenuAdmin;
 import Simulacao.TelaCabine;
 import Utilidades.EstadoCBTC;
 import Utilidades.EstadoPainelControle;
@@ -85,11 +86,15 @@ public class SelecionarFase extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void voltarMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarMenuButtonActionPerformed
-          frame.setVisible(true);
-          this.dispose();
-//        TelaMenuUsuario janelaMenuUsuario  = new TelaMenuUsuario();
-//        janelaMenuUsuario.setVisible(true);
-//        this.dispose();
+          if(Modelo.UsuarioLogado.getUsuario().getInstrutor()){
+            TelaMenuAdmin janelaMenuAdmin = new TelaMenuAdmin();
+            janelaMenuAdmin.setVisible(true);
+            this.dispose();
+        } else{
+            TelaMenuUsuario janelaMenuUsuario = new TelaMenuUsuario(this);
+            janelaMenuUsuario.setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_voltarMenuButtonActionPerformed
 
     private void voltarMenuButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_voltarMenuButtonMouseEntered

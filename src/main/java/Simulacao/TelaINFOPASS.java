@@ -62,8 +62,15 @@ public class TelaINFOPASS extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void preparaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_preparaButtonActionPerformed
-        TelaDDU janelaDDU = new TelaDDU(this);
-        janelaDDU.setVisible(true);
+        if(Utilidades.EstadoPainelControle.getPosicaoAtual() == Utilidades.EstadoPainelControle.Posicao.ISOL){
+            TelaDDUCarroIsolado janelaDDUCarroIsolado = new TelaDDUCarroIsolado();
+            janelaDDUCarroIsolado.setVisible(true);
+            this.dispose();
+        } else{
+            TelaDDUUmaPortaNaoFecha janelaDDUUmaPortaNaoFecha = new TelaDDUUmaPortaNaoFecha();
+            janelaDDUUmaPortaNaoFecha.setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_preparaButtonActionPerformed
 
     private void feButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_feButtonActionPerformed
