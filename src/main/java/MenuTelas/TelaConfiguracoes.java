@@ -132,15 +132,8 @@ public class TelaConfiguracoes extends javax.swing.JFrame {
 
 
     private void voltarMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarMenuButtonActionPerformed
-        if(Modelo.UsuarioLogado.getUsuario().getInstrutor()){
-            TelaMenuAdmin janelaMenuAdmin = new TelaMenuAdmin();
-            janelaMenuAdmin.setVisible(true);
-            this.dispose();
-        } else{
-            TelaMenuUsuario janelaMenuUsuario = new TelaMenuUsuario(this);
-            janelaMenuUsuario.setVisible(true);
-            this.dispose();
-        }
+        frame.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_voltarMenuButtonActionPerformed
 
     private void ajusteSomSliderAncestorMoved(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_ajusteSomSliderAncestorMoved

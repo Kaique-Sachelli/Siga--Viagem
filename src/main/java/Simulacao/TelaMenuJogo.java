@@ -143,11 +143,13 @@ public class TelaMenuJogo extends javax.swing.JFrame {
     }//GEN-LAST:event_somButtonActionPerformed
 
     private void continuarButtonActionPerformed1(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continuarButtonActionPerformed1
+        frame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_continuarButtonActionPerformed1
 
     private void guiaDeComoJogarButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guiaDeComoJogarButton1ActionPerformed
-        // TODO add your handling code here:
+        TelaGuiaDeComoJogar janelaGuiaDeComoJogar = new TelaGuiaDeComoJogar(this);
+        janelaGuiaDeComoJogar.setVisible(true);
     }//GEN-LAST:event_guiaDeComoJogarButton1ActionPerformed
 
 

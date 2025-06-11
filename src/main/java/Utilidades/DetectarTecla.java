@@ -10,6 +10,7 @@ import javax.swing.JRootPane;
 import javax.swing.KeyStroke;
 
 public class DetectarTecla { // Define a classe.
+    
     private static DetectarTecla instance = new DetectarTecla(); // Cria um objeto instance
 
     public static DetectarTecla getInstance() { // Getter, que serve para acessar os atributos da classe.
@@ -17,18 +18,18 @@ public class DetectarTecla { // Define a classe.
     }
     
     public void configurarTeclaESC(JFrame frame) { // Método.
-        
+     
         JRootPane rootPane = frame.getRootPane(); // Obtem o painel principal, que faz mapeamento das teclas e ações.
 
         Action acaoEsc = new AbstractAction() { // Cria uma ação para quando a tecla ESC for precionada.
             @Override
             public void actionPerformed(ActionEvent e) { // Método é chamado quando o ESC é precionado.
-                TelaMenuJogo janelaMenuJogo = new TelaMenuJogo();
+                frame.dispose();
+                TelaMenuJogo janelaMenuJogo = new TelaMenuJogo(frame);
                 janelaMenuJogo.setVisible(true);
             }
         };
         
-
         // Ligando a tecla ESC a essa ação
         KeyStroke teclaEsc = KeyStroke.getKeyStroke("ESCAPE"); // Cria um objeto KeyStroke que representa a tecla ESC.
         
