@@ -189,14 +189,20 @@ public class DAO {
         }
     }
     public int obterRanking(int tentativa, int id)throws Exception{
-        var sql = "WITH ranking AS ("
-                + "SELECT e.id_usuario,"
-                + " DENSE_RANK() OVER(ORDER BY e.pontuacao DESC) as posicao"
-                + " FROM estatistica e"
-                + " WHERE e.tentativa = ?)"
-                + " SELECT posicao"
-                + " FROM ranking"
-                + " WHERE id_usuario = ?;";
+        var sql = "SELECT posicao\n" +
+        "FROM\n" +
+        "(SELECT\n" +
+        "e.id_usuario,\n" +
+        "DENSE_RANK() OVER (ORDER BY e.pontuacao DESC) as posicao\n" +
+        "FROM\n" +
+        "estatistica e\n" +
+        "JOIN\n" +
+        "usuario u ON e.id_usuario = u.id_usuario\n" +
+        "WHERE\n" +
+        "e.tentativa = ? AND u.instrutor = false\n" +
+        ") AS ranking\n" +
+        "WHERE\n" +
+        "id_usuario = ?;";
         
         try(
                 var conexao = new ConnectionFactory().obterConexao();
@@ -229,9 +235,10 @@ public class DAO {
             ps.setInt(1, idUsuario);
             try(
                     ResultSet rs = ps.executeQuery();
-            ){
+            ){  if(rs.next()){
                 return rs.getInt("proxima_tentativa");
-                
+                }
+            return 0;
             }
             
         }
