@@ -1,8 +1,8 @@
 package MenuTelasAdmin;
 
-import SimulacaoCabine.TelaCabine;
 import MenuTelas.SelecionarFase;
 import MenuTelas.TelaConfiguracoes;
+import Simulacao.TelaCabine;
 import Utilidades.EstadoCBTC;
 import Utilidades.EstadoPainelControle;
 import Utilidades.EstadoPorta;

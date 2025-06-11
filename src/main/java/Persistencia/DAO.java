@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import Modelo.Usuario;
+import Modelo.UsuarioLogado;
 import java.time.LocalDateTime;
 
 public class DAO {
@@ -152,8 +153,8 @@ public class DAO {
         var estatisticas = new ArrayList<Estatistica>();
         
         var sql = "SELECT\n" +
-                "s.numero_simulacao,\n" +
-                "s.data_simulacao,\n" +
+                "e.tentativa,\n" +
+                "e.data_simulacao,\n" +
                 "e.erros,\n" +
                 "e.acertos,\n" +
                 "e.erro_fatal,\n" +
@@ -161,7 +162,6 @@ public class DAO {
                 "e.pontuacao\n" +
                 "FROM estatistica e\n" +
                 "JOIN usuario u ON (e.id_usuario = u.id_usuario)\n" +
-                "JOIN simulacao s ON (e.numero_simulacao = s.numero_simulacao)\n" +
                 "WHERE u.id_usuario = ? ;";
         
         try(
@@ -174,26 +174,26 @@ public class DAO {
             ){
                 while(rs.next()){
 
-                    var numeroSimulacao = rs.getInt("numero_simulacao");
+                    var tentativa = rs.getInt("tentativa");
                     var dataSimulacao = rs.getObject("data_simulacao", LocalDateTime.class);
                     var erros = rs.getInt("erros");
                     var acertos = rs.getInt("acertos");
                     var pontuacao = rs.getInt("pontuacao");
                     var errosFatais = rs.getBoolean("erro_fatal");
                     var abandonada = rs.getBoolean("abandonada");
-                    var estatistica = new Estatistica(numeroSimulacao, dataSimulacao, erros, acertos, pontuacao,errosFatais, abandonada);
+                    var estatistica = new Estatistica(tentativa, dataSimulacao, erros, acertos, pontuacao,errosFatais, abandonada);
                     estatisticas.add(estatistica);
                 }
             return estatisticas;
             }
         }
     }
-    public int obterRanking(int numSimulacao, int id)throws Exception{
+    public int obterRanking(int tentativa, int id)throws Exception{
         var sql = "WITH ranking AS ("
                 + "SELECT e.id_usuario,"
-                + " RANK() OVER(ORDER BY e.pontuacao DESC) as posicao"
+                + " DENSE_RANK() OVER(ORDER BY e.pontuacao DESC) as posicao"
                 + " FROM estatistica e"
-                + " WHERE e.numero_simulacao = ?)"
+                + " WHERE e.tentativa = ?)"
                 + " SELECT posicao"
                 + " FROM ranking"
                 + " WHERE id_usuario = ?;";
@@ -202,7 +202,7 @@ public class DAO {
                 var conexao = new ConnectionFactory().obterConexao();
                 var ps = conexao.prepareStatement(sql);
         ){
-            ps.setInt(1, numSimulacao);
+            ps.setInt(1, tentativa);
             ps.setInt(2, id);
             try(
                     ResultSet rs = ps.executeQuery();
@@ -219,5 +219,40 @@ public class DAO {
         }
         
 
+    }
+    public int obterProximaTentativa(int idUsuario)throws Exception{
+        var sql = "SELECT IFNULL(MAX(tentativa), 0) + 1 AS proxima_tentativa FROM estatistica WHERE id_usuario = ?";
+        try(
+                var conexao = new ConnectionFactory().obterConexao();
+                var ps = conexao.prepareStatement(sql);         
+        ){
+            ps.setInt(1, idUsuario);
+            try(
+                    ResultSet rs = ps.executeQuery();
+            ){
+                return rs.getInt("proxima_tentativa");
+                
+            }
+            
+        }
+    }
+    public boolean salvarEstatistica(Estatistica e)throws Exception{
+        var sql = "INSERT INTO estatistica (id_usuario, tentativa, data_simulacao, erros, acertos, pontuacao, erro_fatal, abandonada) VALUES"
+                + "(?, ?, CURRENT_TIMESTAMP(), ?, ?, ?, ?, ?)";
+        var idUsuario = UsuarioLogado.getUsuario().getId();
+        try(
+                var conexao = new ConnectionFactory().obterConexao();
+                var ps = conexao.prepareStatement(sql);
+        ){
+            ps.setInt(1, idUsuario);
+            ps.setInt(2, this.obterProximaTentativa(idUsuario));
+            ps.setInt(3, e.getErros());
+            ps.setInt(4, e.getAcertos());
+            ps.setInt(5, e.getPontuacao());
+            ps.setBoolean(6, e.getErroFatal());
+            ps.setBoolean(7, e.isAbandonada());
+            int atualizou = ps.executeUpdate();
+            return atualizou > 0;
+        }
     }
 }
