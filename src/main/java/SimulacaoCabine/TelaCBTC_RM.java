@@ -79,7 +79,11 @@ public class TelaCBTC_RM extends javax.swing.JFrame {
         TelaCBTC_AM telaAM = new TelaCBTC_AM(this);
         telaAM.setVisible(true);
         this.dispose();
-        Pontuacao.registrarAtividade("AM");
+        if(Utilidades.EstadoPorta.getPosicaoAtual() == Utilidades.EstadoPorta.Posicao.FITA){
+            Pontuacao.registrarAtividade("AM");
+        } else{
+            Pontuacao.registrarErro("AM");
+        }
     }//GEN-LAST:event_cbtcRMButtonActionPerformed
 
     /**

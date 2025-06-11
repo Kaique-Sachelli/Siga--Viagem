@@ -72,7 +72,11 @@ public class TelaReversoraFrente extends javax.swing.JFrame {
         EstadoReversora.setPosicaoAtual(EstadoReversora.Posicao.NEUTRO);
         TelaReversoraNeutro janelaNeutro = new TelaReversoraNeutro(frame); 
         janelaNeutro.setVisible(true);
-        Pontuacao.registrarAtividade("R");
+        if(Utilidades.EstadoPorta.getPosicaoAtual() == Utilidades.EstadoPorta.Posicao.ABERTA){
+            Pontuacao.registrarAtividade("R");
+        } else{
+            Pontuacao.registrarErro("RN");
+        }
         this.dispose(); // <- fecha a janela atual
     }//GEN-LAST:event_reversoraFrenteButtonActionPerformed
 

@@ -110,6 +110,7 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
     private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
         TelaCabine janelaCabine = new TelaCabine(this);
         janelaCabine.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     private void listaPASButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaPASButtonActionPerformed
@@ -134,7 +135,12 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
             // Cria e exibe TelaEmitindoPA, passando a tela atual como referência
             TelaEmitindoPA janelaEmitindoPA = new TelaEmitindoPA(this);
             janelaEmitindoPA.setVisible(true);
-            Pontuacao.registrarAtividade("PA");
+            if(Simulacao.SituacaoPontuacao.getInstance().isSituacaoPA() == false){
+                Pontuacao.registrarAtividade("PA");
+                Simulacao.SituacaoPontuacao.getInstance().setSituacaoPA(true);
+            } else {
+                Pontuacao.registrarErro("PA");
+            }
         } else {
             TelaListaPAS janelaListaPAS = new TelaListaPAS(this);
             janelaListaPAS.setVisible(true);
@@ -163,7 +169,12 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
             // Cria e exibe TelaEmitindoPA, passando a tela atual como referência
             TelaInformandoCCO janelaInformandoCCO = new TelaInformandoCCO(this);
             janelaInformandoCCO.setVisible(true);
-            Pontuacao.registrarAtividade("CCO");
+            if(Simulacao.SituacaoPontuacao.getInstance().isSituacaoCCO() == false){
+                Pontuacao.registrarAtividade("CCO");
+                Simulacao.SituacaoPontuacao.getInstance().setSituacaoCCO(true);
+            } else {
+                Pontuacao.registrarErro("CCO");
+            }
         } else {
             JOptionPane.showMessageDialog(null, "Para informar CCO precione o botão por 2 segundos.", "Informar CCO", JOptionPane.INFORMATION_MESSAGE);
         }

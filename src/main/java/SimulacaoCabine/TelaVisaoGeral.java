@@ -118,6 +118,12 @@ public class TelaVisaoGeral extends javax.swing.JFrame {
     private void sinalizacaoAcessaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sinalizacaoAcessaButtonActionPerformed
         TelaSinalizacaoExternaAcesa janelaExternaAcessa = new TelaSinalizacaoExternaAcesa(this);
         janelaExternaAcessa.setVisible(true);
+        if(Simulacao.SituacaoPontuacao.getInstance().isSituacaoLuz() == false){
+            Pontuacao.registrarAtividade("LPE");
+            Simulacao.SituacaoPontuacao.getInstance().setSituacaoLuz(true);
+        } else {
+            Pontuacao.registrarErro("LPE");
+        }
     }//GEN-LAST:event_sinalizacaoAcessaButtonActionPerformed
 
     /**
