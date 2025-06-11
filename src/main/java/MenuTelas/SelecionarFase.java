@@ -1,6 +1,6 @@
 package MenuTelas;
 
-import SimulacaoCabine.TelaCabine;
+import Simulacao.TelaCabine;
 import Utilidades.EstadoCBTC;
 import Utilidades.EstadoPainelControle;
 import Utilidades.EstadoPorta;
@@ -105,7 +105,7 @@ public class SelecionarFase extends javax.swing.JFrame {
         Utilidades.EstadoPainelControle.setPosicaoAtual(EstadoPainelControle.Posicao.NORMAL);
         Utilidades.EstadoPorta.setPosicaoAtual(EstadoPorta.Posicao.ABERTA);
         Utilidades.EstadoReversora.setPosicaoAtual(EstadoReversora.Posicao.FRENTE);
-        Simulacao.Pontuacao.zerarAtividadesRealizadas();
+        Utilidades.Pontuacao.zerarAtividadesRealizadas();
         TelaCabine janelaCabine = new TelaCabine(this);
         janelaCabine.setVisible(true);
         TocadorSom.tocarSom("Sons/Gongo.wav");
