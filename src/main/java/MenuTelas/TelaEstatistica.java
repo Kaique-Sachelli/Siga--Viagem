@@ -14,7 +14,7 @@ public class TelaEstatistica extends javax.swing.JFrame {
         try{
             var dao = new DAO();
             var estatisticas = dao.obterEstatistica(UsuarioLogado.getUsuario().getId());
-            simulacaoComboBox.setModel(
+            estatisticaComboBox.setModel(
                 new DefaultComboBoxModel<Estatistica>(estatisticas.toArray(new Estatistica[]{}))
             );     
         }
@@ -54,7 +54,7 @@ public class TelaEstatistica extends javax.swing.JFrame {
         errosFataisLabel1 = new javax.swing.JLabel();
         tempoJogoLabel1 = new javax.swing.JLabel();
         jogadorLabel = new javax.swing.JLabel();
-        simulacaoComboBox = new javax.swing.JComboBox<>();
+        estatisticaComboBox = new javax.swing.JComboBox<>();
         acertosLabel = new javax.swing.JLabel();
         erroFatalLabel = new javax.swing.JLabel();
         errosLabel = new javax.swing.JLabel();
@@ -90,7 +90,7 @@ public class TelaEstatistica extends javax.swing.JFrame {
         linhaAzulLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/linhaAzul.png"))); // NOI18N
 
         rankingLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        rankingLabel.setText("Simulação:");
+        rankingLabel.setText("Tentativa:");
 
         acertosLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         acertosLabel1.setText("Acertos:");
@@ -107,10 +107,10 @@ public class TelaEstatistica extends javax.swing.JFrame {
         jogadorLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jogadorLabel.setText("Jogador:");
 
-        simulacaoComboBox.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        simulacaoComboBox.addActionListener(new java.awt.event.ActionListener() {
+        estatisticaComboBox.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        estatisticaComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                simulacaoComboBoxActionPerformed(evt);
+                estatisticaComboBoxActionPerformed(evt);
             }
         });
 
@@ -168,7 +168,7 @@ public class TelaEstatistica extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(rankingLabel)
                                 .addGap(27, 27, 27)
-                                .addComponent(simulacaoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(estatisticaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(tempoJogoLabel1)
                                 .addGap(18, 18, 18)
@@ -212,7 +212,7 @@ public class TelaEstatistica extends javax.swing.JFrame {
                     .addComponent(jogadorLabel))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(simulacaoComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(estatisticaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rankingLabel))
                 .addGap(80, 80, 80)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -260,8 +260,8 @@ public class TelaEstatistica extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_voltarMenuButtonActionPerformed
 
-    private void simulacaoComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simulacaoComboBoxActionPerformed
-        var selecionado = (Estatistica) simulacaoComboBox.getSelectedItem();
+    private void estatisticaComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estatisticaComboBoxActionPerformed
+        var selecionado = (Estatistica) estatisticaComboBox.getSelectedItem();
         
         acertosLabel.setText(String.valueOf((selecionado.getAcertos())));
         
@@ -285,7 +285,7 @@ public class TelaEstatistica extends javax.swing.JFrame {
         else{
             situacaoLabel.setText("Simulação concluída.");
         }
-    }//GEN-LAST:event_simulacaoComboBoxActionPerformed
+    }//GEN-LAST:event_estatisticaComboBoxActionPerformed
 
     
     public static void main(String args[]) {
@@ -330,13 +330,13 @@ public class TelaEstatistica extends javax.swing.JFrame {
     private javax.swing.JLabel errosFataisLabel1;
     private javax.swing.JLabel errosLabel;
     private javax.swing.JLabel errosLabel1;
+    private javax.swing.JComboBox<Estatistica> estatisticaComboBox;
     private javax.swing.JLabel estatisticasLabel;
     private javax.swing.JLabel jogadorLabel;
     private javax.swing.JLabel linhaAzulLabel;
     private javax.swing.JLabel pontuacaoLabel;
     private javax.swing.JLabel pontuaçãoLabel1;
     private javax.swing.JLabel rankingLabel;
-    private javax.swing.JComboBox<Estatistica> simulacaoComboBox;
     private javax.swing.JLabel situacaoLabel;
     private javax.swing.JLabel tempoJogoLabel1;
     private javax.swing.JLabel usuarioLabel;

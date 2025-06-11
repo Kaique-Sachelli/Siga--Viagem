@@ -2,6 +2,7 @@ package MenuTelasAdmin;
 
 import Modelo.Estatistica;
 import Modelo.Usuario;
+import Modelo.UsuarioLogado;
 import Persistencia.DAO;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
@@ -75,7 +76,7 @@ public class TelaEstatisticaAdmin extends javax.swing.JFrame {
         voltarMenuButton = new javax.swing.JButton();
         estatisticasLabel = new javax.swing.JLabel();
         linhaAzulLabel = new javax.swing.JLabel();
-        simulacaoLabel = new javax.swing.JLabel();
+        tentativaLabel1 = new javax.swing.JLabel();
         jogadorLabel = new javax.swing.JLabel();
         rankingLabel = new javax.swing.JLabel();
         estatisticaComboBox = new javax.swing.JComboBox<>();
@@ -134,19 +135,19 @@ public class TelaEstatisticaAdmin extends javax.swing.JFrame {
         linhaAzulLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/linhaAzul.png"))); // NOI18N
         getContentPane().add(linhaAzulLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 70, 640));
 
-        simulacaoLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        simulacaoLabel.setText("Simulação:");
-        getContentPane().add(simulacaoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 120, 40));
-        simulacaoLabel.getAccessibleContext().setAccessibleName("");
+        tentativaLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        tentativaLabel1.setText("Tentativa:");
+        getContentPane().add(tentativaLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 120, 40));
+        tentativaLabel1.getAccessibleContext().setAccessibleName("");
 
         jogadorLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jogadorLabel.setText("Jogador:");
         jogadorLabel.setToolTipText("");
-        getContentPane().add(jogadorLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, 90, 50));
+        getContentPane().add(jogadorLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 90, 50));
 
         rankingLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         rankingLabel.setText("ranking");
-        getContentPane().add(rankingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, -1, -1));
+        getContentPane().add(rankingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, -1, -1));
 
         estatisticaComboBox.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         estatisticaComboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -166,7 +167,7 @@ public class TelaEstatisticaAdmin extends javax.swing.JFrame {
 
         rankingLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         rankingLabel2.setText("Ranking:");
-        getContentPane().add(rankingLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, -1, -1));
+        getContentPane().add(rankingLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, -1, -1));
 
         acertosLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         acertosLabel1.setText("Acertos:");
@@ -227,8 +228,11 @@ public class TelaEstatisticaAdmin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void voltarMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarMenuButtonActionPerformed
-        frame.setVisible(true);
+
+        var telaMenuInst = new TelaMenuAdmin();
+        telaMenuInst.setVisible(true);
         this.dispose();
+          
     }//GEN-LAST:event_voltarMenuButtonActionPerformed
 
     private void estatisticaComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estatisticaComboBoxActionPerformed
@@ -319,9 +323,9 @@ public class TelaEstatisticaAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel pontuaçãoLabel1;
     private javax.swing.JLabel rankingLabel;
     private javax.swing.JLabel rankingLabel2;
-    private javax.swing.JLabel simulacaoLabel;
     private javax.swing.JLabel situacaoLabel;
     private javax.swing.JLabel tempoJogoLabel1;
+    private javax.swing.JLabel tentativaLabel1;
     private javax.swing.JComboBox<Usuario> usuarioComboBox;
     private javax.swing.JButton voltarMenuButton;
     // End of variables declaration//GEN-END:variables
