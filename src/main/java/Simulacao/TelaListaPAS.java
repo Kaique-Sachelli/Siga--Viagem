@@ -2,16 +2,16 @@ package Simulacao;
 
 import javax.swing.JFrame;
 
-public class TelaListaPAs extends javax.swing.JFrame {
+public class TelaListaPAS extends javax.swing.JFrame {
 
     private JFrame frame;
     
-    public TelaListaPAs() {
+    public TelaListaPAS() {
         initComponents();
         Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
     
-    public TelaListaPAs(JFrame frame) {
+    public TelaListaPAS(JFrame frame) {
         this();
         frame.setVisible(false);
         this.frame = frame;
@@ -70,13 +70,13 @@ public class TelaListaPAs extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaListaPAs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaListaPAS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaListaPAs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaListaPAS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaListaPAs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaListaPAS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaListaPAs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaListaPAS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -84,7 +84,7 @@ public class TelaListaPAs extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaListaPAs().setVisible(true);
+                new TelaListaPAS().setVisible(true);
             }
         });
     }

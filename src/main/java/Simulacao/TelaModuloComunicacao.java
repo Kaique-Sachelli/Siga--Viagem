@@ -142,7 +142,7 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
                 Pontuacao.registrarErro("PA");
             }
         } else {
-            TelaListaPAs janelaListaPAS = new TelaListaPAs(this);
+            TelaListaPAS janelaListaPAS = new TelaListaPAS(this);
             janelaListaPAS.setVisible(true);
             this.dispose();
         }
