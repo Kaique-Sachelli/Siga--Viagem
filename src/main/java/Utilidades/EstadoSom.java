@@ -6,13 +6,13 @@ public class EstadoSom {
 
     public static void setSomDesligado(boolean desligado) {
         somDesligado = desligado;
-        TocadorSom.setVolume(desligado ? 0 : volume);
+        TocadorSom.setVolume(desligado ? 0f : volume / 10f);
     }
 
     public static void setVolume(int novoVolume) {
         volume = novoVolume;
         if (!somDesligado) {
-            TocadorSom.setVolume(volume);
+            TocadorSom.setVolume(volume / 10f);
         }
     }
 

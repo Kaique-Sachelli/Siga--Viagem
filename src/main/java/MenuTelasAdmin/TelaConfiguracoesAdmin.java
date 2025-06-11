@@ -12,30 +12,27 @@ public class TelaConfiguracoesAdmin extends javax.swing.JFrame {
     public TelaConfiguracoesAdmin() {
         initComponents();
         configurarSlider();
-        desligarSomCheckBox.setSelected(TelaConfiguracoesAdmin.EstadoSom.somDesligado);
+        desligarSomCheckBox.setSelected(EstadoSom.isSomDesligado());
         setResizable(false);
     }
     
     private static int valorDoSlider = 10;
 
-private void configurarSlider() {
-    ajusteSomSlider.setMinimum(0);
-    ajusteSomSlider.setMaximum(10);
-    ajusteSomSlider.setMajorTickSpacing(1);
-    ajusteSomSlider.setPaintTicks(true);
-    ajusteSomSlider.setPaintLabels(true);
+ private void configurarSlider() {
+        ajusteSomSlider.setMinimum(0);
+        ajusteSomSlider.setMaximum(10);
+        ajusteSomSlider.setMajorTickSpacing(1);
+        ajusteSomSlider.setPaintTicks(true);
+        ajusteSomSlider.setPaintLabels(true);
 
-    ajusteSomSlider.setValue(valorDoSlider);
-    Utilidades.TocadorSom.setVolume(valorDoSlider);
+        ajusteSomSlider.setValue(EstadoSom.getVolume());
+        EstadoSom.setVolume(EstadoSom.getVolume());
 
-        ajusteSomSlider.addChangeListener(new javax.swing.event.ChangeListener() {
-            @Override
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                valorDoSlider = ajusteSomSlider.getValue();
-                if (!EstadoSom.somDesligado) {
-                    Utilidades.TocadorSom.setVolume(valorDoSlider);
-                }
-            }
+        ajusteSomSlider.addChangeListener(evt -> {
+         int valor = ajusteSomSlider.getValue();
+         valorDoSlider = valor;
+         EstadoSom.setVolume(valor);
+
         });
     }
     
@@ -132,9 +129,7 @@ private void configurarSlider() {
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void desligarSomCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desligarSomCheckBoxActionPerformed
-        EstadoSom.somDesligado = desligarSomCheckBox.isSelected();
-        Utilidades.TocadorSom.setVolume(EstadoSom.somDesligado ? 0 : valorDoSlider);
-
+        EstadoSom.setSomDesligado(desligarSomCheckBox.isSelected());
     }//GEN-LAST:event_desligarSomCheckBoxActionPerformed
 
     private void voltarMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarMenuButtonActionPerformed
