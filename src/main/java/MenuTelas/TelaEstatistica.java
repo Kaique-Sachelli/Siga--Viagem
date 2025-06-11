@@ -36,6 +36,8 @@ public class TelaEstatistica extends javax.swing.JFrame {
         this.frame.setVisible(false);
         initComponents();
         setResizable(false);
+        usuarioLabel.setText(UsuarioLogado.getUsuario().getNome());
+        obterEstatistica();
         
     }    
         
@@ -82,36 +84,35 @@ public class TelaEstatistica extends javax.swing.JFrame {
                 voltarMenuButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(voltarMenuButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 542, 220, 60));
+        getContentPane().add(voltarMenuButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 540, 220, 60));
 
         estatisticasLabel.setFont(new java.awt.Font("Impact", 0, 60)); // NOI18N
         estatisticasLabel.setForeground(new java.awt.Color(0, 20, 137));
         estatisticasLabel.setText("ESTATÍSTICAS DO JOGADOR");
-        getContentPane().add(estatisticasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 2, 640, 80));
+        getContentPane().add(estatisticasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, 640, 80));
 
         linhaAzulLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/linhaAzul.png"))); // NOI18N
-        getContentPane().add(linhaAzulLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 2, 70, 640));
+        getContentPane().add(linhaAzulLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 70, 640));
 
         rankingLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-
-        getContentPane().add(rankingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 160, -1, -1));
         rankingLabel.setText("Tentativa:");
+        getContentPane().add(rankingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 158, -1, -1));
 
         acertosLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         acertosLabel1.setText("Acertos:");
-        getContentPane().add(acertosLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 277, -1, -1));
+        getContentPane().add(acertosLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 273, -1, -1));
 
         errosLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         errosLabel1.setText("Erros:");
-        getContentPane().add(errosLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 327, -1, -1));
+        getContentPane().add(errosLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 323, -1, -1));
 
         errosFataisLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         errosFataisLabel1.setText("Erro Fatal:");
-        getContentPane().add(errosFataisLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 427, -1, -1));
+        getContentPane().add(errosFataisLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 423, -1, -1));
 
         tempoJogoLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         tempoJogoLabel1.setText("Data da Simulação:");
-        getContentPane().add(tempoJogoLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 377, -1, -1));
+        getContentPane().add(tempoJogoLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 373, -1, -1));
 
         jogadorLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jogadorLabel.setText("Jogador:");
@@ -123,27 +124,27 @@ public class TelaEstatistica extends javax.swing.JFrame {
                 estatisticaComboBoxActionPerformed(evt);
             }
         });
-        getContentPane().add(simulacaoComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(269, 155, 284, -1));
+        getContentPane().add(estatisticaComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(258, 155, 284, -1));
 
         acertosLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         acertosLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         acertosLabel.setText("Acertos");
-        getContentPane().add(acertosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 277, 212, -1));
+        getContentPane().add(acertosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 273, 212, -1));
 
         erroFatalLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         erroFatalLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         erroFatalLabel.setText("Erro Fatal");
-        getContentPane().add(erroFatalLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 427, 212, -1));
+        getContentPane().add(erroFatalLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 423, 212, -1));
 
         errosLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         errosLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         errosLabel.setText("Erros");
-        getContentPane().add(errosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(203, 327, 212, -1));
+        getContentPane().add(errosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(203, 323, 212, -1));
 
         dataSimulacaoLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         dataSimulacaoLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         dataSimulacaoLabel.setText("Data Simulação");
-        getContentPane().add(dataSimulacaoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(349, 377, 239, -1));
+        getContentPane().add(dataSimulacaoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(349, 373, 239, -1));
 
         usuarioLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         usuarioLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -152,123 +153,20 @@ public class TelaEstatistica extends javax.swing.JFrame {
 
         pontuaçãoLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         pontuaçãoLabel1.setText("Pontuação:");
-        getContentPane().add(pontuaçãoLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 529, -1, -1));
+        getContentPane().add(pontuaçãoLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 525, -1, -1));
 
         pontuacaoLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         pontuacaoLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         pontuacaoLabel.setText("Pontuação");
-        getContentPane().add(pontuacaoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 529, 239, -1));
+        getContentPane().add(pontuacaoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 525, 239, -1));
 
         situacaoLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         situacaoLabel.setText("Situação");
-        getContentPane().add(situacaoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(241, 477, -1, -1));
+        getContentPane().add(situacaoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(241, 473, -1, -1));
 
         abandonadaLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         abandonadaLabel2.setText("Situação:");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(139, 139, 139)
-                        .addComponent(jogadorLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(usuarioLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(128, 128, 128)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(abandonadaLabel2)
-                                .addGap(18, 18, 18)
-                                .addComponent(situacaoLabel))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(rankingLabel)
-                                .addGap(27, 27, 27)
-                                .addComponent(estatisticaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(tempoJogoLabel1)
-                                .addGap(18, 18, 18)
-                                .addComponent(dataSimulacaoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(acertosLabel1)
-                                .addGap(18, 18, 18)
-                                .addComponent(acertosLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(errosLabel1)
-                                .addGap(18, 18, 18)
-                                .addComponent(errosLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(errosFataisLabel1)
-                                .addGap(18, 18, 18)
-                                .addComponent(erroFatalLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(pontuaçãoLabel1)
-                                .addGap(18, 18, 18)
-                                .addComponent(pontuacaoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(372, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(linhaAzulLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(20, 20, 20)
-                            .addComponent(estatisticasLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(570, 570, 570)
-                            .addComponent(voltarMenuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(105, 105, 105)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(usuarioLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jogadorLabel))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(estatisticaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rankingLabel))
-                .addGap(80, 80, 80)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(acertosLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(acertosLabel1))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(errosLabel1)
-                    .addComponent(errosLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tempoJogoLabel1)
-                    .addComponent(dataSimulacaoLabel))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(errosFataisLabel1)
-                    .addComponent(erroFatalLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(abandonadaLabel2)
-                    .addComponent(situacaoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(pontuaçãoLabel1)
-                    .addComponent(pontuacaoLabel))
-                .addContainerGap(83, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(linhaAzulLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(estatisticasLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(460, 460, 460)
-                            .addComponent(voltarMenuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        getContentPane().add(abandonadaLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 473, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
