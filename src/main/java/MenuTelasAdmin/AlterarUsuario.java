@@ -12,6 +12,17 @@ public class AlterarUsuario extends javax.swing.JFrame {
     private String categoriaSelecionada;
     private boolean categoriaAlterada; 
     private boolean senhaAlterada;
+    private void atualizarTela() {
+    obterUsuarios();
+    loginTextField.setText("LOGIN");
+    senhaTextField.setText("SENHA");
+    senhaTextField.setEditable(false);
+    categoriaComboBox.setEnabled(false);
+    confirmarButton.setEnabled(false);
+    senhaAlterada = false;
+    categoriaAlterada = false;
+    }
+    
     private void obterUsuarios(){
         try{
             var dao = new DAO();
@@ -239,9 +250,7 @@ public class AlterarUsuario extends javax.swing.JFrame {
                 if(deletou){
                     
                 JOptionPane.showMessageDialog(null, "Usuario excluido da base de dados.");
-                this.dispose();
-                var tl = new AlterarUsuario();
-                tl.setVisible(true);
+                this.atualizarTela();
                 
                 }
             }
@@ -290,9 +299,7 @@ public class AlterarUsuario extends javax.swing.JFrame {
                var atualizou = dao.atualizaSenha(novaSenha,selecionado.getId());
                if(atualizou){
                     JOptionPane.showMessageDialog(null, "Atualização de senha concluida com sucesso!");
-                    this.dispose();
-                    var tl = new AlterarUsuario();
-                    tl.setVisible(true);
+                    this.atualizarTela();
                }
                    
            }
@@ -319,9 +326,7 @@ public class AlterarUsuario extends javax.swing.JFrame {
                     var atualizou = dao.atualizaCategoria(instrutor, selecionado.getId());
                     if(atualizou){
                         JOptionPane.showMessageDialog(null, "Atualização de categoria concluida com sucesso");
-                        this.dispose();
-                        var tl = new AlterarUsuario();
-                        tl.setVisible(true);
+                        this.atualizarTela();
                     }
                 }
                 catch(Exception e){
