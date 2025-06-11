@@ -26,6 +26,7 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
         timer = new Timer(DELAY_MS, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+            
             }
         });
         timer.setRepeats(false);

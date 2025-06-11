@@ -25,7 +25,7 @@ public class DetectarTecla { // Define a classe.
             @Override
             public void actionPerformed(ActionEvent e) { // Método é chamado quando o ESC é precionado.
                 frame.dispose();
-                TelaMenuJogo janelaMenuJogo = new TelaMenuJogo();
+                TelaMenuJogo janelaMenuJogo = new TelaMenuJogo(frame);
                 janelaMenuJogo.setVisible(true);
             }
         };
