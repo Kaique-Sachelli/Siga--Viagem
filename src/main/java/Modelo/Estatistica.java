@@ -26,6 +26,18 @@ public class Estatistica {
         
     }
     
+    // inserindo novo construtor para passar como parametro em salvarEstatistica de DAO
+    public Estatistica(int erros, int acertos, int pontuacao, boolean erroFatal, boolean abandonada){
+        this.erros = erros;
+        this.acertos = acertos;
+        this.pontuacao = pontuacao;
+        this.erroFatal = erroFatal;
+        this.abandonada = abandonada;
+        
+        
+    }
+    
+    
     public String getDataSimulacaoFormatada(){
         if (this.dataSimulacao == null){
             return "";
@@ -61,6 +73,12 @@ public class Estatistica {
     public boolean isAbandonada() {
         return abandonada;
     }
+
+    public int getTentativa() {
+        return tentativa;
+    }
+    
+    
     public String toString(){
         return String.format(
             "%s", tentativa
