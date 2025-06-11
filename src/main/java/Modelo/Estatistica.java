@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Estatistica {
-    private int numeroSimulacao;
+    private int tentativa;
     private LocalDateTime dataSimulacao;
     private int erros;
     private int acertos;
@@ -13,9 +13,9 @@ public class Estatistica {
     private boolean erroFatal;
     private boolean abandonada;
     
-    public Estatistica(int numeroSimulacao, LocalDateTime dataSimulacao, int erros, 
+    public Estatistica(int tentativa, LocalDateTime dataSimulacao, int erros, 
     int acertos, int pontuacao, boolean erroFatal, boolean abandonada){
-        this.numeroSimulacao = numeroSimulacao;
+        this.tentativa = tentativa;
         this.dataSimulacao = dataSimulacao;
         this.erros = erros;
         this.acertos = acertos;
@@ -35,7 +35,7 @@ public class Estatistica {
     }
     
     public int getNumeroSimulacao() {
-        return numeroSimulacao;
+        return tentativa;
     }
 
     public LocalDateTime getDataSimulacao() {
@@ -63,7 +63,7 @@ public class Estatistica {
     }
     public String toString(){
         return String.format(
-            "%s", numeroSimulacao
+            "%s", tentativa
         );
     }
     
