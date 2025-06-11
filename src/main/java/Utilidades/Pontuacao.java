@@ -52,11 +52,16 @@ public class Pontuacao {
     }
     public static int calcularPontuacao(){
         int total = 0;
-        if(atividadesRealizadas.get(0).equals("PA")){
-            total += 2;
-        }
-        for (String atividadeRealizada : atividadesRealizadas){
-            total += gabarito.getOrDefault(atividadeRealizada, 0);
+        try{
+            if(atividadesRealizadas.get(0).equals("PA")){
+                total += 2;
+            }
+            for (String atividadeRealizada : atividadesRealizadas){
+                total += gabarito.getOrDefault(atividadeRealizada, 0);
+            return total;
+            }
+        } catch(Exception e){
+            return 0;
         }
         return total;
     }
@@ -99,10 +104,14 @@ public class Pontuacao {
     
     public static int calcularErros(){
         int total = 0;
-        for(String erroCometido : errosCometidos){
-            total += erros.getOrDefault(erroCometido, 0);
+        try{
+            for(String erroCometido : errosCometidos){
+                total += erros.getOrDefault(erroCometido, 0);
+            }
+            return total;
+        } catch(Exception e){
+            return 0;
         }
-        return total;
     }
     
     private static Map <String, Integer> errosComuns = new LinkedHashMap<>();

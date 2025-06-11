@@ -4,6 +4,7 @@ import Utilidades.EstadoCBTC;
 import Utilidades.EstadoItem;
 import javax.swing.JFrame;
 import Utilidades.EstadoReversora;
+import javax.swing.JOptionPane;
 
 public class TelaCabine extends javax.swing.JFrame {
    
@@ -39,6 +40,7 @@ public class TelaCabine extends javax.swing.JFrame {
         setaEsquerdaButton = new javax.swing.JButton();
         setaDireitaButton = new javax.swing.JButton();
         setaBaixoButton = new javax.swing.JButton();
+        seguirViagemButton = new javax.swing.JButton();
         cabineLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -174,6 +176,15 @@ public class TelaCabine extends javax.swing.JFrame {
         });
         getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
+        seguirViagemButton.setContentAreaFilled(false);
+        seguirViagemButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        seguirViagemButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seguirViagemButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(seguirViagemButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 360, 60, 100));
+
         cabineLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaCabine.jpg"))); // NOI18N
         getContentPane().add(cabineLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
@@ -264,6 +275,15 @@ public class TelaCabine extends javax.swing.JFrame {
         }
         this.dispose();
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
+
+    private void seguirViagemButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seguirViagemButtonActionPerformed
+        var escolha = JOptionPane.showConfirmDialog(null, "Deseja seguir viagem?", "Tem certeza?", JOptionPane.YES_NO_OPTION);
+        if(escolha == JOptionPane.YES_OPTION){
+            TelaFimJogo janelaFimJogo = new TelaFimJogo();
+            janelaFimJogo.setVisible(true);
+            this.dispose();
+        }
+    }//GEN-LAST:event_seguirViagemButtonActionPerformed
      
     /**
      * @param args the command line arguments
@@ -310,6 +330,7 @@ public class TelaCabine extends javax.swing.JFrame {
     private javax.swing.JButton limpadorParabrisaButton;
     private javax.swing.JButton moduloComunicacaoButton;
     private javax.swing.JButton reversoraButton;
+    private javax.swing.JButton seguirViagemButton;
     private javax.swing.JButton setaBaixoButton;
     private javax.swing.JButton setaDireitaButton;
     private javax.swing.JButton setaEsquerdaButton;
