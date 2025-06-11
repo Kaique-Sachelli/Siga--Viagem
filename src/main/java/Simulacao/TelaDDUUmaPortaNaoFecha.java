@@ -26,11 +26,49 @@ public class TelaDDUUmaPortaNaoFecha extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        setaBaixoButton = new javax.swing.JButton();
+        feButton = new javax.swing.JButton();
+        infopassButton = new javax.swing.JButton();
         dduUmaPortaNaoFechaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela DDU Uma Porta Não Fecha");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        setaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
+        setaBaixoButton.setContentAreaFilled(false);
+        setaBaixoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setaBaixoButton.setPreferredSize(new java.awt.Dimension(100, 100));
+        setaBaixoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                setaBaixoButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
+
+        feButton.setContentAreaFilled(false);
+        feButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        feButton.setMaximumSize(new java.awt.Dimension(40, 40));
+        feButton.setMinimumSize(new java.awt.Dimension(40, 40));
+        feButton.setPreferredSize(new java.awt.Dimension(40, 40));
+        feButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                feButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(feButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 450, 40, 40));
+
+        infopassButton.setContentAreaFilled(false);
+        infopassButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        infopassButton.setMaximumSize(new java.awt.Dimension(30, 40));
+        infopassButton.setMinimumSize(new java.awt.Dimension(30, 40));
+        infopassButton.setPreferredSize(new java.awt.Dimension(30, 40));
+        infopassButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                infopassButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(infopassButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 450, 50, 40));
 
         dduUmaPortaNaoFechaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaDDU - Uma Porta Não Fecha.jpg"))); // NOI18N
         getContentPane().add(dduUmaPortaNaoFechaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
@@ -38,6 +76,22 @@ public class TelaDDUUmaPortaNaoFecha extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
+        TelaCabine janelaCabine = new TelaCabine(this);
+        janelaCabine.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_setaBaixoButtonActionPerformed
+
+    private void feButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_feButtonActionPerformed
+        TelaFE janelaFe = new TelaFE(this);
+        janelaFe.setVisible(true);
+    }//GEN-LAST:event_feButtonActionPerformed
+
+    private void infopassButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infopassButtonActionPerformed
+        TelaINFOPASS janelaINFOPASS = new TelaINFOPASS(this);
+        janelaINFOPASS.setVisible(true);
+    }//GEN-LAST:event_infopassButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -76,5 +130,8 @@ public class TelaDDUUmaPortaNaoFecha extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel dduUmaPortaNaoFechaLabel;
+    private javax.swing.JButton feButton;
+    private javax.swing.JButton infopassButton;
+    private javax.swing.JButton setaBaixoButton;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,23 +1,11 @@
 package Simulacao;
 
-import javax.swing.JFrame;
+public class TelaDDUCarroIsolado extends javax.swing.JFrame {
 
-public class TelaDDU extends javax.swing.JFrame {
-
-    private JFrame frame;
-    
-    public TelaDDU() {
+    public TelaDDUCarroIsolado() {
         initComponents();
     }
 
-    public TelaDDU(JFrame frame) {
-        this.frame = frame;
-        this.frame.setVisible(false);
-        initComponents();
-        setResizable(false);
-        Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
-    }
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -25,10 +13,10 @@ public class TelaDDU extends javax.swing.JFrame {
         setaBaixoButton = new javax.swing.JButton();
         feButton = new javax.swing.JButton();
         infopassButton = new javax.swing.JButton();
-        dduImagemLabel = new javax.swing.JLabel();
+        dduCarroIsoladoLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("DDU Com Fachada Aberta");
+        setTitle("Tela DDU Carro Isolado");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         setaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
@@ -52,7 +40,7 @@ public class TelaDDU extends javax.swing.JFrame {
                 feButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(feButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 480, 40, 40));
+        getContentPane().add(feButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 450, 40, 40));
 
         infopassButton.setContentAreaFilled(false);
         infopassButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -64,10 +52,10 @@ public class TelaDDU extends javax.swing.JFrame {
                 infopassButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(infopassButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(439, 480, 30, 40));
+        getContentPane().add(infopassButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 450, 50, 40));
 
-        dduImagemLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaDDU.jpg"))); // NOI18N
-        getContentPane().add(dduImagemLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
+        dduCarroIsoladoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaDDU - Carro Isolado.jpg"))); // NOI18N
+        getContentPane().add(dduCarroIsoladoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
@@ -76,6 +64,7 @@ public class TelaDDU extends javax.swing.JFrame {
     private void setaBaixoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setaBaixoButtonActionPerformed
         TelaCabine janelaCabine = new TelaCabine(this);
         janelaCabine.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     private void feButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_feButtonActionPerformed
@@ -105,26 +94,27 @@ public class TelaDDU extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaDDU.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDDUCarroIsolado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaDDU.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDDUCarroIsolado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaDDU.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDDUCarroIsolado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaDDU.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDDUCarroIsolado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaDDU().setVisible(true);
+                new TelaDDUCarroIsolado().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel dduImagemLabel;
+    private javax.swing.JLabel dduCarroIsoladoLabel;
     private javax.swing.JButton feButton;
     private javax.swing.JButton infopassButton;
     private javax.swing.JButton setaBaixoButton;

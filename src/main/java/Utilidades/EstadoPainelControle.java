@@ -2,8 +2,6 @@
 package Utilidades;
 
 
-
-
 public class EstadoPainelControle {
     
 
