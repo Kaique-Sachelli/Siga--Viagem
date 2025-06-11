@@ -96,6 +96,7 @@ public class TelaMenuJogo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void sairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairButtonActionPerformed
+        Utilidades.AbandonouSimulacao.getInstance().setAbandonou(true);
         TelaMenuUsuario janelaMenuUsuario = new TelaMenuUsuario(this);
         janelaMenuUsuario.setVisible(true);
     }//GEN-LAST:event_sairButtonActionPerformed
