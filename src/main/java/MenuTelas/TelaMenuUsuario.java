@@ -143,6 +143,7 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jogarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jogarButtonActionPerformed
+        Utilidades.AbandonouSimulacao.getInstance().setAbandonou(false);
         Utilidades.DetectarErroFatal.getInstance().setErroFatal(false);
         Utilidades.EstadoCBTC.setPosicaoAtual(EstadoCBTC.Posicao.AM);
         Utilidades.EstadoItem.getInstance().setChaveFitaCinturao(false);
@@ -151,6 +152,14 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
         Utilidades.EstadoPainelControle.setPosicaoAtual(EstadoPainelControle.Posicao.NORMAL);
         Utilidades.EstadoPorta.setPosicaoAtual(EstadoPorta.Posicao.ABERTA);
         Utilidades.EstadoReversora.setPosicaoAtual(EstadoReversora.Posicao.FRENTE);
+        Utilidades.Pontuacao.zerarAtividadesRealizadas();
+        Utilidades.Pontuacao.zerarErrosCometidos();
+        Utilidades.Pontuacao.zerarErroMaisComum();
+        Utilidades.SituacaoPontuacao.getInstance().setSituacaoPA(false);
+        Utilidades.SituacaoPontuacao.getInstance().setSituacaoCCO(false);
+        Utilidades.SituacaoPontuacao.getInstance().setSituacaoLuz(false);
+        Utilidades.SituacaoPontuacao.getInstance().setSituacaoSoleira(false);
+        Utilidades.SituacaoPontuacao.getInstance().setSituacaoEmergencia(false);
         TocadorSom.setVolume(EstadoSom.isSomDesligado() ? 0 : EstadoSom.getVolume());
         TocadorSom.tocarSom("Sons/Gongo.wav");
         TelaCabine janelaCabine = new TelaCabine(this);

@@ -142,4 +142,8 @@ public class Pontuacao {
         }
     return erroMaisComum;
     }
+    
+    public static void zerarErroMaisComum(){
+        erroMaisComum.clear();
+    }
 }
