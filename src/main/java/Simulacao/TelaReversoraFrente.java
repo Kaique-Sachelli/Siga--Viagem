@@ -74,7 +74,7 @@ public class TelaReversoraFrente extends javax.swing.JFrame {
         janelaNeutro.setVisible(true);
         if(Utilidades.EstadoPorta.getPosicaoAtual() == Utilidades.EstadoPorta.Posicao.ABERTA){
             Pontuacao.registrarAtividade("RN");
-            if(Utilidades.EstadoCBTC.getPosicaoAtual() == Utilidades.EstadoCBTC.Posicao.AM){
+            if(Utilidades.EstadoCBTC.getPosicaoAtual() == Utilidades.EstadoCBTC.Posicao.RM){
                 Pontuacao.registrarErro("RN");
             }
         } else{

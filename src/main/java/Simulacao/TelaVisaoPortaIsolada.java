@@ -68,6 +68,7 @@ public class TelaVisaoPortaIsolada extends javax.swing.JFrame {
         if(Utilidades.SituacaoPontuacao.getInstance().isSituacaoLuz() == false){
             Pontuacao.registrarAtividade("LPE");
             Utilidades.SituacaoPontuacao.getInstance().setSituacaoLuz(true);
+            Utilidades.SituacaoPontuacao.getInstance().setSituacaoCCO(false);
         } else {
             Pontuacao.registrarErro("LPE");
         }

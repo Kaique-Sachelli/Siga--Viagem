@@ -151,6 +151,7 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
         Utilidades.EstadoItem.getInstance().setChaveServico(false);
         Utilidades.EstadoPainelControle.setPosicaoAtual(EstadoPainelControle.Posicao.NORMAL);
         Utilidades.EstadoPorta.setPosicaoAtual(EstadoPorta.Posicao.ABERTA);
+        Utilidades.EstadoPortasCabine.getInstance().setEsquerdaAberta(false);
         Utilidades.EstadoReversora.setPosicaoAtual(EstadoReversora.Posicao.FRENTE);
         Utilidades.Pontuacao.zerarAtividadesRealizadas();
         Utilidades.Pontuacao.zerarErrosCometidos();

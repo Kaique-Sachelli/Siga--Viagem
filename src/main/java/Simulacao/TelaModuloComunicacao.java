@@ -166,6 +166,7 @@ public class TelaModuloComunicacao extends javax.swing.JFrame {
             if(Utilidades.SituacaoPontuacao.getInstance().isSituacaoCCO() == false){
                 Pontuacao.registrarAtividade("CCO");
                 Utilidades.SituacaoPontuacao.getInstance().setSituacaoCCO(true);
+                Utilidades.SituacaoPontuacao.getInstance().setSituacaoPA(true);
             } else {
                 Pontuacao.registrarErro("CCO");
             }

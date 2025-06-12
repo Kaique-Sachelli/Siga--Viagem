@@ -87,6 +87,7 @@ public class TelaPortaSemiAbertaInterna extends javax.swing.JFrame {
         if(Utilidades.SituacaoPontuacao.getInstance().isSituacaoEmergencia() == false){
             Pontuacao.registrarAtividade("EM");
             Utilidades.SituacaoPontuacao.getInstance().setSituacaoEmergencia(true);
+            Utilidades.SituacaoPontuacao.getInstance().setSituacaoCCO(false);
         } else {
             Pontuacao.registrarErro("EM");
         }
