@@ -58,7 +58,6 @@ public class Pontuacao {
             }
             for (String atividadeRealizada : atividadesRealizadas){
                 total += gabarito.getOrDefault(atividadeRealizada, 0);
-            return total;
             }
         } catch(Exception e){
             return 0;

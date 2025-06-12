@@ -70,20 +70,14 @@ public class TelaReversoraNeutro extends javax.swing.JFrame {
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
     private void reversoraNeutroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reversoraNeutroButtonActionPerformed
-        if(Utilidades.Pontuacao.contarAtividadesRealizadas() >= 19){
-            TelaFimJogo janelaFimJogo = new TelaFimJogo();
-            janelaFimJogo.setVisible(true);
-            this.dispose();
+        EstadoReversora.setPosicaoAtual(EstadoReversora.Posicao.FRENTE);
+        TelaReversoraFrente janelaFrente = new TelaReversoraFrente(frame);
+        janelaFrente.setVisible(true);
+        this.dispose();    
+        if(Utilidades.EstadoPorta.getPosicaoAtual() == Utilidades.EstadoPorta.Posicao.FITA){
+            Pontuacao.registrarAtividade("RF");
         } else{
-            EstadoReversora.setPosicaoAtual(EstadoReversora.Posicao.FRENTE);
-            TelaReversoraFrente janelaFrente = new TelaReversoraFrente(frame);
-            janelaFrente.setVisible(true);
-            this.dispose();    
-            if(Utilidades.EstadoPorta.getPosicaoAtual() == Utilidades.EstadoPorta.Posicao.FITA){
-                Pontuacao.registrarAtividade("RF");
-            } else{
-                Pontuacao.registrarErro("RF");
-            }
+            Pontuacao.registrarErro("RF");
         }
     }//GEN-LAST:event_reversoraNeutroButtonActionPerformed
 
