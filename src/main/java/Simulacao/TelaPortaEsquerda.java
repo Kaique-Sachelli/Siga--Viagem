@@ -90,8 +90,15 @@ public class TelaPortaEsquerda extends javax.swing.JFrame {
     }//GEN-LAST:event_areaExternaButtonActionPerformed
 
     private void botoeiraAcessaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botoeiraAcessaButtonActionPerformed
-        TelaBotoeiraAcesa janelaBotoeiraAcessa = new TelaBotoeiraAcesa(this);
-        janelaBotoeiraAcessa.setVisible(true);
+        if(Utilidades.EstadoPortasCabine.getInstance().isEsquerdaAberta()){
+            TelaBotoeiraAcesa janelaBotoeiraAcessa = new TelaBotoeiraAcesa(this);
+            janelaBotoeiraAcessa.setVisible(true);
+            this.dispose();
+        } else{
+            TelaBotoeirasSinaleirasEsquerda janelaBotoeirasSinaleirasEsquerda = new TelaBotoeirasSinaleirasEsquerda(this);
+            janelaBotoeirasSinaleirasEsquerda.setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_botoeiraAcessaButtonActionPerformed
 
     /**

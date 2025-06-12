@@ -4,8 +4,6 @@ package Utilidades;
 
 public class EstadoReversora {
     
-    
-
         public enum Posicao {
             FRENTE,
             NEUTRO

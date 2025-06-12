@@ -1,19 +1,19 @@
 package Simulacao;
 
-import javax.swing.JFrame;
 import Utilidades.TocadorSom;
+import javax.swing.JFrame;
 
 
-public class TelaBotoeiraAcesa extends javax.swing.JFrame {
+public class TelaBotoeirasSinaleirasEsquerda extends javax.swing.JFrame {
 
     private JFrame frame;
     
-    public TelaBotoeiraAcesa() {
+    public TelaBotoeirasSinaleirasEsquerda() {
         initComponents();
         Utilidades.DetectarTecla.getInstance().configurarTeclaESC(this);
     }
-    
-    public TelaBotoeiraAcesa(JFrame frame) {
+
+    public TelaBotoeirasSinaleirasEsquerda(JFrame frame) {
         this();
         frame.setVisible(false);
         this.frame = frame;
@@ -25,11 +25,11 @@ public class TelaBotoeiraAcesa extends javax.swing.JFrame {
     private void initComponents() {
 
         setaBaixoButton = new javax.swing.JButton();
-        portaFechandoButton = new javax.swing.JButton();
-        botoeiraAcessaLabel = new javax.swing.JLabel();
+        portaAbrindoButton = new javax.swing.JButton();
+        botoeirasSinaleirasLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tela Botoeira Acessa");
+        setTitle("Tela Botoeiras e Sinaleiras");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         setaBaixoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/SetaBaixo.png"))); // NOI18N
@@ -41,22 +41,20 @@ public class TelaBotoeiraAcesa extends javax.swing.JFrame {
                 setaBaixoButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 650, -1, -1));
+        getContentPane().add(setaBaixoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
 
-        portaFechandoButton.setContentAreaFilled(false);
-        portaFechandoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        portaFechandoButton.setMaximumSize(new java.awt.Dimension(72, 80));
-        portaFechandoButton.setMinimumSize(new java.awt.Dimension(72, 80));
-        portaFechandoButton.setPreferredSize(new java.awt.Dimension(72, 80));
-        portaFechandoButton.addActionListener(new java.awt.event.ActionListener() {
+        portaAbrindoButton.setBorderPainted(false);
+        portaAbrindoButton.setContentAreaFilled(false);
+        portaAbrindoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        portaAbrindoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                portaFechandoButtonActionPerformed(evt);
+                portaAbrindoButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(portaFechandoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 480, 72, 80));
+        getContentPane().add(portaAbrindoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 300, 80, 80));
 
-        botoeiraAcessaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaBotoeiraAcesa.jpg"))); // NOI18N
-        getContentPane().add(botoeiraAcessaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 750));
+        botoeirasSinaleirasLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SimulacaoImagens/telaBotoeirasSinaleiras.jpg"))); // NOI18N
+        getContentPane().add(botoeirasSinaleirasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 640));
 
         pack();
         setLocationRelativeTo(null);
@@ -68,14 +66,13 @@ public class TelaBotoeiraAcesa extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_setaBaixoButtonActionPerformed
 
-    private void portaFechandoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_portaFechandoButtonActionPerformed
-        TocadorSom.tocarSom("Sons/Porta-fechando.wav");
-        Utilidades.EstadoPortasCabine.getInstance().setEsquerdaAberta(false);
-        Utilidades.Pontuacao.registrarAtividade("FBL");
-        TelaBotoeirasSinaleirasEsquerda janelaBotoeirasSinaleirasEsquerda = new TelaBotoeirasSinaleirasEsquerda(this);
-        janelaBotoeirasSinaleirasEsquerda.setVisible(true);
+    private void portaAbrindoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_portaAbrindoButtonActionPerformed
+        TocadorSom.tocarSom("Sons/Porta-abrindo.wav");
+        Utilidades.EstadoPortasCabine.getInstance().setEsquerdaAberta(true);
+        TelaBotoeiraAcesa janelaBotoeiraAcessa = new TelaBotoeiraAcesa(this);
+        janelaBotoeiraAcessa.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_portaFechandoButtonActionPerformed
+    }//GEN-LAST:event_portaAbrindoButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -94,13 +91,13 @@ public class TelaBotoeiraAcesa extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaBotoeiraAcesa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaBotoeirasSinaleirasEsquerda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaBotoeiraAcesa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaBotoeirasSinaleirasEsquerda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaBotoeiraAcesa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaBotoeirasSinaleirasEsquerda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaBotoeiraAcesa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaBotoeirasSinaleirasEsquerda.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -108,14 +105,14 @@ public class TelaBotoeiraAcesa extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaBotoeiraAcesa().setVisible(true);
+                new TelaBotoeirasSinaleirasEsquerda().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel botoeiraAcessaLabel;
-    private javax.swing.JButton portaFechandoButton;
+    private javax.swing.JLabel botoeirasSinaleirasLabel;
+    private javax.swing.JButton portaAbrindoButton;
     private javax.swing.JButton setaBaixoButton;
     // End of variables declaration//GEN-END:variables
 }
