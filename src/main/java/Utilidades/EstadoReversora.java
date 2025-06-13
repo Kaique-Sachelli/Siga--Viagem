@@ -9,7 +9,7 @@ public class EstadoReversora {
             NEUTRO
         }
 
-        private static Posicao posicaoAtual = Posicao.FRENTE;
+        private static Posicao posicaoAtual = Posicao.NEUTRO;
 
         public static Posicao getPosicaoAtual() {
             return posicaoAtual;

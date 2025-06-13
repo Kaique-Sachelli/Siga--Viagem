@@ -5,7 +5,7 @@ import java.util.*;
 public class Pontuacao {
     private static Map <String, Integer> gabarito = new LinkedHashMap<>();
     static {
-        gabarito.put("RN", 1); // Reversora em Neutro 
+        gabarito.put("RF", 1); // Reversora em Frente -----
         gabarito.put("RM", 1); // Chave CBTC em RM 
         gabarito.put("PA", 1); // Dar PA 
         gabarito.put("FBL", 1); // Fecha portas pela Boleira Lateral 
@@ -23,7 +23,7 @@ public class Pontuacao {
         gabarito.put("PA", 1); // Dar PA 
         gabarito.put("ICS", 1); // Inserir Chave de Serviço
         gabarito.put("AM", 1); // Chave CBTC em AM 
-        gabarito.put("RF", 1); // Reversora em Frente 
+        gabarito.put("RN", 1); // Reversora em Neutro ----- 
 
         // FIM 19 passos
     }
