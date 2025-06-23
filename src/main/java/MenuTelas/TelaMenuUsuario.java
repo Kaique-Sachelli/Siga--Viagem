@@ -1,6 +1,7 @@
 package MenuTelas;
 
 import Simulacao.TelaCabine;
+import Simulacao.TelaGuiaDeComoJogar;
 import Utilidades.EstadoCBTC;
 import Utilidades.EstadoPainelControle;
 import Utilidades.EstadoPorta;
@@ -37,6 +38,7 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
         sairButton = new javax.swing.JButton();
         jogarButton = new javax.swing.JButton();
         mapaMetroLabel = new javax.swing.JLabel();
+        comoJogarButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Usuário");
@@ -69,7 +71,7 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
                 selecionarFaseButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(selecionarFaseButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 200, 220, 60));
+        getContentPane().add(selecionarFaseButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 160, 220, 60));
 
         configuracoesButton.setBackground(new java.awt.Color(255, 255, 255));
         configuracoesButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
@@ -85,7 +87,7 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
                 configuracoesButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(configuracoesButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 270, 220, 60));
+        getContentPane().add(configuracoesButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 300, 220, 60));
 
         estatisticasButton.setBackground(new java.awt.Color(255, 255, 255));
         estatisticasButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
@@ -101,7 +103,7 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
                 estatisticasButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(estatisticasButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 340, 220, 60));
+        getContentPane().add(estatisticasButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 370, 220, 60));
 
         sairButton.setBackground(new java.awt.Color(255, 255, 255));
         sairButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
@@ -117,7 +119,7 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
                 sairButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(sairButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 410, 220, 60));
+        getContentPane().add(sairButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 440, 220, 60));
 
         jogarButton.setBackground(new java.awt.Color(255, 255, 255));
         jogarButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
@@ -133,10 +135,26 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
                 jogarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(jogarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 130, 220, 60));
+        getContentPane().add(jogarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 90, 220, 60));
 
         mapaMetroLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuImagens/mapaMetro.png"))); // NOI18N
         getContentPane().add(mapaMetroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 580, 450));
+
+        comoJogarButton.setBackground(new java.awt.Color(255, 255, 255));
+        comoJogarButton.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        comoJogarButton.setForeground(new java.awt.Color(0, 20, 137));
+        comoJogarButton.setText("COMO JOGAR");
+        comoJogarButton.setBorder(null);
+        comoJogarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        comoJogarButton.setMaximumSize(new java.awt.Dimension(75, 25));
+        comoJogarButton.setMinimumSize(new java.awt.Dimension(75, 25));
+        comoJogarButton.setPreferredSize(new java.awt.Dimension(75, 25));
+        comoJogarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comoJogarButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(comoJogarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 230, 220, 60));
 
         pack();
         setLocationRelativeTo(null);
@@ -189,6 +207,11 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_sairButtonActionPerformed
 
+    private void comoJogarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comoJogarButtonActionPerformed
+        TelaGuiaDeComoJogar janelaGuiaDeComoJogar = new TelaGuiaDeComoJogar(this);
+        janelaGuiaDeComoJogar.setVisible(true);
+    }//GEN-LAST:event_comoJogarButtonActionPerformed
+
     public static void main(String args[]) {
         
         
@@ -219,6 +242,7 @@ public class TelaMenuUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton comoJogarButton;
     private javax.swing.JButton configuracoesButton;
     private javax.swing.JButton estatisticasButton;
     private javax.swing.JButton jogarButton;
